@@ -1,0 +1,1728 @@
+=========================================================================
+Date:         Mon, 6 Aug 90 17:29:00 GMT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      re-posted from comp.text newsgroup
+
+[ Robin Cover passed this exchange on to me. Though lengthy, it seems of
+  sufficiently general interest to merit re-posting. I assume it is
+  worth subscribing this list as a whole to the proposed  comp.text.sgml
+  should it come into being. Any dissenters?  - LB  ]
+
+
+=================================================================
+Yuri Rubinsky, posted on News
+=================================================================
+From texbell!sq.sq.com!yuri Wed Aug  1 15:07:33 1990
+Path: txsil!smunews!texsun!newstop!sun-barr!cs.utexas.edu!news-server.csri.toron
+From: yuri@sq.sq.com (Yuri Rubinsky)
+Newsgroups: comp.text
+Subject: Re: software tools for SGML, proposed comp.text.sgml (LONG!)
+Message-ID: <1990Aug1.200733.2512@sq.sq.com>
+Date: 1 Aug 90 20:07:33 GMT
+Organization: SoftQuad Inc., Toronto, Canada
+Lines: 355
+
+
+In message <281@txsil.lonestar.org>
+robin@txsil.lonestar.org (Robin Cover) writes:
+
+> If some SGML experts from among the "major players" are to be attracted to
+> the group, the distinctive name "sgml" and focused attention on SGML is
+> a clear desideratum.  It will be hard enough to get support from SGML
+> gurus anyway -- they will have neither time nor patience to muck through
+> dozens of postings on unrelated topics....
+>
+> For a healthy SGML discussion, I feel it is imperative to have a couple
+> SGML experts listening in.  Those who have actually read the standard,
+> or write DTD's, or build parsers will know what I mean.  There is still
+> a lot of confusion about what SGML actually *IS* (and is not), and it's
+> easy for an unmoderated forum to generate unfortunate "mis-information."
+> I would even suggest that several companies or SGML-supporting agencies
+> be contacted (e.g., Software Exoterica; SoftQuad; Datalogics) to see if
+> they would designate persons to help referee the discussion -- at least
+> at moments when mis-information goes unchecked or when technical
+> questions cannot be answered by the forum's regular readers.
+
+On behalf of SoftQuad, yes. We will do our best (within our time
+constraints) to respond to appropriate information and questions.
+
+Here are some now:
+
+------------------------------------------------------------------------
+
+In message <2152@tnoibbc.UUCP>
+anita@tnoibbc.UUCP (Anita Eijs) writes/asks:
+
+> 1)    Are WYSISWYG-wordprocessors available which can read and write
+>        SGML ?
+
+Yes and no. SGML encoding is generally considered to be at its purest
+when it is free of formatting information. Its job is to interchange
+structural data and content in such a way that any number of required
+"formats" can be derived.
+
+This makes possible work such as that mentioned
+in message <45238@brunix.UUCP> wherein
+var@iris.brown.edu (Victor A. Riley) describes the work of:
+
+> X3V1.8M MUSIC IN INFORMATION PROCESSING STANDARDS (MIPS) COMMITTEE
+>       operating under the rules and procedures of the
+>            American National Standards Institute
+
+which is using the syntax of SGML to build a representation language
+for hypermedia and time-based documents (music and multimedia events
+are two examples). (I mention this because it has relevance later
+with respect to the CGM question below.)
+
+SGML is widely used for the storage of text in databases and is being
+slowly but surely embraced by the CD-ROM community. [In his keynote address
+at the 1988 CD-ROM Conference, Bill Gates announced that he thought it was
+pretty clear that SGML was the storage format of choice for CD-ROM publishing.]
+
+All in all, then: The creators of SGML-encoded files will not normally
+know or be able to imagine all the uses to which their contents will one
+day be put. "What You See is What You Get" is, accordingly, not a phrase
+that has much meaning when longevity and multi-purposeness are the goal.
+
+Nonetheless, WYSIWYG has a place in the SGML world. In article
+<cah492S00VsA4tzYNl@andrew.cmu.edu>
+mss+@andrew.cmu.edu (Mark Sherman) writes:
+
+> One can define imaging semantics to be associated with SGML. The program
+> AuthorEditor from SoftQuad is quite nice in that regard. But its
+> conventions are parochial -- an "SGML" system knows nothing about AE's
+> semantics, unless the exchanging parties agree to information outside of
+> the standard.
+
+Mark is being a little bit mischievous here. Certainly my favourite
+dictionary defines parochial as "confined to a narrow area", but the
+"but" in his sentence doesn't recognize that very often this
+local functionality is indeed a Good Thing.
+
+For example: Just because the footnotes in my final document may be
+printed in 6 or 8 point type is no reason why I should have to look
+at them in that size on the screen. I'm perfectly comfortable knowing
+that a pair of simple SGML tags will allow a text-for-paper formatter to
+ensure that the footnotes will appear at the bottom of the page or chapter
+end in a small point size, while a text-for-screen formatter may place
+them in-line or at the bottom of a screenful of text, or in a thin column
+to the left of the text body. Having computer screens imitate a piece
+of paper (of all ancient technologies!) hardly does justice to their
+capabilities.
+
+Yes, in Author/Editor we DO associate screen formatting with SGML elements.
+So too does IBM with its TextWrite product. Both of us do this for a very
+good reason: Users take advantage of the screen formatting to build a
+working environment in which they are comfortable and where the formatting
+helps their tagging intuition. With a simple command in such an editor,
+you insert "list item" or "table" tags (for example); screen feedback
+assures you this is the element you wanted.
+
+[A word of explanation for those who don't recognize these names: Both
+SoftQuad Author/Editor and IBM's TextWrite are conforming SGML editors,
+context-sensitive, structured and so forth, with good assistance for
+the user encoding an SGML document, and "QUASI-WYG" in the way
+described above. There are other SGML editors, Exoterica's Checkmark,
+Sobemap's Write-It and Datalogics' WriterStation, which don't do this.]
+
+So, What You See Accurately Represents What You Want, in the model
+that suggests that writers are best left to writing, editors to editing,
+and designers, later in the process (generally), to designing.
+
+------------------------------------------------------------------------
+Here's a much shorter answer to the WYSIWYG question and,
+simultaneously, perhaps to:
+> 2)    Are any translators available to convert SGML to troff, TeX,
+>        MSWord, etc., and vice versa ?
+
+Microsoft has announced (in Government Computer News and the EPSIG
+Newsletter, among other places) that it will announce a form of SGML
+support by the end of 1990 for delivery in 1991. According to the
+EPSIG Newsletter (the journal of the Association of American Publishers'
+Electronic Publishing Special Interest Group operated by OCLC in
+Columbus Ohio), Microsoft is currently evaluating SGML parsers.
+
+WordPerfect Corporation released a Statement of Direction
+in June 1989 saying "We are in the
+process of developing a strategy to assist people in creating
+WordPerfect documents that can be converted to and from SGML and ODA".
+To the best of my knowledge, that company has made no other public
+statements on this subject since.
+
+Agfa Compugraphic CAPS, Xyvision, Frame, Intergraph, Interleaf, Context,
+Datalogics, Arbortext, SoftQuad and perhaps others (apologies to anyone I've
+forgotten in this list) have demonstrated the ability to take
+SGML files encoded using specific tagsets (generally CALS 28001)
+and show them on the screen matching line-for-line what will be
+output to a printer.
+
+Translation from SGML to formatter input is properly the task of an
+SGML Parser, a utility which can understand enough about the context
+of an SGML element [read "object" such as paragraph, or list item, or
+table cell, or figure] to be able to produce an output stream which
+is meaningful to a processor which may not understand "context sensitivity".
+This is not (except when the SGML elements and their inter-relations are
+particularly unsophisticated) a job for sed or awk, or even yacc or lex.
+
+On the subject of parsers, Mark Sherman writes:
+> I believe SoftQuad sells them. Quality, functionality and price unknown
+> to me. There are probably more around, although I recall an article by
+> Larry Welsch from NIST (ACM document processing conference) claiming
+> that some parts of SGML were exceedingly difficult to implement, so you
+> should watch out for how much is implemented when someone makes a claim.
+
+A Conformance Testing Initiative led by the Graphic Communications
+Association in North America and by the National Computing Centre in the
+UK (with the cooperation of the European Community) will, within a
+year or so, eliminate this issue. Today, the most popular parsers,
+which are generally conceded to also be the most conformant, are those
+of Software Exoterica (of Ottawa Canada), licensed by Frame,
+Arbortext and Intergraph; and of Sobemap (of Brussels Belgium,
+marketed by Yard Software of Chippenham Wiltshire UK), licensed
+by Agfa Compugraphic CAPS, Interleaf, Context and Xyvision.
+We have made available to our consulting clients
+the parser from Author/Editor, which
+is optimized to work with our SoftQuad Publishing Software
+sqtroff component.
+
+
+In Holland, Elsevier Scientific Publishers, as a matter of
+course, I believe, use the SGML Parser of the Vrije Amsterdam University
+to convert SGML files to TeX. A number of other sites in Europe perform
+the same conversion as did the creators of the terrific
+SGML/Structured Text Bibliography compiled by Robin Cover, Nicholas
+Duncan and David Barnard [Queen's University at Kingston Ontario Canada,
+Technical Report 90-281 still in draft form and available later this
+year].
+
+------------------------------------------------------------------------
+Back to Anita's questions:
+
+> 3)    Is an SGML to PostScript converter available ?
+
+Well, yes, though we think of that process not so much as a conversion
+as traditional document processing. One could describe any software
+product which makes up pages from SGML-to-parser input as performing
+SGML to PostScript conversion. Neither SGML nor PostScript alone has
+the smarts to know when to break a line or a page, and so on.
+
+------------------------------------------------------------------------
+> 4)    Does SGML support drawings (illustrations) ? How about tables,
+>        mathematical expressions ?
+
+Yes, certainly, but these two questions have quite different answers.
+
+a) Drawings/Illustrations: Think of SGML, at one level, as process
+control. [Stop! SGML is not a procedural language, but nonetheless,
+I believe this is the most straightforward way to explain the
+functionality ...] The standard formalizes a set of declarations
+which associate certain entities with "data content notations".
+SGML's job is not to attempt to predict all the ways that any number
+of hardware and software systems will store graphic images, video,
+sound, smell, voice annotation, and so on. Rather, an SGML
+document will contain, in easily recognized constructs, all the
+information that a system needs to recognize where parseable text
+starts and stops, and where control must be passed to an application
+that can deal with the strictly delimited content which is non-SGML
+data. [The hypermedia/multimedia work going on in the ANSI committee
+mentioned above uses these capabilities very elegantly, even building
+in SGML constructs to point to "the interiors" of non-SGML contents.]
+
+Mark Sherman writes:
+> Now, you and I can make a
+> side agreement that whenever we use the tag "my-CGM-byte", the marked
+> bytes will be in CGM-compliant format. However, that is an agreement
+> outside of the standard and only usable by our local cabal. Ditto for
+> tables, mathematical expressions.
+
+This is not true. The standard defines a document as (more or less)
+a Document Type Definition -- the set of elements, other constructs,
+and their relationships -- followed by an "instance" of that DTD,
+content marked up using the semantics rigidly prescribed by the DTD.
+
+An ability to read the DTD is a vital function within any SGML system.
+Accordingly, there is a completely standardized, interchangeable
+method, within the standard, to pass along the data content notations,
+such as CGM, or TIFF, or RIFF, or IGES, or IFF, or anything. It is
+not the job of SGML (nor should it be) to dictate how applications
+software will respond to the content being passed.
+
+"Our local cabal" has nothing to do with the story. Anyone with
+an SGML parser can read any SGML file and be passed a meaningful
+output stream.
+
+
+b) As for tables and mathematics: Both areas are covered in
+a "must-read" Technical Report (TR 9573)  published by ISO/IEC
+and edited by Anders Berglund (now of ISO, ex of CERN), entitled
+"SGML Support Facilities: Techniques for Using SGML". The DTDs created by
+the Association of American Publishers (which are now an ANSI
+standard) and by the US Defense Department under the CALS initiative,
+also contain "content models" for tables of varying complexity. It
+is now up to software developers to find mechanisms for presenting
+these content models to users in as straight-forward a way as is
+possible, but there is nothing wrong with the underlying SGML data
+representation. [Certainly the content models are complex. And so
+they should be: tables can be extremely complicated.]
+
+As far as math goes, for now, the CALS DTDs use the "data content
+notation" construct described above, choosing to standardize
+on TeX, EQN and IBM's Scientific and Mathematical Formula Format,
+with tags to delimit nested math, and expecting the formatter to
+handle the formatting.
+
+------------------------------------------------------------------------
+> 5)    Is it possible to use SGML and CGM in combination ? How about the
+>        availability of CGM-translators ?
+
+See above. A variety of graphics and CAD packages exist which
+claim CGM translation ability -- but to other graphics formats,
+not to SGML.
+
+The afore-mentioned "Techniques for Using SGML" extends an example given
+in Annex E of SGML itself. The CGM clear text encoding in the example
+is nested within the SGML document, but attributes associated
+with the SGML elements dictate scaling and cropping.
+
+> 6)    Are parsers available to check an SGML-document on syntax ?
+
+Yes. Software Exoterica's XGML, Sobemap's Mark-It, NIST's not-yet-complete
+public domain utility, the Amsterdam Parser (which I've not seen, however),
+and, to SGML sites using sqtroff, SoftQuad's. Datalogics bundles in its
+own (built on top of the NIST parser, I believe) with its WriterStation
+and Pager products; IBM includes one with TextWrite.
+
+> 7)    Are the software tools public domain ? What are the prices of the
+>        software tools ? What kind of software tools are available ?
+
+There is an extraordinary variety of software tools available, from
+all the vendors mentioned above, plus a few more:
+
+Avalanche Development Company (Boulder Colorado) sells FastTag,
+an "auto-tagger" which uses a proprietary visual recognition engine
+to mark up documents from a variety of wordprocessors and scanner/OCRs.
+
+PraXis Inc (Providence Rhode Island) will soon be showing its
+Electronic Book Browser, a system which builds and displays hypertexts
+compiled from SGML texts.
+
+OWL (Office Workstations Limited of Edinburgh Scotland and Bellevue
+Washington) uses SGML as an input source for its IDEX hypertext/
+document database.
+
+Other products (along with addresses and phone numbers
+for all the companies mentioned throughout this article) are listed
+in the SGML Source Guide, a publication of the
+        Graphic Communications Association
+        1730 North Lynn Street, Suite 604
+        Arlington, Virginia 22209-2085  USA
+        Telephone: 703 841-8160
+        Fax: 703 841-8144
+                attn: Marion Ellidge
+
+GCA also publishes <TAG>, the SGML Newsletter,
+which, along with the newsletters mentioned below, is a good
+source of product descriptions and new product announcements.
+
+GCA also hosts several SGML tutorials each year, as well as
+the twice-annual TechDoc Conference [next one: August 20 to 24
+in Washington DC] and, co-sponsored with the International
+Users' Group, the annual Mark-up conference each May or June.
+
+The EPSIG Newsletter, mentioned above, is available from
+        OCLC Inc
+        6565 Frantz Road
+        Dublin, Ohio 43017-0702  USA
+        Telephone: 800 848-5878
+                attn: Betsy Kaiser
+
+The newsletter and bulletin of the International SGML Users' Group,
+as well as a number of other publications, are available from
+        International SGML Users' Group,
+        c/o SoftQuad Inc
+        720 Spadina Avenue
+        Toronto Canada M5S 2T9  Canada
+        Telephone: 416 963-8337
+                attn: Steven Downie
+
+A recent posting to this newsgroup described the work and intentions
+of an SGML Consortium proposed by Ohio State University with
+intentions of making available a variety of public domain SGML tools.
+
+> 8)    Will the newsgroup 'comp.text.sgml' be created ?
+
+I suspect that if there was any doubt before, then the outrageous
+length of this posting will tip the balance as crowds of comp.text
+subscribers say "Get this stuff out of here!" Nonetheless, it seems
+to me that there is another point of view on the subject:
+
+Until SGML is taken for granted as a useful and normal part of
+the working lives of all who toil with documents,
+a national and international standard of this level of
+capability might well be usefully discussed in comp.text rather
+than in a separate newsgroup. I think that people generally interested
+in text issues would do well to follow these discussions, rather
+than create a distinct SGML ghetto. With the support of so many
+governments, associations, research groups, hardware and software
+vendors, as well as electronic and paper publishers of all sorts,
+it's not going to go away. Anyone involved with comp.text may be
+served by keeping on top of these developments.
+
+
+
+------------------------------------------------------------------------
+Yuri Rubinsky                           (416) 963-8337
+President                               (800) 387-2777 (from U.S. only)
+SoftQuad Inc.                           uucp: 'uunet,utzooa!sq!yuri
+720 Spadina Ave.                        Internet: yuri@sq.com
+Toronto, Ontario, Canada M5S 2T9        Fax: (416) 963-9575
+
+=================================================================
+Mark Sherman (prefers ODA) response to Yuri
+=================================================================
+From texbell!andrew.cmu.edu!mss+ Thu Aug  2 10:27:10 1990
+Path: txsil!smunews!texsun!newstop!sun-barr!cs.utexas.edu!tut.cis.ohio-state.edu
+From: mss+@andrew.cmu.edu (Mark Sherman)
+Newsgroups: comp.text
+Subject: Long nits: Re: software tools for SGML, proposed comp.text.sgml (LONG!)
+Message-ID: <wai4NCu00VsAI1q1FD@andrew.cmu.edu>
+Date: 2 Aug 90 15:27:10 GMT
+References: <1990Aug1.200733.2512@sq.sq.com>
+Organization: Information Technology Center, Carnegie Mellon, Pittsburgh, PA
+Lines: 162
+In-Reply-To: <1990Aug1.200733.2512@sq.sq.com>
+
+I normally try to refrain from flaming, but there is an enormous amount
+of "SGML can do everything" rhetoric being expounded by SGML vendors,
+that I feel the need to counterbalance a bit (for some truth in
+advertising, some people claim that I flame because I have a vested
+interest in ODA -- as I've said many times, I view them as incomparable.
+No, I will not get into that discussion on a bboard again. I did not
+push ODA in the previous message and will not mention it again here.
+Call me on the phone.)
+
+I should also preface my comments with saying the Yuri's comments were
+very reasonable. But I do have some nits.
+
+Excerpts from netnews.comp.text: 1-Aug-90 Re: software tools for SGML..
+Yuri Rubinsky@sq.sq.com (17297)
+
+> Nonetheless, WYSIWYG has a place in the SGML world. In article
+> <cah492S00VsA4tzYNl@andrew.cmu.edu>
+> mss+@andrew.cmu.edu (Mark Sherman) writes:
+
+> > One can define imaging semantics to be associated with SGML. The program
+> > AuthorEditor from SoftQuad is quite nice in that regard. But its
+> > conventions are parochial -- an "SGML" system knows nothing about AE's
+> > semantics, unless the exchanging parties agree to information outside of
+> > the standard.
+
+> Mark is being a little bit mischievous here. Certainly my favourite
+> dictionary defines parochial as "confined to a narrow area", but the
+> "but" in his sentence doesn't recognize that very often this
+> local functionality is indeed a Good Thing.
+
+I do not want to get into the religious argument as to whether a
+document ought to include its appearance along with its representation,
+i.e, whether "this local functionality is indeed a Good Thing". My point
+is only that the semantics are confined to only Author/Editor. If you
+send that SGML document to an Interleaf product that supports SGML, it
+won't look the same. Historically, our project (Andrew) has taken the
+view that life is on the screen and not on paper. Therefore, we followed
+the path suggested of making life good on screen at the expense of
+paper. For example...
+
+>  Just because the footnotes in my final document may be
+> printed in 6 or 8 point type is no reason why I should have to look
+> at them in that size on the screen.
+
+Hell, if I got a footnote, I just pop it up or collapse it on the screen
+as necessary. My citations snap to the window that they cite. Who cares
+about 6 or 8 point font? At least that's how we built our software 4
+years ago. We too thought:
+
+> I'm perfectly comfortable knowing that a pair of simple SGML tags will
+> allow a text-for-paper formatter to ensure that the footnotes will
+> appear at the bottom of the page or chapter end in a small point size,
+> while a text-for-screen formatter may place them in-line or at the
+> bottom of a screenful of text, or in a thin column to the left of the
+> text body. Having computer screens imitate a piece of paper (of all
+> ancient technologies!) hardly does justice to their capabilities.
+
+For us, read that first sentence as "if you want paper, we'll generate
+troff". Well, we now have many megabytes of user complaints that they
+use the computers to generate paper and what they see ain't what they
+got. Their professional life does match our whimsies. They use more than
+one computer, more than one program and more than one medium (i.e. paper
+in addition to files). They want it to be the same everywhere. Please
+don't shoot the messenger, I have enough arrows in my back. Note that a
+key element of CALS (one of the big SGML motivaters in the US) is an
+interpretation of display semantics for tags. CALS compliance is not
+merely SGML compliance at the DTD level, but also visual compliance.
+
+> With a simple command in such an editor, you insert "list item" or
+> "table" tags (for example); screen feedback assures you this is the
+> element you wanted. ... A word of explanation for those who don't
+> recognize these names: Both SoftQuad Author/Editor and IBM's TextWrite
+> are conforming SGML editors, context-sensitive, structured and so forth,
+> with good assistance for
+> the user encoding an SGML document, and "QUASI-WYG" in the way described
+> above. There are other SGML editors, Exoterica's Checkmark, Sobemap's
+> Write-It and Datalogics' WriterStation, which don't do this.
+
+Sure, as long as all the editors you use will interpret "table" tag as a
+table. I'll bet the Exoterica's Checkmark only knows that identifier as
+a tag. If the file goes to a system that does not interpret "table" as a
+table, then you'll just get streams of characters matching whatever
+table content encoding Author/Editor or TextWrite use. Which is my
+point: you can add a great deal to SGML (some of which has been written
+down in the references in your message), but all of those additions are
+outside of the SGML standard. I don't care to argue whether that is good
+or bad.
+
+> Agfa Compugraphic CAPS, Xyvision, Frame, Intergraph, Interleaf, Context,
+> Datalogics, Arbortext, SoftQuad and perhaps others (apologies to anyone
+> I've forgotten in this list) have demonstrated the ability to take SGML
+> files encoded using specific tagsets (generally CALS 28001) and ...
+
+A warning to the casual user: just because a vendor says they are CALS
+compliant, does not mean they have a general SGML system. For example,
+one can write an editor that has the CALS DTD and imaging semantics
+built in. It will work just fine with other CALS systems, but be close
+to useless with any general purpose SGML system or other tag
+interpretation. In fact, a salesman from one of the above mentioned
+vendors (not SoftQuad) told me that their product worked exactly that
+way, "so it was a fool proof CALS system -- the user need never worry
+that they were generating some SGML that would not be CALS compliant."
+
+> show them on the screen matching line-for-line what will be output to a
+> printer.
+
+Right. Because CALS is not only SGML, but a collection of *other*
+standards (e.g., MIL 28001) that define what those tags mean and how to
+interpret the content so tagged. Not true for generic SGML.
+
+> The standard defines a document as (more or less)
+> a Document Type Definition -- the set of elements, other constructs,
+> and their relationships -- followed by an "instance" of that DTD,
+> content marked up using the semantics rigidly prescribed by the DTD.
+
+> An ability to read the DTD is a vital function within any SGML system.
+> Accordingly, there is a completely standardized, interchangeable
+> method, within the standard, to pass along the data content notations,
+> such as CGM, or TIFF, or RIFF, or IGES, or IFF, or anything. It is
+> not the job of SGML (nor should it be) to dictate how applications
+> software will respond to the content being passed.
+
+> "Our local cabal" has nothing to do with the story. Anyone with
+> an SGML parser can read any SGML file and be passed a meaningful
+> output stream.
+
+We are violently agreeing. I am speaking from the perspective of a user,
+not an implementor. When someone asks a question like "I have a document
+with a CGM drawing in it and want to send it to a PostScript printer. I
+heard that SGML is an interchange medium that supports CGM and
+PostScript.  Can I use SGML for the conversion?", you *know* they are
+asking whether they can print their file, not whether you can write a
+file with little tags saying "here are  postscript bytes, here are CGM
+bytes". They want the drawing converted. For the editor, printer or
+other imaging program to work, they have to know (1) that your tags mean
+that the data are represented as CGM , PostScript, CALS tables, AAP
+equations, or whatever ("anything") and (2) how to process those bytes
+that are so tagged. As you say, SGML does not specify anything about how
+to process the content. There are lots of ways to say how to process the
+content: all outside of the SGML standard. With just SGML and a generic
+SGML parser, I can parse the bytes and print a wonderful message: "I
+just found some CGM bytes" and then do nothing more with them. Actually,
+I can also say that it was legal for those bytes to appear at that
+location in the document, and possibly where else I could put those
+bytes.  Sorry, that is not what most users expect.
+
+> b) "SGML Support Facilities: Techniques for Using SGML". The DTDs ...
+> contain "content models" for tables of varying complexity.
+
+For the layman: this means that if you want to exchange a table or
+equation from your system to another system, your translator must
+convert from your representation (say SYLK) into the DTD's format in
+SGML. By the way, make sure that the receiving SGML system understands
+the same DTD, or you will still lose your table at the other end. (Yeah,
+yeah, I know: the table is still there, as a marked up SGML and the DTD
+syntax rules can be passed along, but that ain't enough for an editor to
+understand the data as a table -- it can only be understood by the
+recipient as a collection of structured content.) There are lots of
+techniques for using SGML, but saying "SGML" by itself is not enough to
+answer most user's questions.
+
+                -Mark
+=========================================================================
+Date:         Mon, 6 Aug 90 11:10:44 -0400
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      COLING-90 program
+
+*********
+Note: Attached is the scientific programme of The Thirteenth
+International Conference on Computational Linguistics, COLING-90,
+to be held in Helsinki on August 20-25, l990.  Expressions such as
+PI, PII, M1, etc., refer to the auditoria.  The conference proceedings
+will be available from ACL after the meeting.  For further information,
+please contact:
+
+Fred Karlsson
+Dept of General Linguistics
+University of Helsinki
+Hallituskatu 11
+SF-00100 Helsinki, Finland
+e-mail: KARLSSON@FINUH.BITNET
+fax:    +358 0 653726
+phone:  +358 0 1913512
+*********
+
+
+SUMMARY SCIENTIFIC PROGRAMME
+
+Sunday, August 19, 1990
+9.00 - 12.00          Extrapositional Session
+PIV: Open Workshop on Textual and Lexical Resources
+14.00 - 16.00         Extrapositional Session
+PI: Computer Software - Property or Freeware?
+
+Monday, August 20, 1990
+10.00 - 11.00         Opening Session
+Main Building: The Next Quarter of a Century
+11.15 - 15.50         Scientific Papers and Demonstrations
+PI: Beyond Full Stop
+PII: Beyond the Map
+PIII: Out of the Laboratory
+PIV: New Tools
+M1: Projects
+M5: Projects
+16.00 - 17.00         Panel Discussion
+PI: Unfinished Language
+
+Tuesday, August 21, 1990
+9.00 - 15.50         Scientific Papers and Demonstrations
+PI: Formalisms
+PII: Translations
+PIII: Discourse and Speech Acts
+PIV: Efficiency and Tolerance
+M1: Projects
+M5: Projects
+16.00 - 17.00         Panel Discussion
+PI: Homunculus Loquens
+
+Thursday, August 23, 1990
+9.00 - 17.00          Scientific Papers and Demonstrations
+PI: Beyond Full Stop
+PII: Beyond the Map
+PIII: Out of the Laboratory
+PIV: New Tools
+M1: Projects
+M5: Projects
+17.00 - 19.00         Demonstrations
+
+Friday, August 24, 1990
+9.00-15.50  Scientific Papers and Demonstrations
+PI: Text Planning and Comprehension
+PII: Morphology; Translation
+PIII: Parallel Processing
+PIV: Computation
+M1: Projects
+M5: Projects
+
+16.00 - 17.00
+PI: Summing up and looking ahead
+
+Note: The headings of the groups of sessions do not exhaustively
+specify the contents.
+
+
+SCIENTIFIC PROGRAMME, Sunday, August 19, 1990
+9.00 - 12.00, Extrapositional Session
+PIV: Open Workshop on Textual and Lexical Resources
+Organized by Don Walker.
+(This workshop will examine recent activities, plans and possibilities
+for collecting and exploiting massive text files, creating lexical data
+and knowledge bases, and developing methods to reuse and share both
+data and tools.  Everyone is invited.)
+14.00 - 16.00, Extrapositional Session
+PI: Computer Software -  Property or Freeware?
+Jon Bing.
+(This lecture by Professor Bing from the Norwegian Research
+Center for Computers and Law, University of Oslo, was invited in
+response to demands for a discussion at COLING-90 of the legal aspects
+of software development in a research-oriented environment.)
+
+SCIENTIFIC PROGRAMME, Monday, August 20, 1990
+Monday, 10.00 - 11.00, Opening Session
+The Grand Assembly Hall of the University of Helsinki, Main Building,
+Senate Square entrance, Unioninkatu 34.
+Programme Chair's Address.  Hans Karlgren.
+Host's Address. Fred Karlsson (Chair of the Committee on
+Local Arrangements).
+The Next Quarter of a Century in Computational Linguistics. Martin
+Kay (President of the International Committee on Computational
+Linguistics).
+New Computation Technology - Expectations and Rational Research
+Strategy. Helmut Schnelle.
+
+Monday, 11.15 - 11.45
+PI: Generation of Extended Explanations.
+David J Mooney & Sandra Carberry & Kathleen F McCoy.  (Vol 2 276)
+PII: Acquisition of Lexical Information from Corpus.
+Nicoletta Calzolari & Remo Bindi.  (Vol 3 54)
+PIII: Towards Personal MT.
+Christian Boitet.  (Vol 3 30)
+PIV: Synchronous Tree-Adjoining Grammars.
+Stuart M Shieber & Yves Schabes.  (Vol 3 253)
+M1: Spelling-Checking for Highly Inflected Languages.
+Jan Hajic & Janus Drozd.  (Vol 3 358)
+Monday, 11.50 - 12.20
+PI: Generating Referring Expressions.
+Russel Block & Helmut Horacek.  (Vol 2  24)
+PII: Deep Sentence Understanding in a Restricted Domain.
+Pierre Zweigenbaum & Marc Cavazza.  (Vol 1 82)
+PIII: Parsing for Grammar and Style Checking.
+Gregor Thurmair.  (Vol 2 365)
+PIV: A Hybrid Deterministic Parser.
+Kanaan A Faisal & Stan C Kwasny.  (Vol 1 22)
+M5: Advice-Giving Dialogue.
+Didier Bronisz & Thomas Grossi & Francois Jean-Marie.  (Vol 1 41)
+Monday, 12.25 - 12.55
+PI: Discourse Anaphora.
+Joke Dorrepaal.  (Vol 2 95)
+PII: Automated Discovery and Acquisition of Rules.
+Byoung-Tak Zhang & Yung-Taek Kim.  (Vol 2 431)
+PIII: Noisy Channel Model for Spelling Correction.
+Mark D Kernighan & Kenneth W Church & William A Gale.  (Vol 2 205)
+PIV: The Generalized LR Parser/Compiler V8-4.
+Masaru Tomita.  (Vol 1 59)
+M5: Japanese-to-English Project: PROTRAN and TWINTRAN.
+J Jelinek & G Wilcock & O Nishida & T Yoshimi & M J W Bos &
+N Tamura & H Murakami.  (Vol 1 50)
+Monday, 13.00 - 13.30
+PI: Syntactic Constraints on Anaphoric Binding.
+Mary Dalrymple & John Maxwell & Annie Zaenen.  (Vol 2  72)
+PII: Extending the Lexicon by Exploiting Subregularities.
+Robert Wilensky.  (Vol 2 407)
+PIII: Knowledge-Based Structural Disambiguation.
+Katashi Nagao.  (Vol 2 282)
+PIV: A Government-Binding Parser for Mandarin Chinese.
+Hsin-Hsi Chen.  (Vol 2 48)
+M1: Interactive Multilingual Style Analysis.
+Guenter Winkelmann.  (Vol 1 79)
+Monday, 13.35 - 14.05
+PI: La recherche du theme d'un discours.
+Monique Rolbert.  (Vol 1 p  28)
+PII: Probabilistic Integration of Syntax and Semantics.
+Dekai Wu.  (Vol 2 413)
+PIII: Memory-based Translation.
+Satoshi Sato & Makoto Nagao.  (Vol 3 247)
+PIV: Information-Based Case Grammar.
+Keh-jiann Chen & Chu-Ren Huang.  (Vol 2 54)
+M1: An Experimental Sentence Translation System.
+Eric Wehrli.  (Vol 1 76)
+Monday, 14.45 - 15.15
+PI: Semantic Abstraction and Anaphora.
+Mark Johnson & Martin Kay.  (Vol 1 p 17)
+PII: Knowledge Acquisition from Corpora.
+Peter Anick & James Pustejovsky.  (Vol 2 7)
+PIII: Translation and Grammatical Metaphor.
+John A Bateman.  (Vol 2 13)
+PIV: Lazy Incremental Copy Graph Unification.
+Kiyoshi Kogure.  (Vol 2 223)
+M1: The First Million is Hardest to Get: Corpus Tagging.
+Gunnel Kaellgren.  (Vol 3 400)
+Monday, 15.20 - 15.50
+PI: Identifying Subjective Characters in Narrative.
+Janyce M Wiebe.  (Vol 2 401)
+PII: Automatic Pruning of Too Wide Grammars.
+Lynette Hirschman.  (Vol 1 130)
+PIII: Why Human Translators Still Sleep in Peace.
+Paola Velardi.  (Vol 2 383)
+PIV: Augmented Chart Parser for Speech Recognition.
+Lee-Feng Chien & K J Chen & Lin-Shan Lee.  (Vol 2 60)
+M1: A Government-Binding Parser implemented in PARLOG.
+Robert J Kuhns.  (Vol 3 394)
+Monday, 16.00 - 17.00
+PI: Unfinished Language.
+Panel Discussion. Moderator: Walther von Hahn.
+(based on the Electronic Colloqium).
+
+SCIENTIFIC PROGRAMME, Tuesday, August 21, 1990
+Tuesday, 09.00 - 09.30
+PI: Combining Phrase Structure and Field Structure.
+Lars Ahrenberg.  (Vol 2 1)
+PII: Lexical Gaps and Idioms in Machine Translation.
+Diana Santos.  (Vol 2 330)
+PIII: Cleft Constructions in Discourse.
+J L Delin.  (Vol 2 83)
+PIV: Parallel Generalized LR Parsing.
+Hiroaki Numazaki & Hozumi Tanaka.  (Vol 2 305)
+M1: A Semantically Based Systemic Functional Generator.
+Robin P Fawcett & Gordon H Tucker.  (Vol 1 47)
+Tuesday, 09.35 - 10.05
+PI: Implementing 'Generalized Word Order Grammars'.
+Bengt Sigurd.  (Vol 2 336)
+PII: Retrieval of Idioms.
+Erik-Jan van der Linden & Wessel Kraaij.  (Vol 2 245)
+PIII: Explanation Facility for a Grammar Writing System.
+Loong Cheong Tong.  (Vol 2 359)
+PIV: Bottom-Up Generation with Principle-Based Grammars.
+Masato Ishizaki.  (Vol 2 188)
+M5: A Computationally Expensive Approach to Morphology.
+Marc Domenig.  (Vol 2 77)
+Tuesday, 10.10 - 10.40
+PI: Representing and Integrating Linguistic Knowledge.
+Daniel Jurafsky.  (Vol 2 199)
+PII: "Translation great problem".
+Barbara Gawronska-Werngren.  (Vol 2 133)
+PIII: Generating Connectives.
+Michael Elhadad & Kathleen R McKeown.  (Vol 3 97)
+PIV: Human-Computer Interaction for Disambiguation.
+Ralf D Brown & Sergei Nirenburg.  (Vol 3 42)
+M1: Recognizing Advice, Warnings, Promises and Threats.
+Kevin Donagy.  (Vol 3 336)
+M5: Augmentive Communication Systems.
+Kathleen McCoy & Patrick Demasco & Mark Jones & Christopher
+Pennington & Charles Rowe.  (Vol 3 413)
+Tuesday, 11.15 - 11.45
+PI: Normal Form Theorem Proving for the  Lambek Calculus.
+Mark Hepple.  (Vol 2 173)
+PII: Using Test Suites in Evaluation of MT Systems.
+Margaret King & Kirsten Falkedal.  (Vol 2 211)
+PIII: Free Adjuncts in Natural Language Instructions.
+Bonnie Lynn Webber & Barbara Di Eugenio.  (Vol 2 395)
+PIV: A Linguistic Theory of Robust Parsing.
+Sebastian Goeser.  (Vol 2 156)
+M5: Repair Work in Human-Computer Dialoge.
+Alison Cawsey & Pirkko Raudaskoski.  (Vol 3 327)
+Tuesday, 11.50 - 12.20
+PI: Parsing Complexity of Extended Categorial Grammars.
+Esther Koenig.  (Vol 2 233)
+PII: Machine Translation without a Sources Text.
+Harald Somers & Jun-ichi Tsujii & Danny Jones.  (Vol 3 271)
+PIII: Semantic Interfaces in Text Generation.
+Christian Matthiessen.  (Vol 2 322)
+PIV: Category Hierarchy and Robust Parsing.
+Damien Genthial & Jaques Courtin & Irene Kowarski.  (Vol 2 139)
+M1: A Machine Translation System for Foreign News.
+Teruaki Aizawa & Terumasa Ehara & Noriyoshi Uratani & Hideki Tanaka &
+Naoto Kato & Sumio Nakase & Norikazu Aruga & Takeo Matsuda.  (Vol 3 308)
+Tuesday, 12.25 - 12.55
+PI: Functor-Driven Generation and CUG.
+Dale Gerdemann & Erhard W Hinrichs.  (Vol 2 145)
+PII: Modelling Variations in Goal-Directed Dialogue.
+Jean Carletta.  (Vol 3 324)
+PIII: Coordination in an Axiomatic Grammar.
+Davie Milward.  (Vol 3 207)
+PIV: Syntactic Normalization of Spontaneous Speech.
+Hagen Langer.  (Vol 3 180)
+M5: Software for Intelligent Text Processing.
+Paul S Jacobs & Lisa F Rau.  (Vol 3 373)
+Tuesday, 13.00 - 13.30
+PI: Feature Logic with Disjunctive Unification.
+Jochen Doerre & Andreas Eisele.  (Vol 2 100)
+PII: Translation by Abduction.
+Jerry R Hobbs & Megumi Kameyama.  (Vol 3 155)
+PIII: Centering Theory and Italian Pronouns.
+Barbara Di Eugenio.  (Vol 2 270)
+PIV: When Something is Missing.
+Alberto Lavelli & Oliviero Stock.  (Vol 3 184)
+M5: Bilingual Generation of Weather Forecasts.
+D Carcagno & E Goldberg & R Kittredge & A Polguere.  (Vol 1 5)
+Tuesday, 13.35 - 14.05
+PI: Linear Encodings of Linguistic Analyses.
+Samuel S Epstein.  (Vol 3 108)
+PII: Independent Transfer Using Graph Unification.
+Lauri Carlson & Maria Vilkuna.  (Vol 3 60)
+PIII: Centering in Japanese Discourse.
+Sharon Cote & Masayo Iida & Marilyn Walker.  (Vol 1 120)
+PIV: Gapping and Frame Semantics.
+Andreas Stolcke.  (Vol 2 341)
+M1: Connectionist Networks for Constituent Structure.
+Helmut Schnelle & Rolf Wilkens.  (Vol 1 53)
+Tuesday, 14.45 - 15.15
+PI: Complex Features in Description of Chinese.
+Feng Zhiwei.  (Vol 2 118)
+PII: Translation of Support Verb Constructions.
+Morris Salkoff.  (Vol 3 243)
+PIII: Disambiguating Cue Phrases.
+Diane Litman & Julia Hirschberg.  (Vol 2 251)
+PIV: Generating from Deep Structure.
+Claire Gardent & Agnes Plainfosse.  (Vol 2 127)
+M1: Intelligent Handling of Weather Forecasts.
+Stephan Kerpedjiev & Veska Noncheva.  (Vol 3 379)
+Tuesday, 15.20 - 15.50
+PI: A Karaka-based Approach to Parsing.
+Akshar Bharati & Rajeev Sangal.  (Vol 3 25)
+PII: Representing Spatial Configurations for Generation.
+Cornelia Zelinsky-Wibbelt.  (Vol 3 299)
+PIII: On Trying to Do Things with Words.
+Michael J Hussmann & Heinz Genzmann.  (Vol 2 179)
+PIV: Phonological Processing of Speech Variants.
+Julie Carson-Berndsen.  (Vol 3 21)
+M1: An Open-Ended Chinese Question-Answering System.
+Benjamin K Tsou.  (Vol 1 127)
+M5 (Exhibitors' Forum): ATLAS II: FUJITSU's first-in-the-world Japanese
+German Machine Translation System - jointly developed with ARIS (Germany).
+FUJITSU Ltd. & ARIS Software-Entwicklung GmbH.
+(printed in this booklet)
+Tuesday, 16.00 - 17.00
+PI: Homunculus Loquens.
+Panel Discussion. Moderator: Hans Karlgren.
+(based on the Electronic Colloquium).
+
+SCIENTIFIC PROGRAMME, Thursday, August 23, 1990
+Thursday, 09.00 - 09.30
+PI: Generation of Programs from a Declarative Grammar.
+Zaharin Yusoff.  (Vol 2 425)
+PII: Lexical Semantics via Lexicology.
+Ted Briscoe & Ann Copestake & Bran Boguraev.  (Vol 2 42)
+PIII: Stress and Intonation in Concept-to-Speech Systems.
+Georg Dorffner & Ernst Buchberger & Markus Kommenda.  (Vol 2 89)
+PIV: Disambiguation by Document-Oriented Preference Sets.
+Hirohito Inagaki & Sueharu Miyahara & Tohru Nakagawa & Fumihiko
+Obashi.  (Vol 2 183)
+M1: Generation for Dialogue Translation.
+Yoshihiro Ueda & Kioshi Kogure.  (Vol 1 p 64)
+M5: A Parser for French without a Dictionary.
+Jacques Vergne.  (Vol 1 p 70)
+Thursday, 09.35 - 10.05
+PI: Using Lexicalized Tags for Translation.
+Anne Abeille & Yves Schabes & Aravind K Joshi.  (Vol 3  1)
+PII: Tagging for Learning: Collecting Thematic Relations from Corpus.
+Uri Zernik & Paul Jacobs.  (Vol 1 34)
+PIII: Anchor Word in Parsing for Speech Recognition.
+Hiroaki Saito.  (Vol 3 237)
+PIV: Two Principles of Parse Preference.
+Jerry R Hobbs & John Bear.  (Vol 3 162)
+M1: Automatic Indexing and Government-Binding Theory.
+Robert J Kuhns.  (Vol 3 397)
+Thursday, 10.10 - 10.40
+PI: Constraining Tree Adjoining Grammars by Unification.
+Karin Harbusch.  (Vol 2 167)
+PII: Lexical Ambiguity and Knowledge Representation.
+Branimir Boguraev & James Pustejovsky.  (Vol 2 36)
+PIII: Optimum Selection from Phrase Lattice.
+Kazuhiko Ozeki.  (Vol 2 311)
+PIV (Exhibitors' Forum): ATLAS II: FUJITSU's first-in-the-world Japanese
+German Machine Translation System - jointly developed with ARIS (Germany).
+FUJITSU Ltd. & ARIS Software-Entwicklung GmbH.
+(printed in this booklet)
+M1: A Morphological Analyzer for Bulgarian.
+Kiril Simov & Galia Angelova & Elena Paskaleva.  (Vol 3 455)
+M5: Local Cohesive Knowledge for Translating Dialogues.
+Ikuo Kudo.  (Vol 3 391)
+Thursday, 11.15 - 11.45
+PI: Bi-Directional Grammar Formalisms.
+P Newman.  (Vol 2 294)
+PII: Combining Bilingual Corpora and Dictionaries.
+Judith Klavans & Evelyne Tzoukermann.  (Vol 3 174)
+PIII: (empty on purpose).
+PIV: Constraint Grammar for Parsing Running Text.
+Fred Karlsson.  (Vol 3 168)
+M1: Czech-to-Russian Transducing Dictionary.
+Alla Bemova & Vladislav Kubon.  (Vol 3 314)
+M5: Matching Job Offers and Job Search Requests.
+Jose Vega.  (Vol 1 p 67)
+Thursday, 11.50 - 12.20
+PI: Reversible Unification-Based MT.
+Gertjan van Noord.  (Vol 2 299)
+PII: To Parse and Not to Parse: Relation-Driven Skimming.
+Paul S Jacobs.  (Vol 2 194)
+PIII: Backwards Phonology.
+John Bear.  (Vol 3 13)
+PIV: Finite-State Parsing and Disambiguation.
+Kimmo Koskenniemi.  (Vol 2 229)
+M1: A Mechanism for Ellipsis Resolution in Dialogue.
+A Diaz de Harraza Sanchez & H Rodriguez Hontoria & F
+Maillo Verdejo.  (Vol 3 452)
+Thursday, 12.25 - 12.55
+PI: A Symmetrical Approach to Parsing and Generation.
+Marc Dymetman & Pierre Isabelle & Francois Perrault.  (Vol 3 90)
+PII: Is there Contents in Empty Heads?
+Louise Guthrie & Brian M Slator & Yorick Wilks & Rebecca Bruce.  (Vol 3 138)
+PIII: Unification-based Formalism for Korean Phonology.
+Hee-Sung Chung.  (Vol 3 76)
+PIV: A Constraint-Based Approach to Performance.
+Koiti Hasida.  (Vol 3 149)
+M5: Information Extraction and Semantic Constraints.
+John Sterling & Ralph Grishman.  (Vol 3 355)
+Thursday, 13.00 - 13.30
+PI: How to Invert a Parser into an Efficient Generator.
+Tomek Strzalkowski.  (Vol 2 347)
+PII: Computer-Aided Discovery of Syntactic Knowledge.
+Bai Shuo.  (not printed)
+PIII: Unification-Based Phonology.
+Richard Wiese.  (Vol 3 283)
+PIV: Constraint Logic Grammars.
+Sergio Balari & Luis Damas & Nelma Moreira & Giovanni B Varile.  (Vol 3  7)
+M1: Three-Typed Pragmatics for Dialogue Analysis.
+Hitoshi Iida & Takayuki Yamaoka & Hidekazu Arita.  (Vol 3 370)
+Thursday, 13.35 - 14.05
+PI: GPSG Parsing and Bidirectional Charts.
+Laurent Devos & Michel Gilloux.  (Vol 2 151)
+PII: Co-Occurence and Semantic Classification.
+Elena V Paducheva & Ekaterina V Rakhilina.  (Vol 3 231)
+PIII: Unification Phonology.
+John Coleman.  (Vol 3 79)
+PIV: The Self-Extending Lexicon.
+Geert Adriaens & Maarten Lemmens.  (Vol 3 305)
+M1: Translation Tool for the Target Language Inexpert.
+Xiuming Huang.  (Vol 3 364)
+Thursday, 14.45 - 15.15
+PI: Reversible Unification Grammar for French.
+Dominique Estival.  (Vol 2 106)
+PII: Synthesizing Concept Hierarchy from Hypernyms.
+Jean Fargues & Adeline Perrin.  (Vol 2 112)
+PIII: Parsers for a Text-to-Speech System.
+Thomas Russi.  (Vol 3 443)
+PIV: Syntactic Description of Free Word Order Languages.
+Tania Avgustinova & Karel Oliva.  (Vol 3 311)
+M1: Conditionals and Counterfactuals in Prolog.
+J Ph Hoepelman & A J M van Hoof.  (Vol 3 368)
+Thursday, 15.20 - 15.50
+PI: Expressive Power of Grammatical Formalisms.
+Alexis Manaster-Ramer & Wlodek Zadrozny.  (Vol 3 195)
+PII: Neural Networks Generated from Dictionaries.
+Jean Veronis & Nancy M Ide.  (Vol 2 389)
+PIII: The Text-Planning Component of the LILOG System.
+J Kreyss & H-J Novak.  (Vol 3 431)
+PIV: (empty on purpose).
+M1: Using the Same System for Analysis and Synthesis.
+Philippe Rincel & Paul Sabatier.  (Vol 3 440)
+Thursday, 15.55 - 16.25
+PI: Textual and Lexical Resources.
+Speaker: Donald E Walker.
+(Report from Workshop, August 19, 1990, Helsinki, on recent
+activities, plans and possibilities to collect text files, create
+lexical data and knowledge bases, and develop methods to reuse and
+share both data and tools. Continues in PI with discussion 16.30.)
+PII: Message Processing with Object-Centered Semantics.
+Jean-Francois Delanoy.  (Vol 3 333)
+PIII: A Planning-Based Sentence Generator Architecture.
+Dieter Kohl & Agnes Plainfosse & Claire Gardent.  (Vol 3 388)
+PIV: (empty on purpose).
+M1: Russian Morphological Vocabulary.
+Igor A Bolshakov.  (Vol 3 317)
+Thursday, 16.30 - 17.00
+PI: Textual and Lexical Resources.
+Discussion. Chair: Donald E Walker.  (continued from PI, 15.55 - 16.25).
+PII: Psychologically Plausible Object-Oriented Parsing.
+Bradley L Pritchett & John W Reitano.  (Vol 3 437)
+PIII: Parsing Long Sentences with Pattern Rules.
+Wei-Chuan Li & Tzusheng Pei & Bing-Huang Lee & Chuei-Feng Chiou.  (Vol 3 410)
+PIV: Processing Large Corpora for Reference Resolution.
+Ido Dagan & Alon Itai.  (Vol 3 330)
+M1: Natural Language Interface to Software Package.
+Z Alexin & K Fabricz & T Gyimothy & T Horvath.  (Vol 1 p 44)
+
+SCIENTIFIC PROGRAMME, Friday, August 24, 1990
+Friday, 09.00 - 09.30
+PI: Formal Semantics in Relational Database Formalism.
+Claire Vanderhoeft.  (Vol 2 377)
+PII: Finite-State Morphological Processor for Spanish.
+Evelyne Tzoukermann & Mark Y Liberman.  (Vol 3 277)
+PIII: Head-Driven Incremental and Parallel Generation.
+Guenter Neumann & Wolfgang Finkler.  (Vol 2 288)
+PIV: A Computational Approach to Binding Theory.
+Allessandra Giorgi & Fabio Pianesi & Giorgio Satta.  (Vol 3 120)
+M1: A PC-Oriented Tool for Corpus Work.
+Benny Brodda.  (Vol 3 405)
+Friday, 09.35 - 10.05
+PI: Meaning Representation and Text Planning.
+Christine Defrise & Sergei Nirenburg.  (Vol 3 219)
+PII: A Two-Level Model for Non-Concatenative Morphology.
+Harald Trost.  (Vol 2 371)
+PIII: Language Without A Central Pushdown Stack.
+Carson T Schuetze & Peter A Reich.  (Vol 3 64)
+PIV: (empty on purpose).
+M1: An Environment for Machine Translation.
+D Estival & al.  (Vol 3 385)
+M5: Organizing Linguistic Knowledge for Multi-Lingual Generation.
+Martin Emele & Ulrich Heid & Stefan Momma & Remi Zajac.  (Vol 3 102)
+Friday, 10.10 - 10.40
+PI: Abduction Models for Semantic Interpretation.
+Peter Norwig & Robert Wilensky.  (Vol 3 225)
+PII: Syllable-based Morphology.
+Lynne J Cahill.  (Vol 3 48)
+PIII: Neural Network for Word Category Prediction.
+Masami Nakamura & Katsuteru Maruyama & Takeshi Kawabata & Kiohiro
+Shikano.  (Vol 3 213)
+PIV: Overload and Garden-Path Effects.
+Edward Gibson.  (Vol 3 114)
+M1: German-Russian Translation Experiment.
+B Buschbeck & R Henschel & I Hoeser & G Klimonow & A Kuestner &
+I Starke.  (Vol 3 321)
+Friday, 11.15 - 11.45
+PI: Causal and Temporal Text Analysis.
+Ralph Grishman & Tomasz Ksiezyk.  (Vol 3 126)
+PII: (empty on purpose).
+PIII: Parallel Processing of Hierarchial Clauses.
+Risto Miikkulainen.  (Vol 3 201)
+PIV: PATR for Categorial Unification Grammar.
+Todd Yampol & Lauri Karttunen.  (Vol 2 419)
+M1: Morphological Analysis of Slovene.
+Tomaz Erjavec & Peter Tancig.  (Vol 1 p 86)
+M5: A Self-Learning System for the Chinese Characters.
+Georges Fafiotte.  (Vol 3 351)
+Friday, 11.50 - 12.20
+PI: Hierarchy of Salience.
+Eva Hajicova & Petr Kubon & Vladislav Kubon.  (Vol 3 144)
+PII: Incremental Sentence Production with a Parallel Marker-Passing
+Algorithm.
+Hiroaki Kitano.  (Vol 2 217)
+PIII: A Model for Interaction between Cognitive Processes.
+Gerard Sabah.  (Vol 3 446)
+PIV: Disjunctive Unification for Bottom-Up Parsing.
+David Carter.  (Vol 3 70)
+M1: Anticipation-Free Diagnosis of Structural Faults.
+Wolfgang Menzel.  (Vol 3 416)
+M5: Definite Clause Grammar for Arabic Syntax.
+Hisham El-Shishiny.  (Vol 3 34)
+Friday, 12.25 - 12.55
+PI: Arguments Understanding.
+Stephane Guez.  (Vol 3 132)
+PII: A Bilingual Knowledge Bank.
+Victor Sadler & Ronald Vendelmans.  (Vol 3 449)
+PIII: Unbounded Dependency: Tying Strings to Rings.
+Jon M Slack.  (Vol 3 265)
+PIV: (empty on purpose).
+M1: An English-Chinese Translation System for Tourists.
+Huang Jianshuo.  (Vol 3 376)
+M5: A Phrase-Structure Grammar for Arabic.
+Ayman Elnaggar.  (Vol 3 342)
+Friday, 13.00 - 13.30
+PI: Japanese Sentence Analysis and Argumentation.
+Akira Shimazu.  (Vol 3 259)
+PII: Reading Distinction in MT.
+Pius ten Hacken.  (Vol 2 162)
+PIII: Typed Unification Grammars.
+Remi Zajac & Martin Emele.  (Vol 3 293)
+PIV: Incremental Parsing and Reason Maintenance.
+Mats Wiren.  (Vol 3 287)
+M1: Word Sense Disambiguation with Examples.
+Taijiro Tsutsumi.  (Vol 1 p 133)
+Friday, 13.35 - 14.05
+PI: Structured Meanings.
+Kees van Deemter.  (Vol 3 85)
+PII: The E-Framework: Emerging Problems.
+Ian Crookston.  (Vol 2 66)
+PIII: Type Theory and Complex Verb Generation.
+Satoshi Tojo.  (Vol 2 353)
+PIV: Bottom-Up Filtering: A Parsing Strategy for GPSG.
+Philippe Blache & Jeaque-Yves Morin.  (Vol 2 19)
+M1: Generating Explanations of Concepts in Geometry.
+Ruslan Mitkov.  (Vol 3 425)
+Friday, 14.45 - 15.15
+PI: Semantic Representation of Texts.
+Marie-Claude Landau.  (Vol 2 239)
+PII: Interlingual Representation of Definite NPs.
+Montserrat Meya.  (Vol 2 263)
+PIII: Partial Descriptions and Systemic Grammar.
+Chris Brew.  (Vol 3 36)
+PIV: A Portable Data-Base Interface Generator.
+Simon Sabbagh.  (Vol 2 317)
+M1: A Parser for an HPSG-Style Grammar.
+Karel Oliva.  (Vol 3 434)
+M5: A Plan Inference System using Feature Structures.
+John K Myers.  (Vol 3 428)
+Friday, 15.20 - 15.50
+PI: (empty on purpose).
+PII: Concept Analysis, Terminology and Documentation.
+Douglas Skuce & Ingrid Meyer.  (Vol 1 56)
+PIII: Scoping without A Free Variable Constraint.
+Ian Lewin.  (Vol 3 190)
+PIV: An Interactive Japanese Parser for MT.
+Hiroshi Maruyama.  (Vol 2 257)
+M1: A Morphological Parser for Afrikaans.
+L G de Stadler & M W Coetzer.  (Vol 1 p 85)
+M5: The CAT2 Machine Translation System.
+Randall Sharp.  (not printed)
+Friday, 16.00 - 17.00
+PI: Summing up and looking ahead.
+=========================================================================
+Date:         Tue, 7 Aug 90 17:18:50 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      Guidelines available, at last
+
+                   **** TEI DRAFT 1.0 PUBLISHED ****
+
+The Steering Committee of the ACH/ACL/ALLC Text Encoding Initiative is
+happy to announce that its first draft Guidelines for the Encoding and
+Interchange of Machine Readable Texts are now available.  The Text
+Encoding Initiative, which is sponsored by the Association for Computers
+and the Humanities, the Association for Computational Linguistics, and
+the Association for Literary and Linguistic Computing, has prepared
+these Guidelines over the past two years and will test and revise them
+during the next two years.
+
+The Guidelines take the form of a 300-page report containing:
+
+    * a description of the TEI project
+    * a gentle introduction to SGML
+    * recommendations concerning the representation of divers
+      character sets for interchange purposes
+    * proposals for a standard `electronic titlepage'
+    * tagsets for features common to most text types
+    * tagsets for features of some specific text types
+    * tagsets for representing detailed linguistic analyses
+    * recommendations for ways of extending the guidelines
+    * examples and SGML Document Type Definitions (DTDs)
+
+Parts of the Guidelines were presented in preliminary form earlier this
+year at the annual conferences of the ALLC/ACH and the ACL in Siegen
+(Germany) and Pittsburgh (USA) respectively.  This is however the first
+full publication of the Guidelines, and marks the end of the first phase
+of the TEI's work.
+
+The second phase, which will continue until June 1992, will be marked
+(it is hoped) by extensive public discussion of the initial proposals
+set out in this first public draft, which we expect to distribute as
+widely as possible.  At least one, and probably two, interim drafts are
+likely before the final version of the Guidelines is published in 1992:
+we expect to change a lot of what is in the current version, and to add
+even more.
+
+What goes in, and what gets changed, will be determined to a very large
+extent by the feedback that this draft provokes.  The four working
+committees of the TEI have taken a year to formulate the proposals it
+contains: no one associated with the project is however so immodest as
+to believe that our current draft provides an answer for every text
+encoding problem.  However, we believe that it does provide a set of
+basic notions and a viable framework, within which, with your help, the
+real work is now about to begin.
+
+The present draft is available on request from the following addresses:
+
+(in Europe) Lou Burnard, OUCS, 13 Banbury Rd, Oxford OX2 6NN
+        fax +44 (865) 273275
+        email LOU@VAX.OXFORD.AC.UK
+
+(in North America) C. M. Sperberg-McQueen, Computer Center (M/C 135),
+        University of Illinois at Chicago, Box 6998, Chicago IL 60680
+        fax +1 (312) 996-6834
+        email U35395@UICVM (Bitnet) or U35395@uicvm.cc.uic.edu (Internet)
+
+There is no charge for the first copy sent to any one address.  Further
+copies will be charged at 15 pounds or $30, payable in advance, by
+cheque / check to the appropriate institution (OUCS or UIC).
+Redistribution of the draft is encouraged, provided that it is
+reproduced in full with due acknowledgment and not sold for profit.
+
+For more information and news of all TEI activities, subscribe to
+TEI-L@UICVM, by sending a note containing only the single line
+
+   SUB TEI-L Your Name
+
+to LISTSERV@UICVM on BITNET or listserv@uicvm.cc.uic.edu on internet.
+=========================================================================
+Date:         Tue, 7 Aug 90 22:42:19 MDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Alan K. Melby,
+              Chairman BYU Translation Research Group" <MELBY@BYUVM.BITNET>
+Subject:      Re: Guidelines available, at last
+In-Reply-To:  Message of Tue, 7 Aug 90 17:18:50 CDT from <U35395@UICVM>
+
+The BYU TRG would like to receive a copy of the present copy of the guidelines
+you described in your last message.  Our address is:
+BYU Translation Research Group
+2129 Jesse Knight Humanities Building
+Provo, UT  84602
+Attention:  Alan K. Melby
+
+Thank you very much,
+BYU TRG
+=========================================================================
+Date:         Wed, 8 Aug 90 00:46:55 -0400
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      Away from the office until 6 August
+
+I am in Boston, but it will be difficult to reach me.  Contact my
+secretary Elaine Molchan at 201:829-4594 for urgent matters.
+
+Don Walker
+=========================================================================
+Date:         Wed, 8 Aug 90 19:13:39 IST
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Itamar Even-Zohar <B10@TAUNIVM.BITNET>
+Subject:      Re: Guidelines available, at last
+In-Reply-To:  Message of Tue, 7 Aug 90 17:18:50 CDT from <U35395@UICVM>
+
+I wonder whether it would not be cheaper to make the draft
+available electronically, too. One could then order it freely
+without causing any extra expenses to the good people behind
+this blessed initiative. Personally, I would feel much more at ease
+with ordering an e-mail version.
+
+(If you also make it available, in addition to an ASCII version,
+with Postscript codes, ready for a laser
+printer, I would not even have to print it myself - just send
+it to the central printer and get a high quality text.)
+
+Itamar Even-Zohar
+Porter Institute for Poetics and Semiotics
+Tel Aviv University
+=========================================================================
+Date:         Wed, 8 Aug 90 12:36:34 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      electronic copies of the TEI guidelines
+
+Several astute correspondents have justly observed the irony which
+inheres in the current plan of making the TEI Guidelines for
+*electronic* texts available only in *hardcopy* form.  We (I speak for
+my colleagues as well as myself, I know) are acutely aware of the irony
+ourselves, and plan to rectify it as soon as possible.  We are
+determined to do this, however, by making the TEI guidelines available
+in the form prescribed *by* the TEI guidelines.  The guidelines are not
+now, however, in the format they themselves prescribe, for the simple
+reason that they were not completed until they were finished.  They do
+use SGML, but not the TEI DTD, and we are unwilling to distribute them
+electronically in such a form, since that would seem inconsistent with
+the whole idea of the TEI as a standard interchange format.
+
+We hope to convert the electronic form of the Guidelines into TEI format
+sometime this fall; the text will then be available through Listserv and
+also through anonymous FTP, if we can get that set up.
+
+You'll hear about it here first, we promise.
+
+Further, to all those who have requested copies.  Many thanks for your
+interest; please be patient a couple of weeks while we work through the
+mailing list.  We will get them out as quickly as we can.
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Wed, 8 Aug 90 13:09:15 PLT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Guy L. Pace" <PACE@WSUVM1.BITNET>
+Subject:      Guidelines
+
+An electronic copy would be nice, if available.  Or, is there a copy
+via floppy disk for pcs?
+=========================================================================
+Date:         Wed, 8 Aug 90 14:11:14 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "William Gardner, PhD, Psychology/UVa,
+              804-924-0669" <WPG@VIRGINIA.BITNET>
+Subject:      Re: electronic copies of the TEI guidelines
+In-Reply-To:  U35395@uicvm.bitnet's message of Aug  8, 12:36
+
+(* On Aug  8, U35395@uicvm.bitnet writes re: "electronic copies of the TEI guide
+ * We are
+ * determined to do this, however, by making the TEI guidelines available
+ * in the form prescribed *by* the TEI guidelines.  The guidelines are not
+ * now, however, in the format they themselves prescribe, for the simple
+ * reason that they were not completed until they were finished.  They do
+ * use SGML, but not the TEI DTD, and we are unwilling to distribute them
+ * electronically in such a form, since that would seem inconsistent with
+ * the whole idea of the TEI as a standard interchange format.
+ *
+ * We hope to convert the electronic form of the Guidelines into TEI format
+ * sometime this fall; the text will then be available through Listserv and
+ * also through anonymous FTP, if we can get that set up.
+ *
+ *)
+
+You are following the right policy, and the irony is wonderful.  There
+is great precedent -- the first task of most optimizing compilers is to
+recompile themselves!
+
+--
+ [][][][][][][][][][][]   William Gardner  [][][][][][][][][][][][][][][]
+ []      /_   o / /   Department of Psychology     wpg@virginia.edu    []
+ []     /__) / / /     University of Virginia          804-924-0669    []
+ [][][][][][][][][]   Charlottesville, VA 22903    FAX:804-924-7185  [][]
+=========================================================================
+Date:         Tue, 21 Aug 90 13:40:42 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert Philip Weber <WEBER@HARVARDA.BITNET>
+Subject:      Re: electronic copies of the TEI guidelines
+In-Reply-To:  U35395@UICVM.BITNET message of Wed, 8 Aug 90 12:36:34 CDT
+
+while constency with the standards is highly desirable -- ascii
+compatible files available by FTP
+would (1) speed the electronic dissemination
+of the report, and (2) do so in a form that most most people can handle
+now, since few, if any, i suspect, will
+want to read through a lengthy report marked up in sgml.
+All the best.
+Bob Weber
+---------
+Robert Philip Weber, Ph.D.       | Phone: (617) 495-3744
+Senior Consultant                | Fax:   (617) 495-0500
+Academic and Planning Services   | Bitnet: weber@harvarda
+        Division                 | Internet: weber@harvarda.harvard.edu
+Office For Information Technology|           weber@world.std.com
+Harvard University               |-------------------------------------
+50 Church Street                 |
+Cambridge MA 02138               |Dylsexics untie! (-|
+=========================================================================
+Date:         Thu, 9 Aug 90 09:33:00 GMT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Despatching the Guidelines
+
+Further to my co-editor's recent posting, let me re-assure
+those fortunate enough to live in the Old World that the 'few
+weeks' delay to which Michael refers is applicable only to
+the New World. 127 (half of the edition size) copies of the
+Guidelines have been despatched to European destinations so
+far this week, and some feedback from UK recipients has
+already started to trickle back.
+
+Lou Burnard
+European Editor, TEI
+=========================================================================
+Date:         Fri, 17 Aug 90 10:46:03 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      Basics of the TEI, part 1:  design goals
+
+   This list has had a lot of recent subscriptions in response to the
+announcement that the TEI Guidelines are now available in draft form;
+TEI-L now goes to over 275 addresses.  The 600 pre-printed copies of the
+draft, which we originally thought might be a bit too many to get rid of
+in the year before version 2 is ready, may at this rate all be spoken
+for before the month of August is out.
+
+   We're happy about all the interest, because it suggests that many
+others agree with the organizers of the TEI that we need methods for
+text encoding suitable for multiple uses of the same texts, for exchange
+of texts among researchers and others interested, for languages other
+than English and scripts other than Latin, and which will work with all
+kinds of text, not only the most common.
+
+   This list should play a big role in the revision of the Guidelines,
+and to help get the relevant discussion started, it might be a good idea
+for the editors to discuss from time to time some of the background to
+the current draft -- a sort of TEI tutorial over the net.  This will, we
+hope, provoke some questions from participants in the list, and will
+lead over time to discussions of the many thorny technical and other
+issues involved with a project like this.  Much of what we say at the
+beginning may seem (or be) basic and uncontroversial, and those who like
+fireworks may wish we would jump right to the burning questions and get
+some arguments going.  It appears though that some of the noncontrover-
+sial basics are essential to even understanding some of the trickier
+burning questions, so we are going to go slow at first.  Anyone who
+wants to start a second thread on any burning issue of their choice may
+do so.
+
+   We count on the many participants in this list who are serving on the
+TEI working committees to jump in and amplify or supplement our account
+wherever you see fit.
+
+
+                          WHO IS THE TEI FOR?
+
+   Let's start with something fairly simple:  who is the TEI for and
+what are the basic goals?
+
+   The goals of the TEI are to define a format for encoding texts in a
+linear data stream which is suitable for the interchange of textual
+material between researchers, and to provide concrete recommendations,
+for those who can use them, as to what features of texts should usually
+be recorded.  As the letterhead puts it, the TEI is an "Initiative for
+Text Encoding Guidelines and a Common Interchange Format for Literary
+and Linguistic Data".  Note some non-obvious points:
+
+1.    The TEI came out of the community of those using computers to do
+      research on or with texts, and they are our primary constituency.
+      That is:  literary scholars, linguists, computational linguists,
+      historians, philosophers, theologians, philologists, people work-
+      ing on machine translation, ... you name it.  The publishing
+      industry, database vendors, software developers, and others with
+      commercial interests in electronic text are interested in the TEI,
+      and many are sharing their expertise with us, but they are not the
+      *primary* constituency.  If research and publishing were to turn
+      out to require different things, the TEI would go with the needs
+      of researchers.
+
+         It's important to note that this is mostly an imaginary issue:
+      so far the requirements of all these groups seem astonishingly
+      close to identical.  Very concretely:  I have not encountered a
+      single problem faced by humanists which does not have an analogue
+      in a problem faced by linguists, and one in a problem faced by
+      publishers or commercial database vendors.  And vice versa.  Some-
+      times the problems look different, but so far most differences
+      have proven superficial.  We believe that what will work for
+      researchers must work for other applications as well.  So in a
+      real sense, though researchers are the primary constituency, the
+      real intended constituency is everyone who works with electronic
+      text in *any* way, and wants to be able (a) to move the text from
+      system to system without information loss, or (b) to use the text
+      for more than one thing.
+
+2.    One major intended use for the Guidelines is as a specification
+      for an interchange format.  Transfer between researchers,
+      machines, programs, networks would use such a format very simply:
+      as a description of what my text will look like when it passes
+      from my hands to yours, or what I would like yours to look like
+      when yours reaches me.  An interchange format does not tell anyone
+      what to encode, any more than the ASCII code tells us how to write
+      novels or manuals.  What is encoded is the intellectual responsi-
+      bility of the researcher; no one can take that responsibility
+      away.
+
+3.    The other major intended use is as a guide for those encoding
+      texts for general use (and one hopes that that includes most of
+      those encoding texts).  The Guidelines should provide a sample set
+      of textual features that many people have found useful in textual
+      work, together with ways of encoding those features.  No one is
+      required to encode all those textual features, but the list should
+      (if we do our work right) be taken seriously as a checklist of
+      what the community as a whole tends to find useful.
+
+   Software developers should also benefit from the guidelines in both
+these ways:  as a definition of an export-import format (or as an inter-
+nal file format, if you wish!) *and* as a checklist of textual features
+commonly thought important.  I suppose many of us have seen software
+which suffered from its makers' sometimes unconsciously narrow concep-
+tion of the kinds of texts it would be used for -- the Guidelines should
+be useful as a sort of brain-storming, concept-broadening tool for
+developers.
+
+
+1.1   Basic requirements
+
+   The basic requirements for a text encoding scheme have been stated in
+the NEH proposals for TEI funding.  (Quick tip of the hat to the NEH,
+the EEC, and the Mellon Foundation for their funding.  Without them, it
+wouldn't be happening nearly as fast.)
+
+   An encoding scheme is any (systematic?) method of representing or
+encoding textual data in machine-readable form.  Typically, an encoding
+scheme must include:
+
+1.    methods for recording the characters in the text (including dia-
+      critics, special symbols, non-Roman alphabets, etc.)
+2.    conventions for rendering a text in a single linear sequence
+      (specifying how footnotes, end-notes, critical apparatus, parallel
+      texts, and other non-linear complications are handled)
+3.    methods for recording logical divisions of texts (e.g. book, chap-
+      ter, paragraph; act, scene, speech, line; ...)
+4.    methods for recording analytic information like literary or lin-
+      guistic analysis
+5.    conventions for delimiting in-line comments and other ancillary
+      material
+6.    conventions for identifying the text being encoded and those
+      responsible for encoding it
+
+   To create a single encoding scheme suitable for common use, the TEI
+first formulated (in the original planning conference in 1987 and in
+working papers since) the following requirements for the scheme to be
+developed:
+
+1.    It should specify a common interchange format.
+2.    It should provide a set of recommendations for encoding new textu-
+      al materials.
+3.    It should document the existing major schemes and investigate the
+      feasibility of developing a metalanguage in which to describe
+      them.
+4.    It must be a set of guidelines, not a set of rigid requirements.
+5.    It must be extensible.
+6.    It should be device- and software-independent.
+7.    It should be language-independent.
+8.    It should be application-independent.
+
+As design goals, it was specified that the guidelines should:
+
+1.    suffice to represent the textual features needed for research
+2.    be simple, clear, and concrete
+3.    be easy for researchers to use without special-purpose software
+4.    allow the rigorous definition and efficient processing of texts
+5.    provide for user-defined extensions
+6.    conform to existing and emergent standards
+
+   We can expatiate on these, if anyone isn't sure what we mean by
+them, but I won't here.
+
+   The current draft, be it noted, does *not* solve all these problems
+or wholly fulfill all of the design goals.  It wasn't expected to --
+some of the hard problems were intentionally saved for the second cycle.
+Here is my personal checklist of where we stand with respect to the
+goals listed above (which as you can tell from the overlaps were taken
+from different documents).
+
+*   The current draft (version 1.0) does specify both an interchange
+    format and recommendations, though perhaps not as explicitly as one
+    might have expected.  It may need to become more explicit in defin-
+    ing the interchange format.
+
+*   It does not document any existing encoding schemes, though work is
+    continuing on that topic.
+
+*   The metalanguage and syntax committee did consider the formulation
+    of a metalanguage for defining existing schemes, but decided against
+    it.  Descriptions will take the form of prose and of algorithms for
+    translating from a given scheme into the TEI scheme, using a variety
+    of existing software tools (e.g.  sed scripts, Rexx execs, Snobol
+    programs, or even yacc and lex code).
+
+*   It is certainly a set of guidelines rather than requirements, and
+    device- and software-independent.  It is also, however, not fully
+    implemented in software -- this has the advantage that the design is
+    not unduly biased by implementation issues, but it makes it hard to
+    demonstrate or validate the scheme.
+
+*   It is extensible, but the mechanisms for specifying extensions need
+    work to be usable without heavy-duty knowledge of SGML.
+
+*   It has no bias that we have consciously put there in favor of any
+    one language, but the TEI has not addressed, let alone solved, the
+    problems of languages other than those already most effectively cov-
+    ered by international data-processing standards.  The current draft
+    is silent on topics where people need the most guidance:  older
+    forms of languages not covered by ISO standards, Asian scripts,
+    treatment of bidirectional text (e.g.  Hebrew and English), and so
+    on.  We expect to work on these in the next two years, but for some
+    issues there is little we can do but document and call attention to
+    existing methods of handling these problems (e.g.  ISO 10646 or the
+    Unicode effort -- two unfortunately incompatible approaches to han-
+    dling Chinese and other Asian scripts).
+
+*   It does provide what we think is an adequate *basis* for handling
+    all the known needs of research; it probably needs extension in many
+    areas to provide not just the *basis* for the required solutions,
+    but some version of the solutions themselves.
+
+*   It's as simple and clear as we could make it, but we expect to hear
+    about lots of obscurities in the draft.  (Let's say it again--please
+    let us know if there are things that aren't clear!)
+
+*   It can be used without special software, at least at the simpler
+    levels.  A lot of work is needed, however, before we have something
+    we can hand to the average literary scholar who uses Nota Bene or
+    Word Perfect or Microsoft Word and wants to create a TEI-conformant
+    file.  (Volunteer macro-writers sought!)
+
+*   So far, at least, the Guidelines can be used as specified in the ISO
+    standard which defines SGML.  There are some technical reasons which
+    mean that the TEI guidelines may not be definable as a "conforming
+    application" of SGML -- these mostly relate to syntactic freedoms of
+    SGML which are forbidden by the current version of the Guidelines.
+
+   That's it for the basic goals of the TEI.  Coming up:  discussions of
+SGML basics, the TEI tags for core structural features, other core tags
+in the TEI scheme, and character-set issues.  After that, we should be
+able to raise some of the more advanced questions.
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Tue, 21 Aug 90 15:00:46 -0400
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      Away from the office from 13 August to 1 September
+
+I will be in Europe, and it will be difficult to reach me.  Contact my
+secretary Elaine Molchan at em@flash.bellcore.com or (+1-201)829-4594
+for urgent matters.
+
+If you are inquiring about the Workshop on Textual and Lexical Resources
+at COLING-90, it will be held from 9-12 on Sunday, 19 August, in
+Auditorium PIV, Porthania Building, University of Helsinki Hallituskatu 11.
+Everyone is welcome.  I hope to be able to provide more information
+about it when I return.
+
+Don Walker
+=========================================================================
+Date:         Wed, 22 Aug 90 10:21:10 bst
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         P.Burnhill@EDINBURGH.AC.UK
+Subject:      Re: electronic copies of the TEI guidelines
+In-Reply-To:  Your message <sent 21 Aug 90 13:40:42 CDT via EARN>
+
+I agree with Bob Weber.  Let the whatever not be the enemy of the
+whatisname.
+
+\well done
+
+Peter Burnhill
+=========================================================================
+Date:         Wed, 22 Aug 90 10:22:06 bst
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         P.Burnhill@EDINBURGH.AC.UK
+Subject:      Re: Despatching the Guidelines
+In-Reply-To:  Your message <sent 9 Aug 90 09:33:00 GMT via EARN>
+
+Lou, may I have a copy please.
+
+Peter
+=========================================================================
+Date:         Wed, 22 Aug 90 22:49:49 MDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Alan K. Melby" <MELBY@BYUVM.BITNET>
+Subject:      Re: Guidelines available, at last
+In-Reply-To:  Message of Tue, 7 Aug 90 17:18:50 CDT from <U35395@UICVM>
+
+We here at the BYU TRG would like to get a copy of the guidelines while they ar
+e still available.  Our address is
+
+2129 Jesse Knight Humanities Building, Provo UT  84602.
+I originally think we requested one, but I am not sure if you got the message o
+r not.
+
+Thank you very much for you help in what must be the difficult task of sending
+guidelines out to SGML folks all over both the old and new worlds.
+
+Alan K. Melby

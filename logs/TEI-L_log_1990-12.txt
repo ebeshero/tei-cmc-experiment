@@ -1,0 +1,1127 @@
+=========================================================================
+Date:         Sat, 1 Dec 90 13:13:44 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Allen Renear, CIS,
+              Brown Univ. 401-863-7312" <ALLEN@BROWNVM.BITNET>
+Subject:      Re: presentational markup
+
+1) I think Ristow and Amsler are right: a specification of standard
+   presentational markup for TEI tags would be a good thing.
+
+2) However, preparing such a specification will be no small matter.
+   I doubt if the TEI could do it without extending its schedule and
+   receiving increased funding.
+
+3) A formatting specification itself requires a standard declarative
+   language.  The problems in developing such a language are
+   considerable.  Fortunately there is one already under development
+   in ISO/IEC JTC1/SC18 WG8.  It is DP10179: Document Style
+   Semantics and Specification Language (DSSL).  Can anyone
+   on this list comment authoritatively on DSSL?
+=========================================================================
+Date:         Mon, 3 Dec 90 14:41:00 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Jean Veronis <VERONIS@VASSAR.BITNET>
+Subject:      Accents and character sets
+
+Dear Colleagues,
+
+A question has been posted on my list (LN@FRMOP11.BITNET, a primarily
+French-speaking list in Computational Linguistics), concerning the encoding of
+accents in French. I tried to read the TEI guidelines for an answer, but I
+found it difficult to understand what the answer is. I have the feeling that
+you can in the end use any "standard" character set, provided it is properly
+declared, but it is recommended not to do that, and use entities like &eacute;
+etc. Am I correct in my interpretation?
+
+If I am right, a French text would look like this:
+
+La linguistique informatique mod&eacute;lise les ph&egrave;nom&egrave;nes
+li&eacute;s &agrave; l'interpr&eacute;tation et &agrave; la production du
+langage, de mani&egrave;re &agrave; etc.
+
+I am not sure I'll be able to sell this to many of my subscribers...
+
+Who could provide a nice, simple, straightforward and tutorial explanation of
+the accent problem and its TEI solution?
+
+Thanks,
+Jean Veronis
+=========================================================================
+Date:         Mon, 3 Dec 90 16:23:23 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      French characters, other 'special' characters
+
+Jean Veronis adverts to a vexed problem of long standing, and one for
+which the TEI does provide what I think is a good solution, which is in
+fact documented in the current draft of the guidelines, though perhaps
+not as clearly as it ought to be.  This note, too, will not be the clear
+short tutorial JV asks for -- clarity, brevity, and accuracy oppose each
+other fiercely when character sets come up.  But I can at least describe
+the TEI version 1.0 solution and why it is what it is.
+
+The background to the problems of French and other national characters
+as well as other 'special' characters, is described in section 3.1 of
+the guidelines, in particular 3.1.5 (problems in using any existing
+character set for interchange) and 3.1.7 (methods now in use in various
+schemes for representing characters not present in a given character set
+or subset).
+
+The specific character-set recommendations of the TEI in the current
+draft (version 1.1 -- this is unchanged from 1.0) are in section 3.2,
+and the specific passage Jean Veronis is looking for is in sections
+3.2.2 and 3.2.3.  These say that for the present, at least, only
+characters in the "ISO 646 subset" should be used for interchange of
+documents intended to be fully TEI-conformant, and that SGML entity
+references or a transliteration scheme should be used to represent any
+characters of the text not present in the ISO 646 subset.
+
+The list of standard character sets is not now connected to the rules
+for TEI-conformant interchange, because in real life the sender and
+receive do not control the mechanisms of their interchange and so cannot
+guarantee that standard sets will arrive in a usable state.  Writing
+System Declarations will be prepared for the standard and commonly used
+character sets listed, and so will not need to be prepared by
+individuals, but at present the only use of the writing system
+declaration is to document a character set whether used locally or in
+interchange, and to drive a packing/unpacking process which will replace
+characters which don't travel well with corresponding entity
+declarations, or replace entity declarations with the proper local
+characters.  The draft does say that the WSD is not integrated into
+the DTDs yet; it doesn't talk about driving the packer/unpacker.
+
+The ISO 646 subset contains the following (non-national) characters
+which do not commonly cause misinterpretation of the data when shipped
+across networks, from ASCII to EBCDIC machines or vice versa, or across
+national boundaries:
+
+    a b c d e f g h i j k l m n o p q r s t u v w x y z
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+    0 1 2 3 4 5 6 7 8 9
+    " % & ' ( ) * + , - . / : ; < = > ? _
+
+and space.
+
+Transliteration schemes like the Beta code of the Thesaurus Linguae
+Graecae are thus legal in interchange (if they transcribe into the ISO
+646 subset), but for French it is far better to use the publicly
+documented SGML entities of ISO 8879, section D.4.  These are what Jean
+Veronis uses in his sample, and fears he will not be able to sell
+people:  &eacute; for e with acute, etc.
+
+If I were trying to sell this solution to people, I would make the
+following points, not necessarily in this order:
+
+1 this is for interchange, *not* for local processing:  I would look at
+Jean's last name as V)ronis on my screen locally, not as 'Veronis' or
+'V&eacute;ronis' or V\'eronis, and change to the interchange form just
+before the data left my CPU to go to the network.  The recipient might
+well translate from the interchange form into whatever local form is
+desired, before even looking at the file.
+
+2 this *works* for interchange, which is more than can be said for many
+other possible approaches.  If I sent a file containing JV's example, it
+would arrive anywhere on this net in readable form.  If I sent the same
+file containing the characters in the proper form for display on my
+system, it would look like real French when it left me, but like this
+when it arrived on your system -- and while I don't know exactly what
+this will look like, I am willing to bet no one on this list will see
+the accents as they should be (unless we have a few cross-subscribers from
+the ISO8859 list):
+
+    La linguistique informatique mod)lise les ph$nom$nes
+    li)s N l'interpr)tation et N la production du
+    langage, de mani$re N etc.
+
+Among the techniques which don't work well for interchange are
+
+    - using an existing 8-bit character set's representation
+      of the characters.  IBM PCs use character 82 (hex) or 130
+      (decimal) for e-acute, but this typically arrives after net
+      transfer as character 02, which is a control character and
+      might have unexpected results.  The Mac uses 8E for this
+      character, which may arrive as 0E (14), another control
+      character, this one dangerous because it means 'switch
+      to alternate character set'.  Even if they arrive as 82 or 8E,
+      these characters are unlikely to be understood correctly on
+      a different machine without documentation of the source
+      character set, which is not standard in file transfer today.
+      IBM mainframes use, some of them, the codes I sent above.
+      The network software seldom knows about these ...
+    - using the French standard 7-bit character set or its EBCDIC
+      equivalent.  This will often arrive unmolested, even after
+      ASCII-EBCDIC translation, but not if the text crosses a
+      national boundary.  How many readers outside of France
+      recognize JV's name in the string "V{ronis"?
+      (In some countries, this string will be clearly not quite right.
+      In others, the e-acute will have been replaced with some other
+      possible vowel, and the error will be hard to detect.)
+    - using commonly defined but not *standard* solutions like TeX's
+      codes -- backslash is a national character, which does not
+      always cross national boundaries, and does not always cross
+      ASCII/EBCDIC boundaries safely either.  Also, doubly delimited
+      strings like SGML entity references are less ambiguous and
+      thus safer than half-delimited strings like TeX codes.
+
+3 Because the entity names of ISO 8879 D.4 are long and cumbersome, we
+can subsitute shorter names for them if we wish, by making appropriate
+declarations in our document type declaration.  (The current draft of
+the guidelines doesn't go into this, in part because we're not sure how
+great an idea this is.  The Oxford version of the DOE corpus of Old
+English, however, does use its own entity names for eth, thorn, etc.
+rather than keeping the long and cumbersome ones defined in ISO 8879.)
+
+4 Because the SGML entity reference is a general-purpose tool, it is
+not optimized for French.  That makes it seem clumsy.  It also ensures
+that unlike many other tools it will not conflict with solutions for
+German, Danish, and Spanish, or even with solutions for Greek, Cyrillic,
+and Hebrew.
+
+Once again now:
+
+    - Interchange, not necessarily local processing.
+    - Entity references work, and few alternatives do.
+    - Entities can be made less cumbersome whenever it pays to do so.
+    - Entities are a general-purpose tool.
+
+Of these, the most important, I think, is that the solution provided
+works and works reliably with every network connection or other method
+of file transfer now known to me or to anyone on the character set
+group.
+
+I should also point out that the issue of character handling has had
+some of the most thoughtful and voluminous commentary thus far received,
+and the work group on character sets may well decide eventually to
+change the rules for 'TEI-conformant' interchange to allow eight-bit
+interchange, and separate the ISO 646 subset or some similar mechanism
+into a separate recommendation for cases where the network is unknown or
+is known not to support eight-bit data transfer.  Those with opinions
+would do well to make them known to this list or to the head of the work
+group, Harry Gaylord (galiard @ let.rug.nl).
+
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Mon, 3 Dec 90 22:49:41 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         KRAFT@PENNDRLS.BITNET
+Subject:      Klivanski Project Update
+
+                                                                       
+    Hello!
+
+    I am writing this as a short update on the progress of my dictionary
+    project.  As of today I have a series of programs capable of
+    translating the GNTDICT into a TEI conforming format.  A short sample
+    of the final format is included after this note.  The programs seem
+    to perform smoothly overall, although they are not intelligent enough
+    to take care of inconsistencies in the original dictionary.  The
+    change in size of the two formats is significant, but not unexpected.
+    When transforming the sample, it changed from about 17.5KB to about
+    81.5KB.
+
+    I am currently working on a parser/compiler for the TEI dictionary.
+    When completed it should be able to read in a TEI conforming
+    dictionary, transform it to a compact form, and build tables to allow
+    fast retrieval of the desired entry.  I am hoping to make significant
+    progress on this next phase of the project by the end of the Fall
+    semester.
+
+    Thanks for your time and attention.
+
+    Steve
+
+----------------------------(ENCLOSURES)-------------------------------
+
+
+<entry id=1>
+ <form>
+  <orth><gphrase lang=greek>A<\orth>
+ <\form>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <\gphrase><gloss>alpha <\gloss>(first letter of the Greek alphabet)
+  <\descrip>
+ <\sense>
+ <sense>
+  <sn>2<\sn>
+  <descrip>
+    <gloss>first <\gloss>(in titles of NT writings)
+  <\descrip>
+ <\sense>
+<\entry>
+
+<entry id=2>
+ <form>
+  <orth><gphrase lang=greek>*)AARW/N<\orth>
+ <\form>
+ <pos>
+  <\gphrase>m
+ <\pos>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <gloss>Aaron
+  <\descrip>
+ <\sense>
+<\gloss><\entry>
+
+<entry id=3>
+ <form>
+  <orth><gphrase lang=greek>*)ABADDW/N<\orth>
+ <\form>
+ <pos>
+  <\gphrase>m
+ <\pos>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <gloss>Abaddon, Destroyer <\gloss>(Hebrew name of a demon transliterated int
+  <\descrip>
+ <\sense>
+<\entry>
+
+<entry id=4>
+ <form>
+  <orth><gphrase lang=greek>A)BARH/S<\orth>
+  <affix>E/S<\affix>
+ <\form>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <\gphrase><gloss>of no <\gloss>(financial) <gloss>burden
+  <\descrip>
+ <\sense>
+<\gloss><\entry>
+
+<entry id=5>
+ <form>
+  <orth><gphrase lang=greek>ABBA<\orth>
+ <\form>
+ <pos>
+  <\gphrase>m
+ <\pos>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <gloss>Father <\gloss>(of address to God) (Aramaic word)
+  <\descrip>
+ <\sense>
+<\entry>
+
+<entry id=6>
+ <form>
+  <orth><gphrase lang=greek>*)/ABEL<\orth>
+ <\form>
+ <pos>
+  <\gphrase>m
+ <\pos>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <gloss>Abel
+  <\descrip>
+ <\sense>
+<\gloss><\entry>
+
+<entry id=7>
+ <form>
+  <orth><gphrase lang=greek>*)ABIA/<\orth>
+ <\form>
+ <pos>
+  <\gphrase>m
+ <\pos>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <gloss>Abijah: <\gloss>(1) person in the genealogy of Jesus (Mt  1.7)
+  <\descrip>
+ <\sense>
+ <sense>
+  <sn>2<\sn>
+  <descrip>
+    (2) founder of a tribe of priests (Lk 1.5)
+  <\descrip>
+ <\sense>
+<\entry>
+=========================================================================
+Date:         Tue, 4 Dec 90 08:50:12 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         David Megginson <MEGGIN@VM.EPAS.UTORONTO.CA>
+Subject:      Translating into and out of TEI
+In-Reply-To:  Message of Mon, 3 Dec 90 22:49:41 CST from <KRAFT@PENNDRLS>
+
+Since versions of sed (Stream EDitor) are available for nearly every
+type of computer system, usually for free, perhaps sed scripts for
+conversion into and out of TEI format would be a good, general
+contribution to the people on this list. If we write too many machine-
+specific translation programs, the Mac users, the MeSsyDOS users, the
+Unix users, the VAX users, the Amiga users, the Atari ST users, the
+Sinclair users ... in short, _someone_ will always be left out. Barring
+sed scripts, awk scripts would be a good second choice, since gawk
+(Gnu AWK) has also been ported to most CPUs, and is also free.
+
+
+David Megginson
+meggin@vm.epas.utoronto.ca
+david@doe.utoronto.ca
+=========================================================================
+Date:         Tue, 4 Dec 90 09:58:00 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         FZINN@OBERLIN.BITNET
+Subject:      Re: Translating into and out of TEI
+
+Perhaps David Megginson could say a few more things about sed (Stream EDitor),
+especially concerning sources for obtaining it, support for use, and the like.
+Grover Zinn
+FZINN@OBERLIN
+=========================================================================
+Date:         Tue, 4 Dec 90 07:52:25 PST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Jack Armstrong <jacka@IAG.HP.COM>
+Subject:      Please remove me
+In-Reply-To:  <9011130506.AA11146@iag.hp.com>; from "Michael Sperberg-McQueen
+              312 996-2477 -2981" at Nov 12, 90 3:01 pm
+
+Please remove me from this discussion list.  Sorry, I just don't have time
+to wade through the unrelated verbage to dig out information relevant to
+SGML and it's application.  Too bad, because I'll miss the occasional gem,
+but I'm finding it difficult to find my regular mail embedded within TEI
+bantering.
+
+Jack C. Armstrong
+Information Architecture Group
+Hewlett Packard
+jacka@kenzo.HP.COM
+=========================================================================
+Date:         Tue, 4 Dec 90 16:40:29 +0100
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Erik Naggum <erik@NAGGUM.UU.NO>
+Subject:      Re:  Translating into and out of TEI
+In-Reply-To:  <9012041454.AAaun02633@aun.uninett.no>
+
+David Megginson suggests using sed or awk or ports thereof to translate
+into and out of TEI.  While this has its commendable sides, there are a
+few trouble spots that are quite annoying even outside of TEI needs:
+
+(1) The length of lines are restricted in both sed and awk.
+(2) Both sed and awk operate on lines, which makes some parts of SGML
+    very difficult to describe and handle efficiently, and correctly.
+(3) Neither handles 8-bit data very cleanly, be it binary or 8-bit text.
+(4) Neither handles arbitrary binary data with context sensitive meaning,
+    such as found in many proprietary text representation systems.
+(5) Both sed and awk are easy to use for simple tasks, but complex
+    problems get exponentially more complex to solve with sed, less so
+    with awk.
+(6) Both sed and awk are regular expression based.  Regexps are powerful
+    yet get complex once you leave the character-orientation they have.
+    SGML is not character-oriented, but token-oriented, and use regular
+    expressions on tokens in the syntax.  This can get arbitrarily
+    complex to represent in a character-based regular expression engine.
+
+This is not to deride the value of awk or sed.  I use awk to process
+(not validate) simple SGML documents such as invoices and business
+letters.  I even used awk and sed to format and print an SGML document,
+from SGML input to laser printer driving code output.  It can be done,
+but it usually requires multiple steps of sed and awk, and care must
+be taken to "layer" the operations correctly so you handle everything.
+Intermediate steps have to be designed.  It's often easier to write up
+something which builds on an SGML parser.  There are a few SGML parsers
+in the public domain, as well.  NIST comes to mind.
+
+Apropos on the topic of computer representations of text, I got a
+chance to air my frustration with Macs today when talking to a graphic
+designer and a typographer.  They were so happy someone in the computer
+business knew about typography and knew it was an artform you must
+learn to master, not something which could spring out of a computer as
+if it was instant knowledge.  I got to plug SGML, telling them that
+computer people could work with information, as they know, and the
+typographers could work with the presentation, as they know, stressing
+that each requires special knowledge, and that they could meet in a
+language designed to separate the two.  I think I got two new friends.
+
+[Erik Naggum]
+Naggum Software, Oslo, Norway
+=========================================================================
+Date:         Tue, 4 Dec 90 11:54:49 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: Klivanski Project Update
+
+There is something wrong with the first entry's balancing.
+i.e., the GPHRASE tag doesn't nest inside the ORTH and FORM tags,
+but instead ends after the DESCRIP begins? Is this an automated
+conversion program bug? It is illegal SGML.
+
+<entry id=1>
+ <form>
+  <orth><gphrase lang=greek>A<\orth>
+ <\form>
+ <sense>
+  <sn>1<\sn>
+  <descrip>
+    <\gphrase><gloss>alpha <\gloss>(first letter of the Greek alphabet)
+  <\descrip>
+ <\sense>
+ <sense>
+  <sn>2<\sn>
+  <descrip>
+    <gloss>first <\gloss>(in titles of NT writings)
+  <\descrip>
+ <\sense>
+<\entry>
+=========================================================================
+Date:         Tue, 4 Dec 90 15:25:01 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      entity names
+
+Postscript to my note on entity references.  I did not point out, as
+perhaps I should have, that there have been some proposals in comments
+on the TEI draft to use entity references for character set extension,
+but to substitute other names (e.g. the standard identifiers used in ISO
+6937 or ISO DIS (? or is it still DP?) 10646.  I won't detain everyone
+with an explanation of what these are, beyond saying they typically have
+the advantages of having names for *lots* of characters and often being
+shorter than the names of entities provided in ISO 8879, together with
+the disadvantage of being almost wholly opaque in their meaning.  (The
+entity &eacute; designates letter LE11, &egrave; is LE13, etc.)
+Recent reports also have it that the status of these 'short
+identifiers' is in doubt for ISO 10646.  Those interested should
+subscribe to the lists ISO8859 and ISO10646 at JHUVM, where full
+technical details can be aired.
+
+Like all formal comments on the draft, the proposal to use the 'short
+identifiers' as entity names in TEI texts will receive formal
+consideration by the responsible work group during the current cycle of
+revision and extension.  At the moment, the work group is in transition
+and has taken no position on this subject, but it will do so before the
+end of this academic year, I hope.
+
+I report this here because the suggestion might have a significant
+effect on the external appearance, at least, of the mechanism I
+described in my last note, and because it provides a chance to urge
+*all* those with an interest in improving the Guidelines to file formal
+comments and suggestions.  They will be considered, they will receive
+formal and public replies, and if you have an interest in seeing the TEI
+guidelines be useful, but do not participate in making them so, you will
+have only yourself to blame for the flaws you could have corrected.
+
+-C. M. Sperberg-McQueen
+=========================================================================
+Date:         Tue, 4 Dec 90 20:34:00 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Jean Veronis <VERONIS@VASSAR.BITNET>
+Subject:      ISO 646 & networks
+
+In his very helpful note on "French characters and other 'special' characters"
+MSMcQ says:
+
+>If I sent a file containing JV's example, [with accents coded by SGML entities
+>and using only ISO 646 characters, if I understand correctly] it would arrive
+>anywhere on this net in readable form.
+
+This raises another, related, question. Obviously, such a format would be much
+safer, but there is still no guarantee that the file received at the other end
+will be correct.
+
+Networks have a strange behavior with (at least):
+
+(1) lines longer than 80 characters (which are typically truncated, or wrapped);
+(2) spaces at the end of lines (which are typically stripped off).
+
+The result of (1) is that you can't send most texts in their original form.
+You have to process them (or let the network do it in its own way) to make sure
+that lines are < 80 character long.
+
+A reasonable way to do that is to break between words, as close as possible to
+the 80th character. But this means that there is usually a space or punctuation
+at the end of the line. This space can very well be lost by virtue of (2)
+above. Worse if there were several spaces. Worse if the text is not just
+composed of "words", but contains various markup and interpretational material.
+
+Therefore, when the receiver tries to rebuild the text, s/he has to reassemble
+the lines, and I am not sure that re-inserting systematically a space is a good
+idea, since it may cause other problems, by separating things which which were
+not separated in the original text. Also, mutiple spaces would be reduced to
+one.
+
+In fact, for these very reasons, texts encoded in the Microsoft Word's RTF
+format do not travel very well (without more processing) over the networks,
+although the character set is quite close to ISO 646.
+
+The solution typically used by Macintosh users is to encode their texts not
+with RTF, but with BinHex, which ensures (1) that ISO 646 is respected, but
+also (2) that all transmitted lines are < 80 characters long, and (3) that no
+space is lost. --of course, only a Mac (as far as I know) can decode the text
+correctly at the other end. Uuencode/uudecode work in the rather similar way.
+
+Has this problem been discussed within the TEI? is there any TEI-conformant
+solution?
+
+As a corollary, using Sed or Awk, as suggested earlier on this list, would not
+be enough to ensure proper transmission (assumin that Sed and Awk would be
+appropriate--see Erik Naggum's note). You would need to (1) Sed or Awk your
+texts, (2) Binhex or uuencode them for transmission.
+
+
+Jean Veronis           veronis@vassar.bitnet   veronis@vassar.edu
+=========================================================================
+Date:         Tue, 4 Dec 90 20:37:34 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         David Megginson <MEGGIN@VM.EPAS.UTORONTO.CA>
+Subject:      Re: Translating into and out of TEI
+In-Reply-To:  Message of Tue, 4 Dec 90 09:58:00 EST from <FZINN@OBERLIN>
+
+I have the C source code for the Gnu version of sed, and I would be
+happy to mail it to anyone who would like it. There are, I think,
+several MSDOS binary versions, and at least one for the Atari ST. Check
+out your local BBS or archive site. For the Amiga, the best place to
+look would the the Fred Fish (??) collection of free software. If there
+is not a binary version for the Mac yet, a Mac user with Think C should
+be able to port the program in an evening. Finally, sed comes as
+standard issue with all Unix/Minix/Xenix etc. implementations.
+
+If you would like a copy, send me mail at my Unix account, NOT to the
+return address of this message.
+
+David Megginson
+Reply to: david@doe.utoronto.ca
+=========================================================================
+Date:         Tue, 4 Dec 90 22:37:00 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Jean Veronis <VERONIS@VASSAR.BITNET>
+Subject:      accents, entities and size of text
+
+I have heard at least two arguments against the SGML entities:
+
+(1) they expand texts in a prohibitive way;
+(2) they are difficult to read.
+
+To test the validity of the arguments, I just re-coded Maupassant's Menuet
+(French), and I thought that you might be interested in the results:
+
+Type of coding                           # chars    expansion
+--------------------------------------- --------- -----------
+Original text with accents coded
+in Macintosh set...........................9169............
+
+Text with SGML with accents coded
+with SGML-entities........................10593......115.5%
+
+Text with accents coded a` la TeX
+(e grave = \`e , etc.).....................9585......104.5%
+
+I tried the second one because many people working on French use some kind of
+home-made cooking of this kind. It seems to be the most compact ISO 646
+representation one can find without too many ambiguities to solve.
+
+The difference between this encoding and the supposedly very wasteful SGML
+entity-coding is not very big. Nothing like multiplying the size of the text by
+three or four. Therefore the first arguments doesn't hold (for French).
+
+As far as the second argument is concerned, I have of course heard many times
+the counter-argument that this type of encoding is not intended to be read by
+humans, but should just serve the purpose of transmission. Unfortunately, most
+people I know who work on French deal with these things at one time or another,
+simply because nobody has yet the software to do all the necessary conversion.
+This speaks strongly for the development of public domain software to perform
+these tasks--I have the feeling that the success of the TEI depends in large
+part of the availaibility of such software for free, or cheap.
+
+Anyway, just for a test, here are the SGML and TeX-like versions of the same
+fragment.
+
+J' ai cinquante ans. J' &eacute;tais jeune alors et j' &eacute;tudiais le
+droit. Un peu triste, un peu r&ecirc;veur, impr&eacute;gn&eacute; d' une
+philosophie m&eacute;lancolique, je n' aimais gu&egrave;re les caf&eacute;s
+bruyants, les camarades braillards, ni les filles stupides. Je me levais
+t&ocirc;t; et une de mes plus ch&egrave;res volupt&eacute;s &eacute;tait de me
+promener seul, vers huit heures du matin, dans la p&eacute;pini&egrave;re du
+Luxembourg.
+
+J' ai cinquante ans. J' \'etais jeune alors et j' \'etudiais le droit. Un peu
+triste, un peu r\^eveur, impr\'egn\'e d' une philosophie m\'elancolique, je n'
+aimais gu\`ere les caf\'es bruyants, les camarades braillards, ni les filles
+stupides. Je me levais t\^ot; et une de mes plus ch\`eres volupt\'es \'etait de
+me promener seul, vers huit heures du matin, dans la p\'epini\`ere du
+Luxembourg.
+
+The second one is probably easier to read, but not really wonderful either.
+=========================================================================
+Date:         Wed, 5 Dec 90 10:20:55 SET
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Eric van Herwijnen <ERIC@CERNVM.BITNET>
+Subject:      Re:  Translating into and out of TEI
+In-Reply-To:  Message of Tue, 4 Dec 90 16:40:29 +0100 from <erik@NAGGUM.UU.NO>
+
+You are about to invent Software Exoterica's Xtran....
+=========================================================================
+Date:         Wed, 5 Dec 90 10:23:35 SET
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Eric van Herwijnen <ERIC@CERNVM.BITNET>
+Subject:      Re: accents, entities and size of text
+In-Reply-To:  Message of Tue, 4 Dec 90 22:37:00 EST from <VERONIS@VASSAR>
+
+I completely agree. The space requirements for keeping text in SGML
+compared to say, producing PostScript output are negligible.
+=========================================================================
+Date:         Wed, 5 Dec 90 13:18:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         C O/ DUIBHI/N <ADIE1643@VAX1.CENTRE.QUEENS-BELFAST.AC.UK>
+Subject:      RE: French characters, other 'special' characters
+
+Michael Sperberg-McQueen comments correctly that "among the techniques which
+don't work well for interchange are... using an existing 8-bit character set's
+representation of the characters".
+
+It may be of marginal interest to note that the public domain file transfer
+program Kermit uses (since version 3, I think) the ISO8859-1 character set,
+and will do its best to translate to ISO8859-1 at the sending end and from
+ISO8859-1 at the receiving end. Thus, any character which is common to the
+sender's and receiver's character set and to ISO8859-1 should go through
+alright, and the particularly horrific examples given will be avoided.
+
+I very much hope that the situation will rapidly progress to the point where
+manufacturers will offer ISO8859-1 as standard, and TEI can then recommend
+it instead of a restricted ASCII, which admittedly is all that we can be
+sure of at the moment.
+
+Ciara/n O/ Duibhi/n.
+=========================================================================
+Date:         Wed, 5 Dec 90 14:18:00 +0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Pierre Isabelle <isabelle@CCRIT.DOC.CA>
+Subject:      TEI List
+
+SUB Pierre Isabelle
+=========================================================================
+Date:         Wed, 5 Dec 90 22:21:21 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      SGML, ACADEMIC USES, STUDIED AT EXETER
+
+University of Exeter SGML Project
+
+Paul A. Ellison
+University of Exeter Computer Unit
+Mathematics and Geology Building
+North Park Road
+Exeter EX4 4QE
+UNITED KINGDOM
+Tel: +44 392-263951
+Tel: +44 392-263939
+FAX: +44 392-211630
+Email (JANET): ellison@exeter.ac.uk
+
+In November, 1990, a two-year project was awarded by the UK Computer
+Board for Universities and Research Councils to the University of Exeter
+to evaluate SGML products for use in UK Universities and Research
+Council establishments.  When appointed, the project staff will be
+located within the University's Computer Unit and the project will be
+directed by Paul Ellison, a member of the relevant ISO working committee
+and a long-time proponent of SGML.  The aims of the project are:
+
+(1) to investigate commercial products and review them for possible use
+    in the UK Academia
+(2) to investigate the current use of SGML within and without Academia
+(3) to assess possible requirements for SGML systems in UK Academia
+(4) to investigate the required utilities (e.g., editors, translators,
+    formatters) and make recommendations concerning possible acquisition
+(5) to define, in consultation with academic users, a vocabulary of
+    element and entity names and develop general Document Type
+    Definitions (DTDs)
+(6) to maintain a library of DTDs
+(7) to function as a center for information on the use of SGML
+(8) to cooperate with AGOCG (the Advisory Group on Computer Graphics) in
+    increasing the awareness of SGML in Academia
+
+The project was first proposed within the context of an AGOCG-sponsored
+workshop on the use of SGML in UK universities; see Advisory Group on
+Computer Graphics [edited by Anne Mumford], Document Exchange: The Use
+of SGML in the UK Academic and Research Community. Workshop Proceedings
+5-7 March 1990. [The proceedings are available from the organizer: Anne
+M. Mumford, Computer Centre, Loughborough University, Loughborough LE11
+3TU, UNITED KINGDOM; Tel: 44 +509 222312; Fax: +44 392 211603; Email
+(JANET): ammumford@multics.lut.ac.uk.  See a full list of contributors
+and presentation-titles in "Document Exchange in UK Universities," SGML
+Users' Group Newsletter 17 (August 1990) 10.]  SGML was one of the
+standards chosen by the AGOCG for structuring and distribution of
+university-related information containing graphics (research documents,
+teaching aids, view graphs).
+=========================================================================
+Date:         Thu, 6 Dec 90 11:15:00 MST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         ESLINGER@UNCAMULT.BITNET
+
+How does one unsubscribe to this list?  I've tried the "unsub" + name
+command but it fails.
+
+Thanks, LE.
+=========================================================================
+Date:         Wed, 12 Dec 90 11:23:34 GMT
+Reply-To:     Rosemary Rodd <RR25@PHOENIX.CAMBRIDGE.AC.UK>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Rosemary Rodd <RR25@PHOENIX.CAMBRIDGE.AC.UK>
+Subject:      Text Encoding Initiative
+
+Could we be sent a copy of the Guidelines for the Encoding and
+Interchange of Electronic Texts.
+Thank you
+Rosemary Rodd
+=========================================================================
+Date:         Wed, 12 Dec 90 12:12:31 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         DEL2@PHOENIX.CAMBRIDGE.AC.UK
+Subject:      Re: [Text Encoding Initiative]
+In-Reply-To:  -unspecified-
+
+You will all have received a request for the TEI guidelines,
+and perhaps like me muttered 'why can't people distinguish
+between a listserver, a list administrator and the list itself?'
+Don't blame Rosemary Rodd, she was only doing what the header to
+a text provided by the OTA told her to!
+=========================================================================
+Date:         Wed, 12 Dec 90 15:13:51 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      TEI document type declarations posted
+
+This is to announce that the TEI document type declarations, as
+corrected for version 1.1 of the guidelines, are now available from the
+TEI-L server.  To retrieve a list of them (and all the other files
+available from the server) send the following request to LISTSERV at
+UICVM -- n.b. to listserv, not to tei-l:
+
+    get tei-l filelist
+
+To get an individual file, send the same basic request, but substitute
+the filename and filetype in question for 'tei-l' and 'filelist'.  Thus,
+to get TEI1 DTD (the one referred to in the text as 'TEI1.DTD'), send
+the request GET TEI1 DTD -- and so on.
+
+Several of the examples in the guidelines were also changed in version
+1.1, and we hope to get all of them posted soon as well, though they
+aren't on the server yet.
+
+The DTD files now on the server are:
+
+  TEI1     DTD  (the main file or 'driver file')
+  TEIHDR1  DTD  (defines the TEI header)
+  TEIWSD1  DTD  (defines the TEI writing system declaration)
+  TEIBASE1 DTD  (defines basic structural tags)
+  TEIFRON1 DTD  (defines front matter)
+  TEIBACK1 DTD  (defines back matter)
+  TEILOW1  DTD  (defines low-level tags)
+  TEICRYS1 DTD  (defines crystals)
+  TEILING1 DTD  (defines linguistic analysis tags)
+  TEIREND1 DTD  (defines rendition features)
+  TEIDRAM1 DTD  (defines basic structure for drama -- an alternative
+                 to TEIBASE1)
+  TEITC1   DTD  (defines text-critical apparatus tags)
+
+We will do our best to keep current versions on the server at all times;
+let us know if you discover problems, inconsistencies, etc.  in them.
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Sun, 16 Dec 90 21:58:05 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Buford Norman <N290024@UNIVSCVM.BITNET>
+Subject:      Re: accents, entities and size of text
+In-Reply-To:  Message of Tue, 4 Dec 90 22:37:00 EST from <VERONIS@VASSAR>
+
+Bonjour; heureux de vous "voir" aux USA.  Je n'ai pas de projets qui
+demandent toutes les complexites du TEI, mais cela m'interesse.  Je cherche
+toujours un programme qui fera des transcriptions phonetiques (en IPA) des
+tragedies de Racine.  Pour le moment, je me contente de mettre au point un
+programme qui trouve les exemples de hiatus.  C'est deja assez complique,
+donne les petites surprises de l'orthographe.  Ce serait tellement facile
+si j'avais les textes en IPA!
+=========================================================================
+Date:         Sun, 16 Dec 90 23:57:43 pst
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Bill Poser <poser@CRYSTALS.STANFORD.EDU>
+Subject:      Re: accents, entities and size of text
+
+Quelle domage que Racine n'ait pas su ecrire en IPA!
+=========================================================================
+Date:         Mon, 17 Dec 90 12:01:03 MET
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Harry Gaylord <galiard@LET.RUG.NL>
+Subject:      Re: IPA
+In-Reply-To:  <no.id>; from "Buford Norman" at Dec 16, 90 9:58 pm
+
+The working group on character codes and IPA members are working on setting
+up a character set for IPA and will distribute information on it as it
+becomes available.
+  You can see the work which the IPA workgroup on Computer Coding of IPA
+has already produced in Journal of the International Phonetic Assoc.
+19:2 (1989) and 20:1 (1990).
+Harry
+=========================================================================
+Date:         Mon, 17 Dec 90 10:10:30 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         David Megginson <MEGGIN@VM.EPAS.UTORONTO.CA>
+Subject:      Racine and automatic IPA transcription
+In-Reply-To:  Message of Sun, 16 Dec 90 21:58:05 EST from <N290024@UNIVSCVM>
+
+I am not familiar with the intricacies of French pronunciation in
+Racine's age, but I would be surprised if it were possible to
+transcribe Racine's written work into IPA automatically, even if the
+tools did exist. I know that (at least according to Koekeritz),
+the pronunciation of Shakespeare's words depends very much on the
+context, especially in the case of homonymic puns. TEI guidelines
+can help here -- perhaps you could mark any rustic, dialectal or
+foreign-accent passages (if there are any in Racine), so that an
+automatic transcription program could give them special treatment. In
+the end, however (and this conclusion applies to syntactic markup as
+well), TEI markup will probably continue to show the results of
+HUMAN analysis (this is a scene, this is an act, this is a clause, etc.)
+to help the COMPUTER with its work.
+
+
+
+David Megginson
+=========================================================================
+Date:         Mon, 17 Dec 90 14:39:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         C O/ DUIBHI/N <ADIE1643@VAX1.CENTRE.QUEENS-BELFAST.AC.UK>
+Subject:      Re: IPA
+
+I'm interested in computer representation of IPA, but I am not sure how
+immediately useful the work of the Workgroup will be. (I have JIPA 20:1
+beside me, but can't get 19:2 at present.)
+
+It looks to me as if the workgroup is producing an exhaustive list of
+symbols, in some kind of principled order, and assigning names and numbers
+to them. This is a big step forward, but I can't see any obvious and direct
+way to apply it on a computer: the numbering goes from 100 to 999, and gaps
+are left for future additions. What you need for a computer (at present) is
+a set of at most 256 symbols, numbered 0..255. Maybe the workgroup intends
+to produce one or more such sets as subsets of the whole repertoire, and
+get them ratified by ISO?
+
+Kieran Devine.
+(apologies for straying so far from the purpose of TEI-L!)
+=========================================================================
+Date:         Mon, 17 Dec 90 11:17:41 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Buford Norman <N290024@UNIVSCVM.BITNET>
+Subject:      Re: Racine and automatic IPA transcription
+In-Reply-To:  Message of Mon,
+              17 Dec 90 10:10:30 EST from <MEGGIN@VM.EPAS.UTORONTO.CA>
+
+Thanks for your note.  I would be happy with an IPA transcription into
+MODERN French.  Anything wuld help.
+=========================================================================
+Date:         Mon, 17 Dec 90 18:50:38 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      DYNATEXT AT ACADEMIC PRICE
+
+TEI-L members may be willing to overlook the marketing language in the
+following announcement upon reading that DynaText may be obtained
+"for an 80% discount off the standard list price" under qualifying
+conditions.  I hold no stock in the company, but obviously I think it's
+one of the most promising examples of "academic" SGML software (smart
+retrieval, dynamic display) currently available.
+
+Robin Cover
+
+======================================================================
+DynaText(tm) Academic Discount Program
+
+Providence, RI -- November 26, 1990
+
+Electronic Book Technologies, Inc. (EBT), is today announcing that
+DynaText, its Electronic Book Publishing System and Browser, will be
+made available to qualified research and academic organizations at a
+substantial discount.  The goal is to increase research activity and
+stimulate the formation of related standards in the application of ISO
+Standard Generalized Markup Language (SGML) for hypermedia publishing.
+
+"There is significant interest in using SGML as an effective means of
+electronic information delivery, especially within large industries such
+as Aircraft, Telecommunications and Government.  These industries will
+be looking to the research community for help and guidance as they begin
+to apply this technology to real world problems,"  said Louis R.
+Reynolds, EBT Founder/CEO. "Since the announcement of DynaText in August
+of 1990, EBT has had numerous requests from research organizations
+engaged in SGML encoding and electronic publishing activities.  In
+addition, EBTs close ties with Brown University's Institute for Research
+in Information and Scholarship (IRIS) have made us aware of the value of
+advanced hypertext research.  Therefore, we felt it was important to
+provide this community with access to DynaText at an affordable price,"
+Mr. Reynolds, concluded.
+
+In the short time it has been available, DynaText has been hailed by
+many as the 'missing link' or 'the first truly useful SGML application.'
+DynaText was specifically designed as a hypertext browser for large
+scale SGML documents. DynaText accepts valid SGML documents and
+automatically builds a dynamic table of contents that is used as one of
+the primary means of navigating through the material.  Unlike its
+printed counterpart, and like many high-end outline processors, this
+table of contents can be expanded and collapsed providing an appropriate
+level of detail for the reader.  Clicking on an item in this list
+automatically scrolls an associated text view of the document to the
+corresponding section.
+
+DynaText uses SGML tags to automatically generate hyperlinks to
+associated material such as diagrams, tables, and explicit cross
+references.  This allows readers to quickly reference related material
+through simple mouse clicks. DynaText is an open system that is not
+bound to any specific SGML tag set, and allows users to add their own
+link types/behavior through simple style sheet entries.  This mechanism
+can be employed by users who want to create dynamic multi-media
+documents.
+
+DynaText also builds a full text index of the SGML document and (unlike
+other indexers that simply report occurrences within an entire document)
+can report occurrences within SGML components.  This provides an
+unprecedented level of search precision that enables users to find terms
+within the relevant sections of the document quickly.  Wild cards and
+regular expressions can be used in conjunction with simple boolean
+queries, further increasing search power and eliminating the need for
+exact string matches.
+
+Qualified non-commercial research organizations that are willing to
+publish the results of their DynaText applications will be able to
+purchase the system for an 80% discount off the standard list price (or
+as low as $2,500).  DynaText is currently available for the SPARC family
+running Sun OS 4.1 and Xwindows and is planned for MSWindows 3.0 in the
+first half of 1991.
+
+EBT can be contacted for further information at the following address:
+
+In the U.S. :
+        Electronic Book Technologies, Inc.
+        One Richmond Square
+        Providence, RI  02906
+        Tel:(401) 421-9550,  Fax:(401) 421-9551
+
+In Europe:
+        EBT International
+        20, Pre de la Ferme
+        1261 Gingins, Switzerland
+        Tel: 41-22-69-24-24,  Fax:41-22-69-24-25
+
+Email:
+        ebt-inc!info@uunet.uu.net  (or)  lrr@iris.brown.edu
+=========================================================================
+Date:         Mon, 17 Dec 90 17:08:14 PST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Susan Stone <sstone@VIOLET.BERKELEY.EDU>
+
+GET TEI1 DTD
+=========================================================================
+Date:         Tue, 18 Dec 90 11:47:09 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Barry Shein <bzs@WORLD.STD.COM>
+Subject:      Re: DYNATEXT AT ACADEMIC PRICE
+
+In all fairness, ArborText's "Publisher" is another fairly mature
+SGML-oriented product. I wrote a review of it in Sun/Expert magazine a
+few months ago (there was some claim in that hype of being "first".)
+
+        -Barry Shein
+
+Software Tool & Die    | {xylogics,uunet}!world!bzs | bzs@world.std.com
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD

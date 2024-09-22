@@ -1,0 +1,847 @@
+=========================================================================
+Date:         Tue, 10 Jul 90 09:23:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      EP90 - conference announcement
+
+                      Electronic Publishing '90
+             Advance Program and Registration Information
+
+          International Conference on Electronic Publishing,
+                Document  Manipulation, and Typography
+
+                        September 18-20, 1990
+            National Institute of Standards and Technology
+                           Gaithersburg, MD
+
+About the conference
+
+EP90, "Electronic Publishing '90," is the third in a series of
+international conferences dedicated to all areas of electronic publishing,
+document manipulation, and digital typography.  Widely regarded as the
+premier forum for reporting new research developments in these fields, the
+EP conference series has attracted scientists and engineers from leading
+academic, research, and industrial organizations around the world.  The
+British Computer Society sponsored EP86, held in Nottingham, England and
+INRIA sponsored EP88, held in Nice, France.
+
+EP90 will be held at the National Institute of Standards and Technology
+(formerly the National Bureau of Standards) in Gaithersburg, Maryland, close
+to Washington, D. C., from Tuesday, September 18th through Thursday,
+September 20th, 1990.  An associated exhibition will provide an opportunity
+for participants to see commercial and research systems in action.
+
+A broad definition of electronic publishing is adopted to encompass all
+aspects of computer-assisted preparation, presentation, transmittal,
+storage, and retrieval of documents.  Topics include traditional paper-based
+documents; hypertexts and hypermedia; font design (both latin and non-latin
+alphabets); experience with structured document preparation systems; the
+intersection with and application of database systems and software
+engineering environments; the theoretical foundations for document models
+and systems; character, text and document recognition and manipulation;
+experience with standards; and documents with actively computed content.
+
+The proceedings of EP90 will be published by Cambridge University Press in
+its Electronic Publishing Series and a copy will be provided to each
+conference registrant.
+
+Sponsors
+
+EP90 Sponsor: National Institute of Standards and Technology
+
+EP90 Co-Sponsors: ArborText Inc., EPSIG/American Association of
+Publishers, INRIA, University of Maryland Institute for Advanced Computer
+Studies, Xerox Palo Alto Research Center
+
+In Co-operation With: Association for Computing Machinery, IEEE Computer
+Society Technical Committee on Office Automation, TeX Users Group
+
+
+Preliminary program
+
+Tuesday, September 18
+
+8:00- 9:00              Registration
+
+9:00- 9:30              Opening session/chaired by Peter King
+                        Welcome to NIST
+                        James H. Burrows (Director, NCSL, NIST)
+
+9:30-10:30              Keynote
+                        Issues and Tradeoffs in Document Preparation Systems
+                        Brian W. Kernighan (AT&T Bell Laboratories)
+
+10:30-11:00     Coffee break
+
+11:00-11:30     Invited paper
+                  Towards Document Engineering
+                  Vincent Quint (INRIA), Marc Nanard (CRIM),
+                        and Jacques Andre (INRIA)
+
+11:30-13:00     Paper session 1/chaired by Vincent Quint
+
+                        Managing Properties in a System of Cooperating Editors
+                        Donald D. Chamberlin
+                        (IBM Research Division, Almaden Research Center)
+
+                        A Logic Grammar Foundation for Document Representation
+                        and Document Layout
+                        Allen L. Brown, Jr. (Xerox Corporation, Webster
+                        Research Center) and Howard Blair (Syracuse University)
+
+                        Structured EditingHypertext Approach:  Cooperation
+                        and Complementarity
+                  Anne-Marie Vercoustre (INRIA)
+
+13:00-14:00     Lunch
+
+14:00-15:30     Paper session 2/chaired by Robert Morris
+
+                        An ODA Page Planner for Professional Publishing
+                        Giovanni Guardalben and Mose Giacomell (Hi.T Srl
+                        Ingegneria per la Microinformatica)
+
+                        flo: A Language forTypesetting Flowcharts
+                        Anthony P. Wolfman and Daniel M. Berry (Technion)
+
+                        Design of Hypermedia Publications: Issues and Solutions
+                        Paul Kahn, Julie Launhardt (Brown University),
+                        Krzysztof Lenk, and Ronnie Peters (Rhode Island School
+                        of Design)
+
+15:30-16:00     Coffee Break
+
+16:00-17:30     Paper session 3/chaired by Jan Walker
+
+                        Strengths and Weaknesses of Database Models for
+                        Textual Documents
+                        B. N. Rossiter (Newcastle University) and
+                        M. A. Heather (Newcastle Polytechnic)
+
+                  A Structured Document  Database System
+                        Pekka Kilpelainen, Greger Linden, Heikki Mannila,
+                        and Erja Nikunen (University of Helsinki)
+
+                  The Integration of Structured Documents into DBMS
+
+                        Jose Valdeni De Lima (Universidade Federal do
+                        Rio Grande do Sul) and Henri Galy (Laboratoire de Genie
+                        Informatique, IMAG)
+
+17:30-  Exhibition and Reception
+
+
+Wednesday, September 19
+
+9:30-10:00              Invited paper
+
+                        Electronic Publishing - Practice and Experience
+                        David F. Brailsford, David R. Evans
+                        (University of Nottingham), and
+                        Geeti Granger (John Wiley and Sons)
+
+10:00-11:00     Paper session 4/chaired by Peter Brown
+
+                        ADAPT:  Automated Document Analysis Processing and
+                        Tagging
+                        John Handley and Stuart Weibel
+                        (OCLC Online Computer Library Center, Inc.)
+
+                        Recognition Processing for Multilingual Documents
+                        A. Lawrence Spitz (Xerox Palo Alto Research Center)
+
+11:00-11:30     Coffee break
+
+11:30-13:00     Paper session 5/chaired by Richard Rubinstein
+
+                        Editing Images of Text
+                        Gary E. Kopec and Steven C. Bagley
+                        (Xerox Palo Alto Research Center)
+
+                        Automatic Generation of Gridfitting Hints for
+                        Rasterization of Outline Fonts or Graphics
+                        Sten F. Andler
+                        (IBM Research Division, Almaden Research Center)
+
+                        Chinese Fonts and their Digitization
+                        Y. S. Moon and T. Y. Shin
+                        (Chinese University of Hong Kong)
+
+13:00-14:00     Lunch
+
+14:00-15:00     Keynote address
+                        TBA
+
+15:00-18:30     Exhibition
+
+18:30-                  Banquet
+
+
+Thursday, September 20
+
+9:30-11:00      Paper session 6/chaired by Heather Brown
+
+                        The Role of a Descriptive Markup Language in the
+                        Creation of Interactive Multimedia Documents for
+                        Customized Electronic Delivery
+                        Gil C. Cruz and Thomas H. Judd (Bellcore)
+
+                        An Extensible, Object-Oriented System for
+                        Active Documents
+                        Paul M. English, Ethan Jacobson (Interleaf, Inc.),
+                        Robert A. Morris (University of Massachusetts at
+                        Boston), Kimbo B. Mundy, Stephen D. Pelletier,
+                        Thomas A. Polucci, and H. David Scarbro
+                        (Interleaf, Inc.)
+
+                        Documents as User Interfaces
+                        Eric A. Bier (Xerox Palo Alto Research Center) and
+                        Aaron Goodisman (Massachusetts Institute of Technology)
+
+11:00-11:30     Coffee break
+
+11:30-13:00     Invited paper
+                        Electronic Publishing: Why is it so hard?
+                        Richard J. Beach (Xerox Palo Alto Research Center)
+Close
+
+
+Conference Committee
+
+Conference Chair        Peter King      University of Manitoba, Canada
+Program Chair           Richard Furuta  University of Maryland, USA
+Exhibition Chair        Debra Adams     Xerox Palo Alto Research Center, USA
+Local Arrangements/
+Publicity Chair         Larry Welsch    National Institute of Standards and
+                                        Technology, USA
+
+Program Committee
+
+Jacques Andre           INRIA/IRISA, Rennes France
+Patrick Baudelaire      Digital Paris Research Laboratory, France
+Richard J. Beach        Xerox Palo Alto Research Center, USA
+Charles Bigelow         Stanford University, USA
+David F. Brailsford     University of Nottingham, UK
+Heather Brown           University of Kent at Canterbury, UK
+Donald D. Chamberlin    IBM Almaden Research Center, USA
+Giovanni Coray          Ecole Polytechnique Federale de Lausanne, Switzerland
+R. W. Davy              Chelgraph Limited, UK
+Irene Greif             Lotus Development Corporation, USA
+Vania Joloboff          Open Software Foundation, USA
+Brian Kernighan         AT&T Bell Laboratories, USA
+Dario Lucarella         Universita degli Studi di Milano, Italy
+Pierre MacKay           University of Washington, USA
+Norman Meyrowitz        Brown University, USA
+Robert A. Morris        Interleaf and UMASS/Boston, USA
+Jurg Nievergelt         ETH, Zurich, Switzerland
+Vincent Quint           INRIA/IMAG, France
+Brian Reid              DEC Western Research Laboratory, USA
+Richard Rubinstein      Digital Equipment Corporation, USA
+Alan Shaw               University of Washington, USA
+Andries van Dam         Brown University, USA
+Hans van Vliet          Free University, Amsterdam, The Netherlands
+Jan Walker              Digital Equipment Corporation, USA
+
+For registration information contact:
+
+Lori Phillips
+Conference Coordinator
+National Institute of Standards and Technology
+Gaithersburg, MD  20899
+USA
+TELEPHONE: 301/975-3881
+FAX: 301/926-1630
+
+For technical information contact:
+
+Larry Welsch
+Local Arrangements and Publicity Chair
+National Institute of Standards and Technology
+Gaithersburg, MD  20899
+USA
+TELEPHONE: 301/975-3345
+FAX: 301/590-0932
+ELECTRONIC MAIL: ep90@asl.ncsl.nist.gov
+
+For exhibition information contact:
+
+Debra Adams
+Exhibition Chair
+Xerox Palo Alto Research Center
+3333 Coyote Hill Road
+Palo Alto, CA 94304 USA
+TELEPHONE 415/494-4417
+FAX 415/494-4241
+
+
+Registration
+
+A registration fee of $235 is being charged to attendees to help defray the
+costs of the Conference.  Please complete the registration form and remit
+the form with payment to:
+        Office of the Comptroller
+        A807 Administration Building
+        National Institute of Standards and Technology
+        Gaithersburg, MD  20899 USA
+Students with verification of current academic registration should contact
+the Conference Coordinator for information on student registration rates.
+To participate in the exhibition,
+contact the Exhibition Chair.
+
+Location:
+The Conference will be held in the Administration Building, National
+Institute of Standards & Technology, Gaithersburg, MD.  The exhibition will
+be held at the Sheraton Potomac hotel.
+
+Housing:
+A block of rooms has been set aside for conference attendees at the
+Sheraton Potomac (the host hotel) and the Gaithersburg Marriott.  The
+special conference rate is $59, single, or $69, double, at the Sheraton and
+$62, single or double, at the Marriott.  To register for rooms, please use
+the enclosed hotel registration form and send it directly to the hotel no
+later than  August 27, 1990.  After that date, rooms will be released for
+general sale at the prevailing rates of the hotel.  Please note that a 10%
+Maryland tax will be added to all room rates.
+
+Transportation:
+For those attendees arriving at Washington National, Dulles International or
+Baltimore Washington International Airports, the hotel is accessible by
+Airport Transfer, serving each airport.  Individual base price:  $35-$40.
+Group rates:  $20 per person.  Reservations required:  call (301) 593-2358.
+For those who prefer to drive, Gaithersburg is located about 20 miles
+northwest of Washington, DC via Interstate Rt.  270.  To reach the Sheraton
+Potomac, take the Shady Grove Road Exit and make a left off the exit.
+Continue to traffic light and turn left onto Shady Grove Road.  Proceed to
+second traffic light and turn left onto Research Court.  To reach the
+Marriott, take Exit 11 Rt.  124 East, Montgomery Village Avenue; to NIST
+take Exit 10 Rt.  117 West, Clopper Road.  Transportation can be arranged to
+the airports at the conclusion of the conference, at cost.  NIST/Metro
+Shuttle will pick up and discharge passengers in front of the Administration
+Building on the hour and half hour from 8:00 am to 5:30 pm each business day
+from the Shady Grove Station.  The Metro runs approximately every 20 minutes
+and can be taken directly to/from National Airport.  There will be bus
+transportation between the hotels and the conference site each day.
+
+Social Functions:
+In order to provide an opportunity for informal discussion, a conference
+reception will be held September 18 at the Sheraton and a banquet will be
+held at Smokey Glen Farms on September 19.  Roundtrip transportation will
+be provided.
+
+Coffee Breaks and Lunch:
+Coffee service will be provided each day for mid-morning and mid-afternoon
+breaks.  Attendees may use the NIST Cafeteria for lunch; tickets will be
+included in the registration package.
+
+Communications:
+The telephone number for contact during the conference will be available at
+the registration desk.  There will be a message board in the registration
+area.
+
+-------------------------------------------------------------------------------
+Conference Registration Card
+
+EP90
+September 18-20, 1990   National Institute of Standards and Technology,
+Gaithersburg, MD
+
+Name
+Company
+Street Address
+Room Number/Mail Code
+City                                            State           Zip
+Country
+Business Phone                          FAX Number
+
+Registration Fee: $235.00
+Form of payment:
+[  ]    Check enclosed made payable to: NIST/EP90
+                Checks from outside USA should be written on a USA Bank.
+[  ]    Purchase Order attached
+                Purchase Order #
+[  ]     Mastercard      [  ]     Visa
+                Card #
+                Exp. Date
+-----
+Mail To:
+
+Office of the Comptroller
+A807 Administration Building
+National Institute of Standards and Technology
+Gaithersburg, MD  20899
+USA
+
+-------------------------------------------------------------------------------
+
+Hotel Reservation Card
+EP90
+September 18-20, 1990   National Institute of Standards and Technology,
+Gaithersburg, MD
+
+Name
+Company
+Street Address
+Room Number/Mail Code
+City                                            State           Zip
+Country
+Business Phone                          FAX Number
+
+Will arrive on           (date)           (time)
+Will depart on           (date)           (time)
+Please reserve          room(s) for             person(s)
+
+Guaranteed Reservations:
+Sheraton: $69 Double, $59 Single  -  Marriott: $62, Single or Double
+(Apply 10% tax to these rates)
+
+All reservations must be received by August 27, 1990.  Reservations may be
+cancelled with no penalty prior to 6:00 p.m. on the scheduled arrival date.
+All room reservations must be guaranteed by a one night deposit.
+
+Deposit amount enclosed  $
+
+Signature
+
+-----
+Mail to your preferred hotel:
+
+Sheraton Potamac (Conference Hotel)
+I-270 at Shady Grove Road
+Rockville, MD  20850
+TELEPHONE:  301/840-0200 or toll free numbers:  800/638-8559, 800/638-6559
+FAX:  301/258-0160
+
+
+Gaithersburg Marriott
+620 Perry Parkway
+Gaithersburg, MD  20877
+
+TELEPHONE:  301/977-8900         or toll free number:  800/228-9290
+FAX:  301/869-8597
+=========================================================================
+Date:         Fri, 13 Jul 90 16:09:55 -0400
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      Workshop on Textual and Lexical Issues at COLING-90
+
+              WORKSHOP ON TEXTUAL AND LEXICAL RESOURCES
+                     9-12 Sunday, 19 August 1990
+                   At COLING-90, Helsinki, FINLAND
+
+                [Check at registration for location]
+
+Work in computational linguistics is becoming increasingly sensitive
+to the need for natural language data.  Data are critical for theory
+formulation, for the development of practical applications in the
+language industries, and, in particular, for the evaluation of
+computational linguistics as a whole.  Of particular interest from
+this point of view are recent activities concerned with the collection
+of text files, with the creation of lexical data and knowledge
+bases, and with the development of ways to increase the ability to
+reuse and share both data and tools.  The results will increase
+the possibility and likelihood of cooperation across a broad range
+of areas in computational linguistics.
+
+This workshop will provide an open and informal forum within which
+these activities are discussed and their relationship to current
+research and development established.  The results will be reported
+on during COLING-90.  There are no restrictions on participation
+and there is no need to register specifically for the workshop.
+
+For further information, before 10 August contact:
+
+                Dr. Donald E. Walker
+                Bellcore, MRE 2A379
+                445 South Street, Box 1910
+                Morristown, NJ 07960-1910, USA
+                Phone:    (+1 201) 829-4312
+                Fax:      (+1 201) 455-1931
+                Internet: walker@flash.bellcore.com
+                Usenet:   uunet.uu.net!bellcore!walker
+
+After 10 August, contact:
+
+Dr. Hans Karlgren                       Prof. Fred Karlsson
+KVAL                                    Department of General Linguistics
+Skeppsbron 26                           University of Helsinki
+S-111 30 Stockholm, SWEDEN              Vuorikatu 5 B, Hallituskatu 11
+Phone:    +46 8 7896683                 SF-00100 Helsinki, FINLAND
+Fax:      +46 8 7969639                 Phone:       +358 0 1913512
+Telex:    15440 kval s                  Fax:         +358 0 653726
+Internet: hkarlgren@com.qz.se           Earn/Bitnet: karlsson@finuh
+Bitnet:   hkarlgren@qzcom.bitnet
+=========================================================================
+Date:         Sat, 14 Jul 90 16:46:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      what can sgml not do?
+
+[ The following exchange between Professor Stig Johansson of Oslo
+  University and Dr Robert Amsler of Bellcore may be of wider interest,
+  and I have therefore taken the liberty of posting it to this list,
+  without asking permission of either of them. Comments, reactions,
+  even flames, welcomed.
+                                        Lou Burnard, Assoc Ed, TEI   ]
+
+====
+Date: Wed, 11 Jul 90 13:01:21 +0100
+From: Stig Johansson <h_johansson%use.uio.uninett@nac.no>
+Subject: How far SGML?
+Message-Id: <805*h_johansson@use.uio.uninett>
+
+Does everything have to be expressed through SGML? Is it good for all
+types of texts? Cf the recent book by Herwijnen (1990: 12): 'A tree
+representation can be used to describe many documents, but not all.'
+
+Even if SGML can be made to do the work, is it the best way for all
+texts and all types of textual features? For example, can it be used for
+the discourse transcription needed in a spoken corpus without cluttering
+up the text hopelessly? Why not try to convert a discourse transcription
+to SGML-type tagging?
+
+You will say - everything does not need to be keyboarded - there are
+possibilities of tag minimization - tags can be suppressed, etc. But we
+do want to be able to see the text simultaneously tagged for speaker
+overlap. stress, intonation, etc. You will say - but SGML is for the
+interchange format - it can be converted to/from a local format. The
+best thing would be, however, if we could have a usable interchange
+format or, at least, if we could minimize the difference between the
+interchange format and local formats. Otherwise, who will bother to use
+the interchange format?
+
+What I am really asking is: what harm does it do if we can find some
+simpler way of expressing, for example, intonation or word class?
+
+Finally, are we really sure that we can define in advance a grammar for
+textual features? This is what the DTD does (for a particular type of
+text).
+
+These are some of the questions that need careful consideration. Or am I
+just being stupid?
+
+Oslo 25 June 1990
+Stig Johansson
+=============
+
+From:     Robert A Amsler <amsler@COM.BELLCORE.FLASH>
+Subject:  Re: 3d note from SJ
+
+Re: Stig's concerns over whether SGML should always be used to represent
+all texts.
+
+There has been one category of material which from the beginning I have
+concluded should not be represented in SGML. From this category I
+believe one can abstract a general principle of what types of material
+are not best served in SGML garb.
+
+The category was programming language code. The reason was that since a
+compiler existed for such code, it was not only unnecessary to convert
+such material into SGML, it was outright harmful.
+
+Since then, I've come to conclude that DBMS loader stream information
+likewise should not be converted into SGML tagging. The reasoning is
+similar, that it is a formal language already, which is checked by its
+own software. In the case of database data, however, it was concluded
+that there might be another form of the information from which the
+database loader stream could be derived, and that this other format
+might itself be an SGML format.
+
+The general principle seems to be that what makes using SGML worthwhile
+is that software exists to make use of the format and software exists to
+validate the content of the format. Whenever other software exists for
+another format, the utility of SGML is lessened to the degree that this
+other software provides all the formal computational capabilities that
+SGML provides.
+
+However, there is another principle which should be stated.
+
+It is that most criteria which concern  `readability' or `legibility'
+for human users of text are in fact  derivable by  software from less
+readable and less legible forms of information which  are more useful to
+computers.  Using a computer is a bit of a Faustian deal.  We gain
+capabilities to do things, but lose a bit of the ability actually to
+understand the raw information from which these capabilities derive.
+==============================
+=========================================================================
+Date:         Sat, 14 Jul 90 14:46:04 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      WHAT *SHOULDN'T* SGML DO?
+
+Re: Lou Burnard's "Subject: How far SGML?"
+
+Lou must have strong confidence in his friendships to have posted
+an exchange between Stig Johansson and Bob Amsler "without asking
+permission of either of them."
+
+Stig's queries ("Does everything have to be expressed through SGML?
+Is it good for all types of texts? ... Even if SGML can be made to do
+the work, is it the best way for all texts and all types of textual
+features?), in light of his subsequent comment, can be understood to
+ask whether KNOWLEDGE/ANALYSIS OF ALL KINDS *about* a text is best
+represented, in all kinds of texts, by SGML.  Amsler's (posted)
+response in paraphrase (..."whether SGML should always be used to
+represent all texts...category of material") seems to focus on
+format and content, and validation of these.  Stig's question seems
+to ask about propriety, economy, felicity.  When I remind everyone
+that we need character-level and morpheme-level annotations on texts
+for representation of codices, textual criticism and linguistic
+analysis -- the question may be whether we WANT to use an SGML id
+marker for every character in the text, or whether we hand off some
+of the cross-referencing/parsing problems to applications software.
+
+I may be wrong in this interpretation of the exchange, but even if so,
+let me expand the question.  Part of the issue seems to be: when should
+we let the applications do type-checking on the data (Amsler eliminates
+program code from SGML coding because compilers do the validation)
+and when do we declare detailed rules in a document DTD?  If the
+applications already exist, the question is moot: they validate or
+they do not.  In other cases, it's a fresh choice: new text being
+authored or structured, and new software process the encoded text.  Do
+we require that the exchange format (SGML) validate *everything* that
+the local application controls with integrity checks?
+
+An example would be citations, whether of bibliographic data or
+internal references in classical literature.  One *could* use SGML
+(the DTD, with entities, attributes and tags) in an authoring system
+to make sure that nobody ever typed "Sirach 23:30" (since Sirach chapter
+23 has fewer than 30 verses).  Is that the best way to validate the
+legitimacy of citations?  Or is there a more economical way for ALL
+applications to validate citations, so that we can leave deep-level
+SGML structuring markup out of the interchange format?
+
+This is a more benign case than worries Stig, though (I think).  He
+seems to be concerned with the important matter of representing
+knowledge and analysis of texts (not visible, surface features having
+to do with rules of containment) and questioning whether SGML always
+the best way to do this.  Perhaps Bob answered adequately, and it's
+taking me a while to see how Bob's generalization answers all the
+questions.
+
+rcc
+=========================================================================
+Date:         Sun, 22 Jul 90 12:43:00 GMT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      HyTime Meeting Announcement
+
+[ Extracted from MUSIC-RESEARCH bulletin board ]
+Music-Research Digest       Sun, 22 Jul 90       Volume 5 : Issue  70
+
+Today's Topics:
+      meeting announcment for Hypertext and Time-based documents
+                        MuTeX - how to get it
+                          My MuTeX Request.
+                       Strange attractors,Music
+
+
+*** Send contributions to Music-Research@uk.ac.oxford.prg
+*** Send administrative requests to Music-Research-Request
+
+*** Overseas users should reverse UK addresses and give gateway if necessary
+***     e.g.   Music-Research@prg.oxford.ac.uk
+***     or     Music-Research%prg.oxford.ac.uk@nsfnet-relay.ac.uk
+
+*** Back issues, index, etc.: send "help" in a message to archive-server
+***   @uk.ac.oxford.prg (in the UK) or @bartok.sun.com (elsewhere)
+
+----------------------------------------------------------------------
+
+Date: 18 Jul 90 15:04:28 GMT
+From: "Victor A. Riley" <var%iris.brown.edu%brunix@net.uu.uunet>
+Subject: meeting announcment for Hypertext and Time-based documents
+To: music-research@prg
+Message-ID: <45238@brunix.UUCP>
+
+NOTICE: Due to a mixup, the original meeting's notice was mailed
+out rather than the notice of this adjournment (extension) of
+that meeting.  THIS IS THE CORRECT NOTICE!
+
+
+X3V1.8M MUSIC IN INFORMATION PROCESSING STANDARDS (MIPS) COMMITTEE
+      operating under the rules and procedures of the
+           American National Standards Institute
+                    X3V1.8M Secretariat:
+                c/o Larry Austin, President
+               The Computer Music Association
+                       P. O. Box 1634
+          San Francisco, California 94101-1634 USA
+
+MEETING NOTICE DRAFT AGENDA - Adjournment of THIRTEENTH MEETING
+
+MEETING NOTICE:
+
+     Meeting times:
+
+                  Tuesday, July 24, 1990, 9:30 AM - 5:00 PM.
+                  Wednesday, July 25, 1990, 9:30 AM - 5:00 PM
+                  Thursday, July 26, 1990, 9:30 AM - 5:00 PM.
+                  Friday, July 27, 1990, 9:30 AM - 5:00 PM.
+
+
+     Meeting Host:
+
+          Graphic   Communications    Association,    Marion
+          Elledge, Director, Information Technologies
+
+     Meeting Location:
+
+          Graphic Communications Association
+          1730 North Lynn Street
+          Suite 604
+          Arlington, Virginia 22209-2085
+          703/841-8160 (fax 703/841-8178)
+
+
+WRITTEN CONTRIBUTIONS
+
+     There  is  no  mailing  of  papers  accompanying   this
+     announcement,  since this is merely an extension of the
+     June 11-14 meeting.  However, if you wish your paper(s)
+     to  be  distributed at the meeting, please send them to
+     Vice-chairman Steven R. Newcomb before July  15,  1990.
+     His  address  is:  Center for Music Research, School of
+     Music,  Florida  State  University,   Tallahassee,   FL
+     32306-2098  USA.   In  any  case,  your  paper  will be
+     included in the next regular mailing.
+
+     A new version of portions of X3V1.8M/SD-7, the  Journal
+     of  Development  for  the  HyTime Hypermedia/Time-based
+     Document Representation Language, will  be  distributed
+     and  reviewed  at  the  meeting.  This new version will
+     reflect the work done at  the  June  11-14  meeting  on
+     hyperlinks, etc.
+
+ABOUT OUR HOST, THE GRAPHIC COMMUNICATIONS ASSOCIATION (GCA)
+
+     The  Graphic   Communications   Association   organizes
+     several  conferences  each  year intended to inform and
+     serve the needs of the entire community  of  publishers
+     and  the  systems  makers  who  serve them.  The GCA is
+     particularly interested in promoting the development of
+     powerful  standards  for  the representation of various
+     kinds of documents, including both musical  and  hyper-
+     media documents.
+
+
+
+NOTES TO NEW PARTICIPANTS/OBSERVERS:
+
+     1.   Prospective members and observers are  welcome  at
+          any  time  to participate in the current technical
+          work of the committee.  (You can be most effective
+          in  conveying your viewpoint if you can present it
+          in the context of the current  work  --  in  other
+          words,  please be familiar with X3V1.8M/SD-6, SD-7
+          and SD-8.  If you don't have these,  they  can  be
+          obtained  for  a  nominal  charge from the X3V1.8M
+          Secretariat.) New participants are also  urged  to
+          obtain  and  read  ISO  8879 (Standard Generalized
+          Markup Language).  ISO 8879 is not obtainable from
+          the  committee's  secretariat;  it can be obtained
+          from  Graphic  Communications  Association,   1730
+          North  Lynn Street, Suite 604, Arlington, Virginia
+          22209-2085, for $67.50 (156 pp.).  You should also
+          obtain International Standard ISO 8879:1986/Amend-
+          ment 1 from the same organization.
+
+     2.   As usual, a portion of the  second  day's  meeting
+          (Wednesday)  has  been  set  aside for persons who
+          wish to address the committee on topics  of  their
+          own  choosing,  relating  to the subject matter or
+          methodology of the committee's work.
+
+     3.   New participants are asked (but not  required)  to
+          inform  Charles  Goldfarb  (c/o  Debbie Perez, IBM
+          Almaden Research Center,  408/927-2577)  or  Steve
+          Newcomb (Florida State University Center for Music
+          Research,  Tallahassee,  FL  32306-2098,  904/644-
+          5786) if they plan to attend.
+
+DRAFT AGENDA:
+
+     Tuesday
+
+          Administrative matters, including: Opening, Appro-
+          val  of Agenda, Attendance (including introduction
+          of new  participants).   Schedule  for  Fourteenth
+          meeting,  now tentatively scheduled at IBM Almaden
+          Research Center, San Jose, CA., November 12  -  16
+          (adjournment  at  1:00  pm  on  the  16th),  1990.
+          Technical  work  will  include  a  review  of  the
+          changes  to  SD-7,  particularly  clause 7 (hyper-
+          links), made at the June 11-14 meeting.
+
+     Wednesday
+
+          Development of an  operating  model  of  a  HyTime
+          implementation.   HyTime  engines  and their rela-
+          tionship to SGML parsers, etc.
+
+     Thursday
+
+          Operating model of HyTime implementation,  contin-
+          ued.
+
+     Friday
+
+          Operating model of HyTime implementation,  contin-
+          ued.
+
+------------------------------
+=========================================================================
+Date:         Tue, 31 Jul 90 12:47:00 GMT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      New SGML search engine?
+
+I have just received a slightly technical overview of the capabilities
+of the new text retrieval system from Information Dimensions,
+BASIS-PLUS, in which the following paragraphs caught my eye:-
+<quote>
+BASISPlus recognizes an extensive subset of Standard generalized
+Markup Language (SGML) to import and export marked up documents and
+intelligently comprehend and display document attributes identified by
+the markup. SGML is  ... [brief description of markup concepts,
+usefulness of descriptive markup etc.] ... Documents stored in
+BASISplus contain text with embedded markup in the form of the
+BASISplus Generalised Markup Language (BGML). BGML is based on the
+identification of document structure using descriptive markup. BGML
+enables BASISplus to recognize the attributes of the text stored in
+the BDIF format. BGML is derived from and is consistent with SGML.
+
+At presentation time, the BASISplus Markup and Style Guide is referenced
+to determine how to format the text and where to find the external
+entities. It contains the definitions for markup elements, entity
+references and processing procedures. A standard set of markup
+elements is supplied with BASISplus and users can create customized
+markup elements. Only the rules need to be edited; documents are
+unchanged and are not exposed to editing errors. BASISplus requires all
+the definitions of the markup elements and entity references to be
+precompiled into a Markup and Style Guide  [...]
+
+The Markup and Style Guide is a BASISplus repository contaioning
+specifications for:
+- Converters used to import and export documents [other formats mentioned
+include Revisable Form WP, Flatfiles, DDIF Compound Docs, DIF ]
+- Parsers used to locate 'context units' in the text of a document
+- Presenters used to prepoare a document for viewing
+- Markup language declarations for documents that contain markup
+elements and entity references used for descriptive markup
+</quote>
+
+If this is only half as good as it sounds, it's worth a second look.
+OUCS is currently negotiating with Info Dimensions to upgrade our
+current Basis systems to BasisPlus. I'll keep you posted...
+
+Lou Burnard

@@ -1,0 +1,99 @@
+=========================================================================
+Date:         Wed, 18 Apr 90 11:48:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+
+The current issue of EPOdd (Electronic Publishing, vol 2, no 3)
+has an article by Jacques Andr&eacute which I'd like to draw to
+the attention of those with an interest in markup. Titled
+<q>Can structured formatters prevent train crashes?</q>, it suggests
+that one contributory factor in the train crash at the gare du Lyon in
+June 1988 (in which 56 died and hundreds were injured through a
+combination of failures in the braking system of an incoming train)
+was that the maintenance manuals were not only difficult to use but
+also contained a layout error in the part describing the braking
+system. The article makes clear how a structured document editor
+would have precluded such errors.
+
+Incidentally, the article is apparently a translation of an earlier
+version called <q>LaTeX ou SGML pouvaient-ils faire &eacuteviter
+l'accident de la gare de Lyon?</q> published in a journal called
+<q>Cahiers GUTenberg</q>. Does anyone on this list know of this journal?
+
+Lou Burnard
+=========================================================================
+Date:         Mon, 23 Apr 90 08:40:58 CDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         ZWEIG@FRSIM51.BITNET
+Subject:      RE: Cahiers GUTenberg
+
+The <q>Cahiers GUTenberg</q> is a journal published by GUTenberg,
+the Groupe des Utilisateurs de TeX (French TeX User Group), written
+mainly in French, but also including some English articles. For more
+information, write to
+
+Cahiers GUTenberg
+Association GUTenberg
+c/o IRISA
+Campus de Beaulieu
+F35042 RENNES Cedex
+FRANCE
+
+GUTenberg also has a discussion list LISTSERV server, GUT@FRULM11 (on Bitnet).
+
+
+Pierre Zweigenbaum                              Bitnet: zweig@frsim51
+DIAM (Departement Intelligence                  Tel: (+33) 1 45.83.67.28
+      Artificielle et Medecine)
+INSERM U.194 & Service d'Informatique Medicale
+91, bd de l'Hopital
+F-75635 Paris Cedex 13
+=========================================================================
+Date:         Mon, 23 Apr 90 09:02:08 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         o Phillips <PHILLIPS@UKANVM.BITNET>
+Subject:      RE: Cahiers GUTenberg
+In-Reply-To:  note of 04/23/90 08:45
+
+Please remove my name from the list of raecipients of TEI bulletins.
+
+                     Thank you, O. Phillips, PHILLIPS@UKANVM
+=========================================================================
+Date:         Tue, 24 Apr 90 10:55:00 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         E989003@NJECNVM.BITNET
+Subject:      RE: Cahiers GUTenberg
+In-Reply-To:  Text Encoding Initative public discussion list <TEI-L@UICVM> --
+              Mon, 23 Apr 90 09:02:08 CST
+
+Dave,
+
+     Did you have problems sending mail to Apollo?  Sometimes it is not
+working and mail is returned.  The best solution is to wait a while and try
+again.  I dont read NJECN very often and mail can sit there a few days.
+     Anyway.  The conference sounds interesting, although I still don't like
+the Mac very much.  I just don't have time anymore to do anything.  My life is
+going down the tube.  That apartment house is taking up all my very limited
+spare time.  The five connected apartments are OK and all rented at good rents,
+but the house is a total wreck and needs to be totally redone, inside and out.
+When I looked at the cost of having it done--about $35,000 by one estimate--I
+decided to do it myself.  A big mistake, I think, but the only alternative is
+burning it down.  Besides, I think I stand to make about $100,000 over what I
+already have in it.
+     So I have given up all travel plans, probably including a trip to Indiana
+for a wedding.  I havn't even thought about getting the boat ready for the
+season.  Probably will try to sell it.  Also, the kids are full of problems and
+Angela is about to go over the edge.  It seems to me that we have an almost
+perfect life--more than enough money, pleasant, challenging jobs, a nice place
+to live, reasonably good health, good if not terribly ambitious or directed
+kids--yet everybody but me is always miserable and they are working on me.
+     Years ago, when we first got married you told me you didn't see how we
+were going to make it because Anglea seemed kind of screwed up.  If you have
+any insights into what here problems are, I would appreciate your telling me.
+     Thats enough for now--heard anything from Wilson lately?
+
+                                Dave

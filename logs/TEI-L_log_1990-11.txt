@@ -1,0 +1,3842 @@
+=========================================================================
+Date:         Thu, 1 Nov 90 10:46:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Disambiguation
+
+I'm currently transforming some texts which were prepared by
+someone else into something approaching TEI-conformant SGML, and
+expect to be doing quite a lot of that sort of thing over the
+next year or two. Most of the job is fairly straightforward --
+what the person who prepared the text in the first place and what
+the TEI proposes should be encoded are not a million miles apart
+(if they were something would be seriously wrong somewhere) --
+and involves little more than some string twiddlings, for which
+languages like Icon or Snobol are perfect (I use the latter
+though if I were young again I'd use the former). But
+occasionally...
+
+For example, here's a problem which has just turned up on which
+I'd appreciate comments from the collective wisdom, and of which
+I should like to warn the collective unconscious.
+
+The texts on which I am working were originally prepared for a
+concordance. Consequently, they have a very detailed reference
+scheme (which I can handle) and also go to some trouble to
+distinguish homographs. This is done by adding a coded suffix to
+a fairly haphazard selection of words, some 8% of the total of
+different words in the text I'm looking at, some 12% of the
+running text length. For example, `associate' (noun) appears as
+`associate$0$', `associate' (verb) as `associate$1$'. `$0' always
+follows a noun (but not every noun, by any means), `$1' always
+follows a verb and so on. The tag also distinguishes senses or
+other subdivisions for some words: thus `ball', noun, in the
+sense of a spherical object, appears as "ball$0#1$", and `ball'
+as a social gathering as "ball$0#2$".
+
+It's important to realise that these tags are not intended to
+provide a full blown linguistic analysis -- there are only nine
+categories, of which the last two are "idiom/fossil/collocation"
+and "infinitive particle or mixed categories". They are only
+there to distinguish homographs. `Bath' (as a proper name) gets a
+tag to distinguish it from `bath' as a common noun -- but no
+other place names are tagged. So neither the TEI tags for
+linguistic analysis nor the tags for place names seem
+appropriate.
+
+My question is: what shall I do with these tags? There seem to be
+four possibilities:
+
+1a. Throw them away
+
+1b. Ignore them i.e. just leave them in the text as funny looking
+tokens which the application will have to sort out as best it can
+(They will of course be documented in the TEI.Header, so what
+more could you ask).
+
+2. Tag the word or phrase to which they belong as a distinct
+segment (I suppose the S tag would do for this), including their
+value on a suitable attribute. Something like this:
+     <s category='0#1'>ball</s>
+This would involve defining a new attribute of course, with a
+default value of `unspecified'.
+
+3. Represent the word plus its disambiguating tag as an entity.
+Something like &ball01; perhaps, which could be defined simply as
+"ball", if the distinction is not be kept, or some other string
+if it is.
+
+1a.  seems a shame: for some applications (such as making a word
+index) the disambiguating tags are very useful.
+
+1b. is the easiest course of action but feels unwholesome
+
+2. looks like overkill and moreover invites the question as to
+why only some words or phrases get segmented in this way
+
+3. would be easily the most satisfactory if there weren't quite
+so many entities to define -- about 500 in all
+
+Any ideas or counter-suggestions gratefully received.
+
+Lou Burnard
+
+(wearing Oxford Text Archive hat, rather than TEI one)
+=========================================================================
+Date:         Fri, 2 Nov 90 10:03:22 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "David R. Chesnutt" <N330004@UNIVSCVM.BITNET>
+Subject:      Re: Disambiguation
+In-Reply-To:  Message of Thu, 1 Nov 90 10:46:00 GMT from <LOU@VAX.OXFORD.AC.UK>
+
+   While making no claim to "wisdom" here, my personal opinion is that
+you should simply leave the tags in place with documentation in the
+header.  You have foreseen that the tags *may* be useful in some instances;
+therefore, it does seem a shame to throw them away and the other choices
+do seem like overkill.
+   I also gather that you feel the tags could be easily removed by
+potential users who feel they are irrelevant.  Thus, to leave the tags
+in place would not make the text less useful.
+   I suspect that most text that is transformed to TEI standards will
+present similar problems.  In our original transcriptions of letters
+which are published in the Laurens Papers, we mark the hyphenation of
+words.  In the files used for typesetting, the markup is eliminated.
+If I were transforming the letter files into TEI conformant text, I
+would retain the hyphenation markup and probably let the "local"
+markup (hyphen=/=ated) stand.
+  In short, I vote for retention but without further markup.
+I'll be interested to see what others have to say, because I am
+actually working on the problem of converting some of our files
+to TEI standards.
+
+  Happy coding Lou... David Chesnutt
+=========================================================================
+Date:         Fri, 2 Nov 90 12:35:48 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Frank Wm. Tompa" <fwtompa@WATSOL.WATERLOO.EDU>
+Subject:      Re:   Disambiguation
+
+My interpretation of the TEI philosophy is that we wish to preserve
+the data that is there, but not impose too many requirements on
+providers of the data.  From Lou's list of possibilities, I then
+vote for a variant of 2, which he states as:
+
+    2. Tag the word or phrase to which they belong as a distinct
+    segment (I suppose the S tag would do for this), including their
+    value on a suitable attribute. Something like this:
+         <s category='0#1'>ball</s>
+
+but I would want to tag it more properly as 'noun, homograph 1'
+by using more case-specific tags. I disagree with Lou's conclusion
+
+    So neither the TEI tags for linguistic analysis nor the tags
+    for place names seem appropriate.
+
+The fact that not all words are tagged nor all place names marked
+should not force us to water down the information that we have,
+namely that some words are tagged and that some place names are marked
+(and they are marked to distinguish their roles).
+
+                                        Frank Tompa
+=========================================================================
+Date:         Fri, 2 Nov 90 13:54:09 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Bryan Cholfin <SPAMFB@HARVARDA.BITNET>
+Subject:      SGML reference
+
+As a publisher who sometimes receives material in electronic form, and
+interested in publishing in electronic forms, I am interested in the
+text encoding initiative but when I joined this discussion-list it seems
+I've come in well in the middle of something. Could anyone recommend
+(if there is such a thing) a good reference or introduction to SGML?
+=========================================================================
+Date:         Fri, 2 Nov 90 14:42:42 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Richard Goerwitz <goer@SOPHIST.UCHICAGO.EDU>
+Subject:      TEI, uchicago
+
+Does anyone have any inkling of what relationship might obtain between
+SGML and the format specified in the U of Chicago Guide to Electronic
+Manuscripts?
+
+-Richard (goer@sophist.uchicago.edu)
+=========================================================================
+Date:         Fri, 2 Nov 90 22:29:19 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: Disambiguation
+
+Clearly the disambiguation information needs to be recorded.
+There are people for whom that will be the ONLY interesting
+aspect of that text. Such disambiguation information can be used to test
+parsers to determine whether they correctly can idenitify
+the meaning of the words from their contexts.
+
+I would think something like, <word pos=0 sense=1>ball</word>
+would have to be used.
+
+The verboseness of the encoding shouldn't be a factor.
+I would suggest removing the tags from the words themselves
+though, since this would appear to be markup and as such
+shouldn't become embedded in another markup as text.
+=========================================================================
+Date:         Fri, 2 Nov 90 22:30:45 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      Away from the office from 3 November to 19 November
+
+I will be in Japan.  Contact my secretary Elaine Molchan at
+em@flash.bellcore.com or (+1-201)829-4594 for information on
+how to reach me there.
+
+Don Walker
+=========================================================================
+Date:         Sat, 3 Nov 90 11:51:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      chicago guide to electronic mss
+
+So far as I know the Chicago Guide to electronic mss has no standing
+whatsoever (other than the lustre shed by its similarly named
+Manual of Style) in the standards community. The only thing it seems
+to share with SGML is the use of pointy brackets -- but for entirely
+different purposes. I hope to be corrected, but it looks very much
+like a hippogriff designed by a committee of enti-evolutionists.
+
+Lou
+=========================================================================
+Date:         Sun, 4 Nov 90 10:52:00 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         KRAFT@PENNDRLS.BITNET
+Subject:      Lou's Markup Alternatives
+
+Seems to me that there is another option for preserving
+the morphological/grammatical markup in your text
+without so much clutter in the text. Why not give the
+word followed by the parsing information thus:
+... word <tag>N</> [or Noun or whatever code is convenient].
+As long as all such tags follow the word to which they apply,
+and it is only single words that are tagged, software can
+handle the format adequately. In any event, don't lose the
+tagging information!
+Bob Kraft, U Penn
+=========================================================================
+Date:         Wed, 7 Nov 90 11:49:34 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      sporadic information
+
+Lou's problem of translating sporadically recorded information into TEI
+form will surely, as David Chesnutt has already observed, be a very
+common and important one.  I'm with Frank Tompa on this one, though:
+the TEI scheme in its current form already provides methods for (a)
+marking place names and (b) providing a linguistic analysis or
+categorization of a word or phrase.  So I don't at all see what the
+problem is:  when the source text marks 'Bath' as a place name, tag it
+as a place name, and when the source text provides word-class
+information for a word, tag it in the usual way.
+
+Lou suggests that this would be inelegant or misleading, since not all
+place names are so tagged, and not all words are classified.
+
+But consider the alternatives:
+
+    1 lose the information
+    2 leave the information in its non-TEI form
+    3 complete the tagging (ie tag all the rest of the place names,
+         and give part of speech and sense number for all words),
+         so the tagging is consistent and complete, and then use
+         the existing TEI tags
+    4 use the existing TEI tags, and note in the header that not
+         all words are classed, not all place names are tagged, ...
+    5 invent new TEI-style tags, and continue to note in the header
+         that not all words are classed, and not all place names
+         tagged
+
+Of these, 1 is a bad idea. 2 is occasionally tempting, especially for
+things one doesn't know how to handle in TEI tagging, but it really just
+means engaging in only a partial conversion to TEI markup.  Particularly
+when the information left unconverted *does* have a TEI form, such texts
+should not be regarded as TEI conformant.  3 is a pipedream in most
+cases, and violates the spirit of TEI's role as a format for interchange
+of texts without incurring information loss or requiring information
+enrichment.
+
+The only difference I see between 4 (which LB was uncomfortable with,
+and which prompted his inquiry) and 5 (which he suggests as a solution)
+is that the one uses the existing tags, and the other doesn't.   I don't
+see that as a big advantage for choice 5, myself.  Why on earth do we
+want to distinguish between the concepts PLACENAME (for which we have a
+tag) and PLACENAME-TAGGED-EVEN-THOUGH-OTHER-PLACENAMES-ARE-NOT-TAGGED
+(for which we don't, yet, though it would be a legal tag name).
+
+Perhaps a fuller description is needed in the header to allow users to
+specify how consistently and how thoroughly various tags (particularly
+for text enrichment) have been used.  But not new tags for the same old
+information.
+
+Wearing no hat at all except a woolen cap to keep out Chicago's wind,
+
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Wed, 7 Nov 90 12:10:18 MST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         koontz@ALPHA.BLDR.NIST.GOV
+Subject:      Re: sporadic information
+In-Reply-To:  <0A4531A45F5F004C60@ENH.NIST.GOV>
+
+Perhaps TEI needs to add for some tags corresponding tags to indicate that
+tags of the first sort are not being used consistently, for example, for
+placename tags a corresponding tag indicating that placename tags are not
+used consistently.  (This may sound a bit as if I am poking fun, but I am
+not.)
+=========================================================================
+Date:         Wed, 7 Nov 90 18:46:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      what's in a placename?
+
+Michael's question (which I paraphrase from memory as "why have a
+special tag for PLACE-NAME-WHICH-IS-TAGGED-AS-OPPOSED-TO-PLACENAME-WHICH-ISNT?")
+was rather nicely answered before it was asked, by Bob Amsler's comment
+that it was precisely words of the kind tagged in my texts  which were
+of interest for some applications. 'Bath' is not just a placename: it's
+a placename which a dumb (or not so dumb) piece of software might
+mistake for a common noun. The intention of the encoder of my texts was
+to distinguish words that should be distinguished, not to categorise all
+the words of the text. I am coming round to the view that I need a
+tag like <homograph> to do an honest job on this text.
+
+Bob Kraft's suggestion (that the tags should be separated out from the
+words) raised a few hairs on my spine: that would mean somewhere
+deciding whether the encoded bit of content related to the word before
+it or the word after it, how many words on either side ... No, the word
+and the codes have to be treated as a unit of some kind.
+
+My suggested use of entity refs seems to have died the death so I will not
+revive it here.
+
+Everyone quite rightly shuddered at the thought of throwing the
+information away. Just for the record, though, that's what the encoder
+of the text proposed....
+
+Thanks to everyone anyway -- there's more what that came from
+
+Lou Burnard
+=========================================================================
+Date:         Thu, 8 Nov 90 15:46:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         RLH@VAX.OXFORD.AC.UK
+Subject:      DISAMBIGUATION
+
+Surely the important thing about the tags in Lou's texts is that
+they have all been inserted for one and the same reason.
+(And we know that for certain; there is no need to surmise.)
+They are a form of markup, therefore must be preserved.
+Since they are all there for the same reason, whatever format is
+chosen must allow common processing for all occurrences.
+So the indications are for something like
+
+        <homograph type=placename> Bath </>
+
+Rob Hutchings
+=========================================================================
+Date:         Thu, 8 Nov 90 16:11:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Multiple hierarchy raises their head down again
+
+[ A colleague raises the following questions about using SGML for
+literary texts, which are of general interest. I pose them as they were
+put to me, together with my responses. Any other views/comments
+gratefully received.
+                        LB      ]
+
+"I have run into a couple of puzzles with SGML and am curious if
+"you have ways out.
+
+"1. quotes: <q> Quotes can be nested in quotes and for presentation can
+"witch between single and double quotes. In text a quote can cross para-
+"graph boundaries. The presentation convention is to precede each new para-
+"graph included in the quote with an open quote mark. Structurally one
+"could tag the beginning and the end of the quote, but any tag for the
+"paragraphs would conflict with the first convention. What are you doing in
+"that case?
+
+Quotes can indeed be nested. If the use of single or double quotes in
+the original is of importance, then the RENDITION attribute can be used
+to signal it. Otherwise, the particular rendering for quotes-within-
+quotes is an application-specific matter which should not, in my view,
+be tagged at all. By the same token, I would not distinguish run-on from
+block quotes.
+
+The structural problem on the other hand is a killer. (And it applies
+all over the place: see below) Either you have to use a concurrent
+markupstream for the quotes -- arguing that this is quite a separate
+structure from the paragraph one -- or you simply have to pretend that a
+quoted passage which spans a para break is actually two adjacent quotes.
+Or use a milestone tag for the para break. None of these solutions is
+really wonderful, I agree, and it gets much worse in blank verse, where
+you can have verse paragraphs, verse lines, and quoted passages or
+speeches, the boundaries of all three of which resolutely fail to nest.
+
+
+"I am experimenting with Donne's Religious Poetry to see what tags and
+"dtd might be useful. For this I am using the Gardner edition. The higher
+"structures are problematic. I have defined the following:
+"  poem.set = the whole group of religious poetry
+"     poem.subset - holy sonnets forms such a group, another is occasional
+"            poems
+"         poem.collect e.g. La Corona
+"             poem e.g. a sonnet of La Corona
+"         poem
+"Is it a problem that poem can appear as a subsection of poem.subset and
+"poem.collect? A litany poses another problem because it forms a poem.collect
+"section for which there is no poem.subset unless I give it a dummy one. I
+"actually would like to categorize it as poem.
+"Any suggestions?
+
+This issue, unless I've misunderstood you, is adressed in the TEI
+Guidelines. You can use the neutral DIVn tags, with a name attribute
+wherever a work can be hierarchically divided. You can use different
+values for the `name' attribute in the same hierarchy if you like
+Thus:
+    <div1 name=section n='Religious Poetry'> for your poem.set
+    <div2 name=subsect n='Holy Sonnets'> for your poem.subset
+    <div3 name=group n='La Corona'> for your poem.collect
+    <div4 name=sonnet n='lac.12'>  for the 12th sonnet in  La Corona
+    <div2 name=Litany n='Whatever the title of the litany is'>
+    <div2 name=poem n='This poem isnt subdivided at all'>
+
+It's up to your application what happens to attributes of course. I
+suppose the underlying problem is that the notion 'poem' is ill formed
+as a structural component -- for some purposes 'La Corona' is a single
+poem and for others it isn't, and the markup structure reflects that.
+
+Lou
+=========================================================================
+Date:         Thu, 8 Nov 90 22:36:02 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         KRAFT@PENNDRLS.BITNET
+
+Date:     Wednesday, 3 October 1990 2055-EST
+From:     KRAFT@PENNDRLS
+Subject:  Septuagint/Computer Article
+To:       SURF134@KUB.NL (Emanuel Tov)
+To:       TREAT@PENNDRLS
+To:       HUMM@PENNDRLS
+
+The attached invitation from the Rylands Library Bulletin
+is sort of self explanatory. Gordon Neal (classicist, and a
+personal friend) and David Mealand made the initial contacts,
+asking about field-specific results of computer assisted
+research approaches. I encouraged them to think that the
+CATSS crowd, or some subset thereof, could do what they
+want. We could move in a variety of directions, from a
+general overview/update to specifics about morph or alignment
+or variants or papyri or other things. Apparently they want
+this pinned down relatively quickly, with regard to the names
+of the probable authors. Your frank ideas (including any
+volunteering) are warmly solicited -- I'm happy to coordinate
+things if necessary, but would just as soon pass the actual
+assignment and credits to others, as appropriate.
+(PS. I'm having my work-study student scan in the Brock-
+Jellicoe-Fritsch bibliography for updating, etc., if that
+will be of general use to any of you, or if anyone wants to
+help with the proofing/correcting.)
+Bob
+=========================================================================
+Date:         Thu, 8 Nov 90 22:39:14 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         KRAFT@PENNDRLS.BITNET
+Subject:      Sorry! Please Disregard
+
+I hit the wrong key, and sent an irrelevant file (that
+I intended to delete) to TEI-L. Sorry. Red face and all
+that. Now to find the file I intended to send! Bob Kraft
+=========================================================================
+Date:         Thu, 8 Nov 90 23:25:46 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         KRAFT@PENNDRLS.BITNET
+Subject:      SGML Software Conversion Project
+
+[This is the item I intended to send!!]
+Much of the following will be self explanatory.
+Steve Klivansky is an undergraduate engineering
+student who is working on this senior project inbetween
+CCAT and his home school. He has been encouraged to
+contact TEI members who are especially interested in
+dictionary coding. "gntdict" refers to the Greek-English
+dictionary of the New Testament that was published in
+hard copy by the United Bible Societies and is distributed
+electronically by CCAT.
+Bob Kraft and Alan Humm, U Penn
+
+=========
+Received: from linc.cis.upenn.edu by PENNDRLS.UPENN.EDU (IBM VM SMTP R1.2.2MX) w
+Received: from ENIAC.SEAS.UPENN.EDU by linc.cis.upenn.edu
+        id AA22765; Wed, 24 Oct 90 19:24:27 -0400
+Received: by eniac.seas.upenn.edu
+        id AA17329; Wed, 24 Oct 90 19:19:35 EDT
+Date: Wed, 24 Oct 90 19:19:35 EDT
+From: klivas@eniac.seas.upenn.edu (Steven Klivansky)
+Posted-Date: Wed, 24 Oct 90 19:19:35 EDT
+Message-Id: <9010242319.AA17329@eniac.seas.upenn.edu>
+To: kraft@penndrls.upenn.edu
+Subject: update for lexicon project
+Cc: carr@central.cis.upenn.edu, humm@penndrls.upenn.edu,
+        klivas@eniac.seas.upenn.edu, steedman@central.cis.upenn.edu
+
+
+
+        Hello!
+
+        I am writing this as a short update on the progress of my
+        dictionary project.  As of today, I have a rough lex
+        specification which is able to convert the gntdict files into
+        a useful intermediate format with greater than 90% success.  I
+        am currently working on the other 10%, and am considering
+        doing touch-ups by hand.  This is roughly on schedule, and
+        once a solid intermediate state exists it should not be too
+        difficult to convert it to TEI format.  If my other classes do
+        not interfere too much I hope to have a table-building package
+        completed by the end of November.  This package should be
+        capable of transforming a TEI formatted dictionary into
+        compact usable form, and building lookup tables into the
+        dictionary.
+
+        The immediate goal is to transform the gntdict files to a TEI
+        format.  Once this is accomplished I will write a few pages on
+        a generalized version of my technique.  Hopefully this will be
+        useful in itself, but it will also contribute toward a final
+        report which is a partial requirement for CSE 400.
+
+        Any questions or comments are welcome, and I will be glad to
+        meet in person if that is preferred.
+
+        Thanks for your time and attention.
+
+        -Steve
+         klivas@eniac.seas.upenn.edu
+=========================================================================
+Date:         Fri, 9 Nov 90 11:13:59 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Richard Goerwitz <goer@SOPHIST.UCHICAGO.EDU>
+Subject:      gntdict
+
+Is TEI in a sufficiently stable state at this moment for us to
+want to begin converting all this software to it??
+-Richard
+=========================================================================
+Date:         Fri, 9 Nov 90 13:24:10 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      stability of TEI guidelines
+
+Richard Goerwitz asks whether the TEI guidelines are stable enough to
+bother writing software for, yet.  To this, of course, there is no
+single answer:  it depends what you are trying to accomplish, how much
+you enjoy writing software, and how you feel about throwing away your
+rough drafts.  My personal take on this issue is that the guidelines are
+stable enough to begin working with software, and unstable enough that
+if I were developing software I would expect to make some changes to the
+software after each revision of the draft, and I would never tell anyone
+it was stable until after 1992.
+
+To be blunt:  Anyone who needs something which won't change soon
+shouldn't rely on the TEI's current draft.  (That's what it says in
+section 1.4.)
+
+But for many purposes, this is a fine time to start.  The major problems
+facing any stand-alone processor for TEI files are probably SGML-related
+in any case (recognizing tags, handling entity references, etc.) and
+won't change unless SGML changes.  Anything you write to handle specific
+tags is subject to more change, and if I wrote a bunch of stuff to guide
+processing by an SGML parser (for example), I'd expect to throw a lot of
+it out eventually -- half because the tags change and half because I
+will change my mind about how to process things.  I wouldn't let that
+prospect deter me from beginning to work with the current draft.  In
+fact, were I a software developer, I would want to begin work with the
+draft as soon as possible, so that I could argue for changes to make the
+TEI format more tractable for the things I want to do.  And of course,
+the future drafts are likely to be similar enough in spirit that I would
+expect to be able to transfer most of the understanding gained from
+processing files encoded according to the earlier drafts.
+
+So no, I don't think Bob Kraft's student is premature in his plans.
+Most of what he does should be usable with any future draft.  of the TEI
+guidelines.
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Fri, 9 Nov 90 14:18:00 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         John Baima <D024JKB@UTARLG.BITNET>
+Subject:      BNF grammar for TEI DTD?
+
+Talking about writing software for TEI documents, does there
+exist a BNF grammar for the TEI DTD?? There are quite a number
+of tools for BNF grammars and for me, at least, it would be the
+only way I could justify writing a "throw away" parser as had
+been suggested. My impression based on a limited examination is
+that it would not be easy. However, I would think it important
+for several potential software developers. No??
+
+John Baima
+=========================================================================
+Date:         Fri, 9 Nov 90 16:07:24 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      BNF and SGML
+
+John Baima asks whether there is a BNF form of the TEI DTD.  A while
+back, Richard Goerwitz asked whether there was a BNF definition
+(actually, any 'concise syntactic summary' or 'clean, short summary') of
+(the TEI subset of) SGML.  These are distinct questions, and both should
+be answered.
+
+Richard Goerwitz first.  There is definitely a formal grammar defining
+the syntax of SGML -- ISO 8879 uses formal grammar productions to define
+the form of an SGML document.  Though not strictly BNF, it's fairly
+close.  The difficulties in writing a BNF equivalent for use in
+syntax-driven programs are that the grammar is clearly not written with
+automatic parser generators in mind, and some productions, while clear
+enough in their intent, present difficulties for automatic parser
+generation.  Also a lot of details are conveyed only in the accompanying
+prose, not in the formal productions.  In a couple of cases, the
+productions seem to me to be downright misleading and to contradict
+the prose (but I'm not really an expert).
+
+A formal description of the TEI subset of SGML does sound like a good
+idea; I've been working on something similar for a while, when I get the
+chance (i.e. rarely), and if there is serious interest I will try to
+finish it.
+
+John Baima's question I interpret to mean "is there a BNF definition for
+TEI documents?" and not "... for TEI DTDs", since the DTDs are described
+by the formal grammar of ISO 8879, and that part of the grammar is
+relatively clean and simple.
+
+In some sense, the formal grammar of ISO8879 describes TEI documents,
+and one should be able to parse TEI documents using it or some
+facsimile.
+
+Validating the documents, however, is more complicated.
+
+The DTD itself provides a formal description of TEI documents, using a
+regular-right-part grammar (that means the right hand of a production
+can have regular expressions, which is a slight enrichment over Backus's
+normal form, I think).  Some other complications (notably inclusion and
+exclusion exceptions) can make the production of strict BNF equivalents
+rather complicated, and largely as a result I doubt that BNF parser
+generators are going to be as useful a tool for SGML validation as they
+are in other contexts.  This is one reason many computer scientists
+shake their heads mournfully when you mention SGML to them.
+
+Since the document has the right to modify the standard TEI DTD in any
+case, any software for TEI validation must be able to parse from a
+formal grammar presented at run time -- this is like building yacc into
+your application program.  It's not impossible, but it is simpler to
+work with an existing SGML processor.
+
+So:  no BNF in the strict sense, but something close as to the
+structure of tags and content, and something less close as to the
+legal combinations of tags.
+
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Fri, 9 Nov 90 15:41:39 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "C. Perry Willett" <PWILLETT@BINGVAXC.BITNET>
+Subject:      RE: BNF grammar for TEI DTD
+
+                  I N T E R O F F I C E   M E M O R A N D U M
+
+                                        Date:     09-Nov-1990 03:38pm GMT
+                                        From:     C. Perry Willett
+                                                  PWILLETT
+                                        Dept:     Library
+                                        Tel No:   777-4386
+
+TO:  Remote RSCS/NJE Network User         ( _JNET%TEI-L@UICVM )
+
+
+Subject: RE: BNF grammar for TEI DTD
+
+          Okay, I'll bite--what's a BNF? And while we're at it, what's
+a DTD? I lent out my TEI guidelines, and am a SGML/TEI novice, so
+I would appreciate some enlightenment into these arcane acronyms.
+If this is too elementary for the list, would someone respond to
+me privately?
+
+Perry Willett
+SUNY-Binghamton
+PWILLETT@BINGVAXC
+=========================================================================
+Date:         Mon, 12 Nov 90 08:54:00 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Mary Califf <CALIFFMA@BAYLOR.BITNET>
+Subject:      Re: BNF grammar for TEI DTD
+
+BNF stands for Backus-Naur Form, which is a common notation for specifying
+context free grammars.  It uses the form
+        A := BC|D|CD
+where A is a unit that can be broken down in B and C, or just D, or C and D.
+This format is used widely to describe the syntax of programming languages.
+
+As for DTD, I'm as in the dark as you are.
+
+Mary Elaine Califf
+CALIFFMA@BAYLOR
+=========================================================================
+Date:         Mon, 12 Nov 90 09:56:37 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      Away from the office from 3 November to 19 November
+
+I will be in Japan.  Contact my secretary Elaine Molchan at
+em@flash.bellcore.com or (+1-201)829-4594 for information on
+how to reach me there.
+
+Don Walker
+=========================================================================
+Date:         Mon, 12 Nov 90 11:55:32 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      TEI proposal
+
+Last month Lou Burnard wrote a message which seemed to have ended the
+discussion on easy access by other programs, the DOS TYPE command, etc.
+His message carried the message that TEI-L was for the purpose of
+discussing the TEI proposal.  Apparently I need to make an official
+annoucement that my comments here are indeed meant as suggestions for
+consideration for inclusion in the TEI guidelines, operations, etc.
+
+For the record:
+
+I propose that the Text Encoding Initiative include, as part of their
+guidelines, programs, operations, etc., the inclusion of a requirement
+that access to TEI texts by word processors, search and retrieval programs,
+simple TYPE, LIST, GREP, CAT and other commands, so the great majority of
+computer users may benefit from these etexts.
+
+Any other policy will lead to a microcosmic centralization of the usage
+of these materials, rather than to the general improvements which will
+be yielded by electronic texts, whether it be sooner or later, whether
+it will be assisted or retarded by the efforts of the TEI.
+
+In this day of massive illiteracy in Great Britain, the United States,
+and, yes, to a certain degree in Canada, any effort to increase literacy
+must, in good concience, be made.
+
+Michael S. Hart
+
+Disclaimer:  these are not necessarily the opinions of any institution
+through which this mail is routed.
+=========================================================================
+Date:         Mon, 12 Nov 90 12:13:21 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      GENUINELY INTERESTING SGML SOFTWARE
+
+The following description of DynaText is taken from information in
+a press release and from (EBT) company literature.  DynaText is a
+computing environment for SGML-encoded documents: it supports hypertext-
+browsing, full-text searching and dynamic (stylesheet-driven) document
+display based upon SGML encoding.
+
+Robin Cover
+=================================================================
+Electronic Book Technologies, Inc.
+One Richmond Square
+Providence, RI 02906
+Tel: (401) 421-9550
+FAX: (401) 421-9551
+Email: (UUCP) sjd@uunet!ebt-inc (Steven J. DeRose)
+Email: (BITNET) el407011@brownvm (Steven J. DeRose)
+Email: (Internet) lrr@iris.brown.edu (Louis R. Reynolds)
+
+Product: DynaText(tm)
+
+DynaText is a software system that allows in-house publication groups to
+turn existing reference documentation into dynamic electronic books.  It
+is aimed at satisfying the need to publish large-scale reference
+material online, either on a network or for standalone delivery such as
+found in the aircraft, government and telecommunications sectors.
+
+Unlike other systems, DynaText accepts ISO standard SGML directly,
+allowing documents prepared in most desktop publishing systems to be
+input without any modification or translation.  In addition to SGML,
+DynaText supports a variety of popular raster formats (such as PICT,
+TIFF, Sun Raster and CCITT fax formats) to facilitate capture of
+associated artwork.  The system also supports an open architecture for
+integration with multi-media applications allowing sound, animation and
+video supplements to be added to existing reference documents.
+
+DynaText was specifically designed to take SGML documents from any
+source and automatically produce a dynamic electronic book that can be
+browsed on an X-terminal, computer workstation, or portable PC.
+DynaText accepts valid SGML documents and automatically builds a dynamic
+table of contents that is used as one of the primary means of navigating
+through the material.  Unlike its printed counterpart, and like many
+high-end outline processors, this table of contents can be expanded and
+collapsed providing an appropriate level of detail for the reader.
+Clicking on an item in this list automatically scrolls an associated
+text view of the document to the corresponding section. Navigation and
+collaborative document editing are facilitated by navigation tools such
+as history logs and bookmarks.  A facilty under development allows users
+to attach annotations ("sticky notes") of various kinds to documents via
+imposed icons.
+
+DynaText uses SGML element tags to automatically generate hyperlinks to
+associated material such as diagrams, tables, and explicit cross
+references. This allows readers to quickly reference related material
+through simple mouse clicks.  DynaText is an open system that is not
+bound to any specific SGML tag set, and allows users to add their own
+link types/behavior through simple style sheet entries.  Electronic
+style sheets are held in ascii-editable files with SGML syntax.  This
+mechanism can be employed by users who want to create dynamic
+multi-media documents.  Style definitions may be used to set the display
+characteristics (font type, size, color) including visibility or
+suppression of each SGML element.  The principle of conditional
+visibility of elements (and element classes) in response to style sheets
+and icon clicks permits rapid customization of electronic books where a
+variety of document editions is desired.
+
+DynaText builds a full text index of the SGML document and (unlike other
+indexers that simply report occurrences within an entire document) can
+report occurrences within SGML components.  Hit-list statistics for each
+document section provides an unprecedented level of search precision
+that enables users to find terms within the relevant sections of the
+document quickly.  Wild cards and regular expressions may be used in
+queries, eliminating the need for exact string matches; Boolean logic
+(AND, OR) may also be specified.  The indexer supports synonym lists
+that act like special purpose thesauri that enable access to information
+though a variety of synonymous terms.  This feature is especially useful
+in acronym-laden technical reference manuals.
+
+The DynaText system is currently installed at a number of sites running
+UNIX on the Sun/4, SPARC family of workstations and servers.  The
+browser can output to any X-window display device, including low cost
+X-terminals, workstations, or PCs running X windows.  The UNIX version
+of the system is planned for release before the end of this calendar
+year.  A PC version running under MS-Windows is planned for first
+quarter of 1991.
+
+The system is aggressively priced at  $12,500 for an indexer and a
+browser that supports five simultaneous users.  Standalone prices for
+the PC version of the browser will begin at $250 per machine.  Volume
+discounts will be available for large end-users and VARs.
+
+References:
+
+"DynaText: Electronic Book Engine from EBT [Electronic Book Technologies]:
+First to Handle any SGML Application." <title>Seybold Report on Publishing
+Systems</> 20/2 (September 24, 1990). ISSN 0736-7260.
+=========================================================================
+Date:         Mon, 12 Nov 90 15:01:41 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      what's in a DTD
+
+My apologies to those who haven't been swimming in this particular
+alphabet soup as long as I have; my note last week about formal
+grammatical specifications of SGML and the TEI encoding scheme should
+have made more allowances for the variety of prior knowledge among us.
+
+Those of you who read and understood chapter 3 of the Guidelines may
+wish to tune out now for about three to five paragraphs ...
+
+'DTD' stands for 'document type definition' -- which is the SGML term
+for (a) the formal specification of what elements may occur within a
+document, their allowable combinations, and the 'attributes' they may or
+must carry, together with (b) (informally specified) rules saying what
+the elements mean, when they are to be used, etc.  'DTD' is commonly
+used, however, to mean 'document type declaration' -- which is the SGML
+term for just the formal part of the document type definition (part (a)
+in the preceding definition).  Because the standard does not specify
+clearly what must be or may be in a document type *definition* which
+isn't in a *declaration*, the distinction appears to be rather
+metaphysical, and I am not always real consistent in my usage of the
+abbreviation.
+
+The DTD contains declarations of SGML *elements*, SGML *attributes*, and
+the *entities* to which one refers in the course of the document (or in
+the course of the document type definition itself).  Optionally it may
+also contain other declarations for SGML objects, but these other
+objects are not used by the TEI DTDs.  The formal declaration of any
+element specifies formally what forms the content of that element may
+take; the element declarations thus resemble productions in a BNF-style
+formal grammar of a language, the DTD itself resembles the grammar of a
+language, and the set of documents which conform to a given DTD
+resembles the set of strings which constitute a language.  A phonebook
+entry might be defined as containing exactly one name, one
+address, and one phone number, in that order:
+
+    <!ELEMENT entry    (name, address, phone) >
+
+For fuller explanation, see the Guidelines themselves, or Lou Burnard's
+introduction to SGML, found in the TEI-L file server under the name EDJ2
+MEMO (send a note to LISTSERV @ UICVM -- *not* repeat *not* to the list
+itself -- containing the single line GET EDJ2 MEMO to get a copy of this
+file).
+
+'BNF' stands either for 'Backus Normal Form' or for 'Backus/Naur Form',
+for John Backus and (possibly) Peter Naur, who worked on the committee
+which developed Algol-60.  It is a formalism invented by Backus for the
+specification of legal syntax in formal languages, and became widely
+known after its use in defining Algol.
+
+BNF is a specific technique for defining what are called 'context-free'
+languages.  A BNF production defines a single term (given on the left)
+as any of a series of alternative sequences of terms (given on the
+right); each alternative sequence contains zero or more terms, which may
+either be defined in the BNF itself ('non-terminals') or undefined
+(primitives or 'terminal symbols').  E.g.
+
+    phonebook-entry ::=  name address phone-number
+    phone-number    ::=  digit digit digit '-' digit digit digit digit
+    digit           ::= '0' | '1' | '2' | '3' | ... | '9'
+
+OK, techies back with us now?  Fine.
+
+The salient points, for the non-technical reader, are these:  both BNF
+and the SGML DTD are methods of providing formal, machine-enforceable
+specifications of legal sequences of things (characters, words, tokens,
+in the BNF case; in the case of SGML, of elements).  They are roughly
+similar in purpose, and fairly similar in notation, but the differences
+in notation make a difference for some problems in software development.
+
+One crucial difference should be pointed out.  (Warning:  technical
+material ahead.  If your eyes glaze over when someone mentions formal
+language theory, you may wish to tune out before you nod off and maybe
+hit your head on your keyboard ...)
+
+BNF grammars are usually written to allow programs to assign structure
+to data streams in which that structure is not explicitly marked.  In
+SGML, the beginning and end of each element are explicitly marked
+already (unless one is using some kind of markup minimization, which
+would mean one was not using the TEI interchange format) -- one may wish
+to *validate* the structure specified in the document, and for that you
+need the DTD, but if one just wishes to *represent* the structure found
+in the document then one doesn't need the DTD -- one just needs to
+recognize the start- and end-tags and build one's tree accordingly.
+(For this, a BNF of the grammar of legal SGML tags may be used with a
+parser generator ...)
+
+Let's take a simple example.  A BNF might be written to allow the
+processing of phonebook data looking something like this:
+
+    Smith, John Q., 123 Southmoor, 323-4567
+    Fabbro, Giovanno Q., 321 Wisconsin, 232-7654
+    ...
+
+and you need the BNF or some equivalent to recognize which parts of the
+data are names, addresses, and phone numbers, which names, addresses and
+phone numbers fit with each other into entries, and so on.
+
+The fully marked-up form of this data in SGML might be something like
+this:
+
+    <phonebook>
+    <entry>
+        <name>Smith, John Q.,</name>
+        <address>123 Southmoor,</address>
+        <phone>323-4567</phone>
+    </entry>
+    <entry>
+        <name><surname>Fabbro, Giovanni,</name>
+        <address>321 Wisconsin,</address>
+        <phone>232-7654</phone>
+    </entry>
+    </phonebook>
+
+Since the names, addresses, phone numbers, and entries are already
+explicitly marked here, a processing program can assign the right
+structure to the data even without a DTD.  A DTD is needed only to
+verify that the document is legal (e.g. to answer the question "is it
+legal to omit the address?" ).  If you want to validate TEI documents
+without using SGML-conformant software, you will need to worry about the
+DTD and how to parse the specifications it contains and match them to
+the document.  If you only want to process TEI documents, you may get by
+with a lot less.  The DTD will be useful, in that case, primarily as a
+check to see what combinations of tags you are likely to see, so your
+program can be prepared to handle them correctly.  (Of course, you
+will want to validate the documents formally at some point, otherwise
+you are asking for unpleasant surprises.)
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Tue, 13 Nov 90 11:23:00 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: Michael Hart's suggestions for the TEI
+
+Michael Hart (Project Gutenberg) writes:
+
+    I propose that the Text Encoding  Initiative include,  as part of
+    their guidelines, programs, operations, etc., the  inclusion of a
+    requirement that access to TEI  texts by  word processors, search
+    and retrieval programs,  simple TYPE,  LIST, GREP,  CAT and other
+    commands,  so the  great majority  of computer  users may benefit
+    from these etexts.
+
+The major problem with this is that the TEI doesn't intend to produce
+any  texts--and  in  fact  has  no  direct  plans yet  to produce any
+software. The TEI probably should have been named TESI (The Text
+Encoding Standards Initiative) to have avoided this confusion, but
+TEI is the name.
+
+The second issue is whether in fact it is necessary that new
+standards fit old software? I.e. one could just as easily say
+that all WYSIWYG word processors should include commands for
+line-oriented editing or for batch-processing updates from
+command files.
+
+One could also claim that newer SGML-smart software will have no
+trouble doing these tasks and that it is the job of the TEI to
+promote abandonment of software which does not support SGML.
+
+To be conciliatory, there is merit to two points here.
+
+*** First, `Is there a presentation markup isomorphic to the TEI
+*** Guidelines?'
+
+*** Second, `Should there be a presentation markup
+*** format for the display of text with its SGML tags?'
+
+The first issue in my opinion the appropriate restatement of the
+question Michael Hart asked long ago about how to `strip out' the
+SGML tags. The answer is that the TEI hasn't in fact specified
+ANY presentation markup for its SGML Guidelines. SGML doesn't specify
+how to print text. (SGML isn't in fact about the printing of text;
+it is about the preservation of the content of text).
+
+I am personally skeptical that merely using blank space and line
+breaks that one can acceptably represent the TEI Guidelines. It
+would certainly be challenging to try and do so, something like
+trying to flaten a hypertext in an acceptable manner. The goal
+is not without merit and probably deserves more discussion.
+
+The second issue is one that I think does need some discussion.
+How should an SGML text be stored in a file? SGML doesn't say.
+As I've mentioned before, the OED2 is stored as a single stream
+of characters without any carriage-returns or padded blanks for
+presentation. SGML can be ``pretty-printed'' according to a fairly
+simple algorithm, i.e.,
+
+Every additional opening tag indents one more space on a new line.
+Every text line that does not fit in the `width' of the output
+is justified within the left-margin established by the last
+opening tag it contained and the prevailing right-margin.
+Closing tags reset the left-margin to the point it was at
+before they were opened.
+A sequence of immediately consecutive closing tags is represented
+together on one line.
+
+Thus, something like:
+
+<ME><hw>apple</hw><pos>noun</pos><senses><def num=1><m>a fruit of a
+tree</m><eg>Eve gave Adam an <cw>apple</cw> in the Garden of
+Eden</eg></def><def num=2><m>a tree on which
+<xr>apples<sn>1</sn></xr> grow</m><eg>The box is made of
+<cw>apple</cw> wood</eg></def></senses></ME>
+
+Would pretty-print as:
+
+<ME>
+ <hw>apple</hw>
+ <pos>noun</pos>
+ <senses>
+  <def num=1>
+   <m>a fruit of a tree</m>
+   <eg>Eve gave Adam an
+    <cw>apple</cw>in the Garden of Eden</eg></def>
+  <def num=2>
+   <m>a tree on which
+    <xr>apples
+     <sn>1</sn></xr> grow</m>
+   <eg>The box is made of
+    <cw>apple</cw> wood</eg></def></senses></ME>
+
+There are some problems here (as with all simple pretty-printing).
+The tags <cw>, <xr>, and <sn> don't "really" require a new line
+since they are "special" in this case, i.e. they are more oriented
+toward display of at the "word" level than at the document structure
+level. I think this sense of the inappropriateness of a break
+in the text to a new line is due to our innate sense of what
+presentation markup should be for "text". It would be appropriate
+for a `smart' pretty-printer to have a list of tags that are
+`in-line' rather than organizational and pretty print them
+differently.
+
+There is another very subtle problem which probably most of you
+missed. There are extra blanks in the SGML. Notice that
+my SGML contained,
+
+<eg>Eve gave Adam an <cw>apple</cw> in the Garden of Eden</eg>
+
+rather than
+
+<eg>Eve gave Adam an<cw>apple</cw>in the Garden of Eden</eg>
+
+Why? It is because I am using presentation markup for blank spacing
+(and line breaks). I.e. assuming there is a blank between elements
+of the text. That is fine UNTIL one comes to elements which in the
+presentation markup might NOT have blanks between them, such as,
+
+<xr>apples<sn>1</sn></xr> grow</m>
+
+I.e., this `might' be presented as `apples-1' or `apples(1)' or
+any of a number of other stylistic mechanisms. It might ALSO
+not even be intended for printing in the presentation markup.
+
+Thus, when I `pretty-print' this line as,
+
+    <xr>apples
+     <sn>1</sn></xr> grow</m>
+
+I cannot go back to the original.
+
+---
+This is why I am a bit concerned about the implicit use of presentation
+markup in SGML text. However, it is probably preferable that something
+be said about the assumptions rather than everything left implicit.
+=========================================================================
+Date:         Tue, 13 Nov 90 14:28:34 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      Re: Michael Hart's suggestions for the TEI
+In-Reply-To:  Message of Tue,
+              13 Nov 90 11:23:00 -0500 from <amsler@FLASH.BELLCORE.COM>
+
+On Tue, 13 Nov 90 11:23:00 -0500 Robert A Amsler said:
+>Michael Hart (Project Gutenberg) writes:
+>
+>I propose that the Text Encoding Initiative include, as part of their
+>guidelines, programs, operations, etc., the inclusion of a requirement
+>that access to TEI texts by word processors, search and retrieval programs,
+>simple TYPE, LIST, GREP, CAT and other commands, so the great majority of
+>of computer users may benefit from these etexts.
+>
+>
+>The major problem with this is that the TEI doesn't intend to produce
+>any  texts--and  in  fact  has  no  direct  plans yet  to produce any
+>software. The TEI probably should have been named TESI (The Text
+>Encoding Standards Initiative) to have avoided this confusion, but
+>TEI is the name.
+>
+Mr. Amsler would have you believe that I stated "that the TEI intends to
+produce any texts" which, as you can see I neither said nor implied.  He
+would also have you believe that not producing any etexts has bearing on
+the issue.  The fact is that I am proposing that the TEI guidelines mean
+and be what they should be, something providing Initiative for Encoding,
+and not just encoding for the use of a single digit percentage of users.
+If, as Mr. Amsler suggests, the name is inappropriate, then it should be
+changed, even though he implies it is written in stone, when, in fact it
+is written in electronic etext (sometimes transferred to paper).
+
+>The second issue is whether in fact it is necessary that new
+>standards fit old software? I.e. one could just as easily say
+>that all WYSIWYG word processors should include commands for
+>line-oriented editing or for batch-processing updates from
+>command files.
+>
+Another dead herring:  this time asking you, the reader to fallaciously
+equate a simple proposal for the releases of texts in those universally
+available formats known as "DOS text files," etc, with a proposal "that
+  all WYSIWYG word processors should include commands for line-oriented
+  editing or for batch-processing updates from command files."
+The real issue here is whether or not TEI and its associated others can
+and should create guidelines which restrict practical usage of TEI text
+to a single digit percentage of computer users.  The alternative is the
+creation and distribution of etexts which would, could, and should have
+their home in virtually all computers around the world.
+
+>One could also claim that newer SGML-smart software will have no
+>trouble doing these tasks and that it is the job of the TEI to
+>promote abandonment of software which does not support SGML.
+>
+>To be conciliatory, there is merit to two points here.
+>
+>*** First, `Is there a presentation markup isomorphic to the TEI
+>*** Guidelines?'
+>
+>*** Second, `Should there be a presentation markup
+>*** format for the display of text with its SGML tags?'
+>
+>The first issue in my opinion the appropriate restatement of the
+>question Michael Hart asked long ago about how to `strip out' the
+>SGML tags.
+
+Actually, this question was still under discussion last month of course
+which belies another fallacious argument that you should ignore all the
+points because they are old.  Fallacious on two counts:  one that being
+old somehow strips point of its truth, two that this issue is "long ago
+about how to `strip out' the SGML tags."  Non to mention that one might
+not want, perhaps should not want a "restatement of (one's) question"s,
+particulary when one has not been consulted.
+
+>           The answer is that the TEI hasn't in fact specified
+>ANY presentation markup for its SGML Guidelines. SGML doesn't specify
+>how to print text. (SGML isn't in fact about the printing of text;
+>it is about the preservation of the content of text).
+>
+Actually, I have never mentioned " the printing of text," only the
+way the text appears to the eye when viewed as a standard textfile
+when using the standard modes for reading textfiles.  Of course in
+this mode it might become more easily printable.
+
+>I am personally skeptical that merely using blank space and line
+>breaks that one can acceptably represent the TEI Guidelines. It
+>would certainly be challenging to try and do so, something like
+>trying to flaten a hypertext in an acceptable manner. The goal
+>is not without merit and probably deserves more discussion.
+>
+For the umpteenth time I must correct this misquotation:  proposal
+is only to include the easy use of these texts ALONG WITH OTHER OF
+THE TEI GUIDELINES, NOT TO REPLACE ANY OTHER GUIDELINES, access is
+the point of the proposal, access for those who have normal access
+to normal programs for reading, searching or retrieving text files
+on relatively "normal" computers, if such a thing exists.
+
+>The second issue is one that I think does need some discussion.
+>How should an SGML text be stored in a file? SGML doesn't say.
+>As I've mentioned before, the OED2 is stored as a single stream
+>of characters without any carriage-returns or padded blanks for
+>presentation. SGML can be ``pretty-printed'' according to a fairly
+>simple algorithm, i.e.,
+      xxxxxxxx  Many lines about ``pretty-printing'' deleted. xxxx
+>---
+>This is why I am a bit concerned about the implicit use of presentation
+>markup in SGML text. However, it is probably preferable that something
+>be said about the assumptions rather than everything left implicit.
+
+End of Mr. Amsler's note.
+
+My note must also end here, and perhaps should have ended before it
+began.  I fear this may not have been the best way to deal with the
+matter, and welcome assistance.
+
+Thank you,
+Michael S. Hart
+=========================================================================
+Date:         Tue, 13 Nov 90 16:12:00 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      Please add this disclaimer to previous note.
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+I have been told to use a disclaimer, therefore I disclaim it all.
+=========================================================================
+Date:         Tue, 13 Nov 90 16:49:25 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      TEI proposal
+
+By the way, I never received a copy of the note to which Mr. Amsler
+responded.  Is there some policy that the writer of a note does not
+get a copy unless it is put into a digest format?
+
+
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+I have been told to use a disclaimer, therefore I disclaim it all.
+=========================================================================
+Date:         Tue, 13 Nov 90 17:32:01 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      Listserv notes (who gets copies...)
+
+Michael S. Hart asks whether the senders of notes to TEI-L get no copies
+of them as a matter of policy.  Senders do not get copies, but
+not as a matter of policy.  When a subscriber to TEI-L sends a
+note to the list, Listserv sends an acknowledgement to the subscriber,
+and distributes the note itself to all other subscribers.  The note
+itself is not sent back to the subscriber, as a preventive measure
+against mailer loops.
+
+CMSMcQ
+=========================================================================
+Date:         Wed, 14 Nov 90 11:39:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      pretty printing sgml
+
+Sorry, but I am going to be doctrinaire about this. SGML is not meant to
+be read by people. If you want to pretty-print it, use something like
+LECTOR which will deal with the things that SGML tags identify properly,
+and without any tags at all. The SGML standard is fairly idiosyncratic
+in its rules about where white space and record ends are significant (it
+isn't illogical -- just different from what you might expect). Depending
+on the particular content model, it is quite likely that some parseable
+document might become unparseable if pretty-printed  &agrave; la Amsler.
+In which case, there's no point in not going the whole hog and
+formatting them beautifully. There's a useful summary of the relevant
+rules in van Herwijnen so I won't rehearse them here.
+
+Lou
+=========================================================================
+Date:         Wed, 14 Nov 90 16:47:13 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      Re: pretty printing sgml
+In-Reply-To:  Message of Wed,
+              14 Nov 90 11:39:00 GMT from <LOU@VAX.OXFORD.AC.UK>
+
+On Wed, 14 Nov 90 11:39:00 GMT Lou Burnard said:
+>Sorry, but I am going to be doctrinaire about this. SGML is not meant to
+>be read by people. If you want to pretty-print it, use something like
+>LECTOR which will deal with the things that SGML tags identify properly,
+>and without any tags at all. The SGML standard is fairly idiosyncratic
+>in its rules about where white space and record ends are significant (it
+>isn't illogical -- just different from what you might expect). Depending
+>on the particular content model, it is quite likely that some parseable
+>document might become unparseable if pretty-printed  &agrave; la Amsler.
+>In which case, there's no point in not going the whole hog and
+>formatting them beautifully. There's a useful summary of the relevant
+>rules in van Herwijnen so I won't rehearse them here.
+>
+>Lou
+
+I was informed that TEI-L was for the purpose of discussing the proposal
+or proposals which might the the future products of the TEI.  This would
+not suggest that the TEI-L discussion was to be dominated by individual,
+or oligarchical comments or that the TEI or TEI-L were to be ineffectual
+due to the cast-in-stone policies of SGML.  While I was aware of a (more
+or less) interlocking directorate of TEI, TEI-L, SGML, OTA, etc, it must
+be of a different nature than that which I gleaned from my invititations
+to join TEI-L.  It would perhaps be wise to reestablish the ground rules
+and the purpose of TEI, TEI-L AND SGML.  I was once promised mailing(s),
+from several different sources on these matters.  The closest place that
+could be mailed from is Chicago, so if Michael Sperberg-McQueen would be
+so kind. . . .
+
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+
+INTERNET:  hart@vmd.cso.uiuc.edu
+BITNET:    hart@uiucvmd.bitnet
+
+The views expressed herein do not necessarily reflect
+the views of any person or institution.  Neither Prof
+Hart nor Project Gutenberg have any official contacts
+with the University of Illinois.
+
+"NOTICE:  Due to the shortage of ROBOTS and COMPUTERS
+ some of our workers are HUMAN and therefore will act
+ unpredictably when abused."
+=========================================================================
+Date:         Wed, 14 Nov 90 23:12:05 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      MORE ON ASCII ETEXT
+
+Michael Hart's renewed request for "plain ascii" text from TEI, or text
+that can be read on "normal" computers, is analogous to the dilemma faced
+by this chap who wants LaTeX commands removed but structure retained:
+
+> From: sanjiv@fergvax.unl.edu (Sanjiv K. Bhatia)
+> Newsgroups: comp.text.tex,comp.text
+> Subject: Help with removing latex commands
+> Keywords: NOT delatex
+> Organization: Comp Sci and Engr, Univ. of Nebr.
+>
+> I am looking for a program that will remove all the LaTeX specific commands
+> from a document while preserving the structure of the document.  I have
+> delatex but that removes the structure of the document.  I do not mind if
+> things like equations, tables, and pictures are removed.  All I am
+> interested in is plain ASCII text.
+>
+> I have looked into dvitty but that messes up the words.
+>
+> Thanks for any pointers.
+>
+> Sanjiv
+
+At one level, I am sympathetic with Mr. Hart's request: I often receive
+files in Script or TeX which I can't read (easily) on my PC, so I've looked
+for utilities to "remove" the formatting elegance, leaving me with
+aesthetically-impoverished raw-ascii text that indeed can be read with DOS
+"type."  I recall feeling very sheepish when I asked a TeX guru for
+something that would just print a standard page from a DVI file:
+fixed-pitch, uniform point size, just spitting out "the words."  (I
+understand such an utility does exist, though I've never found a DOS
+version; it seems like a nice alternative to cluttering a hard disk with 10
+megabytes of TeX fonts.)
+
+With SGML (TEI) markup, however, such a request makes less sense.  It's not
+just "formatting" structure that gets removed when you take out descriptive
+markup -- indeed, it's a conviction dear to SGML that formatting information
+be kept out of the encoding, thus separating content from presentation --
+but vital **information about the content.**  The richer the encoding
+(analytical- interpretive information, such as literary and linguistic
+scholars need for quantitative study of tagged corpora) -- then, obviously,
+the greater the loss of information when one removes the tagging.  Others
+have pointed out that in some cases, removal of all tagging may not leave a
+sensible or useful residue.
+
+Quite a bit of software development has already been done to provide
+"translators" between SGML-tagged texts and formatters.  According to one
+source, "Image Network (the xroff people) developed some sort of
+public-domain  conversion tool for the U.S. government to convert SGML into
+xroff."  You can get PD versions of x/troff for a PC -- would that qualify
+as a "normal" machine within reach of the masses?  NIST is developing
+similar tools, as well as a PD SGML parser.  It may be expected that
+development of sophisticated software will continue to be done on large
+systems, but surely the best results will filter down to inexpensive micros
+platforms.  SGML editors are already available for Mac and DOS
+microcomputers.
+
+I agree with Lou Burnard (and others) that the best way to think about
+SGML/TEI tagged texts is not with an impulse to remove encoding, but to make
+intelligent use of it.  That's why I posted summaries of LECTOR (Waterloo)
+and DynaBook (Electronic Book Technologies): this is software driven by
+user-defined electronic stylesheets that permit dynamic viewing of these
+texts, suppressing or revealing levels of structure and content objects,
+or classes of content objects, as optimally suit **YOUR** research goals
+at a given moment.  These software tools permit searching and/or hypertext
+browsing based upon GI's that describe/delimit text regions in an intelligent
+way.  I predict, contrary to Lou's "doctrinaire" verdict (which I feel he
+did not mean to stifle intelligent discussion), that "pretty-printing" of
+SGML (TEI) documents will become increasingly feasible and sensible, especially
+for some document classes: AAP/EPSIG and other movements are dedicated to
+making it happen on paper.  But to the extent that encoded texts readily
+become hypertexts through encoding enrichment, it makes less-and-less sense
+to believe we can do justice to these texts in a single view or screen shot.
+The SIL people (e.g., Gary Simons) have a potent claim that texts *ARE*
+linguistically/literarily multi-dimensional whether we recognize this or not:
+when we document the multi-dimensionality in encoding (lexical mappings;
+morphological analyses; etc.) then we betray our convictions in asking to
+see these texts (on ascii terminals) in a single plane.
+
+Forgive me if some of the subtlety of this discussion has eluded me -- but I
+think affordable software for editing/viewing SGML-TEI texts will be
+available by the time these texts are encoded under mature guidelines.  If
+the very *BEST* software for such purposes will not be available or
+affordable on my personal computer (it won't) -- well, that's the way the
+world is already.  We have to live in it.
+
+unrefined and unedited musings by...
+Robin Cover
+=========================================================================
+Date:         Thu, 15 Nov 90 07:59:04 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      wysiwyhaf, or seeing the effects
+
+In the spirit of Robin Cover's unedited musings, let me offer some early
+morning thoughts. I also have been annoyed by visually intrusive markup
+and wanted it removed. It seems also to me, however, that we need this
+removal -- or, more generally, interpretation -- to be done dynamically
+by the software that puts the text on screen or printer.  How in general
+this interpretation is done, how it is selectively controlled by the user
+in real time -- are these matters for the TEI to consider? Forgive my
+ignorance of the TEI's global plan.  If I were a software developer, I'd
+want to know how users might want to have the encoded meta-information
+acted upon, how they might want to specify the actions to be taken.
+
+Not "what-you-see-is-what-you-get" (wysiwyg) but
+"what-you-see-is-what-you-have-asked-for" (wysiwyhaf).
+
+I have wandered into combat without any weapons or armor. Will I escape
+in one piece?
+
+Peering into the near future, I see not merely a direction for software
+development to take but also a rapidly developing need for much more
+powerful hardware.  Has anyone spoken to the folks at NeXT about the
+dynamic presentation of encoded texts?
+
+
+Willard McCarty
+=========================================================================
+Date:         Thu, 15 Nov 90 10:13:00 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         RETURN <HART@UIUCVMD.BITNET>
+Subject:      Re: MORE ON ASCII ETEXT
+In-Reply-To:  Message of Wed, 14 Nov 90 23:12:05 CST from <ZRCC1001@SMUVM1>
+
+On Wed, 14 Nov 90 23:12:05 CST Robin C. Cover said:
+>Michael Hart's renewed request for "plain ascii" text from TEI, or text
+>that can be read on "normal" computers, is analogous to the dilemma faced
+>by this chap who wants LaTeX commands removed but structure retained:
+
+No, as Robin is most certainly well aware, my suggestions for inclusion in
+the TEI proposals, guidelines, etc., are not
+
+"analagous to the dilemma faced by this chap . . . ."
+
+rather this is a request for the inclusion of the users of vast majorities
+of various computers and programs in use, instead of a limitation to those
+in the small percentage which are SGML oriented.  This proposal in no way,
+no way at all, would change the files which are in SGML format, but should
+only add an easy manner for users of popular computers and programs.  This
+request is not meant to change, limit, or otherwise have any effect on the
+users of the SGMLified texts, only to broaden the base of accessibility to
+the 99% of computer users who are not SGML oriented.
+
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+
+INTERNET:  hart@vmd.cso.uiuc.edu
+BITNET:    hart@uiucvmd.bitnet
+
+The views expressed herein do not necessarily reflect
+the views of any person or institution.  Neither Prof
+Hart nor Project Gutenberg have any official contacts
+with the University of Illinois.
+
+"NOTICE:  Due to the shortage of ROBOTS and COMPUTERS
+ some of our workers are HUMAN and therefore will act
+ unpredictably when abused."
+=========================================================================
+Date:         Thu, 15 Nov 90 11:24:18 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         RETURN <HART@UIUCVMD.BITNET>
+Subject:      Re: wysiwyhaf, or seeing the effects
+In-Reply-To:  Message of Thu,
+              15 Nov 90 07:59:04 EST from <MCCARTY@VM.EPAS.UTORONTO.CA>
+
+Willard asked about the NeXT presentation of marked up text files.
+
+Their solution is to present the screen images directly from the marked
+up files, which are marked in PostScript (I am not sure if the vanilla,
+or other usual versions of PostScript might be what they use.  I recall
+some mention of something called Presentation PostScript, but this must
+have been at one of the first demos of the NeXT machine back in version
+0.2 or so.)  If more information is desired, I can forward the question
+to our local NeXT wizards.
+
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+
+INTERNET:  hart@vmd.cso.uiuc.edu
+BITNET:    hart@uiucvmd.bitnet
+
+The views expressed herein do not necessarily reflect
+the views of any person or institution.  Neither Prof
+Hart nor Project Gutenberg have any official contacts
+with the University of Illinois.
+
+"NOTICE:  Due to the shortage of ROBOTS and COMPUTERS
+ some of our workers are HUMAN and therefore will act
+ unpredictably when abused."
+=========================================================================
+Date:         Thu, 15 Nov 90 13:32:18 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      TEI-L's function
+
+Could we please return TEI-L to the discussion of the
+TEI's guidelines and SGML. There are other mailing lists
+for general discussions of printing and text availability.
+
+I think what is needed are some challenges for the TEI
+community. For example,
+
+From your reading of the TEI Guidelines, what specialized
+forms of text cannot be put into SGML format using the
+conventions already provided?
+
+What is the most difficult part of reading the Guidelines?
+
+What types of text do you not feel have been dealt with at all?
+=========================================================================
+Date:         Thu, 15 Nov 90 11:47:15 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      DAK CDROM SALE
+
+*Apologies to those of you who are on more than one of the above lists.*
+
+First at disclaimer:  I have not yet spoken with Drew Kaplan since he is
+at ComDex, and even though I have been assured he will want to speak and
+work with me concerning this, there is no guarantee that this will occur
+nor that the sun will come up tomorrow.  I post this due to an extremely
+fervent hassle I have received at the hands of one of our promienent and
+original Gutenberg list members because I did not manage to get question
+and answer to and from Mr. Kaplan yesterday, but did manage to get a few
+questions asked and answered in his absence.
+
+Most importantly, this kit is not designed for use on a Mac, though, for
+reasons which will become apparent, I am going to try to get the SCSI CD
+ROM drive to work on a Mac.  However, the software is certainly going to
+be DOS oriented as are the CDROMs.  Nevertheless, some of you might want
+to buy the kit, keep the drive or disks, and pass on the disks or drive.
+If this is the case please let me know and I will see if an intermediary
+will be wiling to handle this for us for a small charge.
+
+The drive is a Sony CDU 6201-10 and comes with a SCSI interface card and
+2-3 foot cable (round, not flat).  I will let you know what brand a card
+is included in mine when it gets here (must I disclaim and say "if"?)
+
+I have used this type of drive before with a Western Digital WD 7000 ASC
+SCSI card with great results.  This drive is also said to play audio CDs
+through your hi-fi or with headphone (I am beginning to disclaim it all,
+aren't I).  I was also told you have to have your computer on to run the
+drive through the hi-fi, I will check that out, also.
+
+Now for the bad news, these are being ordered quite quickly, I am making
+a call right now to confirm this again, but the line is busy.  (Autodial
+sounds in the background - got a ring - an answer - I am told they don't
+have that information, but have asked for a supervisor since I received,
+supposedly, that type of information twice earlier.  Well, supervisor in
+charge says they weren't supposed to give me that info, and I didn't say
+who give it to me before, but she told me another department might tell,
+so I am ringing them now. (Sound effect, please)  I will write below and
+come back to this if I get any response - Don't forget applause for live
+typing with justified right margins while talking on phone, eating candy
+bar, etc!)
+
+About the 6 CDROM disks which (are supposed) to come with the system.  I
+have determined through two separate pieces of information that the disk
+encyclopedia is the one originally released out in Monterey, CA, back in
+1985 or so.  They changed the name a few time, but I recall that Grolier
+and Gary Kildall were involved, I don't know if this is the 1985 version
+or if it has been upgraded.  I did find out that the paper version has a
+1988 edition out.  This is a 9 million word encyclopedia, not as large a
+file as some of the others.  It has some 2,000 graphics, and at least an
+assortment of them are VGA, but I don't think all of them could be full-
+screen VGA due to space limitations.  (640 x 480 x 256 GIF files take an
+estimated 1/4 M, so 2,000 of them would take up just about the whole CD)
+I think some are limited in color and in resolution and even in size.
+
+The next disk is the Library of the Future (TM) containing 450 volumes -
+the ad says ". . . you can instantly access a passage, section . . . ."
+and ". . . you can copy any information you need and insert it directly
+into your reports, proposals, letters and any document you write."
+
+I am going to give a very loose approximation of what is in the Library
+of the Future, since I don't want to type in 450 titles of 50? authors.
+
+Author  -  approximate number of titles
+
+Aeschylus - 7
+Aristophanes - 11
+Aristotle - 30
+Saint Augustine - Confessions
+Francis Bacon - Essays
+Baccaccio - Decameron
+Burton - Arabian Nights
+Butler - Way of all Flesh
+Cervantes - Don Quixote
+Chaucer - Canterbury Tales (each tale is a title, I think)
+Coleridge - Ancient Mariner
+Conan-Doyle - Complete cases of Sherlock Holmes (each a title)
+Confucius - Analects, Doctrine of the Mean, Great Learning
+Dana - Two Years Before the Mast
+Darwin - Origin of Species
+Defoe - Robinson Crusoe
+Dickens - Tale of Two Cities (It was the best/worst of times)
+Epictetus - Discourses
+Fielding - Tom Jones
+Galen - On the Natural Faculties
+Hippocrates - 17
+Historical Documents - from Beowulf and the Magna Carta to 1900?
+   Included Declaration, Consitution etc of USA.
+Homer - Iliad, Oddysey
+Hubbard - Message to Garcia
+Ibsen - Peer Gynt
+James - Portrait of a Lady
+Kant - 8
+Khayyam - Rubaiyat
+Lincoln - 1st Inaugural, Gettysburg
+Lucretius - Nature of Things
+Marx/Engles - Communist Manifesto
+Melville - Moby Dick
+Milton - 30+
+Paine - Common Sense, Rights of Man
+Plato - 25
+Poe - Too many to count
+Religios Docs - Egyptian Book of the Dead, Bhagavad Gita, Buddha,
+                King James Bible, Koran, Book of Mormon
+Shakespeare - Looks like the compete works
+Sophocles - 7 (Looks like all major works)
+Swift - Gulliver's Travels
+Tolstoy - War and Peace
+Twain/Clemens - Huck Finn
+Verne - Center of the Earth, 80 Days
+Virgil - Aeneid, Ecologues, Geogics
+Voltaire - Candide
+Wallace - New Species
+Whitman - Leaves of Grass
+(Titles are subject to change)
+
+DAK phones are 1-800-325-0800 to order
+1-800-888-9818  tech info
+1-800-888-7808  cust service
+1-800-395-8976  computer software
+
+Well, I got a ring, but no one is answering, and I am tired so . . .
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+
+INTERNET:  hart@vmd.cso.uiuc.edu
+BITNET:    hart@uiucvmd.bitnet
+
+The views expressed herein do not necessarily reflect
+the views of any person or institution.  Neither Prof
+Hart nor Project Gutenberg have any official contacts
+with the University of Illinois.
+
+"NOTICE:  Due to the shortage of ROBOTS and COMPUTERS
+ some of our workers are HUMAN and therefore will act
+ unpredictably when abused."
+
+I disclaim everything, it is all a pack of foma.
+=========================================================================
+Date:         Thu, 15 Nov 90 14:57:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      RE: wysiwyhaf, or seeing the effects
+
+Willard or Willard's breakfast ask good questions which I will try to
+answer without belligerence, though the gist of what I have to say
+remains essentially 'nothing to do with TEI squire'.
+
+Yes, indeed, acting on the markup encoded in a TEI text should be "done
+dynamically by the software that puts the text on screen or printer"
+(how else you gonna see it I ask myself). For the TEI to specify the
+user interface to that processing (which is what it sounds Willard is
+proposing) -- to  for example "all div1s should be realised in pink
+with green underlining" or "start a new screen and play God Save the
+Queen before every div0" -- does not seem either practicable or
+advisable. Firstly we haven't got time or personpower. Secondly we
+wouldn't do it right. I say that with confidence, because the whole
+point of this exercise is to markup texts so they can be used for
+multiple applications, many different ways of presenting the same text
+including some which we *havent thought of yet*. The 'G' in SGML is for
+GENERIC, remember?
+
+If the TEI scheme doesnt tell you how to process your text (but just
+how to say what's in it) you still need some way of controlling the
+software which does process it. Clearly, the more sgml-aware the
+software is that does the processing, the easier that interface will be.
+So when I said `SGML is not meant for human readers' I was somewhat
+muddying the waters, for which I apologise. For example, a word
+processor which knows that you should have end-tags that balance your
+start-tags, and won't let you insert ones that don't is more use to you
+than one that doesn't even know what a start-tag is; just as a retrieval
+program to which you can say  "only look in the bits of text tagged as
+blorts"  is more use than one which thinks that <blort> is a funny sort
+of word. But specifying software, still less writing it, is one of the
+jobs which the TEI has emphatically *not* volunteered for.
+
+Is there a general feeling that this separation of tasks is
+fundamentally misconceived?
+
+Lou Burnard
+=========================================================================
+Date:         Thu, 15 Nov 90 15:01:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      p.s. to wysiwyhaf
+
+sorry, i left a couple of words out of my last posting in response
+to Willard Mccarty's note. In the second para, line 4, insert "as if"
+after the word "sounds". On the next line, after the "-- to", insert
+the word "specify" (or "require" or something analogous)
+
+L
+=========================================================================
+Date:         Fri, 16 Nov 90 08:16:59 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      wysiwyhaf, the sequel
+
+My thanks to Lou for his controlled belligerence. For what it's worth
+I certainly don't think the separation of tasks (design of the language
+from design of the software than can handle it) is misconceived at all.
+Perhaps, however, it is an unwritten task of the community that the
+TEI has discovered and strengthened to do something about the specifications
+for software. A fascinating bunch of problems, no? Or have I somehow
+overlooked seminal work in this area?
+
+I think we may have progressed from the stage of "now that we have all this
+complex markup let's figure out how to get rid of it" to the stage of "let's
+start thinking about how to act on it".
+
+
+Willard McCarty
+=========================================================================
+Date:         Fri, 16 Nov 90 08:45:55 LCL
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         David.A.Bantz@MAC.DARTMOUTH.EDU
+Subject:      Re: wysiwyhaf
+
+This is an interesting turn of the discussion.  Lou is certainly correct in
+distinguishing sharply between the goals of marking to indicate structure &
+content of the text, from that of appropriate presentation.  But we will want
+easily specified flexible connections between the these two functions.  Is
+there, perhaps, an  analogue to an application programming interface
+specification that would be a useful adjunct to the TEI standards (whether or
+not they are part of the standards or part of the same enterprise)?  That is,
+does it make sense to want some generic framework for indicating links or
+hooks between document components and presentation? Should such a
+specification be defined directly by readers or the presentation software
+(which can be responsive to readers preferences)?
+=========================================================================
+Date:         Mon, 19 Nov 90 17:53:08 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Bryan Cholfin <SPAMFB@HARVARDA.BITNET>
+Subject:      ASCII e-text
+
+If I've been following the argument about text-file formats correctly,
+(and you can shoot me if I haven't), there's actually two distinct (well,
+semi-distinct) issues. The question of whether SGML-encoded files should
+be distributed in ASCII format or not is relevant to the idea that the
+TEI project is supposed to create a device and application independent
+coding scheme (I don't have the TEI guidelines yet, so I may have the
+details wrong).
+In order to achieve the goal of device-independent text interchange, files
+should be distributed in a form that (ideally, at least) any system could
+read. So far, plain ASCII text files come closest to that (as far as I know).
+Most word processors, editors and system utilities (like DOS TYPE) can input
+ASCII files, even if they use a different format for their own work. But since
+SGML is a coding scheme, even if the codes are ASCII, the particular
+application is not going to be able to make any use of the information
+encoded unless it has a filter/interpreter which understands the code.
+So on a practical level, the only software or devices that really need to be
+able to read SGML files are those that have the appropriate filters.
+Now, -some- standard file format -does- need to be defined, so that
+application programmers can build those filters into their software,
+and be able to make the software output files that other SGML-senstive
+software can make use of.
+=========================================================================
+Date:         Mon, 19 Nov 90 19:31:48 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: ASCII e-text
+
+BANG!
+
+The TEI's goal isn't device-independent text interchange, it is
+presentation-independent content representation (for text interchange).
+`Devices' are concerned with tasks like `printing', which while
+a desirable capability for text--is not at all a necessary
+precondition for TEI text. It doesn't matter whether anyone knows
+how to print something--it is a question of whether they know
+what the information items in the text signify. Likewise, TEI
+text might just as well be described as database-independent or
+even application-independent (though I suppose that is a BIT strong
+as there is no telling what your application might be for text).
+
+ASCII is afterall only an alphabet. Saying a text is in ASCII
+is saying little more than that it uses alphanumerics and some
+punctuation. The TEI, for example, doesn't assume anything about the
+control characters--the ``unprintable'' characters. Even carriage-return
+is optional. In some sense the TEI and its standards go well beyond
+ASCII to assume only a printable subset of ASCII.
+
+SGML really doesn't care about `some file format' as it doesn't deal
+with physical things at all---of course, there is no such thing as an
+abstract magnetic medium and it matters when you render text
+machine-readable how and on what you enter it. However here the TEI
+doesn't intend to tell you how to render it machine-readable since
+the TEI doesn't intend to actually create any text--only the
+standards for the abstract (ASCII-subset) representation of the
+content in the text.
+
+The TEI is really just like the style guides you buy to help you
+write documents that conform to good writing practices. Style guides
+don't tell you whether to use a word processor or a typewriter or
+even a pencil and paper. They only address things like how to
+represent the name of a musical note in text, what the abbreviation
+for `und so weiter' is, what the difference between a figure and a
+table are, how to denote the elements in a two-level index entry,
+etc.
+=========================================================================
+Date:         Tue, 20 Nov 90 09:56:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "D. R. Morgans" <IN2023@SYSA.WOLVERHAMPTON.AC.UK>
+Subject:      TEI in a historical context
+
+Hi, I'm a new entrant to the world of TEI and SGML and am  making
+a rather timorous plea for help!
+
+One of our researchers has been invited to help in the definition
+of  'tags'  which  are specific to certain  types  of  historical
+document.   Specifically  data  recording traffic  on  the  River
+Severn  in  the  17th & 18th Centuries (the data  is  held  on  a
+database).   The  interest  in TEI  stems  from  another  related
+project,  a dictionary of terms used to describe the  cargoes  of
+such  traffic;  barrels, tuns, pecks etc.  The full  text  for  a
+database  entry could be used to give context  information  about
+the term.
+
+There are a number of concordance packages which can be used  for
+similar purposes but they tend to be inflexible in the amount  of
+context that can be displayed.
+
+Has  the use of SGML conformant markup languages  been  discussed
+for the production of contextual dictionaries?  How can the  work
+of TEI further this?
+
+Thanks  if  anyone can offer any help on this.  I'm sorry  if  my
+description  is rather vague but I'm still struggling  with  SGML
+and its related applications.
+
+
+Note  1:  the River Severn is the longest river  in  England  and
+Wales and it flows through or near some of the early economic and
+industrial  towns and cities; Shrewsbury, Telford, Worcester  and
+Bristol.
+
+Note  2: the patterns of traffic on the River during 17th &  18th
+C's  can  be used to explore changes in the social  and  economic
+climate of central Britain and beyond.
+=========================================================================
+Date:         Tue, 20 Nov 90 15:04:13 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      shooting the messenger (Cholfin, Amsler, McCarty)
+
+Having just returned from being out of town to the most recent TEI-L
+discussion, I have found, figuratively, the bleeding body of Bryan
+Cholfin's note, shot by Bob Amsler in his reply.  Fortunately, e-bullets
+can be extracted and rarely do bodily harm; this is the more fortunate,
+in that I think RA may have shot prematurely, and that BC's and RA's
+views are not in fact in conflict.
+
+The purpose of the TEI, according to the funding proposal we sent to NEH
+last year, is the development and dissemination of guidelines for the
+preparation and interchange of machine-readable texts; these guidelines
+must be (again, paraphrasing the proposal):
+
+    suitable for interchange of already-existing texts
+    suitable for guidance in encoding new texts
+    flexible (guidelines, not rigid requirements)
+    extensible
+    device- and software-independent
+    language-independent
+    application-independent
+
+For my part, I think Bryan Cholfin is wholly correct to distinguish
+rigorously between ASCII-only text and markup-free text.  Normal TEI
+texts are limited to a subset of the ASCII characters (a subset shared
+by most machines and character sets, even those in non-Anglophone
+countries and those outside the ISO world, like EBCDIC) and thus
+necessarily can be inspected with TYPE and similar programs.  For this
+reason, I have found puzzling Michael Hart's recent request that the TEI
+guidelines require conforming texts to be manipulable with TYPE, GREP,
+CAT, etc., since, as has been repeatedly explained on this list, the
+character-set chapter already contains an explicit requirement which has
+that effect.  I believe MH objects not to the (non-existent) non-ASCII
+characters, but to the markup itself, finding that the presence of
+angle-bracket-delimited text makes the file unusable.  Since others
+find data unusable without the information in question, there appears
+to be no compromise on this point.
+
+I'm not sure exactly what BC means when he says
+
+    Now, -some- standard file format -does- need to be defined, so
+    that application programmers can build those filters into their
+    software, and be able to make the software output files that
+    other SGML-senstive software can make use of.
+
+I believe the information required by application programmers is
+contained in the definition of SGML (ISO 8879) and in the formal
+document type declarations in the appendix of the TEI guidelines.
+Further specification (e.g. restrictions as to line length or
+requirements as to disposition of white space in the file) would seem to
+me to be unnecessary and pernicious, since it has nothing to do with the
+application-independent information in the file.  (The difference
+between this position and that propounded by RA in his note is, I
+believe, merely one of degree:  I lay more stress on SGML's
+specification of what the SGML data stream looks like, and he much less.
+In an absolute sense, he is right:  the SGML standard explicitly states
+that the physical form of the input stream is not restricted, though at
+least part of it must conform to ISO 646 or ASCII, and the rest has to
+be electronic character data if most of the standard is to be
+interpretable.)
+
+To the comments of Willard McCarty and others on the desirability of
+some common, predefined specification of a standard specification of
+text encoded with TEI tags, all I can say is 'yes, that would clearly
+make TEI texts more usable, and thus would help ensure that the TEI
+scheme is widely adopted' and urge them to lay pen to paper or finger to
+keyboard to develop such a specification, and then share it with us
+here.
+
+There are several reasons I think such a presentation-specification
+should not come from the TEI itself:  it's too close to software
+development (for which we lack the resources and mandate), it's a
+specification of one user interface (and the TEI would risk having the
+one interface confused with the underlying encoding, and having people
+decline to use the TEI scheme 'because it puts two blank lines after the
+section title and I hate that', and it would distract our slender
+resources from the crucial and difficult specification of the tag set
+and structure into an enterprise which, however useful, does not pose
+any intrinsic conceptual difficulties.  Presentation as a function of
+markup has been specified for a long time by formatters and structured
+editors, and the problem of how to specify the desired presentation has
+been solved by troff, Waterloo and IBM GML, Author/Editor, CheckMark,
+Nota Bene, any word processor with style sheets, DynaText, and many
+others.  It should not be beyond the wit of some subscriber to this list
+to implement the TEI scheme or some significant subset thereof in one or
+the other of these programs.  We would welcome such enterprise, and I
+can assure you there will be space on the server for whatever you
+develop and wish to share (even if I have to learn UUENCODE and UUDECODE
+to handle it!).  If no volunteers are found willing, perhaps that will
+be a sign that the community is not as interested in the problem as one
+might expect.
+
+Any volunteers who run into interpretive problems understanding the
+guidelines are hereby assured that any inquiries they have will be
+answered.
+
+-Michael Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+=========================================================================
+Date:         Wed, 21 Nov 90 11:24:06 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Michael S. Hart" <HART@UIUCVMD.BITNET>
+Subject:      Re: shooting the messenger (Cholfin, Amsler, McCarty)
+In-Reply-To:  Message of Tue, 20 Nov 90 15:04:13 CST from <U35395@UICVM>
+
+Michael S. Hart's response to:
+
+"The Shot Heard 'Round the World"
+
+This is is two parts, one referring to the NEH proposal (a copy should be
+on the way for me to quote in more detail), the other in response to S-Ms
+restatement of my proposal (the latest in a series of TEI-L restatements,
+which I would much prefer to be quotations.  There might be a reason.)
+
+On Tue, 20 Nov 90 15:04:13 CST Michael Sperberg-McQueen 312 996-2477 -2981 said:
+>Having just returned from being out of town to the most recent TEI-L
+>discussion, I have found, figuratively, the bleeding body of Bryan
+>Cholfin's note, shot by Bob Amsler in his reply.  Fortunately, e-bullets
+>can be extracted and rarely do bodily harm; this is the more fortunate,
+>in that I think RA may have shot prematurely, and that BC's and RA's
+>views are not in fact in conflict.
+>
+>The purpose of the TEI, according to the funding proposal we sent to NEH
+>last year, is the development and dissemination of guidelines for the
+>preparation and interchange of machine-readable texts; these guidelines
+>must be (again, paraphrasing the proposal):
+>
+>    suitable for interchange of already-existing texts
+>    suitable for guidance in encoding new texts
+>    flexible (guidelines, not rigid requirements)
+>    extensible
+>    device- and software-independent
+>    language-independent
+>    application-independent
+>
+
+I would like to respond to these in order.
+
+1.  suitable for interchange of already-existing texts
+
+Obviously before the advent of TEI, TEI-L, SGML, etc, there were no
+etexts encoded in these formats, with these markups or whathaveyou.
+Therefore such interchange would have to include etexts which could
+not be marked up according to such standards.  These etexts include
+standard DOS text as output by Microsoft Word, Word Perfect, and/or
+other word processors by default.
+
+2.  flexible (guidelines, not rigid requirements)
+
+This would preclude the "doctrinaire" positions Lou Burnard adopted
+in his responses to these issues, and would preclude ANY positions,
+no matter taken by whom, which would be inflexible.  It also should
+preclude enforcement of the guidelines, else they transgress to the
+"rigid requirements" prohibited above.  Of course, this precludes a
+guideline for the inclusion of normal text (i.e. texts which can be
+searched with the search and find functions of "normal" programs on
+"normal" machines)(more about this later, but please accurate quote
+efforts please.  I am tired of this point being restated, restated,
+restated, to mean everything but what it means.)
+
+3.  device- and software-independent
+
+This means the arguments that any serious resercher should have one
+of the machines necessary for SGMLing are contrary to the proposal.
+This means the arguments that any serious resercher should have one
+of the programs necessary for SGMLing are contrary to the proposal.
+Device independent means the files should be utilizable on various,
+as widely varying as is feasible, machines.  Any effort limiting to
+certain hardware configurations is to be eschewed.  Programs, also.
+Software independent means the files should be utilizable on major,
+and even semi-major software methodologies.  Any effort limiting to
+certain software configurations is to be eschewed to at the same or
+greater degrees.  However, these two were linked, not just by their
+inclusion together in the NEH proposal, but before that they linked
+in the natural evolution of hardware and software.  Perhaps a great
+majority of the use of etexts is to search the text for quotations,
+or more loosely for portions of text which include certain words in
+certain contexts.  These contexts are usually defined in terms of a
+proximity within a certain range of characters, words, lines or any
+other definitions within the realms of the user and the program.  A
+text which has been marked up has great value, a value which I must
+not be said ever to deny, but there were other values, values which
+I pointed out could not be utilized by any of the normal programs I
+see in use on normal machines.  To use the search or find portions,
+or sort features, or most of the more powerful features included in
+most of the word processing and search programs, one must have text
+which does not include markup.  Therefore text could be released in
+both marked up and not marked up formats.  I prefer this to program
+utilization by each user to strip the file, which would be a waster
+of time and resources to do over and over again.  Better yet, I am,
+in association with others who are real programmers, working on the
+production of a program with will present a text file in several of
+the manners discussed above, in addition to being able to present a
+single file, with multiple markups, as either a first edition, or a
+second edition, etc.  This will drastically reduce the space needed
+to store multiple editions for comparison.
+
+This part has become long enough.   I don't want to lose attention,
+attention required for the formulation of improved etext files.
+
+You may wish to treat this second portion as a separate note:  even
+though it is in response to the same note as above.
+
+
+Lines deleted*****
+>necessarily can be inspected with TYPE and similar programs.  For this
+>reason, I have found puzzling Michael Hart's recent request that the TEI
+>guidelines require conforming texts to be manipulable with TYPE, GREP,
+>CAT, etc., since, as has been repeatedly explained on this list, the
+>character-set chapter already contains an explicit requirement which has
+>that effect.  I believe MH objects not to the (non-existent) non-ASCII
+>characters, but to the markup itself, finding that the presence of
+>angle-bracket-delimited text makes the file unusable.  Since others
+>find data unusable without the information in question, there appears
+>to be no compromise on this point.
+
+I am not asking for a compromise.  I never have.  I only ask that the
+users of normal programs on normal computers not be denied access for
+their program features to be used in conjunction with these etexts.
+
+I have not objected to anything, only requested that something in the
+way of increased utilization be included.  When a users do a "search"
+or "find" or "sort" or any of the various other features available in
+most of the text and word processing programs, the markups can get in
+the way and prevent even some of the simplest quotations from being a
+result of the search.  I am sure you all have been made aware of this
+situation in a variety of experiences when a search did not yield the
+quotation you could already see in front of you on the screen.  Would
+these situations not be reduced by allowing various and sundry others
+in the world of search software to have a go at it?
+
+Why would you want to limit the utilization of electronic texts?  Why
+would you want to keep them away from the millions of students with a
+normal access to normal computers with normal programs?
+
+This is not the "flexible"
+"device- and software-independent"
+"proposal"
+"suitable for interchange of already-existing texts."
+
+>     *****remainder of original note deleted*****
+
+Thank you for your interest,
+
+Michael S. Hart, Director, Project Gutenberg
+
+
+INTERNET:  hart@vmd.cso.uiuc.edu
+BITNET:    hart@uiucvmd.bitnet
+
+The views expressed herein do not necessarily reflect
+the views of any person or institution.  Neither Prof
+Hart nor Project Gutenberg have any official contacts
+with the University of Illinois.
+
+"NOTICE:  Due to the shortage of ROBOTS and COMPUTERS
+ some of our workers are HUMAN and therefore will act
+ unpredictably when abused."
+=========================================================================
+Date:         Wed, 21 Nov 90 17:49:40 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Bryan Cholfin <SPAMFB@HARVARDA.BITNET>
+Subject:      I'm not dead yet
+
+Well, I think I see what's going on a little clearer now, actually. I don't
+think I split the problem at quite the right plac the first time. Here we have
+some e-text that has been tagged or coded according to SGML rules, and those
+codes/tags are represented by ASCII strings (or a particular subset of ASCII)
+so that any piece of common software should be able to read and write to files
+containing those codes/tags. Now there are two seperate problems after that:
+
+1) Many word processors and editors store their files in proprietary formats
+with proprietary formatting codes embedded into them. This presents a problem
+to people wishing to share SGML coded files, but who are not necessarly using
+the same systems. This is not a new problem, this is an old problem rearing its
+head in a new context.  Now it may be that this is not precisely in the realm
+of the TEI or SGML, but it would seem that eventually you'd want to get away
+from having to worry about compatibility across, say, different word
+processors (do you, user of MS-WORD, for example, want to have to have a
+filter for everyother word processor in the known universe?), i.e. the
+goals of the software companies that give us these things run counter to the
+goal of being able to universally share text. Now, all hope is not lost, since
+most of these programs can read or write to plain ASCII text files, preserving
+the SGML tagging but losing the proprietary formatting information (though,
+I would guess that in this context that would be less important).
+
+2) Will the word processors/database handlers/etc. have code built into them
+to allow them to use the SGML coding, or will the software just perceive
+random ASCII strings? As has been pointed out, in some cases this may
+interfere in the normal operation of the word processors (though I would
+guess in practice this would not be a major impediment for most). Presumably
+it would not require *major* rewrites of software to allow searching, sorting,
+etc. routines to dynamically make use of SGML coded structural information,
+and I would also expect that in some wp or editing software (if this hasn't
+in fact, already occured) that allows for user supplied macros/programs,
+that each user could tailor the system to his or her own needs, which is the
+whole point of those facilities.
+
+This whole issue may be secondary to the main point of the TEI, but I would
+guess that in the long run, if it isn't thought about here, software
+developers will be handing out 'solutions' that will hamper the usefullness
+of the whole project rather than increase it.
+
+Bryan Cholfin
+Broken Mirrors Press
+=========================================================================
+Date:         Wed, 21 Nov 90 22:07:41 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Converting into SGML-ASCII
+
+Ah, what Bryan Cholfin has identified is a good point, that what you
+really want in a word processor is that it be able to convert its
+internal format into an SGML ASCII output for interchange to
+another word processor. That is, it should be able to display
+multiple fonts, underlining, superscripts, etc. but if you
+ask it to write the data out in plain ASCII it should also
+be able to put into the ASCII a translation of its own
+codes into SGML tags.
+
+This is I believe the point behind several emerging software systems.
+I would contend that rather than be concerned about what today's
+word processors are doing, we should be looking forward to better
+word processors that can speak, decode and encode in SGML.
+
+It goes back to pointing out why standard for SGML tags are essential.
+I.e. if you use <para>, I use <graf> and someone else uses <pgf>
+there will be endless conversions even between SGML+ASCII. Thus
+enters the TEI by making some arbitrary decisions to call the tag
+one name, rather than 3 or 30.
+=========================================================================
+Date:         Wed, 21 Nov 90 23:07:00 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         FORTIER@UOFMCC.BITNET
+
+Subject: Survey of Literature Study Needs
+
+Dear Colleague:                         22/11/90
+   The next cycle of work in the TEI Project will include a
+concentrated effort to develop standards geared to the needs
+of scholars of literature.
+   I am writing on behalf of a Work Group charged with setting up
+the committee structure to carry this out.  Input from the community
+of potential users of these standards will be particularly valuable
+to us at this time.
+   Please fill out the following questionnaire and return it to me
+by electronic mail at FORTIER@UOFMCC.BITNET, or by paper post to
+Paul A. Fortier, Department of French and Spanish, University of
+Manitoba, Winnipeg, Man., R3T 2N2, CANADA.
+   If you know of any colleagues who might be affected or interested
+by this topic, please pass a copy of this letter along to them.
+   We need to receive your responses no later than December 10, 1990.
+            Thank you,
+                         Paul A. Fortier,
+                         TEI Work Group on Literary Texts.
+
+                        QUESTIONNAIRE
+I. Standards for Literature Texts.
+
+I would rate the importance of the indicated categories to standards
+for literature texts as follows:
+
+A. Bibliographical Information : (Place, date of publication, edition,
+   printing, etc):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+B. Formal Characteristics (Chapters and sub-chapters, page and line
+   Breaks, stanza divisions, speakers in plays, stage directions, etc.):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+C. Grammatical Information (Basic Form, Part of Speech, Inflection
+   Identification, etc):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+D. Metrical Information for Poetry:
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+E. Interpretative Information (e.g. Narrative vs. expository
+   passages, direct and indirect discourse, point of view, themes,
+   images, allusions, etc.):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+Please Specify Important items in this category:
+
+F. In order to do my work as I prefer, I need generally
+   accepted tags for the following aspects of texts (Please be as
+   specific as possible.  This is not a test but an opportunity to
+   express your wishes.  Please number your "wishes" and rank them
+   in descending order of preference.):
+
+1.
+2.
+3.
+etc.
+
+G. Futher suggestions to the Work Group on Literature Texts:
+
+
+II. The Current Version of the Standards (TEI P1.1)
+
+I would propose the following modifications to make them more
+appropriate to the needs of scholars of literature (Please list in
+descending order of preference):
+
+1.
+2.
+3.
+etc.
+
+III. About yourself
+
+I consider myself to be a specialist in (Literature) (another
+discipline [please specify]):
+
+My sub-specialties are as follows:
+
+Genre (please specify):
+
+Period (please specify):
+
+Geographical area (please specify):
+
+Language of the texts studied (please specify):
+
+The next text I shall encode will probably be
+ __Prose fiction __Theatre  __Film script __Poetry __Essay
+ __Non-literary text __Other (please specify):
+
+I use the following type of computer:
+ __Mainframe __Microcomputer __both  __neither
+
+I (have) (have not) prepared literary texts for computer processing.
+
+I (have) (have not) used texts prepared elsewhere for computer
+processing.
+
+I (have) (have not) published literary analyses based on computer
+results.
+
+I (am) (am not) aware of the content of the current version of the
+Standards (TEI P1.1) from the following source(s)
+__ Reading the Standards Document (TEI P1.1)
+__ Conference Presentations   __ Published or electronic descriptions
+__ Other (please specify):
+
+I (would) (would not) be willing to work on a committee to develop
+explicit standards for my area of specialisation.
+
+Name and Postal Address (Optional):
+To:    <U017101@BLIULG11.bitnet>
+  <WORDS@BUCLLN11.bitnet>,
+  <MMEPHAM@LAVALVM1.bitnet>,
+  <gholmes@uwovax.bitnet>,
+  <BUCLIFF@CCM.UMANITOBA.CA>,
+  <cshunter@uoguelph.bitnet>,
+  <BARNARD@QUCIS.queensu.ca>,
+  <oldeng@gpu.utcs.toronto.edu>,
+  <ROBERTS@UTOREPAS.BITNET>,
+  <LOGAN@WATDCS.bitnet>,
+  <cadmadge@vm.uoguelph.ca>,
+  <ELAINE@MCMASTER.bitnet>,
+  <PHIL@WATDCS.bitnet>,
+  <59156@ucdasvm1.bitnet>,
+  <dlberg@watsol.waterloo.edu>,
+  <FLIKEID@STMARYS.BITNET>,
+  <FORTIER@UOFMCC.BITNET>,
+  <Mary@writer.yorku.ca>,
+  <JARED_CURTIS@cc.sfu.ca>,
+  <PH22@MUSICA.MCGILL.CA>,
+  <LIDIO@UTORONTO.bitnet>,
+  <Young@VM.EPAS.UToronto.CA>,
+  <IAN@VM.EPAS.UTORONTO.CA>,
+  <MCDOJ@QUCDN.BITNET>,
+  <GILLILAND@SASK.BITNET>,
+  <SMYE@SHERCOL1.bitnet>,
+  <HLOGAN@WATDCS.bitnet>,
+  <feem@qucdn.bitnet>,
+  <TBUTLER@UALTAVM>,
+  <Roberta@Writer.yorku.ca>,
+  <cecchett@mcmaster.bitnet>,
+  <usermial@ualtamts.ca>,
+  <SREIMER@UALTAVM.bitnet>,
+  <johnt@espinc.uucp>,
+  <M_CONNEL@UTOROISE.bitnet>,
+  <NYE@UWYO.bitnet>,
+  <Wujastyk@euclid.ucl.ac.uk>,
+  <udaa220@elm.cc.kcl.ac.uk>,
+  <VERONIS@FRMOP11.bitnet>,
+  <VERROUST@FRP8V11.BITNET>,
+  <H27@TAUNIVM.bitnet>,
+  <CHOUEKA@BIMACS.BITNET>,
+  <GLOTTOLO@ICNUCEVM.bitnet>,
+  <TRTIDU2@IRMUNISA>,
+  <Delmonte@Iveuncc.Bitnet>,
+  <a86743@jpnkudpc.bitnet>,
+  <arvid@ifi.uio.no>,
+  <S.Michaelson@ed.ac.uk>,
+  <hiscont@cc.unizar.es>,
+  <TEGKW@SEGUC21.BITNET>,
+  <tingsell@hum.gu.se>,
+  <CSMIKE@VAX.SWAN.AC.UK>,
+  <mike@cogs.sussex.ac.uk>,
+  <GKHA13@cms.Glasgow.ac.uk>,
+  <LOU@vax.ox.ac.uk>,
+  <SUSAN@VAX.OX.AC.UK>,
+  <MI604W@D606WD01.bitnet>,
+  <xpmfL1@yubgss21.bitnet>,
+  <JHUBBARD@SMITH.bitnet>,
+  <Dorenkamp@HLYCross.bitnet>,
+  <hshirk@lynx.northeastern.edu>,
+  <Durand@brandeis.bitnet>,
+  <SALEY@HARVARDA.bitnet>,
+  <pc@mitre.org>,
+  <elli@wij12.harvard.edu>,
+  <jhmurray%athena@mituma.bitnet>,
+  <jal@iris.brown.edu>,
+  <pdk@iris.brown.edu>,
+  <Womwrite@Brownvm.bitnet>,
+  <J_GOLDFIELD@unhh.bitnet>,
+  <DANTE@DARTMOUTH.edu>,
+  <RPY383@MAINE.bitnet>,
+  <SCLAUS@YALEVM.bitnet>,
+  <Eveleth@Yalevm.bitnet>,
+  <FRIEDMAN@SITVXB.bitnet>,
+  <EHRLICH@DRACO.RUTGERS.EDU>,
+  <Stuehler@Apollo.Montclair.edu>,
+  <Bolton@Zodiac.bitnet>,
+  <MECHC@CUNYVM.bitnet>,
+  <HMB6311@ROSEDALE.bitnet>,
+  <Sharong@Phoenix.Princeton.edu>,
+  <jeff@pucc.princeton.edu>,
+  <bobh@phoenix.princeton.edu>,
+  <judith@pucc.bitnet>,
+  <tobypaff@pucc.princeton.edu>,
+  <WASSERMAN@FORDMULC.bitnet>,
+  <bb.HXR@RLG.bitnet>,
+  <SLUS@CUVMA.BITNET>,
+  <JPSMALL@ZODIAC.bitnet>,
+  <LOWRY@CUNIXC.CC.COLUMBIA.EDU>,
+  <nancyf@yktvmh.bitnet>,
+  <DCLAYMAN@BKLYN.bitnet>,
+  <bm.nll@rlg.bitnet>,
+  <KRA@AECOM.yu.edu>,
+  <MLAOD@CUVMB.bitnet>,
+  <NDUFFRIN@SBCCMAIL.BITNET>,
+  <EMJ69@ALBNY1VX.bitnet>,
+  <PARDOT@UNION.BITNET>,
+  <IDE@VASSAR.BITNET>,
+  <acs@suvm.acs.syr.edu>,
+  <PWILLETT@BINGVAXC.bitnet"
+  <ECTGPT@RITVAX.bitnet"
+  <AIFJ@CORNELLA.bitnet"
+  <elfj@crnlvax5.bitnet"
+  <pch@cornella.bitnet"
+  <G3RY@CORNELLC.bitnet"
+  <CW3H@TOPSD.bitnet"
+  <RUDMAN@CMPHYS.bitnet"
+  <meriz@pittvms.bitnet"
+  <WLS11@PITTVMS.bitnet"
+  <MHayward@IUP.Bitnet"
+  <JAW2@LEHIGH.BITNET"
+  <woolleyj@lafayett.bitnet"
+  <NORDBERG@SCRANTON.bitnet"
+  <J_ASHMEAD@HVRFORD.bitnet"
+  <ERDT@VUVAXCOM.bitnet"
+  <Friedlac@duvm.bitnet"
+  <Kraft@Penndrls.bitnet"
+  <ST_JOSEPH@HVRFORD.bitnet"
+  <mdharris@guvax.bitnet"
+  <TURNER@UMDC.bitnet"
+  <NEWMAN@GUVAX.bitnet"
+  <jmoline@nist.gov"
+  <Morgan@loyvax.bitnet"
+  <H01024%suzy.eisna.mil@usna.mil"
+  <JOCONNOR@GMUVAX.bitnet"
+  <IRIZARRY@GUVAX.bitnet"
+  <rmcash!dvm@uunet.uu.net"
+  <rooks@cs.unc.edu"
+  <WITTIGJS@UNCVM1.bitnet"
+  <Stephani@ils.unc.edu"
+  <ghb@uncecs.edu"
+  <MDWEST@ECSVAX.BITNET"
+  <n330004@univscvm.bitnet"
+  <N290024@UNIVSCVM.bitnet"
+  <bzdyl@clemson.bitnet"
+  <ILADHH@EMUVM1.bitnet"
+  <usmsm@emoryu1.bitnet"
+  <HortonT@FAUVAX.bitnet"
+  <Churchdm@vuctrvax.bitnet"
+  <Gallowa@IUBACS.bitnet"
+  <GBOGGESS@MSSTATE.Bitnet"
+  <fac2090@uoft01.bitnet"
+  <FAC0287@UofT01.bitnet"
+  <DA_HUNTER1@MUSKINGUM.EDU"
+  <fkoch@oberlin.bitnet"
+  <Prussell@OBERLIN.bitnet"
+  <gxs11@PO.cwru.edu"
+  <Reiff@cwru.bitnet"
+  <JSCHWARTZ%DESIRE@WSU.BITNET"
+  <IKAF400@INDYCMS.bitnet"
+  <lacurej@iubacs.bitnet"
+  <cole@iurose.bitnet"
+  <jp-w@um.cc.umich.edu"
+  <Raleigh_Morgan@gb08.umich.edu"
+  <Gemini@MSU.Bitnet"
+  <S2.JSR@ISUMVS.bitnet"
+  <zempel@stolaf.edu"
+  <sara@cray.com"
+  <Eric@SDnet.bitnet"
+  <U18189@UICVM.Bitnet"
+  <mark@gide.uchicago.edu"
+  <Bill@Tank.UChicago.edu"
+  <C1953@UMSLVMA.bitnet"
+  <RRIVA@UMKCVAX1.bitnet"
+  <ENG003@UNOMA1.bitnet"
+  <TBESTUL@UNLVAX1.bitnet"
+  <ZRCC1001@SMUVM1.BITNET"
+  <eieb360@uta3081.bitnet"
+  <wtosh@cs.utexas.edu"
+  <rwl@emx.utexas.edu"
+  <ctaylor@ducair.bitnet"
+  <SMITH@CSUGREEN.bitnet"
+  <dawn@csugreen.bitnet"
+  <BodineJ@CSUgreen.Bitnet"
+  <ECHUCK@BYUVM.bitnet"
+  <HRCJONES@BYUVM.bitnet"
+  <MELBY@BYUVM.BITNET"
+  <IDPAL@ASUACAD.bitnet"
+  <ATDXB@ASUACAD.bitnet"
+  <CHISH@ARIZRVAX.bitnet"
+  <OWEN@ARIZRVAX.bitnet"
+  <ABURGESS@UNMB.bitnet"
+  <IMD7VAW@UCLAMVS.bitnet"
+  <IMK0RWV@UCLAMVS.bitnet"
+  <INK1IMG@UCLAMVS.bitnet"
+  <jody@rand-unix.ARPA"
+  <PRWOODS@POMONA.bitnet"
+  <jknowles@pomona.bitnet"
+  <CKGARRET@UCI.edu"
+  <HCF1Dahl@UCSBvm.bitnet"
+  <UNCLE@VOODOO.BITNET"
+  <xb.m07@stanford.bitnet"
+  <forbes@HPLABS.HP.COM"
+  <GX.MBB@STANFORD.BITNET"
+  <tshannon@garnet.berkeley.edu"
+  <lindow@garnet.berkeley.edu"
+  <cstim@violet.berkeley.edu"
+  <KED@garnet.berkeley.edu"
+  <Larisa@Applelink.apple.com"
+  <TFCAAK9@CALSTATE.BITNET"
+  <ffjl@alaska.bitnet"
+Subject: Survey of Literature Study Needs
+
+Dear Colleague:                         22/11/90
+   The next cycle of work in the TEI Project will include a
+concentrated effort to develop standards geared to the needs
+of scholars of literature.
+   I am writing on behalf of a Work Group charged with setting up
+the committee structure to carry this out.  Input from the community
+of potential users of these standards will be particularly valuable
+to us at this time.
+   Please fill out the following questionnaire and return it to me
+by electronic mail at FORTIER@UOFMCC.BITNET, or by paper post to
+Paul A. Fortier, Department of French and Spanish, University of
+Manitoba, Winnipeg, Man., R3T 2N2, CANADA.
+   If you know of any colleagues who might be affected or interested
+by this topic, please pass a copy of this letter along to them.
+   We need to receive your responses no later than December 10, 1990.
+            Thank you,
+                         Paul A. Fortier,
+                         TEI Work Group on Literary Texts.
+
+                        QUESTIONNAIRE
+I. Standards for Literature Texts.
+
+I would rate the importance of the indicated categories to standards
+for literature texts as follows:
+
+A. Bibliographical Information : (Place, date of publication, edition,
+   printing, etc):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+B. Formal Characteristics (Chapters and sub-chapters, page and line
+   Breaks, stanza divisions, speakers in plays, stage directions, etc.):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+C. Grammatical Information (Basic Form, Part of Speech, Inflection
+   Identification, etc):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+D. Metrical Information for Poetry:
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+E. Interpretative Information (e.g. Narrative vs. expository
+   passages, direct and indirect discourse, point of view, themes,
+   images, allusions, etc.):
+ __Essential  __Important  __Not important  __Should not be included
+Further  comments:
+
+Please Specify Important items in this category:
+
+F. In order to do my work as I prefer, I need generally
+   accepted tags for the following aspects of texts (Please be as
+   specific as possible.  This is not a test but an opportunity to
+   express your wishes.  Please number your "wishes" and rank them
+   in descending order of preference.):
+
+1.
+2.
+3.
+etc.
+
+G. Futher suggestions to the Work Group on Literature Texts:
+
+
+II. The Current Version of the Standards (TEI P1.1)
+
+I would propose the following modifications to make them more
+appropriate to the needs of scholars of literature (Please list in
+descending order of preference):
+
+1.
+2.
+3.
+etc.
+
+III. About yourself
+
+I consider myself to be a specialist in (Literature) (another
+discipline [please specify]):
+
+My sub-specialties are as follows:
+
+Genre (please specify):
+
+Period (please specify):
+
+Geographical area (please specify):
+
+Language of the texts studied (please specify):
+
+The next text I shall encode will probably be
+ __Prose fiction __Theatre  __Film script __Poetry __Essay
+ __Non-literary text __Other (please specify):
+
+I use the following type of computer:
+ __Mainframe __Microcomputer __both  __neither
+
+I (have) (have not) prepared literary texts for computer processing.
+
+I (have) (have not) used texts prepared elsewhere for computer
+processing.
+
+I (have) (have not) published literary analyses based on computer
+results.
+
+I (am) (am not) aware of the content of the current version of the
+Standards (TEI P1.1) from the following source(s)
+__ Reading the Standards Document (TEI P1.1)
+__ Conference Presentations   __ Published or electronic descriptions
+__ Other (please specify):
+
+I (would) (would not) be willing to work on a committee to develop
+explicit standards for my area of specialisation.
+
+Name and Postal Address (Optional):
+To:    <U017101@BLIULG11.bitnet>
+  <WORDS@BUCLLN11.bitnet>,
+  <MMEPHAM@LAVALVM1.bitnet>,
+  <gholmes@uwovax.bitnet>,
+  <BUCLIFF@CCM.UMANITOBA.CA>,
+  <cshunter@uoguelph.bitnet>,
+  <BARNARD@QUCIS.queensu.ca>,
+  <oldeng@gpu.utcs.toronto.edu>,
+  <ROBERTS@UTOREPAS.BITNET>,
+  <LOGAN@WATDCS.bitnet>,
+  <cadmadge@vm.uoguelph.ca>,
+  <ELAINE@MCMASTER.bitnet>,
+  <PHIL@WATDCS.bitnet>,
+  <59156@ucdasvm1.bitnet>,
+  <dlberg@watsol.waterloo.edu>,
+  <FLIKEID@STMARYS.BITNET>,
+  <FORTIER@UOFMCC.BITNET>,
+  <Mary@writer.yorku.ca>,
+  <JARED_CURTIS@cc.sfu.ca>,
+  <PH22@MUSICA.MCGILL.CA>,
+  <LIDIO@UTORONTO.bitnet>,
+  <Young@VM.EPAS.UToronto.CA>,
+  <IAN@VM.EPAS.UTORONTO.CA>,
+  <MCDOJ@QUCDN.BITNET>,
+  <GILLILAND@SASK.BITNET>,
+  <SMYE@SHERCOL1.bitnet>,
+  <HLOGAN@WATDCS.bitnet>,
+  <feem@qucdn.bitnet>,
+  <TBUTLER@UALTAVM>,
+  <Roberta@Writer.yorku.ca>,
+  <cecchett@mcmaster.bitnet>,
+  <usermial@ualtamts.ca>,
+  <SREIMER@UALTAVM.bitnet>,
+  <johnt@espinc.uucp>,
+  <M_CONNEL@UTOROISE.bitnet>,
+  <NYE@UWYO.bitnet>,
+  <Wujastyk@euclid.ucl.ac.uk>,
+  <udaa220@elm.cc.kcl.ac.uk>,
+  <VERONIS@FRMOP11.bitnet>,
+  <VERROUST@FRP8V11.BITNET>,
+  <H27@TAUNIVM.bitnet>,
+  <CHOUEKA@BIMACS.BITNET>,
+  <GLOTTOLO@ICNUCEVM.bitnet>,
+  <TRTIDU2@IRMUNISA>,
+  <Delmonte@Iveuncc.Bitnet>,
+  <a86743@jpnkudpc.bitnet>,
+  <arvid@ifi.uio.no>,
+  <S.Michaelson@ed.ac.uk>,
+  <hiscont@cc.unizar.es>,
+  <TEGKW@SEGUC21.BITNET>,
+  <tingsell@hum.gu.se>,
+  <CSMIKE@VAX.SWAN.AC.UK>,
+  <mike@cogs.sussex.ac.uk>,
+  <GKHA13@cms.Glasgow.ac.uk>,
+  <LOU@vax.ox.ac.uk>,
+  <SUSAN@VAX.OX.AC.UK>,
+  <MI604W@D606WD01.bitnet>,
+  <xpmfL1@yubgss21.bitnet>,
+  <JHUBBARD@SMITH.bitnet>,
+  <Dorenkamp@HLYCross.bitnet>,
+  <hshirk@lynx.northeastern.edu>,
+  <Durand@brandeis.bitnet>,
+  <SALEY@HARVARDA.bitnet>,
+  <pc@mitre.org>,
+  <elli@wij12.harvard.edu>,
+  <jhmurray%athena@mituma.bitnet>,
+  <jal@iris.brown.edu>,
+  <pdk@iris.brown.edu>,
+  <Womwrite@Brownvm.bitnet>,
+  <J_GOLDFIELD@unhh.bitnet>,
+  <DANTE@DARTMOUTH.edu>,
+  <RPY383@MAINE.bitnet>,
+  <SCLAUS@YALEVM.bitnet>,
+  <Eveleth@Yalevm.bitnet>,
+  <FRIEDMAN@SITVXB.bitnet>,
+  <EHRLICH@DRACO.RUTGERS.EDU>,
+  <Stuehler@Apollo.Montclair.edu>,
+  <Bolton@Zodiac.bitnet>,
+  <MECHC@CUNYVM.bitnet>,
+  <HMB6311@ROSEDALE.bitnet>,
+  <Sharong@Phoenix.Princeton.edu>,
+  <jeff@pucc.princeton.edu>,
+  <bobh@phoenix.princeton.edu>,
+  <judith@pucc.bitnet>,
+  <tobypaff@pucc.princeton.edu>,
+  <WASSERMAN@FORDMULC.bitnet>,
+  <bb.HXR@RLG.bitnet>,
+  <SLUS@CUVMA.BITNET>,
+  <JPSMALL@ZODIAC.bitnet>,
+  <LOWRY@CUNIXC.CC.COLUMBIA.EDU>,
+  <nancyf@yktvmh.bitnet>,
+  <DCLAYMAN@BKLYN.bitnet>,
+  <bm.nll@rlg.bitnet>,
+  <KRA@AECOM.yu.edu>,
+  <MLAOD@CUVMB.bitnet>,
+  <NDUFFRIN@SBCCMAIL.BITNET>,
+  <EMJ69@ALBNY1VX.bitnet>,
+  <PARDOT@UNION.BITNET>,
+  <IDE@VASSAR.BITNET>,
+  <acs@suvm.acs.syr.edu>,
+  <PWILLETT@BINGVAXC.bitnet"
+  <ECTGPT@RITVAX.bitnet"
+  <AIFJ@CORNELLA.bitnet"
+  <elfj@crnlvax5.bitnet"
+  <pch@cornella.bitnet"
+  <G3RY@CORNELLC.bitnet"
+  <CW3H@TOPSD.bitnet"
+  <RUDMAN@CMPHYS.bitnet"
+  <meriz@pittvms.bitnet"
+  <WLS11@PITTVMS.bitnet"
+  <MHayward@IUP.Bitnet"
+  <JAW2@LEHIGH.BITNET"
+  <woolleyj@lafayett.bitnet"
+  <NORDBERG@SCRANTON.bitnet"
+  <J_ASHMEAD@HVRFORD.bitnet"
+  <ERDT@VUVAXCOM.bitnet"
+  <Friedlac@duvm.bitnet"
+  <Kraft@Penndrls.bitnet"
+  <ST_JOSEPH@HVRFORD.bitnet"
+  <mdharris@guvax.bitnet"
+  <TURNER@UMDC.bitnet"
+  <NEWMAN@GUVAX.bitnet"
+  <jmoline@nist.gov"
+  <Morgan@loyvax.bitnet"
+  <H01024%suzy.eisna.mil@usna.mil"
+  <JOCONNOR@GMUVAX.bitnet"
+  <IRIZARRY@GUVAX.bitnet"
+  <rmcash!dvm@uunet.uu.net"
+  <rooks@cs.unc.edu"
+  <WITTIGJS@UNCVM1.bitnet"
+  <Stephani@ils.unc.edu"
+  <ghb@uncecs.edu"
+  <MDWEST@ECSVAX.BITNET"
+  <n330004@univscvm.bitnet"
+  <N290024@UNIVSCVM.bitnet"
+  <bzdyl@clemson.bitnet"
+  <ILADHH@EMUVM1.bitnet"
+  <usmsm@emoryu1.bitnet"
+  <HortonT@FAUVAX.bitnet"
+  <Churchdm@vuctrvax.bitnet"
+  <Gallowa@IUBACS.bitnet"
+  <GBOGGESS@MSSTATE.Bitnet"
+  <fac2090@uoft01.bitnet"
+  <FAC0287@UofT01.bitnet"
+  <DA_HUNTER1@MUSKINGUM.EDU"
+  <fkoch@oberlin.bitnet"
+  <Prussell@OBERLIN.bitnet"
+  <gxs11@PO.cwru.edu"
+  <Reiff@cwru.bitnet"
+  <JSCHWARTZ%DESIRE@WSU.BITNET"
+  <IKAF400@INDYCMS.bitnet"
+  <lacurej@iubacs.bitnet"
+  <cole@iurose.bitnet"
+  <jp-w@um.cc.umich.edu"
+  <Raleigh_Morgan@gb08.umich.edu"
+  <Gemini@MSU.Bitnet"
+  <S2.JSR@ISUMVS.bitnet"
+  <zempel@stolaf.edu"
+  <sara@cray.com"
+  <Eric@SDnet.bitnet"
+  <U18189@UICVM.Bitnet"
+  <mark@gide.uchicago.edu"
+  <Bill@Tank.UChicago.edu"
+  <C1953@UMSLVMA.bitnet"
+  <RRIVA@UMKCVAX1.bitnet"
+  <ENG003@UNOMA1.bitnet"
+  <TBESTUL@UNLVAX1.bitnet"
+  <ZRCC1001@SMUVM1.BITNET"
+  <eieb360@uta3081.bitnet"
+  <wtosh@cs.utexas.edu"
+  <rwl@emx.utexas.edu"
+  <ctaylor@ducair.bitnet"
+  <SMITH@CSUGREEN.bitnet"
+  <dawn@csugreen.bitnet"
+  <BodineJ@CSUgreen.Bitnet"
+  <ECHUCK@BYUVM.bitnet"
+  <HRCJONES@BYUVM.bitnet"
+  <MELBY@BYUVM.BITNET"
+  <IDPAL@ASUACAD.bitnet"
+  <ATDXB@ASUACAD.bitnet"
+  <CHISH@ARIZRVAX.bitnet"
+  <OWEN@ARIZRVAX.bitnet"
+  <ABURGESS@UNMB.bitnet"
+  <IMD7VAW@UCLAMVS.bitnet"
+  <IMK0RWV@UCLAMVS.bitnet"
+  <INK1IMG@UCLAMVS.bitnet"
+  <jody@rand-unix.ARPA"
+  <PRWOODS@POMONA.bitnet"
+  <jknowles@pomona.bitnet"
+  <CKGARRET@UCI.edu"
+  <HCF1Dahl@UCSBvm.bitnet"
+  <UNCLE@VOODOO.BITNET"
+  <xb.m07@stanford.bitnet"
+  <forbes@HPLABS.HP.COM"
+  <GX.MBB@STANFORD.BITNET"
+  <tshannon@garnet.berkeley.edu"
+  <lindow@garnet.berkeley.edu"
+  <cstim@violet.berkeley.edu"
+  <KED@garnet.berkeley.edu"
+  <Larisa@Applelink.apple.com"
+  <TFCAAK9@CALSTATE.BITNET"
+  <ffjl@alaska.bitnet"
+=========================================================================
+Date:         Fri, 23 Nov 90 18:55:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Comments on Textual Variation in TEI Draft
+
+[I forward these comments, unedited, from my colleague
+Peter Robinson, at his request pending the ListServer's noticing
+his request for a subscription to TEI-L
+   -- LB  ]
+
+Some thoughts on encoding of textual variation for TEI.
+
+The guidelines proposes four systems of encoding textual variation:
+1.      Parallel segmentation (5.10.3);
+2.      Single end-point attachment, attaching variants at the end of the
+ corresponding reading in the base text (5.10.4);
+3.      Single end-point attachment, attaching variants at the beginning of
+the corresponding reading in the base text (5.10.4);
+4.      Double end-point attachment (5.10.5).
+
+This looks to me to be three systems too many. Double end-point attachment
+might be all we need:
+
+1.      Parallel segmentation can be treated as a special case of double
+end-point attachment, one in which every variant in every text begins
+and  ends at exactly the same point.
+
+2.      Single end point attachment must be converted to double end
+point  attachment before it is useful. This could prove difficult:
+software would  have to find the other end point by comparing the lemma
+with the base text,  scanning the text forward or back from the single
+declared end point. Where  the lemma abbreviates or otherwise alters the
+base text (as in the example on  p. 114 of the guidelines) this could
+fail. Better to begin with double end  point attachment and have done
+with it.
+
+Double end point attachment allows explicit and orderly treatment of
+overlapping lemmata (which parallel segmentation does not). It is
+unambiguous (which single end point attachment is not).  Nothing is lost
+by  concentrating on it, except the deficiencies of the other systems.
+
+There is also the question of how we indicate the end points, and how
+we indicate the link between the lemma (placed between the end points)
+and  the variant on the lemma (that is, on the text between the end
+points). The  guidelines use the "anchor" method: identifiers are placed
+in the base text  before and after each lemma (<anchor id=a1> etc); at
+the beginning of each  variant entry in the apparatus the span of that
+variant is stated (<app  startpoint=a1 endpoint=a2> etc).
+
+It seems a little odd to me that we mark explicitly the beginning and
+end of the lemma in the base text, but we do not mark it explicitly in
+the  variant. Of course, when one is looking at the variant only within
+the  apparatus this does not matter: the whole variant is given, placed
+beside  the lemma, so the beginning and end of the variant declare
+themselves. But  one can imagine many circumstances where one is not
+looking at the variant  within the apparatus. For example, one might be
+reading through the variant  source itself, rather than just reading
+bits of it decomposed through an  apparatus. If one marked the beginning
+and end of the variant text, as well  as the lemma, those markers could
+then be read back into the variant source,  and could then be used to
+"look up" the parallel text in the master, or in  some other text.
+
+It looks to me as if the method outlined in 6.2.5, "explicit alignment
+of multiple analyses" (p. 142) would permit something just like this. At
+the  least, it would be inconsistent to adopt one method of indicating
+anchors and  links in critical apparatus and another method when dealing
+with the very  similar matter of alignment of multiple analyses.
+
+Finally: I am suspicious of the system of "nesting" variants given in
+the guidelines. For example: on p. 117 the apparatus states that
+witnesses A  and C both read "The quick". But they don't! C actually
+reads "The sleek", as  we learn three lines down. This looks a nonsense
+to me. Either C reads "The  quick" or it reads "The sleek". It cannot
+read both, and the apparatus should  not try and suggest that it does. I
+cannot see any advantages in this, and I can see lots of possibilities
+for confusion of both man and machine.
+
+---------
+=========================================================================
+Date:         Fri, 23 Nov 90 19:02:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Comments on P1 from Hans van halteren
+
+[ Again, with his permission, I forward the following collection of
+  comments on the Draft TEI Guidelines from Hans van Halteren, of
+  Nijmegen University. -LB ]
+
+Fragmentary comments on the TEI report
+
+- Status of the guidelines
+
+  In some places in the report (sorry, can't find exact spots right now) I
+  had the impression that the guidelines allow several different methods
+  of tagging the same thing. Is this part of the discussion and will one
+  method be chosen eventually, or will this freedom remain? In the last case
+  it will be harder to create software which can handle all TEI encoded texts.
+
+- 5.3.5 Glosses
+
+  Looking at the examples, there appear to be several kinds of glosses:
+    an added gloss (e.g. eluthemen), which does not function in the sentence
+      and may or may not (not determinable in the example) be present in the
+      actual text
+    a gloss which is in the text and actually functions in the sentence
+      (e.g. parser)
+  This difference is found important enough in normal words, as there are
+  separate tags <term> and <cited.word>. Should the difference not be tagged
+  for glosses as well?
+
+- 5.3.8 Lists
+
+  List items may also be marked in different ways (cf. Latex). I would
+  propose that a list item consists of an <itemmark> and an <itembody>.
+  This seems more general than to introduce an exception for the case of
+  gloss lists.
+
+- 5.3.4 Foreign words and 5.3.5 Terms
+
+  Similar tags could be created for
+
+    substandard words/expressions (e.g. heavy dialect)
+
+    deliberately illformed words (e.g. to simulate a foreigner speaking or
+       someone with a speech impediment)
+
+    idiomatic expressions
+
+- 5.3.1 Paragraphs and Their Contents
+
+  I am not sure whether figures and tables should be seen as part of the
+  contents of the paragraph. Is it not possible that they function on a
+  higher structural level? What do you propose for illuminations, which
+  do not actually function in the text at all?
+
+- Tagging vs. Actual Text
+
+  Before reading the report I assumed that all information added to the raw
+  text would be placed inside tags. In this case, throwing away all tags (as
+  proposed on by some) would leave the raw text. In the report (mainly in
+  chapter 6) I see that some information is placed between tags instead of
+  inside them (e.g. <f.name> SING </f.name>).
+
+- 5.11.2 Special Layout Tags
+
+"considerable work is needed": yes indeed. In the system I am building I
+want to display the text exactly as it occurred in the original (well,
+as close as technically possible). Therefore, I not only need the
+structure of the text, but also the layout. For the moment I am using a
+homegrown tagset (appended below [deleted -LB]). Some of these tags are
+mappable to the TEI tagset, some I can't find right away (e.g. tabbing).
+
+  Something I haven't quite worked out (for myself) is the treatment of <extm>
+  (figures and such). Floating figures have separate two places in the text:
+  the place where they are found in the text and the place they are referred
+  to in the text. The place where they are found may be in the middle of a word:
+
+    ...................................... hyphen-
+
+         FIGURE
+
+    <pagebreak>
+
+    ated .......................
+
+  Therefore I use (at least at the moment) <extm> as well as <?extm> to
+  represent these two places.
+
+  Note that all layout tag may occur in the middle of a word, which causes
+  all kinds of processing problems. However, seeing my goal, you understand
+  I want to keep them there rather than just shift them to the end of the word.
+
+- 3.2.3 Entity References
+
+  Would it be a good idea to set up a central administration of special
+  character names, i.e. TEI additions to appendix D.4?
+
+==========
+=========================================================================
+Date:         Sun, 25 Nov 90 13:45:47 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      TEXTUAL VARIANTS DISCUSSION (DETAILED
+
+Re: comments by Peter Robinson on encodings for textual variation
+
+> It seems a little odd to me that we mark explicitly the beginning and
+> end of the lemma in the base text, but we do not mark it explicitly in
+> the variant. Of course, when one is looking at the variant only within
+> the apparatus this does not matter: the whole variant is given, placed
+> beside the lemma, so the beginning and end of the variant declare
+> themselves. But one can imagine many circumstances where one is not
+> looking at the variant within the apparatus. For example, one might be
+> reading through the variant source itself, rather than just reading
+> bits of it decomposed through an apparatus. If one marked the beginning
+> and end of the variant text, as well as the lemma, those markers could
+> then be read back into the variant source, and could then be used to
+> "look up" the parallel text in the master, or in some other text.
+
+Whether "odd" or not, I can think of several reasons why one might not
+wish to require explicit marking of endpoints with IDs (<anchor>) for
+variant(s), as with the lemma. Here are three:
+
+(1) The encoder presumably has access to machine-readable copy of the base
+text being annotated for textual variation, but machine-readable editions
+for hundreds or thousands of other relevant witnesses may NOT be in
+electronic form.  In the case of biblical, cuneiform and other oriental
+texts, I suspect this will be the norm for decades to come.  The tagger
+may wish to encode variants from other editions, having no alternative but
+to cite variants known only from hard-copy sources, and then not with SGML
+IDs.   Often the textual data in these sources will be sporadic,
+occasional or otherwise incomplete: UN-contextualized word- or
+phrase-level variants recorded by earlier textual critics (e.g.,
+Hexaplaric readings in biblical studies; occasional variant readings cited
+from unpublished tablets in the Chicago Assyrian Dictionary volumes or
+Akkadisches Handwoerterbuch).  Mechanisms are suggested in the TEI
+Guidelines for using regular-expression-like notation for locating a cited
+text string in its hardcopy (brick/clay tablet/papyrus/paper) source if
+the encoder has access to that hardcopy source in full, and if there is
+necessity for a robust mapping scheme.  See Guidelines section 5.7, esp.
+5.7.3.  But the notation "<anchor id=xx>" would not be appropriate as
+such, and similar mechanisms suggested in 5.7.3 may entail encoding labor
+far exceeding the tagger's interest/patience.  Rather than using SGML IDs,
+explicit locators would have to make use of the hardcopy source's native
+or canonical referencing scheme down to the level of a parsable range,
+intended for humans initially, but if done well, for conversion by
+machines at some later time when the hardcopy source is digitized.  But
+this provision will still not assist the encoder in making use of
+double-endpoint attachment in cases when isolated single-word/phrase
+variants are known from casual/incomplete and sometimes un(der)documented
+sources which themselves do not merit representation using a section 5.7.3
+mechanism.
+
+(2) A second common case when double-endpoint attachment is less
+meaningful (or an unnecessary encumbrance) is when a textual variant has
+been normalized or retroverted, say, from another language.  Suppose we
+have a Hebrew source text with a phrase-level variant (involving
+grammatical co-dependencies -- as on the simple example of p. 119)., and
+suppose we have Greek and German translation texts containing reflexes of
+the various Hebrew readings.  The translated phrase may map out very
+awkwardly over the Greek/German sentence, so in practice, the top-level
+apparatus entry for the Hebrew text will be normalized to Hebrew, and the
+Greek/German witnesses cited by siglum in support of the Hebrew
+alternatives.  Linguists, and some text-critical researchers might indeed
+wish to study the details of these theoretical Hebrew-German/Greek
+mappings.   But it could easily overburden the average encoder (in this
+case, of the Hebrew text) to require that multiple anchors be set in the
+variant texts, and that startpointS (plural&emph;) and endpointS of the
+Greek and German discontinuous text segments be mapped correctly to the
+elements of the Hebrew phrase: simple normalization and witness-list
+(omitting any variant endpoints) would be sufficient.
+
+If it is desirable to supply double-endpoint attachment notation for
+variant readings, perhaps this can be done under <witness-detail>
+(Guidelines section 5.10.10).  Use of the method outlined in 6.2.5,
+"explicit alignment of multiple analyses" (p. 142) would possibly work in
+some cases, but could get very nasty (as I imagine the process of creating
+the alignment) when one has hundreds or thousands of witnesses, in various
+languages. I think only encoders who wish specify this level of
+segmentation and alignment should be required to do so; it should not be
+expected as part of standard encoding.
+
+(3) Requiring double-endpoint attachment notation for variant readings
+might be a particularly aggrivating nuisance, and sometimes nonsense, when
+the variant text contains a zero variant.  It's very easy to assert that
+witness C lacks the reading of the base text, but if witness C is given to
+irratic stylistic transpositions anyway (e.g., for adverbs), where would
+one (confidently) set the anchors for the null reading in the variant
+text?  We don't usually think of a zero-variant on the base text, but if
+we did, the "double-endpoint" attachment would make less sense than
+single-point locus for a simple textual minus.  "Minuses" and "plusses"
+make more sense once the encoding and qualtification is done.  Do we
+propose that the encoding support machine-permutation of the data such
+that any text can become the "base" text, with all others "variant" texts?
+Requiring double-endpoint notation for all variant readings sounds like a
+manual step in this direction.  Sounds nice, but difficult, and perhaps
+labor-intensive for the encoding phase.  These questions expose some of
+the many difficulties in working from a base text against which all
+variants are registered -- which, however, is probably inescapable.
+
+Re: the three/four alternative systems:
+
+> This looks to me to be three systems too many. Double end-point
+> attachment might be all we need:
+
+Nobody would argue against simplicity, of course.  The TEI editors could
+comment more authoritatively, but my memory is that alternative schemes
+were proposed: (a) to encourage discussion of the theoretical problems,
+(b) to accommodate text encoders in highly variable textual arenas.
+Someone encoding textual variation when only two exemplars are known might
+prefer "parallel segmentation" method because it's more economical or
+perspicuous at various levels (storage, browsing, parsing, etc.).
+Similarly, "inline" and "external" alternatives were proposed to
+accommodate different encoding goals, personal preferences, corpora of
+widely variable textual richness, etc.  If indeed there's no need for
+single- endpoint attachment, then we should dispense with it.  Does
+double-endpoint attachment make sense always (e.g., for simple plus in the
+variant text, could we use "<app point=a2>" rather than <app startpoint=a2
+endpoint=a2>)?  Zero variants (simple plusses and minuses) point out the
+privilege that the base text text usually receives and the desideratum of
+having variation expressible from neutral (database) persective or from
+the viewpoint of any single witness.  Can this be had for free -- or
+at a price encoders are willing to pay if 95% of their variants data is
+only in hardcopy format?
+
+> I am suspicious of the system of "nesting" variants given in
+> the guidelines.
+
+I forget all the reasons advanced and discussed for nesting within <app>
+entries.  Possible cases: (1) Nesting would be a valuable means of
+grouping large-scale recensional variants.  Imagine two textual traditions
+that are genetically related, but clearly as recensional variants, sharing
+only 70% of content in common.  Both major recensions have extensive
+textual variation in daughter traditions.  Nesting can be used to describe
+oppositions that are meaningful at the lower levels.  (2) Nesting may be a
+valuable means of grouping language witnesses in an encoding project that
+wishes to trace textual variation in several languages.  Normalizations
+would be required at key points, but the researcher may indeed wish to
+fully encode all variation below a single parent language text in the same
+database.  This is perhaps the only way to get control over complex
+traditions in which retroversion of the most recent (language) levels to
+the earliest does not make any historical sense (e.g., Hebrew 'Scriptures'
+4th century BCE >> Old Greek translation(s), 3rd/2nd centuries BCE >>
+Sahidic Coptic translation of (Old) Greek, 3rd century CE).  Of course,
+(1) and (2) are not mutually exclusive motivations for supporting nesting.
+
+A procedural question (I am perplexed by Lou's posting of PR's note on
+TEI-L): do we wish to inflict upon **everyone** on TEI-L the gory details
+of encoding textual variation?  Are not the TEI-REP, TEI-ANA (etc.)
+listserv groups still active?  There is (supposed to be) a TEI Textual
+Criticism Working Group -- would not a listserv for this WG be a better
+discussion forum for the most boring details of encoding textual
+variation?
+
+Robin Cover
+=========================================================================
+Date:         Sun, 25 Nov 90 16:25:00 EDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         DJBPITT@PITTVMS.BITNET
+Subject:      Re: TEXTUAL VARIANTS DISCUSSION (DETAILED
+
+Robin Cover's very helpful recent discussion of encoding textual variation
+concluded with the following procedural question:
+
+>...do we wish to inflict upon **everyone** on TEI-L the gory details
+>of encoding textual variation?  Are not the TEI-REP, TEI-ANA (etc.)
+>listserv groups still active?  There is (supposed to be) a TEI Textual
+>Criticism Working Group -- would not a listserv for this WG be a better
+>discussion forum for the most boring details of encoding textual
+>variation?
+
+During a quiet time on TEI-L, I asked the editors about subscribing to TEI-REP,
+etc.  I was told that these ListServs were for internal discussion of work in
+progress that was not yet polished enough for public consumption.  Since I was
+not a member of the relevant committees, I would not be permitted to subscribe.
+This seems quite reasonable; we all show drafts to selected colleagues before
+we  solicit general comments and suggestions.
+
+It was explained that all relevant information would eventually be distributed
+on the public list.  Material would be restricted to private lists not because
+it was "boring" (i.e., of limited interest to the general readership), but
+because it was unfinished.
+
+This being the case, TEI-L is the only publically accessible forum for
+discussion of any TEI issues, both general and specific.  Relegating textual
+criticism discussions to a private ListServ would makes these discussions
+inaccessible to at least one interested party.  I would prefer to receive as
+much information as possible and take personal responsibility for what I do and
+don't read and I appreciate the recent postings on these important issues to a
+publically accessible list.
+
+Two ways of dealing with specialized or extremely technical discussion might be
+the following:
+
+1) Post all information to TEI-L, where readers can select messages they wish
+to read according to subject headings.
+
+2) Use specialized lists for specialized discussions, but make these publically
+accessible.  This can involve either opening all specialized lists to the
+general public or creating a separate set of lists for open discussion of
+specialized questions.  This new set would differ from the old specialized
+lists in that information would be directed there because it was specialized
+and of limited general interest, rather than because it was too incompletely
+formed for public consumption.
+
+Each of these has its advantages.  The point of this posting isn't to start a
+procedural wrangle, but to remind those with access to the specialized lists
+that redirecting discussions there would exclude interested readers.
+
+--David
+===================================================================
+David J. Birnbaum   djbpitt@vms.cis.pitt.edu [Internet]
+                    djbpitt@pittvms.bitnet   [Bitnet]
+=========================================================================
+Date:         Tue, 27 Nov 90 11:43:05 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      question for the readership
+
+Faithful readers of this bulletin board will be aware that from time to
+time we have been lobbing onto it large quantities of more or less
+undigested comment and reaction from recipients of TEI P1, some of it
+quite technical or sharply focussed, some not. The hope is that you
+will pick up on one or more of the points individual respondents have
+made and react to them yourself: this hope has (like most others) been
+successful in some cases and not in others. Also, of course, we can do
+that fairly quickly, while the comment is still fresh in the mind.
+
+However, as comments build up, the editors have been feeling the need
+for a more structured approach: moreover, we are committed under the
+terms of our grant to provide a formal response to written comments.
+Consequently, we have to impose some sort of structure on them, and
+provide some sort of point-by-point response. Those who have sent in
+comments already will know how successfully we have done this so far; our
+question for the TEI-L readership (though the populations overlap) is --
+would you rather see the comments posted here undigested, or (after a
+delay) itemised, and with at least one editor's first careless thoughts
+about an answer attached?
+
+Strong views only need respond: if no strong views appear, we'll just
+carry on doing what comes naturally...
+
+-Lou Burnard
+ Michael Sperberg-McQueen
+=========================================================================
+Date:         Tue, 27 Nov 90 11:55:43 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      text-critical tagging
+
+Many thanks to Peter Robinson and Robin Cover for their postings on
+the thorny issues of textual criticism.  They have raised some questions
+of fact which I may be able to answer, as well as a lot of questions of
+policy, convenience, etc., which need general discussion (and to which
+my two cents' worth follows).
+
+First, on procedure:  should text-criticism be discussed on TEI-L?  I
+believe so.  TEI-L is for public discussion of the TEI and its work, and
+that must inevitably sometimes include some rather technical issues.
+Those not interested in the particular technical questions being
+discussed must simply be patient, and maybe get some practice with their
+delete keys, just as those technically proficient in SGML have been very
+patient during the discussions of basic issues and questions on this
+list.   (This concludes the general-interest portion of this message.
+If you are not interested in textual criticism, you should stop
+reading right *now*.)
+
+1.  The four methods.  I believe everyone agrees that four methods of
+encoding textual variants is too many, and that we need eventually to
+cut down to one or two methods.  The draft presents all four methods
+(plus variations) that we could think of, because there was no consensus
+as to their relative strengths.  I am grateful to Peter Robinson for
+coming out so strongly in favor of one scheme -- this is the kind of
+evaluation and judgement we need to make about text-critical tags in
+this revision cycle.
+
+2.  Peter Robinson is right to say double-attachment is the only method
+*needed*, in the sense that it provides all the information needed for
+an encoding using any of the other methods.  It isn't an argument for
+double attachment, though, since it goes for all four methods:  they all
+provide substantially the same information about the witnesses, and may
+be regarded as notational variants of each other.  (The only exception
+is that parallel segmentation and the other methods may treat
+overlapping lemmata differently, making translation back and forth
+tricky:  it can be done, but the results may look odd.)
+
+3.  I don't understand what is meant by the suggestion to mark the end
+points of the variation (not 'the lemma' surely!) 'in the variant'.
+Where is the variant text?
+
+Are we assuming the witness is held in electronic form in a separate
+document or section?  If so, then I agree that marking the variations
+would be useful.  The problem in this case is to mark points of
+synchronization between/among parallel texts, and the techniques
+described for parallel texts should prove useful and adequate.
+
+If the witness is not held separately (a common case, I suspect, even
+when the witnesses are fewer than a thousand), but the collation has
+been thorough, then its readings should be reconstructible by a fairly
+simple processing of the base text and apparatus, and the end-points of
+the variations are marked implicitly by the APP and RDG tags.  In this
+case, what more is needed?  (To answer Robin Cover's question, I for one
+certainly expect any notation for apparatus to be able to support
+mechanical reformulation of the apparatus using any arbitrarily chosen
+witness or set of readings as the base -- given, of course, that the
+collations are complete.  I regard this as a basic requirement.)
+
+4.  The parallel-segmentation method really shines in this respect:
+extraction of any given text is substantially simpler there than for any
+of the other methods, since the beginning and ending of each variation
+are explicitly marked as such.  The double-attachment method marks the
+beginnings and endpoints explicitly, but since ANCHOR is a generic
+position marker, not unique to apparatus entries, you can never know til
+you've scanned the entire text for APP entries whether there is any
+variation on a particular point in the base text.  Using parallel
+segmentation, you always know when you enter a variation.  We could
+clone ANCHOR to get an APPARATUS-START tag, but unless we require
+exactly one such tag for each apparatus entry, we still won't match the
+performance of parallel segmentation.
+
+5.  I don't understand Peter Robinson's point about the tags for
+alignment of multiple analyses.  I understand their relevance, but I
+don't understand what PR was saying about them.
+
+6.  Nesting variants.  It is common, at least in the text criticism I've
+read, to work with groups of witnesses which agree in the basic line of
+their reading, even when they have minor variations within the group.
+Robin Cover has given some vivid examples of the advantages of such
+nesting, which I agree with.  The notation for nested variations is
+required to allow the expression of such groupings.
+
+Since the notation for nested variants is exactly the same as that for
+non-nested variations, I don't see why nested variations are more
+confusing than others.  In both cases, the base text is given, followed
+by the apparatus entry.  If it is confusing to print 'The quick'
+followed by an entry saying C reads 'sleek' not 'quick', why is it not
+confusing to print 'The quick brown fox' followed by an entry saying
+that B reads 'A silver wolf'?  Any confusion here results from the
+double attachment method, not the nesting, I think.  Parallel
+segmentation avoids this problem (if it is one) by denying any
+structural role to the lemma.
+
+7.  Attaching a variant to a point instead of a span.  Robin Cover
+points out that additions in the variants (or omissions in the base
+text) require the lemma to occupy zero space, not a span.  True.
+Instead of
+
+    <app point=a2>
+
+however, which leaves APP with attributes for STARTPOINT, ENDPOINT, and
+POINT, with rules about which combinations can be used which are
+unenforceable in SGML, I'd suggest
+
+    <app startpoint=a2 endpoint=a2>
+
+which conveys the same information and eliminates the dichotomy between
+additions and omissions-or-changes.
+
+8.  If I'm right in saying all of the encoding methods record the same
+information and thus can be translated mechanically among themselves,
+then presumably the choice of one or two methods to carry forward into
+the next draft must be made on perspicuity and ease of processing.
+That suggests we should consider what kinds of processing are to be
+supported.  Here's a quick list to start with; from a text with
+variants, I want to be able to:
+
+    a.  transform the file into EDMACS format so I can print a
+    text with apparatus using TeX.
+
+    b.  extract the running text of any given witness.
+
+    c.  extract summary information on variations in the style of
+    Greg, Quentin, and Dearing, thus:
+
+         quick A : sleek C
+         The quick (sleek C) brown fox AC : A silver wolf B
+         A : C
+         AC : B
+
+         etc.
+
+    d.  filter the text, retaining only readings from specified
+    witnesses or groups
+
+    e.  mechanically translate the text using a different witness
+    as a base ms.
+
+    f.  for any given point on the text, show what variants are
+    open at that point (e.g. to bold all words of the base text
+    which have variants opposing them, in an editor)
+
+This isn't necessarily complete, but it's what comes to mind first thing.
+Additions gratefully accepted.
+
+-Michael Sperberg-McQueen
+=========================================================================
+Date:         Wed, 28 Nov 90 09:40:50 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         MFIXXDR@CMS.MANCHESTER-COMPUTING-CENTRE.AC.UK
+Subject:      EDITING BULLETIN BOARD CONTRIBUTION
+
+I hope very much that you will edit contributions to TEI-L.  Reading
+through most of them is an utter waste of time
+David Robey
+=========================================================================
+Date:         Wed, 28 Nov 90 15:14:00 GMT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      caveat to the general
+
+The 'request to the readership' which Michael and I jointly posted
+yesterday seems to have been misinterpreted by a few, so let me re-state
+what I thought was on offer. Or rather re-assert what is (regrettably)
+not on offer.
+
+It would be wonderful to have a properly moderated TEI-L list. If only
+there was a constant flow of correspondence from the readership, pungent
+comments, focussed discussion! If only the editors could be bothered to
+pick from this constant stream the really important things, stem the
+flow of irrelevant dross, polish the good bits lovingly, group them into
+aesthetically satisfying shape, perhaps add a few footnotes to explain
+hard words in them or provide useful references to background reading!
+
+Sorry. That's not an option. This bulletin board is still unmoderated,
+in just the same way that the TEI Draft proposals are DRAFT proposals.
+We're struggling to establish a consensus from the bottom up: those who
+want tidy solutions and simple answers are inevitably going to be
+disappointed.
+
+The posting of the other day was using the word 'comment' in the rather
+specific sense of "response to the TEI Draft P1, probably submitted on
+the form that came with copy of same" . It was asking whether you were
+happy to get *those* undigested -- not the whole list. Sorry for not
+making that clearer.
+
+Apologies also to anyone who feels that I was mistaken in forwarding
+Peter Robinson's comments on textual critical matters. There is a simple
+option on my keyboard for dealing with such aberations though: it's the
+NEXT key.
+
+Lastly, may I remind all correspondents that LONG MESSAGES ARE ALWAYS
+DELAYED. Robin Cover's recent posting took nearly four days to get here
+-- almost as long as it takes to get a new prime minister.
+
+Lou Burnard
+EuroEdTEI
+=========================================================================
+Date:         Wed, 28 Nov 90 14:04:23 EST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Richard Ristow <AP430001@BROWNVM.BITNET>
+Subject:      Do presentational specifications belong in TEI?
+
+A few days ago, Michael Sperberg-McQueen wrote against giving
+presentational specifications for the TEI-specified document structure,
+saying among other things,
+
+> ( . . . )                      and it would distract our slender
+>resources from the crucial and difficult specification of the tag set
+>and structure into an enterprise which, however useful, does not pose
+>any *intrinsic conceptual difficulties*.   . . .  (emphasis added)
+
+Granting the weight of other reasons for the TEI's decision, the
+emphasized point raises such a red flag for me as to call for
+reconsidering the whole question.  A lot of us in the computing business
+have burned ourselves and others with similar arguments, taking the line
+that because there are no known conceptual problems with an enterprise
+it will be easy in practice.  In the black humor of the software
+business, this is described as an SMOP -- "simple matter of
+programming".  Projects have frequently failed because the time and
+difficulty of the SMOPs were grossly underestimated.  The damage in
+these cases goes beyond the obvious schedule slippage and cost overrun.
+Since the extra time and effort go into work initially defined as
+'easy', managers' instincts say the time is wasted and shows
+incompetence; programmers' instincts say the time can't be necessary,
+and push them to doing a hasty job.
+
+In the case of the TEI, the very sound arguments against specifying
+presentation face quite a clamour for *some* presentational form that is
+more human-readable than is the SGML-tagged text stream.  I suggest that
+the TEI should define a simple but readable presentational interpre-
+tation of the standard, to be called "TEI examination form", explicitly
+*not* standard for publication or formal presentation.  TEI examination
+form should include some documented variations, e.g. for presentation of
+diacriticals and emphatic markup on devices that do not support such.
+It would then be *one* presentation that TEI-supporting software should
+support, and that would make sense to all TEI-knowledgeable users.  The
+alternative may be much reduced usefulness for the standard, with
+marked-up text little used because of its inaccessibility to humans, and
+formatted text having proprietary forms so that the unifying effect of
+the standard is lost.
+
+This does not mean TEI should go into software development.  The "TEI
+examination form" is proposed as a set of presentation rules, not as
+code implementing those rules.  Nor does it mean that every TEI tag
+should have a presentational form; it means that enough should have such
+a form that the remaining tags retained literally in the text are not a
+bar to human reading.
+=========================================================================
+Date:         Wed, 28 Nov 90 23:06:41 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: Do presentational specifications belong in TEI?
+
+Sounds reasonable to me.
+
+The basic notion would seem to be that it should be possible to
+specify a set of presentation markup capabilities that are
+nearly universal, such as line break, indent, center, flush left/right
+footnote, etc. and then allow/require all TEI tags to have some
+specifications in these universals. It might even be desirable to
+have a more elaborate set, including bold, italic, etc. and allow
+those as well to be acceptable accompanying traits of the tags.
+
+This alternate formatting language could be made reasonably
+device independent by preferably not assigning any numbers to
+anything, making it possible to realize this concrete presentation
+format on many devices of varied output.
+
+----
+I still also believe that SGML itself should worry about its
+presentation format when written down with tags on a page.
+I've been informed by professional publishers that they
+experienced considerable problems due to SGML's failure to
+exactly specify the nature of blanks and line breaks around tags.
+=========================================================================
+Date:         Thu, 29 Nov 90 09:59:12 CST
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      presentational markup
+
+<!-- This note was posted by Harry Gaylord, but owing to network
+problems was rejected by the Listserv.  -->
+
+From: Harry Gaylord <galiard@let.rug.nl>
+Subject: Re: Representation & SGML
+To: TEI-L@UICVM.bitnet
+Date: Thu, 29 Nov 90 10:10:46 MET
+In-Reply-To: <no.id>; from "Robert A Amsler" at Nov 28, 90 11:06 pm
+X-Mailer: ELM [version 2.3 PL8]
+
+  There are two markup standards at ISO, SGML and ODA  (Office Document
+Architecture). Presentational markup is the aim of ODA.
+  It might be worthwhile to include very limited presentational
+information in TEI, but unless that is the structural info we are
+marking it will clutter the text up with non relevant info.
+  If that is desired, a SGML formater will provide it without including
+it in the basic file.
+Harry Gaylord
+=========================================================================
+Date:         Thu, 29 Nov 90 11:46:15 -0500
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      Re: presentational markup
+
+As I see it, the details about presentation would only be
+suitable for use in the DTD itself, i.e. they refer to the
+a property/effect of a tag, not of the text. Thus, what I'm
+suggesting is that a DTD could include supplemental information
+for each tag which notes whether it has presentation effects.
+Presumably such effects would operate as modifications to
+a standing `vector' of such properties (as Scribe uses to
+change states when it encounters a request to, say, indent
+while inside a previous request to reset the left margin).
+
+What seems possible is that a set of device independent
+presentation capabilities could be determined. I`d prefer they
+be numerically unspecified, i.e. an `indent' isn't a number
+but a presentation effect described in terms of other
+presentation traits such as a `left margin'.

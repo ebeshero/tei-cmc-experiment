@@ -1,0 +1,650 @@
+=========================================================================
+Date:         Tue, 4 Sep 90 14:38:38 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      Basics of the TEI, part 2:  Introducing SGML
+
+This is the second in our series of tutorial notes on the TEI
+guidelines.  Lou Burnard wrote it; I am posting it for him because
+he is out of town for the week.
+
+Next topics:  core structural tags, other core tags, and character
+set issues.
+
+If you find you have questions after reading this, please post them
+to the list; you'll never have a more appropriate forum for them.
+
+Michael Sperberg-McQueen
+
+-------
+
+                 TEI Tutorial No. 2:  Introducing SGML
+
+
+   One of the TEI's basic goals, as originally formulated in 1987, was
+the definition of an encoding scheme expressive enough to allow texts in
+all widely-used encoding schemes to be translated into it without loss
+of information.  This poses two technical challenges for any encoding
+scheme:  it must be extensible, to allow hitherto-unheard-of analyses of
+texts to be expressed in tags, and it must be able to represent any
+structural relationship among text segments which can be tagged in any
+scheme.
+
+   Already at the first planning meeting, several people suggested Stan-
+dard Generalized Markup Language (ISO 8879, SGML) as the most promising
+basis for such an encoding scheme.  Others were concerned that SGML was
+not powerful enough to meet the needs of the TEI, or not sufficiently
+well understood, or too verbose or of too dubious parentage or inade-
+quately supported.  Only time will tell how far these concerns were jus-
+tified:  at present, no alternative candidate has been proposed which
+comes even close to the acceptability or applicability of SGML.
+
+   Chapter two of the Guidelines contains a "gentle introduction to
+SGML" intended for readers who have not encountered it before.  Many
+such introductions spend most of their time on the origins and histori-
+cal development of SGML or on polemics against alternative models of
+text processing.  Our own experience reading these introductions is that
+they don't always succeed in describing very clearly what SGML actually
+is; we try to provide such a description and leave the polemics aside
+for a while.
+
+
+
+                         TEXT AND ITS STRUCTURE
+
+
+   So what, in fact, is SGML?  Well, just as Fortran, C or Pascal are
+languages in which algorithms may be expressed, so SGML is a language in
+which text structures may be expressed.  It allows you to name particu-
+lar types of textual object (such as plays, novels, reports ... ) and
+their constituent elements (speeches, chapters, paragraphs ...).  It
+allows you to state rules about how occurrences of those types may
+legally appear in real texts (for example, that poems may contain stan-
+zas, but paragraphs cannot).  These and other types of rule make up what
+is called in the jargon a document type definition (DTD); this allows a
+suitable piece of software to check that texts match their intended def-
+inition, and also to take advantage, in interpreting the text, of the
+knowledge about the text encapsulated by the definition.
+
+   Text is not, for the TEI, a mass of unruly strings to be reorganized
+into nice patterns on paper.  It is a tissue of nested objects of vari-
+ous kinds, the order and structure of which are crucial to its under-
+standing:  an "ordered hierarchy of content objects" as De Rose and com-
+pany call it in their recent and highly recommended article "What is
+text really" Journal of Computing in Higher Education, 1.2 (1990):
+3-26.  This concern with text as a complex structure is one reason for
+preferring SGML to other, perhaps better known, markup systems, in which
+structural complexity is recognized only insofar as it affects the
+printing of a text, or insofar as it affects the precision and recall
+with which it may be recovered from a text retrieval system.
+
+   How is this done?  For the full story, you will have to read else-
+where.  For a superficial overview, read on.  If (like me) you have read
+enough superficial overviews to last you a lifetime, accept my apolo-
+gies, and tell us what you do want to read on this list!
+
+
+
+                           WHAT IT LOOKS LIKE
+
+
+   In SGML terms, a text (or "document") is composed of content and
+markup, which are distinguished by special flag characters.  The text is
+made up of elements which contain other elements or just text.  The
+markup identifies the boundaries of the different elements in which the
+content is held.  Consider a mail message like the one you are reading
+at the moment:  it could be considered as a single object, called a
+"message".  Like everything else, it has a begining and an end:  SGML
+requires us to mark these explicitly.  We might also say that messages
+always have two parts:  a header (all the chattering between networks at
+the top), and a body (the rest).  Again, SGML requires us to mark
+explicitly the boundaries of these two constituents.  We might further
+subdivide both the header (it contains a "from", a "date", a "subject"
+etc.) and the body (it consists of paragraphs, may have a title or a
+signature etc.).
+
+   The SGML standard suggests, for reference purposes, one particular
+way of marking these boundaries:  you introduce a start tag (which looks
+like <this>) at the beginning of each "this" object, and an end tag
+(which looks like </this>) at the end.  This method (which rejoices in
+the name of "the reference concrete syntax") is not however obligatory:
+you can use square brackets and numbers, binary escape sequences, big
+red stars in the margin or musical notes if your keyboard will allow
+you.  You can even use conventional punctuation or layout information,
+provided that this can be unambiguously mapped onto the element struc-
+ture.
+
+   So, tagged (more fully than might commonly be done) in SGML, the
+start of this message might look something like this:
+
+     <message>
+     <header><from>Lou</from>
+             <to>Rest of World</to>
+             <date>20 Aug <year>1990</year></date>
+             <subject><abbrev>SGML</abbrev> - the basics</subject>
+     </header>
+     <body>
+     <title>TEI Tutorial no 2:  SGML</title>
+     <paragraph>
+     <sentence>One of the <abbrev>TEI</abbrev>'s basic goals, as
+     originally formulated in <date>1987</date>, was the definition
+     of an encoding scheme expressive enough to allow texts in all
+     widely-used encoding schemes to be translated into it without
+     loss of information.</sentence> <sentence>This poses two
+     technical challenges for any encoding scheme:  it must be
+     extensible, to allow hitherto-unheard-of analyses of texts ...
+
+     </body></message>
+
+   Notice that we use exactly the same sort of markup for subdivisions
+of the header (which would probably be regarded as obvious candidates
+for information retrieval fields) as we do for the body of the text.
+Notice also that some types of object (year and abbrev for example) can
+appear in more than one type of enclosing object.
+
+   Explicitly labelled and delimited objects, described by a hierarchi-
+cally organized grammar, is almost all there is to know about SGML.  Two
+further wrinkles remain to be discussed:  entities and attributes.
+
+
+
+                                ENTITIES
+
+
+   For many years, a central problem in the encoding and interchange of
+scholary texts has been to agree standards for the representation of the
+graphemes used in all the languages and scripts of importance to the TEI
+community, as Michael defined it in our previous posting.  Because of
+the unaccountable lack of interest shown by standards bodies and comput-
+ing industry alike for mediaeval manuscripts or Old High Glagolitic, ad
+hoc transliteration schemes have proliferated.  For many people, defin-
+ing just such standards is one of the major jobs for the TEI.  In a lat-
+er posting, we will discuss what TEI has actually proposed in this con-
+nexion:  here I just want to point to the remarkably simple solutions
+offered by SGML itself.
+
+   Firstly, SGML requires that a DTD specify the character set in which
+texts using it are encoded:  this will normally be an internationally
+agreed one such as ISO 646 (not quite, but almost, the same as ASCII)
+but if you insist on rolling your own, SGML at least offers you a means
+of telling the world what you have done.
+
+   Secondly, SGML includes a general purpose mechanism for string sub-
+stitution.  Arbitrary text segments known as "entities", ranging in size
+from individual characters to whole chunks of text, may be named in a
+DTD, and then invoked by reference at any point when it is impossible or
+inconvenient to enter them directly into a document.  An entity refer-
+ence in a text is conventionally preceded by an ampersand and followed
+by a semicolon, thus taking the form
+
+         &name;
+
+    An SGML processor is provided by the DTD with both the names of all
+such entities used in a document and with translations for them
+appropriate to the particular machine environment in which the processor
+is running.  Standard sets of names have been proposed by ISO for such
+things as accented letters, mathematical and typographic symbols etc.
+which TEI will follow wherever possible.
+
+
+
+                               ATTRIBUTES
+
+
+   It is occasionally useful to be able to record some information asso-
+ciated with a textual element, but not regarded as being a textual ele-
+ment in its own right.  Examples include identifying numbers, canonical
+references, status markers etc.  Attributes are the mechanism provided
+by SGML for this purpose.  The DTD defines attribute names, their possi-
+ble values (within some limits) and the elements to which they can be
+attached.  In an SGML tagged texts, attribute values must be supplied
+within the opening tag for an element.  For example, assume the element
+MESSAGE has an attribute ID, used to supply a unique identifying number
+for each MESSAGE element.  The start of message number 42 would then be
+indicated:  <message id=n42>
+
+   The use of attributes is slightly controversial, in that they are
+formally redundant:  anything that can be done with them, can also be
+done without them.  However, they are very widely used in most existing
+SGML systems.  Moreover, without them, markup of concurrent structures
+becomes unbearably complicated.  But that is another story.
+
+                                                         Lou Burnard
+                                                         Editor, TEI
+=========================================================================
+Date:         Wed, 5 Sep 90 14:21:45 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Craig Hubley <CRAIG@UTORGPU.BITNET>
+
+Hello,
+
+This is an email answering machine.  I am away on vacation.  Your mail will
+remain intact until I return to read it September 17th.  Should you wish to
+reach me before then:
+
+from Aug.26-Sept.8: 902-688-3179, don't be surprised if I'm not in :)
+
+from Sept.9-14:     Le Grand Hotel, Montreal, 514-879-1370, FAX 514-879-1761
+
+Otherwise, your mail will remain intact until I return.
+
+Thank you,
+
+  Craig Hubley                     kid after Live Aid: "Is that it?"
+  Craig Hubley & Associates        ---------------------------------
+  craig@gpu.utcs.Utoronto.CA   UUNET!mnetor!utgpu!craig   craig@utorgpu.BITNET
+  craig@gpu.utcs.toronto.EDU   {allegra,bnr-vpa,decvax}!utcsri!utgpu!craig
+  28 First Avenue, Suite 2, Toronto, Ontario, Canada  M4M 1W8  (416) 466-4097
+=========================================================================
+Date:         Wed, 5 Sep 90 17:28:00 EST
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "JUDITH HOPKINS AT SUNY BUFFALO" <ULCJH@UBVMS.BITNET>
+Subject:      Re: Basics of the TEI, part 2:  Introducing SGML
+
+I must have subscribed to this list after Basics of the TEI, part 1
+was distributed.  How do I get hold of a copy?
+
+  Judith Hopkins
+  Technical Services Research and Analysis Officer
+  State University of New York at Buffalo
+  ULCJH@UBVMS.BITNET
+  (716) 636-2796
+=========================================================================
+Date:         Thu, 6 Sep 90 12:20:04 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      fetching copies of old TEI-L postings
+
+To get a copy of the first installment of the TEI tutorial, send
+a note to LISTSERV@UICVM (or LISTSERV@uicvm.cc.uic.edu, if you are
+on the Internet and not on Bitnet), containing the single line
+
+    get edj1 memo tei-l
+
+To get the second tutorial, send a note containing the single line
+
+    get edj2 memo tei-l
+
+(This is the standard method for fetching files from a listserv
+server -- consult the Listserv documentation or a local guru for
+further details.  The best way to get the documentation is to
+send Listserv a note containing the single line
+
+    help
+
+which will elicit some simple instructions on how to find out
+what documents are available and how to fetch them.)
+
+To find out what files are available, send the line
+
+    get tei-l filelist
+
+The list of available files also includes complete logs of the
+list's discussion, month by month.  Since the first tutorial
+appeared in August, you could also retrieve it with the command
+
+    get tei-l log9008
+
+N.B. The file names are often TEI document numbers, which means they
+will seldom be self-explanatory.  I try to keep explanatory comments
+nearby but I sometimes get behind-hand.
+
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Mon, 10 Sep 90 22:31:01 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Michael Kreyche <MKREYCHE@KENTVM.BITNET>
+
+Some weeks ago there was a question about SGML software.  The response
+did little more than list a dozen or so packages.  Can anybody provide
+a little more information than that?  I've been reading the TEI guide-
+lines and van Herwijnen's book, and have been getting enthused about
+using SGML; I even have a project to work on.  I want to purchase
+some software but don't know how to choose what I need.  In Chapter 10
+van Herwijnen lists things to look for in an SGML editor and describes
+a few systems, but none for MS-DOS, which I'm interested in.  Can anyone
+point to some reviews or make some general recommendations?
+
+To describe more specifically what I'm interested in:  A colleague and
+I have begun capturing the text of a campus newspaper, primarily for
+the purposes of full text searching.  The text is coming from two sources,
+ASCII files with embedded formatting codes, which we began collecting a
+few months ago, and back issues scanned with a Kurzweil 4000.
+
+I am primarily interested in processing the ready-made E-text, writing
+simple conversion programs to convert what formatting I can into structural
+tags, and then doing some manual touch-up.  My colleague is is interested
+in scanning, which of course requires a lot of manual work.  As this project
+evolves the textbase will migrate from platform to platform, so creating
+a standard file right at the start makes a lot of sense.  We are tentatively
+starting with Folio Views on a PC; by the time we move up to something
+bigger, maybe we will be using software that can read SGML directly (we
+recently saw a demo of BASISplus which was mentioned on the list a while
+ago--it does come with a utility that will load SGML documents, but I
+don't know the particulars).
+
+By the way, does anyone know where I can find a DTD for newspapers?
+
+Mike Kreyche
+Systems Librarian
+Kent State University Libraries                     Kent, Ohio  44242
+216-672-3024         FAX 216-672-2265          MKREYCHE@KENTVM.BITNET
+=========================================================================
+Date:         Tue, 11 Sep 90 05:44:24 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         barnard@QUCIS.QUEENSU.CA
+
+On the subject of SGML software:
+
+The Metalanguage Committee has in hand a working paper giving a bit of
+detail about available software (what there is, where it can be obtained).
+When available it will be announced to this list--probably sometime next week.
+=========================================================================
+Date:         Wed, 12 Sep 90 17:58:00 GMT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      Free SGML Seminars
+
+[Not much use to non-European readers of this list, but following press
+release may still be worth noting]
+
+"As partof Yard Software Systems drive to increase the awareness of
+SGML, we are conducting a series of free seminars in London, Paris and
+Brussels..."
+
+Seminars last about 1.5 hours and cover the basics of SGML.
+They are given by Martin Bryan, author of `SGML: an authors guide'.
+
+Dates are: London Oct 2, Nov 28; Brussels 6 and 7 Oct; Paris 8 Oct.
+
+Yard also organise full training courses at more usual commercial
+rates.
+
+They are still willing to make MARKIT, their SGML parser, available
+under an academic licence, but have had to introduce a charge to cover
+distribution costs. For the MS/DOS executable version of the parser and
+a full manual they are now charging 150 pounds.
+
+For more information:
+
+G.Gudgion, YSS, Avonbridge House, Bath Road, Chippenham SN15 2BB
+tel. +44 (249) 656194
+=========================================================================
+Date:         Wed, 12 Sep 90 22:54:22 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Craig Hubley <CRAIG@UTORGPU.BITNET>
+
+Hello,
+
+This is an email answering machine.  I am away on vacation.  Your mail will
+remain intact until I return to read it September 17th.  Should you wish to
+reach me before then:
+
+from Aug.26-Sept.8: 902-688-3179, don't be surprised if I'm not in :)
+
+from Sept.9-14:     Le Grand Hotel, Montreal, 514-879-1370, FAX 514-879-1761
+
+Otherwise, your mail will remain intact until I return.
+
+Thank you,
+
+  Craig Hubley                     kid after Live Aid: "Is that it?"
+  Craig Hubley & Associates        ---------------------------------
+  craig@gpu.utcs.Utoronto.CA   UUNET!mnetor!utgpu!craig   craig@utorgpu.BITNET
+  craig@gpu.utcs.toronto.EDU   {allegra,bnr-vpa,decvax}!utcsri!utgpu!craig
+  28 First Avenue, Suite 2, Toronto, Ontario, Canada  M4M 1W8  (416) 466-4097
+=========================================================================
+Date:         Wed, 12 Sep 90 21:09:02 PDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "John A. Kunze" <jak@VIOLET.BERKELEY.EDU>
+
+I will not be answering my mail reliably until September 21.
+Please direct urgent questions to Margaret Baker (margaret@garnet).
+=========================================================================
+Date:         Thu, 13 Sep 90 09:19:45 EDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Steven J. DeRose" <IR400011@BROWNVM.BITNET>
+Subject:      SGML software
+
+I am pleased to announce that the beastie I've been building here in
+Providence for the last year is now available in beta-test.  Those
+going to EP '90 can see it there, and likewise at the upcoming
+Seybold conference.
+
+Electronic Book Technologies' "DynaText" is an indexing and browsing
+system for SGML documents.  It avoids many of the common limitations
+such as document size, choice of DTD, etc.  Since I am associated with
+the EBT company, I won't belabor the list with more than this mention;
+anyone wanting further info should contact me directly, at this
+address, or (better) EL407011@BrownVm, or:
+     Steven J. DeRose
+     EBT, 1 Richmond Sq.
+     Providence RI 02906
+     (401) 421-9550
+
+Steve
+=========================================================================
+Date:         Thu, 13 Sep 90 08:32:10 PST
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Chet Grycz <CJGUR@UCCMVSA.BITNET>
+Subject:      Re:       SGML software
+
+Steven,
+
+I'd be interested in knowing more about your SGML stuff.
+If you can send me some printed information, I'd
+appreciate it.
+
+I THINK I'll be down at Seybold for xhibits,
+in which case I'll look you up.
+
+Thanks,
+
+Chet Grycz
+Scholarship and Technology Study Project
+University of California
+Kaiser Cetner, Eighth Floor
+300 Lakeside Dr  94612-3550
+
+Thanks.
+=========================================================================
+Date:         Thu, 13 Sep 90 08:46:08 PDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         "Jack C. Armstrong" <jacka@IAG.HP.COM>
+Subject:      Re: SGML software
+In-Reply-To:  <9009131328.AA08908@iag.hp.com>; from "Steven J. DeRose" at Sep
+              13, 90 9:19 am
+
+> Electronic Book Technologies' "DynaText" is an indexing and browsing
+> system for SGML documents.  It avoids many of the common limitations
+> such as document size, choice of DTD, etc.  Since I am associated with
+> the EBT company, I won't belabor the list with more than this mention;
+> anyone wanting further info should contact me directly, at this
+> address, or (better) EL407011@BrownVm, or:
+>      Steven J. DeRose
+>      EBT, 1 Richmond Sq.
+>      Providence RI 02906
+>      (401) 421-9550
+>
+> Steve
+>
+I tried to email you and bounced - apologies to the group for the broadcast.
+
+
+From: Jack C. Armstrong <jacka@aspen.iag.hp.com>
+Message-Id: <9009131541.AA10360@kitzbuhl.iag.hp.com>
+Subject: SGML Software
+To: EL407011@BrownVm
+Date: Thu, 13 Sep 90 8:41:40 PDT
+Mailer: Elm [revision: 64.9]
+
+Mr. DeRose,
+
+Could you provide me with more information on the SGML tools you are
+developing?  Thank you.
+
+
+Jack C. Armstrong
+Hewlett Packard Company, Bldg 46G
+Information Architecture Group
+19046 Pruneridge Avenue
+Cupertino, California  950140-9974
+
+Phone: telnet 1- or (408) 447-7188
+Fax: (408) 447-4928
+email: jacka@iag.hp.com
+=========================================================================
+Date:         Thu, 13 Sep 90 10:33:42 CDT
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      software
+
+(Gesture of ceremoniously removing hat labeled 'editor' and replacing it
+with one labeled 'user')
+
+Mike Kreyche's inquiry is worth some reply from *all* of us who have
+seen any of the software available for SGML.  What follows are purely
+personal notes, which represent my views and not those of the TEI, its
+sponsors, other participants, or funders, and which only represent *my*
+views for today -- no guarantees about tomorrow.
+
+I've had access to only two MS-DOS programs for SGML, and only know one
+at all well.  That one is Markit, from SEMA Group.  The other is the
+XGML Translator (XTRAN) from Software Exoterica, which I will report on
+later, after I use it more.
+
+Markit is an SGML parser, which comes with (a) a simple editor with some
+SGML awareness, (b) some software to implement simple applications using
+the SGML linked-process specification, and (c) yacc and lex source for
+building your own applications to work on Markit output.
+
+The parser does what its name says:  it parses an SGML document and
+validates it.  If the document is legal, the parser says in effect 'yes
+this is legal SGML'.  If it's not, it produces error messages saying
+what went wrong.  As a side effect of the parsing, it also produces a
+'canonical output' (SEMA's term) form of the document:  a 'minimal SGML
+document' (ISO's term) with no omitted tags, short references, implied
+tags, or other complications.  (Minimal SGML documents use *no* markup
+minimization -- the markup can grow to astonishing volumes.)
+
+Used from the DOS command line, Markit accepts a wide variety of option
+flags, some of which still bewilder me.  I don't use it that way much,
+but Lou Burnard swears by it.
+
+Me, I mostly use the Markit editor (MktEd) and run the parser from
+inside it.  The parsing options are specified from menus here, and it's
+slightly easier to get them right.  Moreover, the display of errors
+found during parsing is nice:  they can be viewed and for any error you
+can go, with one keystroke, to the point at which it was detected.  I
+find it a reasonably nice way to validate SGML documents.
+
+Markit provides a number of switches to turn off conformance checking
+for some aspects of SGML -- e.g. the quantity restrictions written into
+the standard.  For full conformance, you need to turn them on, but
+if like many people you think the standard has no business specifying
+things like buffer sizes (even if it disguises them by saying they are
+not buffer sizes), you may feel a surge of relief at being able to
+tell the parser to ignore them.  I'm told this speeds the parser up,
+too, since the quantity checking requires storing a lot of otherwise
+irrelevant information.
+
+For serious work, though, you want not just to know that your document
+is correct, but to process it.  That is where the application language
+and the yacc/lex source come in.  I've only scratched the surface here,
+but both facilities look promising.  The application language allows you
+to embed application code (written in a special-purpose language) within
+comments in the SGML link type declaration.  Actions can be called at
+the beginning or end of an element, and can act upon the tags, the
+attributes and their values, and the content of the element; enough I/O
+control is provided that you can spool data off into holding tanks and
+retrieve it later (e.g. to re-order elements in your output) or suppress
+some data entirely.  I've written only a toy application or two, and
+haven't pushed the language far, but it should be useful for a lot of
+simple transformations (e.g. for transforming the current form of the
+TEI guidelines into TEI-conforming tags).  It's clear though that it
+isn't quite what you'd call an full programming language, and it can
+feel a bit confining (or maybe you get used to it?).
+
+(Notably, the application language of Markit is notably smaller and
+more primitive than the XGML Translator language as described in the
+latter's manual.  But as noted I haven't used XTRAN enough yet to
+talk about it.)
+
+I have not used the yacc/lex source at all, but clearly if you want full
+control over the processing, this is a way to get it, using a language
+that many of us have access to.  There are public-domain yacc and lex
+processors, so no further outlay is required beyond a C compiler.
+
+Sum:  I like Markit fairly well, as a tool for constructing applications.
+It is not yet a tool for people who want the application pre-constructed;
+someone on the project has to be willing to get fingernails dirty
+writing code.
+
+All this, of course, just my own opinion, and not even a well-informed
+one at that, since I haven't enough points of comparison with other
+products.
+
+-Michael Sperberg-McQueen, UIC
+=========================================================================
+Date:         Tue, 18 Sep 90 15:25:58 -0700
+Reply-To:     Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+Sender:       Text Encoding Initative public discussion list
+              <TEI-L@UICVM.BITNET>
+From:         Malcolm Brown <mbb@JESSICA.STANFORD.EDU>
+Subject:      accessing TEI DTDs on-line
+
+Sorry if this has been asked before, but can one
+get on-line copies of the DTDs that appear in
+appendix C of the Guidelines?  Browsing through
+them could be expedited using the search function
+of a word processor.
+
+FTP access would be best for me.
+
+Just wondering.
+
+Malcolm Brown
+Stanford

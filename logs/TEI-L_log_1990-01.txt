@@ -1,0 +1,157 @@
+=========================================================================
+Date:         Mon, 8 Jan 90 16:08:22 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      ISO 639
+
+Does anyone have access to ISO 639, and would you be willing to
+summarize the information on language codes?  ISO 639 bears the
+title (ca.) _Codes for the representation of names of languages_,
+and according to the ANSI office in New York, was updated in
+1988.  I cannot afford the $37 this document costs, and would
+appreciate help from anyone who has it.  A summary of language
+codes would probably be worth posting publicly.  I would like to obtain
+as many codes as possible, but particularly, for languages of
+antiquity (e.g., Latin, Aramaic, Akkadian; any which have been
+identified in the ISO) and a fuller list for modern western languages.
+Note that these two-letter codes are not (always) the same as the
+country (and postal) codes of ISO 3166 (for example, where Israel
+would be IL). The language codes known to me currently are as follows:
+
+Arabic      AR
+Chinese     CH
+Danish      DA
+Dutch       NL
+English     EN
+French      FR
+German      DE
+Greek       GR
+Hebrew      HE
+Hindi       HI
+Italian     IT
+Japanese    JA
+Portuguese  PT
+Russian     RU
+Sanskrit    SA
+Spanish     ES
+Urdu        UR
+
+Many thanks.
+
+Robin Cover
+
+zrcc1001@smuvm1.bitnet
+attctc!cdword!cover.UUCP
+attctc!utafll!robin.UUCP
+attctc!texbell!txsil!robin.UUCP
+3909 Swiss Avenue
+Dallas, TX  75204
+(214) 296-1873
+----------------------------Original message----------------------------
+=========================================================================
+Date:         Fri, 12 Jan 90 12:46:07 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      ISO 639 LANGUAGE CODES
+
+ISO 639
+
+MARIO E.B. BALDINI (PSDMSPIN@BRUSPVM) has kindly send a listing of
+language codes from an older version of ISO 639 (_Codes for the
+representation of names of languages_).  Two different codes for
+Spanish (ES, SP) have surfaced, and may reflect versional
+differences in the ISO.  Anyone who has a current version of the
+document (1988 revision) is invited to check this list and report
+and additions or changes.
+
+AFRIKAANS       AF
+ARABIC          AR
+BULGARIAN       BG
+CHINESE         CH
+CZECH           CS
+DANISH          DA
+DUTCH           NL
+ENGLISH         EN
+ESPERANTO       EO
+FINNISH         FI
+FRENCH          FR
+GERMAN          DE
+GREEK           GR
+HEBREW          HE
+HINDI           HI
+HUNGARIAN       HU
+INTERLINGUA     IA
+INTERLINGUE     IE
+INDONESIAN      IN
+ITALIAN         IT
+JAPANESE        JA
+KOREAN          KO
+LATIN           LA
+NORVEGIAN       NO
+POLISH          PL
+PORTUGUESE      PT
+ROMANIAN        RO
+RUSSIAN         RU
+SANSKRIT        SA
+SERBO-CROAT     SH
+SLOVAK          SK
+SLOVENIAN       SN
+SPANISH         ES (alt =SP ?)
+SWEDISH         SV
+TURKISH         TR
+UKRAINIAN       UK
+URDU            UR
+
+============
+Robin Cover
+zrcc1001@smuvm1.bitnet
+----------------------------Original message----------------------------
+=========================================================================
+Date:         Mon, 29 Jan 90 10:54:39 PST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "NACO (LC)" <BB.NAC@RLG.BITNET>
+Subject:      ISO Standard for Language Codes
+
+In the recent exchange of information, I have noted the
+mention of the ISO Standard for Language Codes.  As
+Chairman of the Registration Authority for this standard,
+I would be happy to address any specific questions you
+may have regarding the code.
+
+By the way, I should alert you to the fact that this code
+is considered inadequate for bibliographic purposes.
+A working group has been established to draft a
+3-letter code based to the fullest extent possible on
+the USMARC code representation.  Therefore, I would
+suggest that we not invest effort into investigation
+of the 2-letter code for TEI purposes.
+
+John D. Byrum
+
+sm
+
+To:  TEI-L@UICVM.BITNET
+=========================================================================
+Date:         Wed, 31 Jan 90 09:33:26 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Robert Philip Weber <WEBER@HARVARDA.BITNET>
+Subject:      compound documents and images
+
+could someone please explain the TEI approach to compound documents
+and images?  WIll SGML be used here, and if so, how?  I've just
+joined the list. sorry if this has been asked before.
+Many Thanks
+Bob Weber
+---------
+Robert Philip Weber, Ph.D.       | Phone: (617) 495-3744
+Senior Consultant                | Fax:   (617) 495-0750
+Academic and Planning Services   |
+        Division                 |
+Office For Information Technology| Internet: weber@popvax.harvard.edu
+Harvard University               | Bitnet:   Weber@Harvarda
+50 Church Street                 |
+Cambridge MA 02138               |

@@ -1,0 +1,108 @@
+=========================================================================
+Date:         Tue, 6 Mar 90 18:15:00 PST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Cvetana Krstev 38-11-639-544 <XPMFL01@YUBGSS21.BITNET>
+Subject:      Information on SGML parser
+
+In December, 1989 I have received through this list
+the information that MARK-IT software can be obtained,
+if used for research. I have sent to Yard Software System
+the signed contract and everything thay asked for but
+I have received no answer. Does anyone know what happened?
+
+Maybe somebody connected to this list knows for some
+other SGML parser for IBM PC XT/AT/386 that could be
+obtained. It would be strictly used for the research,
+namely for the construction of the pilot Serbo-Croatian
+corpus marked up usin SGML.
+
+As this list is till now my only conection with the
+SGML users, I would be very important for any information.
+
+Ms Cvetana Krstev
+Computer Laboratory
+Faculty of Science
+Studentski trg 16
+11000 Beograd
+Yugoslavia
+EARN: XPMFL01@YUBGSS21
+=========================================================================
+Date:         Wed, 7 Mar 90 12:15:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      New product announcement from Sema
+
+Sema Group recently announced a new structured document editor for SGML.
+Called WriteIt, the product operates either as a smart SGML editor,
+as a word processor or as a friendly user interface to version 3 of MarkIt
+(not yet released). I saw the product briefly demonstrated by Martin Bryan
+(its author) yesterday and was quite impressed.
+
+===============
+The blurb says:
+===============
+ When using WriteIt as an SGML smart editor, the
+author selects a compiled DTD, which then allows documents to be viewed
+as structured documents. The documents can be "browsed" from node to
+node of the structure. Whether creating a new document or editing an
+existing document, menu bars show the cursor's location within the tree
+structure of the document and the permissible tags at that point.
+
+Tags are inserted by selection from the menu. The structure is validated
+interactively, so selecting a tag automatically results in a new series
+of tag options being presented. This allows local enrichment of the
+structure by the use of optional or repeatable elements. WriteIt
+supports tag minimisation (such as ShortTag) on loading an existing
+document, and Omit tag interactively.
+
+The user interface includes windowing, optional mouse and pull down
+menus including extensive Help screens. A comprehensive range of word
+processing functions are provided in addition to the SGML
+capabilities. Editing functions include cut and paste between
+windows with automatic revalidation of the structure. To minimize the
+risk of tag errors, cuts containing nest elements must include both
+start and end tags for all nested elements within the cut.
+
+WriteIt is available for DOS pcs  and requires a minimum of 640K of
+memory. Versions for MS-Windows and UNIX will be available later in
+1990.
+
+No pricing information is available yet.
+
+For more information, contact Yard Software Systems Avonbridge House
+Bath Road Chippenham Wilts SN15 2BB
+=========================================================================
+Date:         Wed, 7 Mar 90 12:03:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      MarkIt License Update
+
+I have received a letter from Yard Software to the effect that copies of
+MarkIt (version 2.2) are on their way to the following lucky subscribers
+to this list:-
+
+  David Stuebler (Montclair); Terry Butler (Alberta); Karel Babcicky (Oslo);
+  Andrea de Leeuw van Weenen (Leiden); Axel Wupper (Bonn); David Birnbaum
+  (Harvard); Stig Johansson (Oslo); Hans van Halteren (Nijmegen); Brad
+  Inwood (Toronto); Charles Faulhaber (Berkeley); C M Sperberg-McQueen
+  (Chicago); Yair Orgler (Tel Aviv); PMCvan Dijck (Amsterdam); John
+  Bradley (Toronto); Jagos Puric (Belgrade)
+
+If your name doesnt appear on this list and you think you've gone through
+the required hoops (i.e. sent the signed license form together with a
+request on the headed notepaper of your institution), don't hesitate to
+badger Yard Software Systems! The address is
+
+  Geoffrey Gudgion, Yard Software Systems Ltd, Avonbridge House,
+  Bath Road, Chippenham SN15 2BB     fax +44 (249) 655723
+
+It occurs to me that this list might be a good way for users of MarkIt
+to share impressions, expertise, tips etc. and generally act as a mutual
+support group. I have fairly good links with the company and will willingly
+act as an intermediary if there is general interest in this possibility.
+
+Lou Burnard
+Assoc Ed, TEI

@@ -1,0 +1,618 @@
+=========================================================================
+Date:         Mon, 14 Oct 1991 17:25:37 CDT
+Reply-To:     "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Subject:      countdown for 1992
+
+TEI P2 -- the countdown commences
+
+Apologies to readers of this list who feel it's been too quiet for too
+long. That's not because nothing is happening in the TEI -- on the
+contrary, a great deal has been happening, rather more than we poor
+editors can keep track of, digest for public consumption and transmit
+through this channel.  Nearly all of the specialist work groups set up
+at the beginning of the summer have now had meetings, producing a mass
+of working papers, comments, criticisms and proposals for the next
+draft.  We've run two public workshops, both of which were oversubscribed
+(and exhausting) and given more presentations than either of us cares to
+think about ... and there's more to come.
+
+But the most important piece of news is the time scale for the rest of
+the project, which is the purpose of this note. Reach for your diary,
+(if in North America, make that 'reach for your datebook') and then read
+on.
+
+15-17 Nov:  Myrdal Conference. The committees responsible for the major
+            part of the original draft of the TEI Guidelines (TEI P1)
+            will be reconvened for a special three-day meeting in a
+            remote spot in Norway.  The main business of the meeting
+            will be to review that draft, the public comments on
+            it received to date, and as much as is available of the
+            work done so far on the next draft (TEI P2) of the
+            Guidelines.
+
+30 Nov 1991:  Cutoff date for input to TEI P2, the second version of the
+           Guidelines.  Work papers and specific proposals for changes
+           and extensions to the Guidelines (reflecting the decisions
+           taken at the Myrdal meeting) are due from all current
+           work groups by this date.  This is also the closing date for
+           public comment on TEI P1; comments received after this date
+           will not be reflected in TEI P2.
+
+January 1992:  Public release of TEI P2, the draft of the final version
+           of the TEI Guidelines, for public comment. We haven't yet
+           decided exactly how we'll be distributing it, and in what
+           forms, but FTP is a distinct possibility.  (TEI P2 is expected
+           to be marked up with tags conforming to TEI P2 itself.)
+
+15 March 1992:  Deadline for public comments on P2. (This is the date
+          you should mark on your calendar / diary / datebook!)
+          Comments received after this date will *not* affect the
+          form of the Guidelines presented to the Advisory Board.
+
+Late April 92:  Final revisions of TEI P2 should be complete. A
+         preliminary version of TEI P3 (i.e. the final draft of
+         the final version) will be circulated within the TEI only,
+         though there will, of course, be a presentation devoted to
+         it at the ALLC-ACH '92 conference, 5-9 April 92 (mail
+         ALLCACH@UK.AC.OXFORD.VAX for details of this conference
+         if you need them)
+
+30-31 May 92:  TEI Advisory Board meets in Chicago to review,
+        and (we hope) endorse the final draft.
+
+30 June 92:  Final publication of TEI Guidelines, incorporating any
+        comments from the Advisory Board.  Editors take a long holiday.
+
+What happens thereafter?  Well, that depends a lot on you.  Some
+mechanism will definitely be in place to handle revision and further
+extensions to the guidelines.  But we need to hear from you now if you
+think the general direction and content of the TEI Guidelines is
+seriously flawed -- next June it may be too late.
+
+-Michael Sperberg-McQueen
+ Lou Burnard
+=========================================================================
+Date:         Thu, 17 Oct 1991 20:54:51 CDT
+Reply-To:     "Wendy Plotkin (312) 413-0331" <U49127@UICVM.BITNET>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         "Wendy Plotkin (312) 413-0331" <U49127@UICVM.BITNET>
+Subject:      TEI AI1 (Linguistic Description) Working Paper Available
+
+New Document:
+
+(AI: Analysis and Interpretation      AI1: Work Group on Linguistic
+  W: Working Paper                           Description
+
+TEI AI1W9: Feature-Structure Markup for Presentation at Oxford and
+           Brown Workshops
+Authors:   D. Terence Langendoen and Eanass Fahmy
+Date:      September 25, 1991
+
+Description:
+
+This paper is a conflation of the material presented by Terry
+Langendoen at the European TEI Workshop that was held at Oxford
+University in June 1991, and by Eanass Fahmy at the North American
+TEI Workshop that was held at Brown University in July 1991.  Their
+task was to show how to use the feature structure markup
+proposals of the TEI Guidelines, as amended in January, 1991, for the
+encoding of lexical items (words) in running text, and to
+demonstrate the applicability of the feature structure markup
+conventions for other than strictly linguistic purposes.
+
+The paper proposes significant changes to Chapter 6 of the the TEI
+Guidelines (Version 1.0), including the expanded use of entity
+references to improve readability.
+
+This document has recently become available for public distribution.
+It is available on request to anyone interested in the work of the TEI.
+It is not necessarily final, and may not represent the final decision
+of the TEI on any issue; it does reflect the opinions of the
+responsible committee or working group and is distributed publicly to
+allow others to comment on the issues involved.  Electronic copy is
+available both with SGML markup and without markup in a form designed
+for reading on terminal screens or for simple printout.  Hard copy is
+also available.
+
+If you would like a document, please specify mark-up, no-markup, or
+hard copy.  Contact:
+
+         Wendy Plotkin
+         U49127@UICVM.bitnet or U49127@uicvm.cc.uic.edu
+
+         Computer Center (M/C 135)
+         University of Illinois at Chicago
+         Box 6998
+         Chicago, IL  60680, USA
+         1-312-413-0331 or 1-312-996-6834 (Fax)
+=========================================================================
+Date:         Mon, 21 Oct 1991 20:33:03 MET
+Reply-To:     Harry Gaylord <galiard@LET.RUG.NL>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Harry Gaylord <galiard@LET.RUG.NL>
+Subject:      iso 10646 and unicode
+
+JTC1/SC2 met in Rennes, France last week and approved a motion that
+a new DIS 10646 be sent out to national bodies. This means that
+UNICODE and ISO 10646 are integrated, i.e. that for the most part
+UNICODE will be distributed in a cover of ISO. The DIS will be sent
+to national bodies in January and the voting will take place within 4
+months. It is to be expected that ISO IS 10646 will be official at the
+end of 1992.
+  I will place a more extensive discussion of the implications of this
+on the listservers of humanist and tei-l at the end of this week.
+Harry Gaylord
+=========================================================================
+Date:         Fri, 25 Oct 1991 03:53:16 TZONE
+Reply-To:     Timothy.Reuter@MGH.BADW-MUENCHEN.DBP.DE
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Timothy.Reuter@MGH.BADW-MUENCHEN.DBP.DE
+Subject:      software queries
+
+Two quick queries:
+
+a) does anybody know what Author/Editor currently costs?
+
+b) can anybody recommend programs with comparable functionality available
+for UNIX platforms?
+
+Thanks in advance, Timothy Reuter, MGH Munich
+=========================================================================
+Date:         Fri, 25 Oct 1991 09:59:50 BST
+Reply-To:     via the vacation program <ht@COGSCI.ED.AC.UK>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         via the vacation program <ht@COGSCI.ED.AC.UK>
+Subject:      away from my mail until 28 Oct.
+
+I will not be reading my mail until 28 October.
+Your mail regarding " software queries" will be read when I return.
+
+cheers
+
+ht
+=========================================================================
+Date:         Fri, 25 Oct 1991 09:11:18 +0000
+Reply-To:     N.POPPELIER@ELSEVIER.NL
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         N.POPPELIER@ELSEVIER.NL
+Subject:      RE: software queries
+In-Reply-To:  <397D4D016003C4B0@HEARNVAX.nic.SURFnet.nl>
+
+1. Author/Editor + build rules + "SGML Primer" + annual support contract
+   for DOS costs $ 1995.
+
+2. SGML-Publisher from ArborText. It runs on HP and Sun workstations,
+   and on several other machine types as well.
+
+Nico
+----------------------------------------------------------------------
+Dr. Nico A.F.M. Poppelier
+Elsevier Science Publishers, APD, R&D Department
+Sara Burgerhartstraat 25, 1055 KV Amsterdam, The Netherlands
+Phone: +31-20-5862504. Fax: +31-20-5862425. Email: n.poppelier@elsevier.nl
+=========================================================================
+Date:         Fri, 25 Oct 1991 10:10:00 GMT
+Reply-To:     Mail_System@ANDUIN.COMPSCI.LIVERPOOL.AC.UK
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Mail_System@ANDUIN.COMPSCI.LIVERPOOL.AC.UK
+Subject:      %% Undelivered Mail %%
+
+Your mail was not delivered as follows:
+Error reason: Fatal FTP error
+
+Filename and information:
+
+SYS$SYSROOT:[SYSMGR.MAIL]CBS_00950A3A11E0.MAI;1
+VAX/VMS FTP (80) Version 5.2-1
+@(#)hhQ.c       3.5  90/03/20
+
+Your original mail header and message follow.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Via: UK.AC.EARN-RELAY; Fri, 25 Oct 91   9:59 GMT
+Received: from UKACRL by UK.AC.RL.IB (Mailer R2.07) with BSMTP id 5982; Fri, 25
+          Oct 91 09:54:22 BST
+Received: from UICVM by UKACRL.BITNET (Mailer R2.07) with BSMTP id 0975; Fri,
+          25 Oct 91 09:54:19 BS
+Received: by UICVM (Mailer R2.07) id 3826; Fri, 25 Oct 91 03:53:44 CDT
+Date:     Fri, 25 Oct 1991 03:53:16 TZONE
+Reply-To: Timothy.Reuter@DE.DBP.BADW-MUENCHEN.MGH
+Sender:   "TEI-L: Text Encoding Initiative public discussion list" <TEI-L@EARN.
+          UICVM>
+From:     Timothy.Reuter@DE.DBP.BADW-MUENCHEN.MGH
+Subject:  software queries
+To:       Martin Beer <mdb@UK.AC.LIVERPOOL.COMPSCI>
+
+Two quick queries:
+
+a) does anybody know what Author/Editor currently costs?
+
+b) can anybody recommend programs with comparable functionality available
+for UNIX platforms?
+
+Thanks in advance, Timothy Reuter, MGH Munich
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+End of returned mail
+=========================================================================
+Date:         Fri, 25 Oct 1991 17:10:02 MET
+Reply-To:     Harry Gaylord <galiard@LET.RUG.NL>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Harry Gaylord <galiard@LET.RUG.NL>
+Subject:      no subject (file transmission)
+
+Let me answer briefly the questions which John Hughes raised in Vol. 5,
+No. 0409.
+Control codes do not form a part of the required sections of 10646.
+Reference is made to the Control codes of ISO 6429:1988. Until now control
+functions have been encoded in positions 0 - 31 (C0) and 128 - 159 (C1)
+or are introduced by an escape sequence in ISO standards.
+In the recent ISO discussion documents it has become apparent that UNICODE
+contains control/ formatting codes in places where a graphic character
+would be expected. These have now been placed in an appendix which means
+devices can conform to the requirements of 10646 without using them.
+If this sounds confusing, the result is simple. There are going to be
+two sets of control codes which are not mutually interchangable.
+1. Your question about bidi (bidirectionality) can illustrate the problem well.
+UNICODE offers a relatively brutal way of handling this.
+        1. The bracket and parenthesis marks are right or left in shape relative
+to the direction of the language.
+        2. There are codes for starting and overriding left to right and right
+to left directions.
+ISO 6429 offers two ways of changing directionality.
+        1. Select Presentation Directions (SPD) There are 7 possible parameters
+for this to indicate the character and line progression. For Hebrew this is
+3 "the direction of the character path is from right to left; the direction
+of the line progression is from top to bottom.
+        2. Start Reversed String (SRS) can have two paramenters. They indicate
+the start and end of reversing the current direction. A technical committee
+of ECMA is currently working on making this ISO control function more powerful.
+An example of what they are working on as far as I understand it is to
+have a parameter in which the Arabic or Hebrew text is presented right to
+left, but numbers from left to right.
+So the answer to your first question is that 10646 in itself does not have
+any protocol for bidi, but it can be used with two different sets of
+protocols which can achieve this. This is certainly going to cause some
+problems.
+
+2.  Let me break this questions into its parts:
+        a. There will be 4 levels of code extension. In one floating accents
+will not be included, in two floating accents will be available with the
+ISO mechanism only, in three the combining method of UNICODE but not the
+ISO can be used, in four both UNICODE and ISO methods can be used. I assume
+that a file will have to have a header indicating the level.
+There is provision for what you call floating accents. There are also
+a large number of preformed compound characters. Thus your &eacute; can be
+coded as [00E9] or [0065]+[0301], i.e. LATIN SMALL LETTER E + COMBINING
+ACUTE ACCENT and in one other way with the ISO SGCI. Software designers will
+have to decide how they will this. The basic question for them is to design
+tables which multiencodings are possible and to perhaps normalize them in
+some way.
+        b. Your Hebrew question is another question entirely. This is a problem
+of imaging, not character encoding. It would be absurd to include your
+1000s of possible combinations. A program will have to read the stream
+of characters and produce a readable image of them on screen or printer.
+
+3. Variable width in presentation is only marginally provided for in both
+10646 and UNICODE. This also is a question of imaging, not character
+encoding.
+
+4. Ibid.
+
+5. I cannot predict what will happen in the future, but if 10646 takes
+off it will mean that character sets are provided for at the system level
+where they should be, not on application level. Everyone who has a 10646
+system will have access to the necessary characters for multilingual
+processing in an enormous number of languages. That can only be an improvement.
+There will be some hickups with sorting out which extension level and
+control function wins out. There will also be some revision of what
+characters are included within the short term, I think. It will mean that
+your word processor, full text data retrieval system, and SGML application
+(if compliant) will use the same multilingual character set. With networks
+supporting it we can exchange these files anywhere without corruption. If
+machines running EBCDIC move up to 10646, other major compatibility
+problems will be solved.
+
+6. The problem of printing as you can see from the above is not dealt with
+by a character coding standard. The whole issue of presentation forms will
+have to be handled outside of this standard. This will be done by using
+Postscript download fonts etc. The number of glyphs which can be place on
+paper and screen is considerably larger than 2^16 which is the maximum
+number of characters in this standard.
+
+Apologies for the length of this answer. I will send the more lengthy and
+informative information to the listservers soon.
+=========================================================================
+Date:         Fri, 25 Oct 1991 14:01:23 -0400
+Reply-To:     "Liam R. E. Quin" <lee@SQLEE.SQ.COM>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         "Liam R. E. Quin" <lee@SQLEE.SQ.COM>
+Subject:      Re: software queries
+
+Timopthy Reuter asked:
+a) does anybody know what Author/Editor currently costs?
+b) can anybody recommend programs with comparable functionality available
+for UNIX platforms?
+
+I shall forward his questions to our sales people (sales@sq.com), but I'd
+like to mention that Author/Editor 2.0 has been shipping on Unix for some
+time now -- months, anyway.  It needs a SPARC (Sun 4) and X11 or Open Windows.
+
+Lee
+
+--
+Liam Quin, lee@sq.com, SoftQuad, Toronto, 416 239-4801; the barefoot programmer
+            `Jacob sod pottage'  [King James Bible]
+=========================================================================
+Date:         Thu, 31 Oct 1991 10:10:00 GMT
+Reply-To:     Peter Flynn <CBTS8001@IRUCCVAX.UCC.IE>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Peter Flynn <CBTS8001@IRUCCVAX.UCC.IE>
+Subject:      WorldWideWeb (SGML Hypertext browser) on open access
+
+From:   IN%"timbl@nxoc01.cern.CH"  "Tim Berners-Lee"
+To:     IN%"www-interest@dxmint.cern.CH"
+CC:
+Subj:   Telnet access to W3 information server
+
+
+                        TELNET ACCESS to W3
+
+You can new telnet to our information server.
+
+
+                Telnet to:      info.cern.ch
+                User name:      www
+                (no password)
+
+You will be presented with the home page which is used at CERN on the
+central machines. From there, you can follow links whatever documents
+and indexes we know about at CERN or elsewhere in the world of online
+information. You will be using the line mode brower, which assumes
+nothing about your terminal capabilities.
+
+This trial service is provided for those who want to try out the
+software, or who need information and are away from home. If you use
+this service frequently, it is much more efficient and faster for you
+to install the browser locally.
+
+You can of course get help, including installation instructions, by
+following the "Help" link from the home page.
+
+__________________________________________________________
+Tim Berners-Lee                       timbl@info.cern.ch
+World Wide Web project                (NeXTMail is ok)
+CERN                                  Tel: +41(22)767 3755
+1211 Geneva 23, Switzerland           Fax: +41(22)767 7155
+
+
+
+
+=========================================================================
+Date:         Thu, 31 Oct 1991 12:12:40 -0500
+Reply-To:     Ralph Seguin <rps@ARBORTEXT.COM>
+Sender:       "TEI-L: Text Encoding Initiative public discussion list"
+              <TEI-L@UICVM.BITNET>
+From:         Ralph Seguin <rps@ARBORTEXT.COM>
+Subject:      RE: ArborText SGML
+
+Several weeks ago ArborText came across a posting by Francois Chahuneau
+describing his thoughts and experience concerning the use of parser interfaces
+to develop SGML-based structured editors.  Since the posting specifically
+mentioned our SGML-Editor product and attributed to it the deficiencies of
+other parser-based editors, we felt a technically-oriented response was in
+order.  The response is overdue for which I apologize.
+
+Mr. Chahuneau divides the world of SGML editors into two camps:  those which
+are parser-based and those which are "abstract tree manager"-based.  He then
+outlines quite well the strengths and drawbacks of each approach and the
+dilemma faced by any user having to choose.  As we well know neither approach
+alone is fully up to the job of providing a context-sensitive SGML editor
+which can correctly handle all of the components of the SGML language.
+
+Although our SGML-Editor product was lumped into the parser-based camp, it is
+actually a hybrid of both camps representing what we believe is the "best of
+both worlds".  SGML-Editor reads and parses the document instance at startup
+into an in-memory data structure in which elements are multiply linked.  These
+links give SGML-Editor the capability of readily traversing the document
+structure in many different ways.
+
+As the document is being modified we then navigate this tree structure to
+control what we pass to the content model engine both upstream and downstream
+thus checking the DTD rules against the whole document structure.  The
+"context sensitivity" engine does its job in two steps which we've dubbed with
+the in-house names "context checking" and "region checking".  The "context
+checking" step is much as Mr. Chahuneau describes in that a stack of
+currently open elements (e.g.  what has happened upstream) is fed to the
+engine and from that the engine can return a list of tags which are candidates
+for insertion at that spot in the document instance.  Obviously a special case
+of this is whether a tag selected by the user for insertion is a member of
+this list.
+
+The "region checking" step is the process of examining the document instance
+downstream to determine if a given change is invalidated by elements which are
+either already present or missing.  This step is performed on every
+modification of the document instance.  There are many variations based on the
+type of modification being done but the classic "region checking" case
+involves placing the engine at the given spot (usually already the case after
+the context check) and feeding it the elements which appear downstream and are
+within the scope of the content model governing the modification.  Because of
+our knowledge of document structure we can greatly reduce the volume of data
+sent to the content model engine to perform downstream validation compared to
+a parser only implementation.  For example, when a tag is to be inserted, we
+"context check" the insertion point to see if the tag is potentially valid at
+that point.  If so, we tell the parser it has been inserted and then "region
+check".  If either "context checking" or "region checking" says no then we
+inform the user why the tag cannot be inserted and do not make the change.
+
+Which leads to the issue Mr. Chahuneau raises regarding greying of tag items
+on menus.  We made an implementation decision to base our menu-greying of tag
+items solely on the results of a "context check".  Because of this, the
+non-grey tag menu items represent a list of *potentially* valid tags to insert
+at the current caret position.  As with any "context check" not all of these
+tags will pass a subsequent "region check" if actually inserted.  One reason
+for posting this is to correct the notion that because we are parser-based, it
+is impossible for us to do any better with our menu-greying.
+
+The fact is that we chose to base menu-greying on "context checking" alone in
+order to minimize overhead and present the menu to the user in the fastest
+possible time.  Our experience has been that users find any kind of delay
+between the request for a menu and the time the menu appears to be somewhere
+between annoying and intolerable.  Now the extra logic to change our tag menu
+items from *potentially* valid tags to *guaranteed* valid tags is to cycle
+through the list of potentially valid tags "region checking" each tag for
+insertion at that point and to grey those which do not pass.  There is no
+question that this involves extra overhead but it is unclear whether the
+overhead would result in any noticeable delay to the user.  One concern is
+that the overhead is variable in that it depends on the number of tags in the
+menu (our menus are user-configurable), on the DTD being used (also beyond our
+control), on the structure of the document being edited, and the location of
+the insertion point.  So a user could encounter a case when the delay was
+noticeable, perhaps intolerable, and the variables would be beyond our
+control.
+
+But given feedback from Mr. Chahuneau and others, we are looking into the
+performance issue and are committed to providing some method of context-driven
+tag insertion via menu or panel (or both) in which only guaranteed valid tags
+appear as choices.  For example, it might appear as a menu of "valid elements"
+containing only those tags which are permitted by the content model both
+upstream and downstream.  One reason we've hesitated to provide such
+capability as a menu is that we've also received strong feedback that users
+prefer menus whose items are fixed in position from menu popup to menu popup.
+This criteria cannot be met by a menu whose items are defined dynamically.
+But we recognize that as the size and complexity of the user's DTD continues
+to grow, the need for such functionality grows as well so we've scheduled this
+addition for our Q1/92 release of SGML-Editor.
+
+The original posting also made the observation that one of the drawbacks of
+the "abstract tree manager" approach is that "bizarre things in SGML which
+cannot be represented on a tree, like element-asynchronous marked sections,
+cannot be handled by editors of this category".  Our SGML-Editor product
+correctly handles marked sections whether they are well-behaved following the
+nesting of the tag elements in the document instance or whether they are
+element-asynchronous beginning and ending without regard to tag nesting.  We
+would not be so arrogant as to suggest that this was not a challenge to
+implement but we considered it a requirement for any true SGML editor.  The
+fact that our document instance representation is tree-based made this
+difficult but not impossible.
+
+Mr. Chahuneau concludes:
+   "SGML being the expression of mixed inluences(sic), both from the object
+   oriented world and from the sequential data processing world (marked
+   sections!), it is probably unfeasible to provide an editor which
+   satisfactorily reflects both viewpoints.  In other words, you have to
+   choose."
+
+We believe that since SGML-Editor employs both methodologies using whichever
+is most appropriate for the operation being performed it is not necessary
+to choose.  You still have to choose an editor but you do not have to
+choose methodologies as a prerequisite.
+
+Bill Culbertson
+ArborText, Inc.
+
+
+
+For those who missed the original posting, a copy of Francois Chahuneau's
+message to which we are responding is included below.
+
+
+--------------------Original Posting--------------------
+Hello,
+
+The tests I have been performing so far with VM2 presently bring me to the
+same conclusions as yours.  It is interesting to note that VM2 is
+approximately 5 times faster than Merk-it 2.2 (using precompiled DTDs) on the
+same hardware (the time for DTD analysis by VM2 is negligible).
+
+
+The SGML declaration says that "MODEL" is not supported, and I verified that
+VM2 is totally unable to detect ambiguous content models in a DTD.  If you
+have such a model, nothing is detected till the ambiguity arises in the
+instance, in which case you get misleading error messages.
+
+Having performed lots of benchmarks with lots of parsers, for which I know
+more or less how they have been developed, I tried to understand why VM2 was
+so fast.  One thing is carefully optimized and coded I/O.  But, essentially,
+it looks like this parser has been written like FORTRAN compilers were written
+20 years ago, i.e.  without any use of automata theory, and without the help
+of any generator of lexical analysers or parsers (lex or yacc type).  This
+means that writing this parser was probably a very long, trial-and-error
+process, and that it not easy for somebody else than its author to modify it
+(at least, as long as core mechanisms are concerned).  On the other hand, this
+approach does yield very fast and compact code (60 K under DOS using MSC 6.0
+with maximum optimisation, 100 K under SUN-OS using gcc).
+
+Furthemore, I have something to say about your remark concerning the use of
+parser interfaces to develop SGML-based structured editors.  This will bring
+us somewhat beyond the current topic of becnchmarking VM2, but reflects the
+current state of my thoughts and experience, and might be of interest to
+people on the TEI list (retransmit this mail if you think it is worth to).
+
+I would like to point out that, using parsing technology alone (be it
+incremental), you will *never* be able to develop a better SGML editor than
+Yard's Write-It, Exoterica's CheckMark or its Unix counterpart, Arbortext's
+SGML-Editor.
+
+These editors, which use an interface to a parser as their sole "context
+sensitivity" engine, suffer from the contradiction between two facts of life :
+
+- - 1) SGML prohibits look-ahead;
+
+- - 2) Document creation and update is inherently a non-sequential process,
+     except in initial stages.
+
+Parsers only need to maintain a stack of currently open elements (look at
+VM2), i.e.  a trace of what has happened *upstream*.  They do not know at all
+whether the content model has already been partially fullfilled *downstream*
+(and they do not need to :  when parsing a sequential file, they will find out
+later when it is time).  The result is that editors based *solely* on parsers
+offer tag menus with lots of wrong suggestions :  the tag list is established
+based on the current parser context and on the element's content model (known
+from the DTD), but *not taking into account* what is already there downstream
+in the document.  You can make the experiment at any time.
+
+Editors like Author/Editor, Grif...  etc.  base their context-sensitivity on
+an "abstract tree manager" :  the whole document tree is known to the editor
+at any time, and DTD rules are checked against the whole structure.
+
+The downside of this approach is that bizarre things in SGML which cannot be
+represented on a tree, like element-asynchronous marked sections, cannot be
+handled by editors of this category.  Also, editors of this category work on
+their own internal representation of the document tree, and hence it is very
+impractical for them to maintain information about tag minimizations occuring
+in the instance...  which they usually do not do (they always output
+non-minimized documents, or "systematically" minimized documents).
+
+Nothing prevents editors of this second category to also include a parser, to
+validate the finished document (this is what AUthor/Editor does; the internal
+parser works on the "externalized" linear tagged text representation, not on
+the tree structure).
+
+This distinction between two categories of tools has nothing to do with more
+visible distinctions based on user-interface issues.  User interfaces can
+either be based on :
+
+        I) typed text objects, on which presentation rules are applied; II)
+        tagged ASCII text, handled in a sequential text buffer.
+
+As an exemple, Check-Mark uses a type I interface, while SGML-Editor uses a
+type II interface, while both use the same Exoterica parser as their only
+support for context sensitivity.
+
+SGML being the expression of mixed inluences, both from the object oriented
+world and from the sequential data processing world (marked sections!), it is
+probably unfeasible to provide an editor which satisfactorily reflects both
+viewpoints.  In other words, you have to choose.

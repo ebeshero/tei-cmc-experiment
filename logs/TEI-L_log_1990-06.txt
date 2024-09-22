@@ -1,0 +1,252 @@
+=========================================================================
+Date:         Sat, 16 Jun 90 17:42:02 -0400
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Don Walker <walker@FLASH.BELLCORE.COM>
+Subject:      New book on SGML
+
+NEW BOOK ON SGML
+
+"Practical SGML" by E. van Herwijnen
+
+Published by Kluwer, June 1990; 307 pages, paperback, $39.95;
+ISBN 0-7923-0635-X.
+
+Orders can be placed through:
+
+         Kluwer Academic Publishers
+         Order Department
+         P.O. Box 358
+         Accord Station
+         Hingham, MA  02018-0358
+
+         Customer Service Department at 617-871-6600.
+         Credit Cards are accepted.
+
+Publicity prose:
+
+        Are you fed up with incompatible word processor formats?  Are you
+        frustrated by the lack of interchangeability of the documents you
+        painstakingly create?  Or do you have difficulties in creating an
+        integrated database of documents in a multivendor environment?
+
+        If so, "Practical SGML" is for you.  It shows how, by using SGML,
+        you can interchange documents and process them on many different
+        systems in many different ways.  SGML, the Standard Generalized
+        Markup Language, is the ISO (International Standards Organization)
+        standard for text representation.  The SGML format is independent
+        of a particular text formatter of any kind of processing.  It is
+        portable, structured, and readable, making it easier to create
+        document databases.
+
+        With the US Department of Defense and many computer manufacturers
+        expressing their interest in SGML through the CALS (Computer-aided
+        Acquisition and Logistics Support) initiative, this standard, and
+        any application using it, is guaranteed a long and fruitful life.
+        "Practical SGML" will help you make the most of it.
+=========================================================================
+Date:         Sun, 17 Jun 90 23:22:58 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      Re: New book on SGML
+In-Reply-To:  Message of Sat,
+              16 Jun 90 17:42:02 EDT from <walker@FLASH.BELLCORE.COM>
+
+Dear Colleague:
+
+From 27 May to 29 June 1990 I am out of the country and so gone from
+this address, chiefly to attend the ALLC/ICCH conference in Siegen,
+Germany.  Mail will be kept faithfully for me here, but if I do not
+reply to your message in early July, please resend your message then.
+
+Yours, Willard McCarty
+=========================================================================
+Date:         Mon, 18 Jun 90 09:54:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+
+The first fruits of the Text Encoding Initiative have put in an
+appearance, at last. A preliminary version of the TEI Guidelines
+for the encoding of machine readable texts was presented at recent
+conferences in Pittsburgh (ACL) and in Siegen (ACH/ALLC) at the
+start of June. A presentation about the Guidelines also attracted
+much interest at the recent ICAME meeting in Berlin.
+
+The text of this first draft of the Guidelines is currently being
+finalised within the TEI committees, and will be published on July
+15th. The draft will be distributed freely in order to solicit the
+maximum feedback and comment within the community which the
+Guidelines hope to address.
+
+Over the next two years, we hope that the draft proposals in the
+Guidelines will be refined, expanded, contradicted, revised, argued
+over, quarrelled about, misunderstood, expounded, applied,
+misapplied, enthused over -- anything except ignored. This bulletin
+board, and others like it, will be used extensively for these
+purposes, as will other more conventional means of publication and
+scholarly dispute.
+
+A further announcement will be made on this bulletin board as soon
+as the draft is available.
+
+Lou Burnard
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Sun, 24 Jun 90 13:21:21 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+In-Reply-To:  Message of Mon,
+              18 Jun 90 05:54:00 EDT from <LOU@VAX.OXFORD.AC.UK>
+
+Dear Colleague:
+
+From 27 May to 29 June 1990 I am out of the country and so gone from
+this address, chiefly to attend the ALLC/ICCH conference in Siegen,
+Germany.  Mail will be kept faithfully for me here, but if I do not
+reply to your message in early July, please resend your message then.
+
+Yours, Willard McCarty
+=========================================================================
+Date:         Sun, 24 Jun 90 12:26:28 CDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Richard Goerwitz <goer@SOPHIST.UCHICAGO.EDU>
+Subject:      where is SGML being used
+
+Is SGML actually being used anywhere on a large scale?  Is there soft-
+ware based on it (i.e. academic, multilingual wordprocessors and text
+bases)?  I'm just curious.
+
+    -Richard L. Goerwitz              goer%sophist@uchicago.bitnet
+    goer@sophist.uchicago.edu         rutgers!oddjob!gide!sophist!goer
+=========================================================================
+Date:         Mon, 25 Jun 90 11:05:00 GMT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Lou Burnard <LOU@VAX.OXFORD.AC.UK>
+Subject:      in reply to goerwitz
+
+Tempting though it is to reply to Richard Goerwitz' query (<q>is anyone
+using SGML? what software exists?</q>)  "Gasp! rumbled at
+last! all right governor, it's a fair cop - there's no such thing as
+SGML software at all!!"  the facts of the matter are as follows:
+
+1. SGML is very widely used and even more widely promoted outside the
+academic community.
+
+2. Software exists.
+
+3. Eric van Herwijnen's `Practical SGML', recently published by
+  Kluwers, is a very readable, informative and up to date summary
+of activities in the SGML world.
+
+4. Here (from memory) is a brief list of SGML parsing/validating software:
+
+a. From Sema Group
+        MarkIt
+        WriteIt
+b. From Software Exoterica
+        XGML Validator
+        XGML Normaliser
+        XGML CheckMark
+        XGML Translator
+c. From SoftQuad:
+        AuthorEditor
+d. From IBM:
+        DCF/SGML edition
+        LEXX
+e. From Open Texts Systems
+        PAT
+f. Academic projects
+        TOLK (Turing Inst)
+        DAPHNE (DFN)
+
+However, one of the most interesting things about SGML is precisely that
+you don't need special purpose software to use it. If you are dealing
+with an existing correctly-tagged SGML document, then any old piece of
+string handling software can be cobbled together to make sense of the
+tags. If you can recognise tokens in an input stream and maintain a stack
+then you can do it yourself!
+
+Robin Cover (ZRCC1001@SMUVM1) has for many years been compiling
+an exceptionally full and detailed bibliography of publications and
+software relating to SGML. This is being worked on within one of the
+committees of the TEI and is due for publication shortly.
+
+Lou Burnard
+=========================================================================
+Date:         Mon, 25 Jun 90 14:25:29 MEZ
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "R. WYTEK" <Z00WYR01@AWIUNI11.BITNET>
+Subject:      Re: where is SGML being used
+In-Reply-To:  Message of Sun,
+              24 Jun 90 12:26:28 CDT from <goer@SOPHIST.UCHICAGO.EDU>
+
+On Sun, 24 Jun 90 12:26:28 CDT Richard Goerwitz said:
+>Is SGML actually being used anywhere on a large scale?  Is there soft-
+>ware based on it (i.e. academic, multilingual wordprocessors and text
+>bases)?  I'm just curious.
+>
+Please accept the same questions from me also, potent partners in the
+project don't guarantee success, remmeber e.g. ADA.
+I hear in Germany courses are held about SGML, and several of the great
+companies like Bosch, Siemens etc. change their publication standards to
+SGML. Could one of the SGML initiates send me a short text file with
+SGML commands? Is SGML only a sophisticated version of IBM's GML?
+Many thanks for answers, I'm new to this list and hope this isn't
+snow of yesteryear for all.
+Rudolf WYTEK, Computer Center, Univ. of Vienna.
+=========================================================================
+Date:         Fri, 29 Jun 90 13:19:30 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      Re: where is SGML being used
+In-Reply-To:  Message of Sun,
+              24 Jun 90 13:26:28 EDT from <goer@SOPHIST.UCHICAGO.EDU>
+
+Dear Colleague:
+
+From 27 May to 29 June 1990 I am out of the country and so gone from
+this address, chiefly to attend the ALLC/ICCH conference in Siegen,
+Germany.  Mail will be kept faithfully for me here, but if I do not
+reply to your message in early July, please resend your message then.
+
+Yours, Willard McCarty
+=========================================================================
+Date:         Fri, 29 Jun 90 13:24:15 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      Re: in reply to goerwitz
+In-Reply-To:  Message of Mon,
+              25 Jun 90 07:05:00 EDT from <LOU@VAX.OXFORD.AC.UK>
+
+Dear Colleague:
+
+From 27 May to 29 June 1990 I am out of the country and so gone from
+this address, chiefly to attend the ALLC/ICCH conference in Siegen,
+Germany.  Mail will be kept faithfully for me here, but if I do not
+reply to your message in early July, please resend your message then.
+
+Yours, Willard McCarty
+=========================================================================
+Date:         Fri, 29 Jun 90 13:26:02 EDT
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Willard McCarty <MCCARTY@VM.EPAS.UTORONTO.CA>
+Subject:      Re: where is SGML being used
+In-Reply-To:  Message of Mon, 25 Jun 90 10:25:29 EDT from <Z00WYR01@AWIUNI11>
+
+Dear Colleague:
+
+From 27 May to 29 June 1990 I am out of the country and so gone from
+this address, chiefly to attend the ALLC/ICCH conference in Siegen,
+Germany.  Mail will be kept faithfully for me here, but if I do not
+reply to your message in early July, please resend your message then.
+
+Yours, Willard McCarty
