@@ -15,8 +15,7 @@
             <publisher>The Pennsylvania State University</publisher>
             <distributor>LISTS.PSU.EDU LISTSERV Server (17.0)</distributor>
             <date>2024</date>
-         </publicationStmt>
-      
+         </publicationStmt>   
          <sourceDesc>
               <bibl>
                  <title>TEI-L Listserv</title>
@@ -28,15 +27,55 @@
       </fileDesc>
       <encodingDesc> 
          <samplingDecl>
-            <p>Sampled by requesting monthly logs from LISTS.PSU.EDU by e-mail with GET commands: <code>GET TEI-L LOG 9001</code> (for January 1990). 
-               One log command was issued for each month.</p>
+            <p>Sampled by requesting monthly logs from <name type="API">LISTS.PSU.EDU</name> by e-mail with GET commands: <code>GET TEI-L LOG 9001</code> (for January 1990). 
+               One log command was issued for each month. See <ptr type="APIdoc" target="https://www.lsoft.com/manuals/17.0/commands/14File-serverandwebfunctioncomma.html"/>. Received by e-mail between <date from="2024-09-21" to="2024-09-22">September 21 and 22, 2024</date>.</p>
          </samplingDecl>
       </encodingDesc>
    </teiHeader>
    <text>
       <body>
          <div>
-            <post>stuff</post>
+            
+            <post when="Mon, 8 Jan 90 16:08:22 CST">
+               <p>Does anyone have access to ISO 639, and would you be willing to
+                  summarize the information on language codes?  ISO 639 bears the
+                  title (ca.) _Codes for the representation of names of languages_,
+                  and according to the ANSI office in New York, was updated in
+                  1988.  I cannot afford the $37 this document costs, and would
+                  appreciate help from anyone who has it.  A summary of language
+                  codes would probably be worth posting publicly.  I would like to obtain
+                  as many codes as possible, but particularly, for languages of
+                  antiquity (e.g., Latin, Aramaic, Akkadian; any which have been
+                  identified in the ISO) and a fuller list for modern western languages.
+                  Note that these two-letter codes are not (always) the same as the
+                  country (and postal) codes of ISO 3166 (for example, where Israel
+                  would be IL). The language codes known to me currently are as follows:</p>
+             
+           <list type="gloss">
+              <label>Arabic</label> <item>AR</item>
+              <label>Chinese</label> <item>CH</item>
+              <label>Danish</label> <item>DA</item>
+              <label>Dutch</label> <item>NL</item>
+              <label>English</label> <item>EN</item>
+              <label>French</label> <item>FR</item>
+              <label>German</label> <item>DE</item>
+              <label>Greek</label> <item>GR</item>
+              <label>Hebrew</label> <item>HE</item>
+              <label>Hindi</label> <item>HI</item>
+              <label>Italian</label> <item>IT</item>
+              <label>Japanese</label> <item>JA</item>
+              <label>Portuguese</label> <item>PT</item>
+              <label>Russian</label> <item>RU</item>
+              <label>Sanskrit</label> <item>SA</item>
+              <label>Spanish</label> <item>ES</item>
+              <label>Urdu</label> <item>UR</item>
+           </list> 
+               
+               <p>Many thanks.</p>
+               <p>Robin Cover</p>
+               
+            </post>
+           
          </div>
       </body>
    </text>
