@@ -14,8 +14,7 @@
          </editionStmt>
          <publicationStmt>
             <!-- about the born-digital document -->
-            <p>Published from my awesome GitHub Repo yay</p>
-
+            <publisher>https://github.com/tei-cmc-experiment/tei-cmc-experiment</publisher>
          </publicationStmt>
          <sourceDesc>
 
@@ -34,7 +33,6 @@
                   </bibl>
                </relatedItem>
             </bibl>
-
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
