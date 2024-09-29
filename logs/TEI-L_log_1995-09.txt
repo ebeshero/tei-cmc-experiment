@@ -1,0 +1,3415 @@
+=========================================================================
+Date:         Fri, 1 Sep 1995 16:56:22 CDT
+Reply-To:     Nancy Ide <ide@univ-aix.fr>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nancy Ide <ide@univ-aix.fr>
+Subject:      Re: TEI vs 12083
+
+At 11:26 31/08/95, Patrice Bonhomme wrote:
+
+>I would like to list all the works or projects using the TEI on the
+>Web.
+>
+
+As chair of the TEI Steering Committee, I would like to heartily endorse
+this idea and assure you that we in the TEI will do everything possible to
+help you out in your efforts. Some of this information probably exists in
+partial form in various places, but there is not, to my knowledge, a
+comprehensive and up-to-date list available on the WWW. Apart from its
+obvious value as a general information source, such a list would provide a
+valuable resource for those considering using the TEI, including
+information of the kind that can be used in proposal development etc. It
+would also foster better communication among projects already using the
+TEI.
+
+I would encourage you to include substantial annotations and/or links from
+your list to the projects included. Ideally, it would be great to provide
+access to (even small) samples of the encoded data for each project as
+well.
+
+The TEI can in turn provide a link to your list from our home page on the WWW.
+
+Many thanks for undertaking this project!
+
+Nancy Ide
+=========================================================================
+Date:         Tue, 5 Sep 1995 10:32:35 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         KAREN FRASER <K.A.FRASER@dundee.ac.uk>
+Subject:      SGML and presentation
+
+I'd be grateful if someone could clarify just how one could go about
+ensuring a particular document layout with SGML, should it
+be a very important feature. I know its best to keep processing
+instructions separately in a style sheet, but may I use a
+silly awkward example to illustrate my query: a poem is laid out in
+some kind of uneven spiral on one page, say, and uses a collection of
+different fonts which can change in mid-verse or even mid-word, it
+even uses a few lines of Chinese writing. This presentation is
+considered an important part of the poem and it must be preserved.
+Could a style sheet describe all this, or would it be considered
+better to encode the presentational information within the document
+itself? (or a bit of both) Would so much presentational information
+severely retard the portablility of the document, and could it be
+that SGML is simply not the ideal choice of markup for such a
+scenario? Is there any way, encoding in SGML, that this
+particularly awkward poet could ensure his poem was only viewed
+in the layout he prescribed? Hope this doesn't seem like a silly
+frivolous question, I know that SGML is meant for greater things
+than denoting page layout, I'm just interested in whether it can do
+this if it really has to.
+
+cheers,
+Karen Fraser.
+=========================================================================
+Date:         Tue, 5 Sep 1995 10:35:39 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Lou Burnard <lou@vax.ox.ac.uk>
+Subject:      TEI and MARC
+
+>Date: Thu, 31 Aug 1995 10:13:41 +0100
+>From: alan_j@supvax.sls.co.uk
+
+I've newly signed up with the TEI discussion group. The welcome note
+asks for planned or existing encoding projects - so here is my
+interest...
+
+I am an informatics contractor working for a library automation vendor.
+They are planning an ambitious new library product which will manage all
+library resources, not just books.These resources include local and
+remote databases and catalogues.
+
+They have a big investment in processing of MARC records but recognise
+the limitations of this scheme for cataloguing anything other than books
+(eg museum artefacts, serials, Web data etc.). The TEI offers the
+possibility of a vehicle for cataloguing diverse resources.
+
+As a start point, I would like to know what is in the pipeline regarding
+the representation of MARC data in structured SGML format. MARC and
+AACR2 rules are highly complex, virtually impenetrable for a
+non-cataloguer. MARC fields show high dependence on each other which
+suggestst there is an underlying structure waiting to be represented in
+a better way - which may be SGML.
+
+Some leading references/discussion threads pertaining to resource
+discovery, metadata and MARC would be gratefully received.
+
+Alan Jackson
+=========================================================================
+Date:         Tue, 5 Sep 1995 10:39:24 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Arjan.Loeffen@LET.RUU.NL
+Subject:      DYNATEXT and TEI: level of support?
+
+Dear reader,
+
+Peter Robinson writes in 'The transcription...' that DynaText is well suited
+to browse TEI files. In my asumption, a TEI 'engine', or 'browser' for that
+matter, would have to be able to process milestones, implement the extended
+pointer syntax, check for valid attribute values, understand %inherited, be
+able to check and implement the directions recorded in the WSD, and
+represent elements such as <expan> well. Can anyone tell me if this is
+covered in the DynaText browser? Which browser, if not DynaText, does all
+this for us?
+
+Thanks in advance,
+Arjan.
+----------------------------------------------------------------------
+Arjan Loeffen           Achter de Dom 22-24  ++31+30536417  voice work
+Faculty of Arts         3512JP Utrecht       ++31+206656463 voice home
+University of Utrecht   The Netherlands      ++31+30539221  fax work
+----------------------------------------------------------------------
+LOEFFEN@LET.RUU.NL     www.let.ruu.nl/departments/C+L/loeffen/home.htm
+=========================================================================
+Date:         Wed, 6 Sep 1995 11:04:31 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         "Steven J. DeRose" <sjd@ebt.com>
+Subject:      Re: DYNATEXT and TEI: level of support?
+
+At 10:39 AM 9/5/95 -0500, Arjan.Loeffen@LET.RUU.NL wrote:
+
+>Peter Robinson writes in 'The transcription...' that DynaText is well suited
+>to browse TEI files. In my asumption, a TEI 'engine', or 'browser' for that
+>matter, would have to be able to process milestones, implement the extended
+>pointer syntax, check for valid attribute values, understand %inherited, be
+>able to check and implement the directions recorded in the WSD, and
+>represent elements such as <expan> well. Can anyone tell me if this is
+>covered in the DynaText browser? Which browser, if not DynaText, does all
+>this for us?
+
+Caveat for anyone new to the list: I *am* connected to DynaText, as its
+system architect. I've worked with the TEI for even longer than DynaText
+has been around, particularly on Text Representation, WSDs, and Hypermedia.
+
+That said, I think Arjan has given a good set of requirements above, but
+they cover a wide range of applications. For example, as a delivery engine
+DynaText doesn't concern itself much with authoring issues, under which I
+should think "check for valid attribute values" would fall.
+
+I think it fair to say you will find no engine of any kind that will do
+everything listed above well. DynaText, however, does quite a lot of this
+off the shelf, and one could build much of the rest using our toolkit (a
+possibility not even available with most products). Specifically:
+
+* Process milestones: Depends, I suppose, on what "process" means. If you
+mean find a milestone given its attributes, step a view through milestones
+in either direction, count them, or display some kind of marker and
+information at each milestone's location, that's all trivial off-the-shelf.
+I did a little demo for the Women Writers' Project a couple years back
+where you could read and search documents in DynaText, and each "page"
+milestone also caused an icon to appear in the margin, which if clicked
+brought up a scanned image of the same page you were reading; that worked
+rather nicely, I thought.
+
+* Implement the extended pointer syntax: the syntax from P1 has been
+available in DynaText off-the-shelf for years. P3 is in the works but not
+yet released. It can also be built with our toolkit, which gives complete
+access to the tree structures and to all indexing information for content,
+attributes, and GIs.
+
+* check for valid attribute values: I would consider this an authoring-time
+issue. However, if you want display-time checking you could rig it up in
+the style sheet, for example to turn some element's content pink or slap up
+a warning icon if some attribute doesn't have a value in a given list.
+
+* understand %inherited: This could mean several things. At one level, any
+SGML parser understands it since that's what it means to be a parser. At
+the opposite extreme, of course no computer can 'understand' it at all. We
+do have built-in provision for inheritance of attribute values, which may
+be what you had in mind. For example, in a stylesheet you can not only
+refer to attr(TYPE) to access the value of some named attribute of an
+element, but inheritedattr(TYPE), which will look upwards through ancestors
+until it finds the specified attribute. I think that's unique to us.
+
+* able to check and implement the directions recorded in the WSD: Sorry, no
+can do right now. However, the system supports a wide variety of Eastern
+and Western writing systems, and you can select fonts and coded character
+sets on the fly based on element types, the LANG attribute, etc, plus
+specify character-> character mappings to reconcile your fonts with your
+character sets.
+
+* represent elements such as <expan> well: I suspect what you have in mind
+is something like seeing either the expanded or the original form at will.
+That same WWP demo I did a while back did something fundamentally similar
+with a few lines of stylesheet magic: I think we were using <sic> and
+<corr>: you could just pick the view you want and get either the original,
+the correction, or both (with one bold and one struck-through or some
+such).
+
+Hope that's helpful. Oh, I can't resist mentioning that this will all work
+portably across Mac, Windows, and most flavors of Unix.
+
+Steve DeRose
+Sr. System Architect, EBT
+sjd@ebt.com
+=========================================================================
+Date:         Wed, 6 Sep 1995 11:20:20 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Text Tool Maintenance <texttool@lemur.com>
+Subject:      TEI & List Enumerators
+
+A question about the way the TEI handles list enumerators:
+
+I'm encoding a technical document where an item of the following
+form appears:
+
+<hi rend="typewriter">/dev/rdsk/c0t0d0sc</hi>
+
+After this, there is a list which explains the components of
+this item.  The enumerators of this list are the letters
+'c,' 't,' 'd,' and 's.'   The content of the list is easy to
+encode:
+
+<list>
+<item n="c">The SCSI Host Bus Adapter</item>
+<item n="t">The target ID on that bus</item>
+
+and so forth.
+
+However, this encoding misses the information that in this list
+the enumerators 'c,' 't,' etc. are also highlighted in a typewriter-
+style typeface.
+
+I want to be able to say something like
+
+<item n="<hi rend="typewriter">n</hi>">
+
+but I'm sure this is absurd from an SGML point of view.
+
+Any thoughts as to how I might encode this list?
+
+Care
+David M. MacMillan
+dmm@lemur.com
+writing from: texttool@lemur.com
+=========================================================================
+Date:         Wed, 6 Sep 1995 11:40:25 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Hasse Haitto <haitto@synex.se>
+Subject:      Re: DYNATEXT and TEI: level of support?
+
+Arjan Loeffen writes:
+
+>In my asumption, a TEI 'engine', or 'browser' for that
+>matter, would have to be able to process milestones, implement the
+>extended pointer syntax, check for valid attribute values, understand
+>%inherited, be able to check and implement the directions recorded in
+>the WSD, and represent elements such as <expan> well. Can anyone tell
+>me if this is covered in the DynaText browser? Which browser, if
+>not DynaText, does all this for us?
+
+The Synex ViewPort engine (used to implement SoftQuad Panorama)
+supports a subset of the extended pointer syntax as described
+by the grammar below. The links are interpreted directly from the
+markup, without any additional scripting, as you read the SGML file.
+
+I am not convinced of the benefits of a validating browser (though
+our software makes a number of sanity checks); by the time a document
+is browsed, it ought to have passed through an authoring and validating
+stage, so why pay a performance penalty for full validation each and
+every time you open and parse the document?
+
+
+Hasse Haitto
+Synex Information AB
+http://www.synex.se/
+
+                                 *
+
+
+Supported extended pointer syntax in Synex ViewPort/SoftQuad Panorama
+=====================================================================
+
+ladder  :- locterm ladder*
+
+locterm :- 'ROOT'                        // default first location
+        |  'HERE'                        // location of the xptr
+        |  'ID' '(' NAME ')'             // only one ID allowed.
+        |  'CHILD' steps
+        |  'DESCENDANT' steps
+        |  'ANCESTOR' steps
+        |  'PREVIOUS' steps
+        |  'NEXT' steps
+        |  'PRECEDING' steps
+        |  'FOLLOWING' steps
+        |  'DITTO'                       // valid only in TO att.
+
+steps     :-  '(' step ')' steps*
+
+step      :-  instance [ element [ avspecs ] ]
+
+avspecs   :-  attribute value avspecs*
+
+instance  :-  [ '+' | '-' ] NUMBER // default sign is +
+
+element   :-  NAME                 // Element name
+          |   '#CDATA'             // Pseudo elements
+          |   '*'                  // Any element matches
+
+attribute :- NAME                  // Attribute name
+          |   '*'                  // Any attribute matches
+
+value     :- LITERAL               // Quoted string
+          |  NAME                  // Name characters
+          |  NUMBER                // Numbers
+          |  NUMTOKEN              // Numbers or name characters
+          |  '#IMPLIED'            // No value specified, no default
+          |  '*'                   // Any value matches
+=========================================================================
+Date:         Wed, 6 Sep 1995 15:50:31 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Subject:      Re: TEI and MARC
+
+Alan Jackson writes:
+
+> As a start point, I would like to know what is in the pipeline regarding
+> the representation of MARC data in structured SGML format.
+
+Hey!  I saw a fish in that barrel.  Pass me my shotgun...
+
+But, seriously, a quick answer to the question is
+ftp://lib.berkeley.edu/pub/sgml/marcdtd/usmarc.dtd, together with material in
+the same directory, and its subdirectories.  I quickly found this by browsing
+on the SGML Web site, http://www.sil.org/sgml/sgml.html.    (While I'm here,
+many thanks to Robin Cover and the Summer Institute of Linguistics for
+maintaining this wonderful resource.)  Further browsing would probably throw up
+further leads.  Suffice it to say that a considerable amount of work has been
+done in the field.
+
+Pausing only to remark that I'm not a librarian (making my cataloguing skills
+roughly equal to my fish-shooting ability), I can say that the the TEI header
+had interchange between headers and MARC records as a design goal.  A reading
+of TEI P3, chapter 24 throws up frequent references to MARC.
+http://etext.virginia.edu/bin/tei-browse.sh?id=1938744 gets me straight to that
+chapter today, but I don't know if the IDs remain constant: it's probably
+better to go in at the top of the browser site, http://etext.v
+irginia.edu/TEI.html.
+
+I hope that's enough to get you started.
+=========================================================================
+Date:         Wed, 6 Sep 1995 15:52:04 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         lee@sq.com
+Subject:      Re: DYNATEXT and TEI: level of support?
+
+Arjan Loeffen <LOEFFEN@LET.RUU.NL> asked:
+> [...]  In my asumption, a TEI 'engine', or 'browser' for that
+> matter, would have to be able to process milestones, implement the extended
+> pointer syntax, check for valid attribute values, understand %inherited, be
+> able to check and implement the directions recorded in the WSD, and
+> represent elements such as <expan> well. Can anyone tell me if this is
+> covered in the DynaText browser? Which browser, if not DynaText, does all
+> this for us?
+
+I can't speak about DynaText in this regard, but SoftQuad Panorama
+can do some (I think most) of the extended pointer syntax, attributes and
+parameter entities.  It does not use writing set definitions (WSD), and
+I don't know about <expan> offhand.
+
+There's a free version of SoftQuad Panorama you can download, which
+includes TEI Lite (although we invented our own public identifiers, through
+dire necessity! :-) ).  You would want Panoram PRO if you were working with
+your own files, crating style sheets, etc., though.
+
+See http://www.sq.com/
+
+Lee
+
+--
+Liam Quin, SoftQuad Inc +1 416 239 4801 lee@sq.com   <URL:http://www.sq.com/>
+=========================================================================
+Date:         Thu, 7 Sep 1995 10:52:33 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Peter Robinson <peterr@vax.ox.ac.uk>
+Subject:      Re: DYNATEXT and TEI: level of support?
+
+>
+>Peter Robinson writes in 'The transcription...' that DynaText is well suited
+>to browse TEI files. In my asumption, a TEI 'engine', or 'browser' for that
+>matter, would have to be able to process milestones, implement the extended
+>pointer syntax, check for valid attribute values, understand %inherited, be
+>able to check and implement the directions recorded in the WSD, and
+>represent elements such as <expan> well. Can anyone tell me if this is
+>covered in the DynaText browser? Which browser, if not DynaText, does all
+>this for us?
+>
+>Thanks in advance,
+>Arjan.
+>----------------------------------------------------------------------
+>Arjan Loeffen           Achter de Dom 22-24  ++31+30536417  voice work
+>Faculty of Arts         3512JP Utrecht       ++31+206656463 voice home
+
+
+As the originator of the remark that started this thread: I should explain
+just why I said this.  Steve De Rose has already answered much of my
+thinking much better than I could, so I'll just underline what I
+particularly like about the TEI/Dynatext marriage.  It is this: TEI makes
+extremely heavy use of attribute values to enrich the encoding
+possibilities: every tag has by default four attributes (id lang rend
+teiform) and many tags have many more: <expan> has four more, allowing you
+to denote the unexpanded form of the text, the type of abbreviation here
+expanded, how certain you are of the expansion and who did the expansion.
+The "property value" functions in Dynatext are extremely good with
+attribute values: you can replace the text of the expansion with the value
+of the abbrev attribute in one "view", or have the text of the expansion
+italicized or unitalicized in other views, etc.
+Dynatext is also extremely good at permitting prescription of display by
+document structure: it understands that when a <ref> is in a <list> you may
+want it to do one thing; when it is in a <p> you want it to do something
+else.  Further, you can determine different hypertext behaviours by
+attribute value. The possibilities of control of text display for any one
+element by a combination of the attributes of that element and its place in
+the document hierarchy are endless. For example, the first Canterbury Tales
+cdrom will have over one million hypertext links, most in the form of <ref>
+elements (this will be a world record).  We want some of these links to
+open new windows, sometimes containing only the text we are referring to,
+sometimes containing the whole text scrolled to this point; some of the
+links will not open a new window but scroll the text in that window; the
+starting point of some links is indicated by an icon, for others by text
+colour, for others by the cursor changing, for others by combinations of
+these.  All this is done just by good ole <ptr> and <ref> (mostly <ref>;
+one million refs later..), and reading its attributes and place in the doc
+structure to determine appearance and hypertext behaviour.  This is really
+pretty wonderful, and DynaText is, for this kind of heavy duty browsing, an
+exceptional tool.  (of course, this capacity also extends to searches which
+permit exactly the same kinds of searches on combinations of text,
+attributes and structure).
+One caution, however: if I read Arjan's message aright he is also asking
+about DynaText's ability as a parser, as well as a browser.  It is a superb
+browser.  But you have to be careful using the parser: it will pretty well
+parse anything, and certainly does not give the kind of rich error
+information you would get from sgml-s and (my favourite) YASP.  Especially,
+it does NOT check id/idref pairings: it will happily let you parse
+something with millions of idrefs to dis that don't exist and never
+complain.  But there are lots of parsers that will do this for you, so
+first run the text through one of them and then through DynaText.
+and, of course, the next release of dynatext will be even better
+Peter Robinson
+
+Peter Robinson
+The Canterbury Tales Project
+Oxford University Computing Services
+13 Banbury Road, Oxford OX2 6NN
+Phone +44 (0)1865 273285, fax 273275
+=========================================================================
+Date:         Thu, 7 Sep 1995 10:53:25 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Christian Myhre <cmy@gorgon.scup.no>
+Subject:      three dots
+
+Does anyone know:
+
+Three dots often signifiy that certain parts of a sentence have been left
+out. In dictionaries, it is important to save as much space as possible, and
+I have noticed that the three dots often come more closely together than
+three "ordinary dots". Is there a TEI character entity for these three dots?
+
+Chris
+******************************************************************
+* Christian Myhre - cmy@gorgon.scup.no                            *
+* Scandinavian University Press                                   *
+* P.O.Box 2959 T=F8yen                                              *
+* N-0608 Oslo, Norway                                             *
+******************************************************************
+=========================================================================
+Date:         Thu, 7 Sep 1995 10:54:10 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nancy Ide <ide@univ-aix.fr>
+Subject:      Re: TEI & List Enumerators
+
+At 11:20 6/09/95, Text Tool Maintenance wrote:
+>A question about the way the TEI handles list enumerators:
+>
+>I'm encoding a technical document where an item of the following
+>form appears:
+>
+><hi rend="typewriter">/dev/rdsk/c0t0d0sc</hi>
+>
+>After this, there is a list which explains the components of
+>this item.  The enumerators of this list are the letters
+>'c,' 't,' 'd,' and 's.'   The content of the list is easy to
+>encode:
+>
+><list>
+><item n="c">The SCSI Host Bus Adapter</item>
+><item n="t">The target ID on that bus</item>
+>
+>and so forth.
+>
+>However, this encoding misses the information that in this list
+>the enumerators 'c,' 't,' etc. are also highlighted in a typewriter-
+>style typeface.
+>
+
+One solution to your problem would be to use the following encoding
+(ignoring the fact that there may be other rendition text, such as a period
+after the "c", "t", etc. that you may also want to preserve):
+
+<list>
+<item><label rend="typewriter">c</>The SCSI Host Bus Adapter</item>
+<item><label rend="typewriter">t</>The target ID on that bus</item>
+
+This encoding obeys a strict principle that we applied in the early stages
+of  up translation from material originally in typesetter's formats etc. to
+a first TEI encoding (I assume from what you say that you are doing up
+translation from existing documents, and not creating the data): that all
+data comprising the actual characters in the original printed text is
+retained as tag content, and not shifted into attributes, etc. This enables
+a clear distinction between what was in the original source vs. the markup
+and other potential added information, and all original source data can be
+treated in the same way (e.g. marked for rendition, as seems to be
+necessary here).
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:21:32 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Syd Bauman <SYD@BROWNVM.BITNET>
+Subject:      Re: three dots
+
+Those three dots are called an ellipsis. The ISO entity name for that
+character is "hellip", for horizontal ellipsis. Thus, the entity
+reference you would use is "&hellip;" (assuming the core concrete
+syntax :-).
+
+Reference: ISO 8879-1986//ENTITIES Publishing//EN, typically
+           called "isopub" or "isopub.ent".
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:22:15 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Werner Wegstein <wegstein@vax.rz.uni-wuerzburg.d400.de>
+Subject:      three dots
+In-Reply-To:  <199509071049.MAA08023@gorgon.scup.no>
+
+I found lots of 'three dots' encoding
+German prose. They occur at the beginning of
+sentences, within sentences and in final position.
+I couldn't find them in the punctuation chapter
+of TEI P3.
+Suggestion: entity in the punctuation chapter with
+special regard to sentence initial, mid sentence and
+sentence final position ?
+
+Werner Wegstein
+----------------------------------------------------
+Dr. Werner Wegstein
+Institut fuer deutsche Philologie
+Sprachwissenschaft
+Universitaet Wuerzburg
+Am Hubland
+D - 97074 Wuerzburg
+
+Tel. 0931 - 888 5612
+Fax: 0931 - 888 4616
+e-mail: wegstein@germanistik.uni-wuerzburg.de
+-----------------------------------------------------
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:22:34 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Subject:      Re: three dots
+
+Christian Myhre says:
+> Is there a TEI character entity for these three dots?
+
+Well, the TEI hasn't defined one, because the definition is already in one of
+the public entity sets defined by ISO 8879, the SGML standard.  Specifically,
+ISO 8879-1986//ENTITIES Publishing//EN says:
+
+<!ENTITY hellip SDATA "[hellip]"--=ellipsis (horizontal)-->
+
+The trick here is in knowing that the technical name for the three dots
+"character" is "ellipses".
+
+By the way, can somebody remind me which SGML textbook it is that contains a
+list giving graphical representations of all the characters covered by the 8879
+standard entity sets?  Thanks.
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:22:56 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Subject:      Entitity set for IPA
+
+Can anybody point me at a more-or-less standard entity set covering the
+International Phoenetic Alphabet?
+
+Failing that, can anybody point me at any ad-hoc entity set which does the job?
+
+Finally, what is the name of the body responsible for the definition and
+maintenance of the IPA?
+
+(An orgy of web browsing has uncovered Much Interesting Stuff, but has not
+answered these specific questions.)
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:23:22 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominique BESAGNI <besagni@inist.inist.fr>
+Subject:      Re: three dots
+
+[Christian Myhre]
+
+|  Three dots often signifiy that certain parts of a sentence have been left
+|  out. In dictionaries, it is important to save as much space as possible, and
+|  I have noticed that the three dots often come more closely together than
+|  three "ordinary dots". Is there a TEI character entity for these three dots?
+
+SGML character entities as given in annex D of the standard are not mandatory.
+Still, in clause D.4.3.3 of the standard, also called "ISOpub", the horizontal
+ellipsis is coded "&hellip;".
+
+Regards,
+
+-----
+Dominique Besagni
+INIST - CNRS                  E-mail : besagni@inist.fr
+2 allee du parc de Brabois    Phone  : (+33) 83.50.46.00
+54514 Vandoeuvre Cedex        Fax    : (+33) 83.50.47.33
+France
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:23:45 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Ole Norling-Christensen <olenc@coco.ihi.ku.dk>
+Subject:      Re: three dots
+Comments: cc: cmy@gorgon.scup.no
+In-Reply-To:  <199509071049.MAA08023@gorgon.scup.no>; from "Christian Myhre" at
+              Sep 7, 95 10:53 am
+
+>
+> Does anyone know:
+>
+> Three dots often signifiy that certain parts of a sentence have been left
+> out. In dictionaries, it is important to save as much space as possible, and
+> I have noticed that the three dots often come more closely together than
+> three "ordinary dots". Is there a TEI character entity for these three dots?
+>
+> Chris
+> ******************************************************************
+> * Christian Myhre - cmy@gorgon.scup.no                            *
+>
+
+TEI? - I don't know. However, Bryan mentions among "Publishing
+characters"
+
+        &hellip;
+
+meaning Horizontal ellipsis (three dots). It's part of an
+Addison-Wesley Publishers public set of character entities.
+
+Martin Bryan: SGML, An Authors Guide..., Addison Wesley 1988
+ISBN 0-201-17535-5. Page 297.
+
+Ole
+*******************************************************************
+* Ole Norling-Christensen - olenc@coco.ihi.ku.dk                  *
+* The Danish Dictionary - KUA, Njalsgade 80, DK-2300 Copenhagen S *
+* Tel +45 3532 8995 - Fax +45 3154 2595                           *
+*******************************************************************
+=========================================================================
+Date:         Fri, 8 Sep 1995 10:24:08 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Arjan.Loeffen@LET.RUU.NL
+Subject:      Re: SGML and presentation
+
+Karen Fraser:
+
+> a poem is laid out in
+> some kind of uneven spiral on one page, say, and uses a collection of
+> different fonts which can change in mid-verse or even mid-word, it
+> even uses a few lines of Chinese writing. This presentation is
+> considered an important part of the poem and it must be preserved.
+> Could a style sheet describe all this, or would it be considered
+> better to encode the presentational information within the document
+> itself?
+
+You could do this, but a picture does more than a thousand words. In my
+opinion, you should be clear on why you want to encode the poem in the first
+place. If its's about the text, type the text. If it's about the image, scan
+the image and pass it like that. If it's both, scan the image, type the
+text, link the image to your document using NOTATIONs (i.e external
+entities). The TEI recommendations are in ch. 22; check <figure>.
+Now you only have the problem of specifying what part of the image aligns
+with what part of the encoded text. This is also treated in ch. 22, page
+636. Note that parts of HyTime are especially designed to do this. The
+extended pointer syntax is much like the HyTime Finite Coordinate Space
+addressing.
+
+In short, no style sheet is designed to handle things like this. Note that
+some image notations are also standardized.
+
+> ...
+> Hope this doesn't seem like a silly
+> frivolous question,
+
+It is not. An enormous amount of data is passed on through the ages for us
+to both look at and read. SGML 'pure' encodes the information we think is in
+there. Some information simply cannot be expressed in natural language or
+symbols.
+
+Arjan.
+----------------------------------------------------------------------
+Arjan Loeffen           Achter de Dom 22-24  ++31+30536417  voice work
+Faculty of Arts         3512JP Utrecht       ++31+206656463 voice home
+University of Utrecht   The Netherlands      ++31+30539221  fax work
+----------------------------------------------------------------------
+LOEFFEN@LET.RUU.NL     www.let.ruu.nl/departments/C+L/loeffen/home.htm
+=========================================================================
+Date:         Mon, 11 Sep 1995 11:47:16 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Werner Wegstein <wegstein@vax.rz.uni-wuerzburg.d400.de>
+Subject:      three dots
+In-Reply-To:  <199509071049.MAA08023@gorgon.scup.no>
+
+Appendix to the earlier mail:
+Having the P3 in front of me, chasing
+the "three dots":
+Page 142 there is a cross-reference to
+a file teipunc2 "which is documented in
+chapter 37 "Obtaining TEI WSDs" on page 1237.
+
+But I couldn't find it there, nor could I
+find it at the TEI sites given.
+
+?
+
+With kind regards from Wuerzburg
+
+Werner Wegstein
+----------------------------------------------------
+Dr. Werner Wegstein
+Institut fuer deutsche Philologie
+Sprachwissenschaft
+Universitaet Wuerzburg
+Am Hubland
+D - 97074 Wuerzburg
+
+Tel. 0931 - 888 5612
+Fax: 0931 - 888 4616
+e-mail: wegstein@vax.rz.uni-wuerzburg.d400.de
+-----------------------------------------------------
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:26:22 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Stephen Miller <stephen.miller@computing-services.oxford.ac.uk>
+Subject:      Re: Entitity set for IPA
+
+>Can anybody point me at a more-or-less standard entity set covering the
+>International Phoenetic Alphabet?
+>
+>Failing that, can anybody point me at any ad-hoc entity set which does the job?
+>
+>Finally, what is the name of the body responsible for the definition and
+>maintenance of the IPA?
+>
+
+Er, the IPA aka the International Phonetic Association.
+
+>(An orgy of web browsing has uncovered Much Interesting Stuff, but has not
+>answered these specific questions.)
+
+******************************************************************************
+Stephen Miller                            Tel 01 865 273 266
+National Academic Typesetting Service     Fax 01 865 273 275
+Oxford University Computing Services      Email: stephen.miller@oucs.ox.ac.uk
+13 Banbury road, Oxford. OX2 6NN UK       WWW  http://sable.ox.ac.uk/~stephen
+******************************************************************************
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:26:46 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Stephen Miller <stephen.miller@computing-services.oxford.ac.uk>
+Subject:      Re: three dots
+
+>
+>By the way, can somebody remind me which SGML textbook it is that contains a
+>list giving graphical representations of all the characters covered by the 8879
+>standard entity sets?  Thanks.
+
+Joan M. Smith & Robert Stutley
+SGML: The User's Guide to ISO 8879
+Ellis Harwood, 1988
+
+is what you are probably after.
+
+
+******************************************************************************
+Stephen Miller                            Tel 01 865 273 266
+National Academic Typesetting Service     Fax 01 865 273 275
+Oxford University Computing Services      Email: stephen.miller@oucs.ox.ac.uk
+13 Banbury road, Oxford. OX2 6NN UK       WWW  http://sable.ox.ac.uk/~stephen
+******************************************************************************
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:27:31 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Lou Burnard <lou@vax.ox.ac.uk>
+Subject:      Re: TEI & List Enumerators
+
+>I'm encoding a technical document where an item of the following
+>form appears:
+>
+><hi rend="typewriter">/dev/rdsk/c0t0d0sc</hi>
+>
+>After this, there is a list which explains the components of
+>this item.  The enumerators of this list are the letters
+
+><list>
+><item n="c">The SCSI Host Bus Adapter</item>
+><item n="t">The target ID on that bus</item>
+>
+
+[... stuff deleted]
+
+Presumably the fact that /dev/rdsk/c0t0d0sc appears in a typewriter font is not
+the most important thing about it. My guess is that you're more interested in
+the fact that it is a filename of a particular sort, the components of which
+are abbreviations that can be linked to the members of the list. Leaving that
+aside just for the moment, I would think you'd get more mileage out of an
+encoding the filename *as a filename*.
+
+Using TEI P3 you would have to do this as
+  <name type=filename>/dev/rdsk/c0t0d0sc</name>
+or
+  <rs type=identifier>/dev/rdsk/c0t0d0sc</rs>
+as there is no specific element for these features in P3. Using TEI Lite, you
+could use the element IDENT which is defined for exactly this purpose in that
+dtd.
+
+In either case, you could then leave it to the application to decide to format
+identifer names in typewriter, or arial, or in red with a nice frame round them
+or whatever. You could also write a neat application which would pick out all
+the filenames and change them to some other format for when you have to migrate
+the system being documented to some other platform.
+
+Encoding the list could be done in a number of ways. The crucial decision is
+what exactly you consider the enumerators to be. (All tagging questions are
+ontological ones)
+
+If they are simply enumerators, then you don't care what they look like and
+your proposed use of the N attribute is appropriate.
+
+If they are simply enumerators, but you do care what they look like, then you
+should use the <label> element with or without a REND attribute, as Nancy Ide
+suggests. (Note, by the way, that labelled lists can be organized either
+<list type=gloss>
+<label>c</label><item>The SCSI Host Bus Adapter</item>
+<label>t</label><item>The target ID on that bus</item>
+</list>
+or
+<list type=gloss>
+<item><label>c</label>The SCSI Host Bus Adapter</item>
+<item><label>t</label>The target ID on that bus</item>
+</list>
+This is one of several things I now consider suboptimal about the <list> tag)
+
+If they are really abbreviations only incidentally being used as enumerators,
+you could use the <abbr> element, either alone or within a <label>
+
+<list type=gloss>
+<item><label><abbr>c</abbr></label>The SCSI Host Bus Adapter</item>
+<item><label><abbr>t</abbr></label>The target ID on that bus</item>
+</list>
+
+Finally, why not show that there's a link between the letter used as the label
+and the letter in the filename? To do this we must be able to address both the
+content of the <ident> element containing the filename, and the <label> element
+in the <list>. A rather neat  way of doing this is to use the TEi extended
+pointer syntax.
+
+We start by adding <xptr> elements. Assuming that the <ident> element has been
+given the identifier GRACKLE (i.e. it is tagged <ident
+id=GRACKLE>/dev/rdsk/c0t0d0sc</ident>) and we want to point at the "c" which is
+its 11th character, here's one:
+
+<xptr id=G11 from='id (GRACKLE) str(11,1)'>
+
+Let's also add an <xptr> indicating the "C" used as a label identifier. We'll
+assume this time that only the list has an identifier, say ZARNIEWHOOP. It
+looks like this
+
+<xptr id=Z2 from='id (ZARNIEWHOOP) child (1 item) child (1 label) child (1
+abbr)'>
+
+This might be read "the first <abbr> contained by a <label> which is the first
+<label> contained by an <item>, which is the first <item> within an element
+whose identifier is ZARNIEWHOOP". Relax, it's easier than reverse polish.
+
+Now we want just to indicate that the thing that the <xptr> called Z2 is
+pointing at, and the thing that the <xptr> called G11 are pointing at are to be
+linked in some way. The element for doing this is called .... <link>, and looks
+like this
+
+<link targets='Z2 G11'>
+
+Now to the big question. What can you do with it, now you've gone to all this
+trouble? Well, an application can now very easily generate a hotlink, so that a
+user can click on either the label of the list item,  or the letter of the
+filename) to jump to the other. And you have made explicit to all and sundry
+why on earth the first two items of your list are labelled C and T !
+
+In need of a G and T,
+
+Lou
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:51:02 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nick Finke <nick.finke@Law.UC.Edu>
+Subject:      Encoding Stumper
+
+My very diligent encoders have just brought me a problem which I am sorry
+to say I am having a bit of difficulty in answering.
+
+We are tagging, among other things, the Dumbarton Oaks Papers, the record
+of the meetings held in San Francisco in 1945 for the purpose of forming
+the United Nations.  One rather short document we have is entitled _Summary
+of First Meeting of Coordination Committee_, under that line is another
+which reads _Opera House, Room 418, May 9, 1945, 6:15 p.m._.  It is this
+last which gives us a problem.
+
+We are using a DTD with Prose as a base and have added in Linking and
+Names-and-Dates.  I am not finding anything that really helps.  This looks
+almost like stage directions, but this analogy doesn't lead me anywhere.
+It's not an address in the postal sense.  It is somewhat similar to the
+<meeting> tag found in bibliographical references, but it isn't a
+bibliographical ref.  What am I missing?
+
+By the way, it was brought to my attention that <placeName> may only occur
+within <placeName>.  Has this been fixed?
+
+TIA.
+
+Nick Finke
+
+
+   *******************************************************************
+   * Nicholas D. Finke                        Phone:(513)556-0103    *
+   * Center for Electronic Text in the Law    Fax:  (513)556-6265    *
+   * University of Cincinnati College of Law  Email:                 *
+   * P.O. Box 210142                           nick.finke@law.uc.edu *
+   * Cincinnati, OH  45221-0142                                      *
+   *******************************************************************
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:52:36 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Harry Gaylord <galiard@let.rug.nl>
+Subject:      Re: Entitity set for IPA
+In-Reply-To:  <9509081903.AA0142@HERMES.eo.net> from "Dominic Dunlop/EOI" at
+              Sep 8, 95 10:22:56 am
+
+>
+> Can anybody point me at a more-or-less standard entity set covering the
+> International Phoenetic Alphabet?
+>
+> Failing that, can anybody point me at any ad-hoc entity set which does the
+ job?
+>
+> Finally, what is the name of the body responsible for the definition and
+> maintenance of the IPA?
+>
+> (An orgy of web browsing has uncovered Much Interesting Stuff, but has not
+> answered these specific questions.)
+>
+There is a TEIIPA entity set and wsd publicly available on the servers.
+It is based on the 1989 IPA symbol set. John Esling of IPA and I drew them
+up. There were a few more revisions decided in 1993 which we are working
+on to issue a revision very soon. I am also working at the moment on a
+mapping to the Adobe StoneIPA font which can be used within Explorer and
+Panorama. I will make this publicly available as soon as it is ready. This
+could be used by others to map the entities to their local IPA font if
+they use another one.
+
+The body which makes IPA decisions is the International Phonetic Association.
+John Esling is its secretary. Their decisions are published in the
+Journal of the IPA (JIPA). John and I wrote an article recently in it
+on the IPA entity set.
+
+On the ellipsis we did not include it because we assume all the ISO public
+entity sets are available.
+
+Hope this helps.
+
+Harry
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:53:49 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Ole Norling-Christensen <olenc@coco.ihi.ku.dk>
+Subject:      Re: three dots
+Comments: cc: Dominic_Dunlop/EOI.EOI@hermes.eo.net
+In-Reply-To:  <9509081903.AA0144@HERMES.eo.net>; from "Dominic Dunlop/EOI" at
+              Sep 8, 95 10:22 am
+
+> By the way, can somebody remind me which SGML textbook it is that contains a
+> list giving graphical representations of all the characters covered by the
+> 8879
+> standard entity sets?  Thanks.
+>
+That's Bryan. See my answer to Christian Myhre on the "three dots".
+
+Ole
+*******************************************************************
+* Ole Norling-Christensen - olenc@coco.ihi.ku.dk                  *
+* The Danish Dictionary - KUA, Njalsgade 80, DK-2300 Copenhagen S *
+* Tel +45 3532 8995 - Fax +45 3154 2595                           *
+*******************************************************************
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:54:33 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Ole Norling-Christensen <olenc@coco.ihi.ku.dk>
+Subject:      Re: three dots
+Comments: cc: wegstein@germanistik.uni-wuerzburg.de
+In-Reply-To:  <4*/S=wegstein/OU=vax/OU=rz/PRMD=uni-wuerzburg/ADMD=d400/C=de/@MHS>; from "Werner Wegstein" at Sep 8,
+              95 10:22 am
+
+>
+> I found lots of 'three dots' encoding
+> German prose. They occur at the beginning of
+> sentences, within sentences and in final position.
+> I couldn't find them in the punctuation chapter
+> of TEI P3.
+> Suggestion: entity in the punctuation chapter with
+> special regard to sentence initial, mid sentence and
+> sentence final position ?
+>
+> Werner Wegstein
+> ----------------------------------------------------
+
+Apart from   &hellip;  Bryan (and ISO 8879?) also mentions
+        &mldr;  meaning "Em leader (three dots), and
+        &nldr;  meaning "En leader (double baseline dot)
+
+Ole
+*******************************************************************
+* Ole Norling-Christensen - olenc@coco.ihi.ku.dk                  *
+* The Danish Dictionary - KUA, Njalsgade 80, DK-2300 Copenhagen S *
+* Tel +45 3532 8995 - Fax +45 3154 2595                           *
+*******************************************************************
+=========================================================================
+Date:         Mon, 11 Sep 1995 12:55:15 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Peter Flynn <pflynn@curia.ucc.ie>
+Subject:      Re: three dots
+In-Reply-To:  <199509071049.MAA08023@gorgon.scup.no> (message from Christian
+              Myhre on 07 Sep 1995 10:53:25 -0500 (CDT))
+
+   Three dots often signifiy that certain parts of a sentence have been left
+   out. In dictionaries, it is important to save as much space as possible, and
+   I have noticed that the three dots often come more closely together than
+   three "ordinary dots". Is there a TEI character entity for these three dots?
+
+The three dots are called an ellipsis. There is no semantic
+distinction between three dots printed close together and three
+printed further apart: that is purely a typographic artifice (done as
+you say in the cited instance to save space).
+
+Normally if you type three periods, a wordprocessor or DTP system will
+print them too close together: they require wider spacing to be
+typographically acceptable in most house styles and are thus normally
+handled as a single entity (for example, TeX's "\dots" macro, or the
+related PostScript character found in some fonts).
+
+The ISOpub character entity file has entities &hellip; and &vellip;
+for horizontal and vertical ellipses.
+
+///Peter
+=========================================================================
+Date:         Mon, 11 Sep 1995 15:15:56 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Masayuki TOYOSHIMA <mtoyo@Lgjp0.Lit.hokudai.ac.jp>
+Subject:      Re: SGML and presentation
+In-Reply-To:  Your message of "Tue, 05 Sep 1995 10:32:35 CDT."
+              <D0841B66AC4@phil-engl.dundee.ac.uk>
+
+Karen Fraser writes:
+> This presentation is
+> considered an important part of the poem and it must be preserved.
+
+ A parallel situation is described minutely in the paper below :
+
+  Sperberg-McQueen,C.M.(1991) Text in the electronic age -- textual
+    study and text encoding, with examples from medieval texts
+    (Literary and linguistic computing, 6-1, pp.34--46)
+
+Arjan Loeffen writes:
+>If it's about the text, type the text. If it's about the image, scan
+>the image and pass it like that. If it's both, scan the image, type the
+>text, link the image to your document using NOTATIONs (i.e external
+>entities).
+
+ The problem is, I take it, not the mechanism of linkage itself, but the way
+ of conveying *meaning* implied in the linkage.
+
+ Indentations are spaces at the head of lines, and here texts and images
+ are linked. The <p> tags explicitly tell their meanings (significance), not
+ the topological/graphical informations of the text in page.
+
+ The <figure> tag for the Fraser cases tells no more than a simple linkage
+ tag of "these spaces-at-head are linked to text here" tells, and may fall
+ far short of what is aimed.
+
+Masayuki TOYOSHIMA / Dept. of Japanese linguistics, Faculty of Letters,
+Hokkaido university, Sapporo 060 Japan / mtoyo@Lit.hokudai.ac.jp
+=========================================================================
+Date:         Mon, 11 Sep 1995 15:16:41 CDT
+Reply-To:     trujillo@mail.utexas.edu
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         "Juan A. Trujillo" <trujillo@mail.utexas.edu>
+Subject:      persName
+
+Greetings.
+
+I'm sure this has been covered before, so I thank you for your patience.
+
+What exactly is the problem with the persName element in the TEI names/
+dates tag set? I've seen reference made to a 'bug' as well as line
+I assume is intended to correct said bug.
+
+As far as I can tell, persName *should* be available in any <P>-level
+section of text, but a glitch somewhere forbids this (at least *I*
+have been unable to use it--or orgName either). What do I need to fix,
+and how does the fix work?
+
+Thanks again--
+JAT
+
+<><><><><><><><><><><><><><><><><><><><>|<><><><><><><><><><><><><><><><><>
+Juan A. Trujillo                        |  El omne que tiene estado, onra
+Dept. of Spanish & Portuguese           | e gran poder, lo que para si non
+The University of Texas at Austin       | quiere, non lo deve a otros fazer
+<><><><><><><><><><><><><><><><><><><><>|<><><><><><><><><><><><><><><><><>
+=========================================================================
+Date:         Mon, 11 Sep 1995 15:17:49 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Organization: ACH/ACL/ALLC Text Encoding Initiative
+Subject:      discussion list for technical matters
+
+Every now and then the question comes up, "if I have a question using
+the TEI encoding scheme, how do I get help?"  As many of you know, the
+usual response, from those of us on the receiving end of this question,
+is "Post the question to TEI-L."  Thanks to the generosity of many of
+TEI-L's readers, questions on TEI-L almost always get prompt,
+informative, correct answers, answers, whether they are about the TEI
+proper, or how to make it work with a given software package.
+
+On the other hand, every now and then one may have a problem which
+is really rather technical, and may require an awful lot of back and
+forth discussion which may be of only marginal interest for many
+readers of TEI-L, who may not be vitally interested in the nuances
+of SGML parsing and the like.  Many people are understandably shy
+about burdening the inboxes of everyone subscribed to TEI-L with very
+specialized queries --- and while I like to remind everyone that many
+apparently specialized questions have very wide ramifications of very
+general interest, nevertheless there *are* some topics that are of
+restricted, rather than general, interest.
+
+As many readers of this list know, there *is* a second TEI discussion
+list, which is intended for the discussion of just such specialized
+topics.  It is called TEI-TECH, and it provides a home for technical
+(i.e. not necessarily general-interest) discussion of SGML and the TEI.
+It hasn't received a lot of use lately, but I have been asked to remind
+people that it exists, in part to ensure that those with technical
+questions know there is a place they can direct them.  Syd Bauman of
+the Women Writers Project has volunteered to start discussion by
+posting a couple of meaty questions he's run up against.
+
+To subscribe to TEI-TECH, follow normal listserv procedure:  send
+mail to listserv@uicvm.uic.edu containing the single line
+
+  subscribe tei-tech J. Doe
+
+(substituting your name for 'J. Doe').
+
+The TEI-TECH list is unmoderated, and open to the public.  I hope to
+see many of you there.
+
+-C. M. Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+ u35395@uicvm.uic.edu / u35395@uicvm
+
+"Clarity, Precision and Ease of use does not mean Confinement, Verbosity
+and Futility."  -Jean Pierre Gaspart
+=========================================================================
+Date:         Tue, 12 Sep 1995 18:34:13 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         "Carole E. Mah" <CAROLEM@BROWNVM.brown.edu>
+Subject:      Re: Encoding Stumper
+In-Reply-To:  Message of Mon, 11 Sep 1995 12:51:02 CDT from
+              <nick.finke@Law.UC.Edu>
+
+On Mon, 11 Sep 1995 12:51:02 CDT Nick Finke said:
+>We are tagging, among other things, the Dumbarton Oaks Papers, the record
+>of the meetings held in San Francisco in 1945 for the purpose of forming
+>the United Nations.  One rather short document we have is entitled _Summary
+>of First Meeting of Coordination Committee_, under that line is another
+>which reads _Opera House, Room 418, May 9, 1945, 6:15 p.m._.  It is this
+>last which gives us a problem.
+
+We had a similar problem, and found that the most adequate (but still
+probably inadequate) solution is to use <dateline>. Note that <dateline>
+may occur only within <closer> or <opener>.  Its content model is
+
+
+<!ELEMENT dateline      - O  (date | time | name | #PCDATA |
+                             address)*                          >
+<!ATTLIST dateline           %a.global                          >
+
+
+-c
+- - - - - - - - - - - - -
+Carole E. Mah
+Carole_Mah@Brown.edu
+Textbase Coordinator
+Brown University
+Women Writers Project
+=========================================================================
+Date:         Tue, 12 Sep 1995 18:34:43 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Organization: ACH/ACL/ALLC Text Encoding Initiative
+Subject:      Re: Encoding Stumper
+Comments: cc: Nick Finke <Nick.Finke@Law.UC.Edu>
+In-Reply-To:  Message of Mon, 11 Sep 1995 12:51:02 CDT from
+              <nick.finke@Law.UC.Edu>
+
+On Mon, 11 Sep 1995 12:51:02 CDT Nick Finke said:
+>We are tagging, among other things, the Dumbarton Oaks Papers, the record
+>of the meetings held in San Francisco in 1945 for the purpose of forming
+>the United Nations.  One rather short document we have is entitled _Summary
+>of First Meeting of Coordination Committee_, under that line is another
+>which reads _Opera House, Room 418, May 9, 1945, 6:15 p.m._.  It is this
+>last which gives us a problem.
+>
+>We are using a DTD with Prose as a base and have added in Linking and
+>Names-and-Dates.  I am not finding anything that really helps.  This looks
+
+I'd class this as a date line (or 'place-date line', as some call it)
+and tag it DATELINE, assuming I could manage to get an OPENER element
+around it, something like this:
+
+<text>
+<front><head>Summary of First Meeting of Coordination Committee</>
+<opener>
+<dateline>Opera House, August 16, 1945</></></front>
+<body>
+<p>The meeting began with ...
+</body>
+</text>
+
+>By the way, it was brought to my attention that <placeName> may only
+>occur within <placeName>.  Has this been fixed?
+
+Yes.  Make sure your DTD files begin with comments saying they were
+'written by OddDTD 1994-09-09'.
+
+
+-C. M. Sperberg-McQueen
+ ACH / ACL / ALLC Text Encoding Initiative
+ University of Illinois at Chicago
+ u35395@uicvm.uic.edu / u35395@uicvm
+
+"Clarity, Precision and Ease of use does not mean Confinement, Verbosity
+and Futility."  -Jean Pierre Gaspart
+=========================================================================
+Date:         Tue, 12 Sep 1995 18:35:15 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Katalin Somlai <turi@ludens.elte.hu>
+Subject:      Q: Anon. FTP for Panorama?
+
+I have tried to find an FTP address to download Panorama,
+the SGML browser, but my archie-search failed.
+
+Could anyone let me know the anon. FTP address for Panorama?
+(I would prefer a European address.) Is it available for
+downloading at all?
+
+Thank you,
+
+Laszlo Turi
+Dept. for Social and Economic History
+Eotvos Lorand University, Budapest, Hungary
+
+e-mail: turi@ludens.elte.hu
+=========================================================================
+Date:         Tue, 12 Sep 1995 18:36:58 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Subject:      Re: three dots -- the plot thickens
+
+> I found lots of 'three dots' encoding
+> German prose. They occur at the beginning of
+> sentences, within sentences and in final position.
+> I couldn't find them in the punctuation chapter
+> of TEI P3.
+> Suggestion: entity in the punctuation chapter with
+> special regard to sentence initial, mid sentence and
+> sentence final position ?
+
+Firstly, do you need to do this at all?  If you have a browser which can
+condition searches on SGML structure, and if you mark up sentences, you
+probably don't need a distinct entity for each of the three cases: the browser
+should be able to distinguish them:
+
+beginning: sentence-start followed by ellipses
+middle:  (anything but sentence-start) followed by ellipses followed by
+  (anything but sentence-end)
+end:  (ellipses followed by <sentence-end) or
+  (ellipses followed by (sentence-end puntuation) followed by sentence-end)
+
+But, if you do decide explicitly to distinguish the three cases in the
+electronic text, by all means go ahead and define such entities , but give
+careful consideration to their expansion.  A first cut at a TEI-ish way to
+handle this situation might be
+
+ <gap desc='&hellip;' extent='sentence start ellipses' resp=transcriber>
+ <gap desc='&hellip;' extent='sentence middle ellipses' resp=transcriber>
+ <gap desc='&hellip;' extent='sentence end ellipses' resp=transcriber>
+
+as the expansions for the three entities.  Although purists can easily pick
+holes in this idea:
+
+  -- it hides the ellipses from the copy text as attribute values, obscuring
+the
+ fact that they appear in the copy text, and making it difficult for many
+ browsers to display them
+  -- desc is arguably misused in being used as a container for the ellipses
+  -- extent should be used to say how much material was omitted, not where
+ it has been omitted
+
+A solution might be to use <del>:
+
+ <del type='sentence start'>&hellip;</del>
+ <del type='sentence middle>&hellip;</del>
+ <del type='sentence end>&hellip;</del>
+
+but then you begin to wonder about the value of the resp attribute: who is
+responsible for this deletion?  I'd say the creator of the copy text.
+Probably.  But others' ideas may differ.  What's more, if different hands can
+be identified as being responsible for different ellipses, it's no longer
+possible to use entities: you've got to insert the mark-up in full.  And, if
+you wanted to add a commentary on the omission, you'd need a tag with an ID to
+tie it to.  Again, you can't do this with an entity.
+
+I'd say it's not the job of the TEI to define the three entities, firstly
+because their expansion is dependent upon the aims of the transcriber, and
+secondly because to define them might encourage their use in situations where
+full-blown mark-up is really what is required.  But particular projects should
+not shrink from defining such entities if entities can fill their needs.
+
+Does anybody else feel like setting more angels dancing on this particular pin
+head?
+=========================================================================
+Date:         Tue, 12 Sep 1995 18:37:33 CDT
+Reply-To:     Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         KAREN FRASER <K.A.FRASER@dundee.ac.uk>
+Subject:      Re: SGML and presentation
+
+Thanks very much for your answer to my enquiry, it was very helpful
+in clarifying the issue.
+Best wishes from Scotland!
+
+karen.
+=========================================================================
+Date:         Wed, 13 Sep 1995 11:08:39 CDT
+Reply-To:     Nick Finke <nick.finke@Law.UC.Edu>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nick Finke <nick.finke@Law.UC.Edu>
+Subject:      Re: Encoding Stumper
+
+Thanks for the answer (the same one, so it must be right!) from Michael
+S-McQ and Carole.  I agree that the solution is inadequate but gets the job
+done for now.  It was the fact that <dateline> occurs only in <opener> or
+<closer> that made me overlook it.
+
+Nick Finke
+
+>On Mon, 11 Sep 1995 12:51:02 CDT Nick Finke said:
+>>We are tagging, among other things, the Dumbarton Oaks Papers, the record
+>>of the meetings held in San Francisco in 1945 for the purpose of forming
+>>the United Nations.  One rather short document we have is entitled _Summary
+>>of First Meeting of Coordination Committee_, under that line is another
+>>which reads _Opera House, Room 418, May 9, 1945, 6:15 p.m._.  It is this
+>>last which gives us a problem.
+>
+>We had a similar problem, and found that the most adequate (but still
+>probably inadequate) solution is to use <dateline>. Note that <dateline>
+>may occur only within <closer> or <opener>.  Its content model is
+>
+>
+><!ELEMENT dateline      - O  (date | time | name | #PCDATA |
+>                             address)*                          >
+><!ATTLIST dateline           %a.global                          >
+>
+>
+>-c
+>- - - - - - - - - - - - -
+>Carole E. Mah
+>Carole_Mah@Brown.edu
+>Textbase Coordinator
+>Brown University
+>Women Writers Project
+
+
+   *******************************************************************
+   * Nicholas D. Finke                        Phone:(513)556-0103    *
+   * Center for Electronic Text in the Law    Fax:  (513)556-6265    *
+   * University of Cincinnati College of Law  Email:                 *
+   * P.O. Box 210142                           nick.finke@law.uc.edu *
+   * Cincinnati, OH  45221-0142                                      *
+   *******************************************************************
+=========================================================================
+Date:         Wed, 13 Sep 1995 11:09:10 CDT
+Reply-To:     Peter Flynn <pflynn@curia.ucc.ie>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Peter Flynn <pflynn@curia.ucc.ie>
+Subject:      Re: persName
+In-Reply-To:  <9509102232.AA0044@slip-11-9.ots.utexas.edu>
+              (trujillo@mail.utexas.edu)
+
+   I'm sure this has been covered before, so I thank you for your patience.
+
+   What exactly is the problem with the persName element in the TEI names/
+   dates tag set? I've seen reference made to a 'bug' as well as line
+   I assume is intended to correct said bug.
+
+   As far as I can tell, persName *should* be available in any <P>-level
+   section of text, but a glitch somewhere forbids this (at least *I*
+   have been unable to use it--or orgName either). What do I need to fix,
+   and how does the fix work?
+
+I posted about our use of persName among other things in July. I just
+looked it up: it's message 1254, so you can get it using LISTDB: send
+a mail message to LISTSERV@UICVM.cc.uic.edu saying
+
+//      Job  Echo=No
+Database Search DD=Rules
+//Rules DD   *
+search persname and flynn in tei-l since 1 jun 1995
+index
+print 1254
+/*
+
+and it will send you the message. DON'T include anything else in the
+message text you send, especially NOT a .sig file.
+
+///Peter
+=========================================================================
+Date:         Wed, 13 Sep 1995 11:09:48 CDT
+Reply-To:     Nick Finke <nick.finke@Law.UC.Edu>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nick Finke <nick.finke@Law.UC.Edu>
+Subject:      Re: Q: Anon. FTP for Panorama?
+
+SoftQuad <http://www.sq.com> suggests that you go to the anonymous server
+at ftp.ncsa.uiuc.edu/Web/Mosaic/Windows/viewers/panofr10.exe to download
+Panorama.
+You will also need a recent version of Mosaic for Windows which you can
+find on the same server.  I don't know if this server is mirrored in
+Europe.
+
+Nick Finke
+
+
+>I have tried to find an FTP address to download Panorama,
+>the SGML browser, but my archie-search failed.
+>
+>Could anyone let me know the anon. FTP address for Panorama?
+>(I would prefer a European address.) Is it available for
+>downloading at all?
+>
+>Thank you,
+>
+>Laszlo Turi
+>Dept. for Social and Economic History
+>Eotvos Lorand University, Budapest, Hungary
+>
+>e-mail: turi@ludens.elte.hu
+
+
+   *******************************************************************
+   * Nicholas D. Finke                        Phone:(513)556-0103    *
+   * Center for Electronic Text in the Law    Fax:  (513)556-6265    *
+   * University of Cincinnati College of Law  Email:                 *
+   * P.O. Box 210142                           nick.finke@law.uc.edu *
+   * Cincinnati, OH  45221-0142                                      *
+   *******************************************************************
+=========================================================================
+Date:         Thu, 14 Sep 1995 10:35:56 CDT
+Reply-To:     Jon Patrick <J.D.Patrick@massey.ac.nz>
+Sender:       Text Encoding Initiative public discussion list
+              <TEI-L@UICVM.UIC.EDU>
+From:         Jon Patrick <J.D.Patrick@massey.ac.nz>
+Subject:      Multi-lingual dictionary encoding issue
+
+We are encoding a trilingual dictionary that consists of Basque
+headwords and French and Spanish definitions, but not basque
+definitions. In the mark up process we wish to denote the french and
+spanish definitions separately however the TEI standard only has the one
+field <def>. Any suggestions on how we might get around this problem?
+Note that the words "Fr" or "sp" do not appear in the text. The
+lexicographer has assumed that the reader knows the difference. We have
+the same problem with example sentences but which are given in the three
+languages basque, french, spanish.
+
+Jon
+J.D.Patrick@massey.ac.nz
+--------------------------------------------------------------------------
+Prof. Jon Patrick
+Dept. of Information Systems               +64 6 350 5552(Work)
+Massey University                          +64 6 355 0256(Home)
+Palmerston North                           +64 6 350 5611(Fax)
+New Zealand
+--------------------------------------------------------------------------
+=========================================================================
+Date:         Fri, 15 Sep 1995 11:44:05 CDT
+Reply-To:     Jean Veronis <veronis@univ-aix.fr>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Jean Veronis <veronis@univ-aix.fr>
+Subject:      Re: Multi-lingual dictionary encoding issue
+Comments: cc: U59467@UICVM.uic.edu
+
+Dear Jon,
+
+I would be happy to help on this topic, but I am not sure that I understand
+completely the porblem(s). Could you please send me a few entries, so that
+I can see the exact problem, and will send them back to you (and TEI-L)
+encoded "a la" TEI (if I can!).
+
+Thanks and best regards,
+Jean
+
+________________________________________________________________________________
+Jean Veronis
+Laboratoire Parole et Langage
+CNRS & Universite de Provence
+29, Avenue Robert Schuman
+13621 Aix-en-Provence Cedex 1 (France)
+Fax: +33 42 59 50 96  E-mail: veronis@univ-aix.fr
+________________________________________________________________________________
+=========================================================================
+Date:         Fri, 15 Sep 1995 11:46:43 CDT
+Reply-To:     Harry Gaylord <galiard@let.rug.nl>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Harry Gaylord <galiard@let.rug.nl>
+Subject:      TEI workshop
+
+The Guidelines of the Text Encoding Initiative were published in 1994.
+These have defined within the ISO Standard Generalized Markup Language
+(SGML) for encoding many different text types. The Document Type
+Definition (DTD) is modular and can be extended and modified. Tag sets
+for prose, poetry, drama, dictionaries, hypertext linking, critical
+editions, primary sources, and other documents are included. Linguistic
+information encoding is also included as is provision for documents in
+any language or languages.
+
+SGML is also increasingly being used for hypertext/multimedia, in
+particular in its HTML form, which is used on the World-Wide Web.
+
+A Text Encoding Initiative (TEI) workshop will be held at Groningen
+University in Groningen, The Netherlands on November 21 and 22.
+The subjects will include an Introduction to SGML, SGML and HTML,
+SGML Software, the public SGML DTDs, and TEI. In addition there will
+be a hands-on session of TEI.
+
+More information and a registration form is available on the web at
+URL:http://www.let.rug.nl/~sgml95/.
+
+The presenters will include Lou Burnard, Harold Short, Bert Bos,
+Gerd v.d. Steen, and Harry Gaylord.
+
+Information is also available by email from sgml95@let.rug.nl or
+regular mail to TEI workshop, Dept. of Humanities Computing,
+Groningen University, POB 716, NL 9700 AS Groningen, The Netherland.
+
+Harry Gaylord
+=========================================================================
+Date:         Fri, 15 Sep 1995 11:47:57 CDT
+Reply-To:     Murray McGillivray <mmcgilli@acs.ucalgary.ca>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Murray McGillivray <mmcgilli@acs.ucalgary.ca>
+Subject:      Call for Papers
+
+I am reissuing this call for papers with an extended due date,
+partly because I realized from the requests for extensions I
+got that 4 Sept. is not a good time for a lot of people for
+writing abstracts, partly because our mail system here crashed
+sporadically, with massive destruction of mail, for several days
+around that date.  Please, if you sent me something at that time
+and did not get a response acknowledging receipt, either resend or
+send an enquiry.  Abstracts received by the end of September will
+now be on time; we will still need to have the electronic copy of
+a completed paper (diskettes of most wordprocessor files are OK;
+HTML or SGML sent over the net would be ideal; if in doubt about
+format ask) by the beginning of November in order to do the
+Web-mounting.
+
+                         CALL FOR PAPERS
+
+                     The Electric Scriptorium:
+        Electronic Approaches to the Imaging, Transcription,
+         Editing and Analysis of Medieval Manuscript Texts
+
+                    A Physical/Virtual Conference
+                           sponsored by
+               The Calgary Institute for the Humanities
+                               and
+       The Society for Early English and Norse Electronic Texts
+                             (SEENET)
+
+
+                      November 10 - 12, 1995
+
+
+Proposals of papers on any topic relating to the electrification of medieval
+manuscript studies are solicited for the electronic portion of this
+conference.  The full conference will consist of a listserv discussion
+(October 17 to November 22), physical meeting in Calgary (November 10 - 12),
+and World Wide Web/ gopher posting of conference papers (November 11 - 12).
+Participants in the electronic sessions need not attend the physical
+conference in Calgary, though their presence is warmly encouraged.  Organizers
+expect to publish the conference proceedings, including an archive of the
+listserv discussion, as a CD-ROM.
+
+Papers should be approximately 2500 - 5000 words, may include graphics, sound,
+or video files, and may deal with any aspect of
+
+a) digitization of manuscript images, whether in a library context, as part
+of an editorial project, or in the context of broader electronic uses
+b) transcription into electronic form of medieval manuscript texts, including
+encoding questions
+c) electronic editing and electronic editorial projects
+d) computer-based analysis of medieval texts
+e) topics connected closely or loosely with a) though c), such as classroom
+uses of electronic editions, future directions of research
+
+250 word abstracts should be sent to Murray McGillivray
+(mmcgilli@acs.ucalgary.ca) or Hoyt N. Duggan
+(hnd@jefferson.village.virginia.edu) by 30 September 1995.
+Papers must be in the hands of the organizers in final electronic
+form for Internet posting by 1 November 1995.
+
+Murray McGillivray
+Department of English
+2500 University Dr. N.W.
+Calgary, Alberta
+T2N 1N4
+CANADA
+
+phone: (403) 220-5470
+fax: (403) 289-1123
+=========================================================================
+Date:         Fri, 15 Sep 1995 17:24:07 CDT
+Reply-To:     tei-l <U59467@UICVM.BITNET>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         tei-l <U59467@UICVM.BITNET>
+Subject:      ALLC/ACH '96 Call for Papers
+
+  Date: Fri, 15 Sep 1995 09:29:47 +0200
+  To: tei-l%uicvm.BITNET@SEARN.SUNET.SE
+  From: Espen.Ore@hd.uib.no (Espen S. Ore)
+  Subject: ALLC/ACH '96 Call for Papers
+
+
+This message has been posted on various humanities lists. Please excuse
+me if you have already seen it.
+
+Espen Ore
+
+-----------------------------------------------------------------------------
+ASSOCIATION FOR LITERARY AND LINGUISTIC COMPUTING
+ASSOCIATION FOR COMPUTERS AND THE HUMANITIES
+
+JOINT INTERNATIONAL CONFERENCE ALLC-ACH '96
+
+JUNE 25-29, 1996 UNIVERSITY OF BERGEN, NORWAY
+
+CALL FOR PAPERS
+
+This conference -- the major forum for literary, linguistic and
+humanities computing -- will highlight the development of new computing
+methodologies for research and teaching in the humanities, the
+development of significant new computer-based resources for humanities
+research, especially focusing on developing applications.
+
+TOPICS: The Association for Literary and Linguistic Computing and the
+Association for Computing and the Humanities invite submissions on
+topics and applications focused on the humanities disciplines, such as:
+languages and literature, history, philosophy, music, art, linguistics,
+anthropology and archaeology, creative writing, cultural studies, etc.
+We are interested in receiving technical proposals that focus on the
+cutting edge issues of the application of scientific tools and
+approaches to humanities disciplines; discipline-based proposals that
+focus on some of the more traditionally defined applications of
+computing in humanities disciplines, including text encoding, hypertext,
+text corpora, computational lexicography, statistical models, and
+syntactic, semantic, stylistic and other forms of text analysis; broad
+library and research-based proposals that focus on significant issues of
+text documentation and information retrieval; and tools-focused
+proposals that offer innovative and substantial applications and uses
+for humanities-based teaching and research, throughout the academic and
+research worlds. Submissions on humanities computing in developing
+countries and software/courses/courseware in undergraduate education are
+welcomed.
+
+The official language is English.
+
+The deadline for submissions is 30 NOVEMBER 1995.
+
+REQUIREMENTS: Proposals should describe substantial and original work.
+Those that concentrate on the development of new computing methodologies
+should make clear how the methodologies are applied to research and/or
+teaching in the humanities, and should include some critical assessment
+of the application of those methodologies in the humanities. Those that
+concentrate on a particular application in the humanities (e.g., a study
+of the style of an author) should cite traditional as well as
+computer-based approaches to the problem and should include some
+critical assessment of the computing methodologies used. All proposals
+should include conclusions and references to important sources.
+
+INDIVIDUAL PAPERS: Abstracts of 1500-2000 words should be submitted for
+presentations of thirty minutes including questions.
+
+SESSIONS: Proposals for sessions (90 minutes) are also invited. These
+should take the form of either:
+
+(a) Three papers. The session organizer should submit a 500-word
+statement describing the session topic, include abstracts of 1000-1500
+words for each paper, and indicate that each author is willing to
+participate in the session; or
+
+(b) A panel of up to six speakers. The panel organizer should submit an
+abstract of 1500 words describing the panel topic, how it will be
+organized, the names of all the speakers, and an indication that each
+speaker is willing to participate in the session.
+
+POSTERS AND DEMONSTRATIONS
+
+ALLC-ACH '96 will include poster presentations and software and project
+demonstrations (either stand-alone or in conjunction with poster
+presentations) to give researchers an opportunity to present
+late-breaking results, significant work in progress, well-defined
+problems, or research that is best communicated in conversational mode.
+
+By definition, poster presentations are less formal and more interactive
+than a standard talk. Poster presenters will have the opportunity to
+exchange ideas one-on-one with attendees and to discuss their work in
+detail with those most deeply interested in the same topic. Posters are
+actually several large pieces of paper that present an overview of a
+topic or a problem. Poster presenters are given space to display two or
+three posters, and may provide handouts with examples or more detailed
+information.
+
+Poster presenters must be present at their posters at a specific time
+during the conference to describe their work and answer questions, but
+posters will remain displayed throughout the conference. Specific times
+will also be assigned for software or project demonstrations. Further
+information on poster presentations is available from the Program
+Committee chair.
+
+Posters proposals and software and project demonstrations will be
+accepted until January 15, 1996 to provide an opportunity for submitting
+very current work that need not be written up in a full paper. Poster or
+software/project demonstration proposals should contain a 300 to 500
+word abstract in the same format described below for paper proposals.
+Proposals for software or project demonstrations should indicate the
+type of hardware that would be required if the proposal is accepted.
+
+Doctoral students are encouraged to consider poster submission as a
+viable means for discussing ongoing dissertation research.
+
+As part of its commitment to promote the development and application of
+appropriate computing in humanities scholarship, the Association for
+Literary and Linguistic Computing  will award up to five bursaries of up
+to 500 GB pounds each to students and young scholars who have papers
+accepted for presentation at the conference.  Applicants must be members
+of ALLC, and must be aged 30 years or less at the start of the
+conference. Those wishing to be considered for an award should indicate
+this in their conference proposal.  The ALLC will make the awards  after
+the Programme Committee have decided which proposals are to be
+accepted.  Recipients will be notified as soon as  possible thereafter.
+A participant in a multi-author paper is eligible  for an award, but it
+must be clear that s/he is contributing  substantially to the paper.
+
+FORMAT OF SUBMISSIONS
+
+Electronic submissions are strongly encouraged. Please pay particular
+attention to the format given below. Submissions which do not conform to
+this format will be returned to the authors for reformatting, or may not
+be considered if they arrive very close to the deadline.
+
+All submissions should begin with the following information:
+
+    TITLE: title of paper
+    KEYWORDS: three keywords (maximum) describing the main contents of
+      the paper
+    AUTHOR(S): names of authors
+    AFFILIATION: of author(s)
+    CONTACT ADDRESS: full postal address of main author followed by other
+      authors
+    E-MAIL: electronic mail address of main author (for contact),
+      followed by other authors (if any)
+    FAX NUMBER: of main author
+    PHONE NUMBER: of main author
+
+1. Electronic submissions
+
+Electronic submissions are accepted as ASCII-files (please specify if
+encoding schemes have been used for characters outside ASCII range),
+MS-Word for Windows or Macintosh, and WordPerfect for Windows. Those who
+submit abstracts electronically, especially abstracts containing
+graphics and tables are kindly asked to fax a copy of the abstract in
+addition to the one sent electronically. Notes, if needed, should take
+the form of endnotes rather than footnotes.
+
+Electronic submissions should be sent to:
+
+    allc-ach96@hd.uib.no
+
+with the subject line "<Author's surname> Submission for ALLC-ACH96".
+
+2. Paper submissions
+
+Submissions should be typed or printed on one side of the paper only,
+with ample margins. Six copies should be sent to
+
+    ALLC-ACH96 (Paper submission)
+    Espen Ore Norwegian
+    Computing Centre for the Humanities
+    Harald Haarfagresgt. 31
+    N-5007 Bergen
+    NORWAY
+
+EQUIPMENT AVAILABILITY
+
+Presenters will have available an overhead projector (video based -
+overheads on plain paper rather than transparencies), a slide projector,
+a data projector which will display Macintosh, DOS/Windows, and video
+(but not simultaneously), an Internet connected computer which will run
+Macintosh OS programs or DOS/Windows programs, and a VHS (PAL)
+videocassette recorder. NTSC format will be available; if you anticipate
+needing NTSC, please note this information in your proposal.
+
+Requests for other presentation equipment will be considered by the
+local organizer; requests for special equipment should be directed to
+the local organizer no later than December 31, 1995.
+
+DEADLINES
+
+  Proposals for papers and sessions       November 30, 1995
+  Proposals for poster presentations      January 15, 1996
+  Notification of acceptance              February 15, 1996
+
+PUBLICATION
+
+A selection of papers presented at the conference will be published in
+the series Research in Humanities Computing edited by Susan Hockey and
+Nancy Ide and published by Oxford University Press.
+
+Accepted  abstracts will also be published on the WWW server at the
+Norwegian Computing Centre for the Humanities
+(URL=http://www.hd.uib.no/allc-ach96.html)
+
+INTERNATIONAL PROGRAM COMMITTEE
+
+Proposals will be evaluated by a panel of reviewers who will make
+recommendations to the Program Committee comprised of:
+
+    Jan-Gunnar Tingsell, Gothenburg University (ALLC) (chair)
+    Chuck Bush, Brigham Young University (ACH),
+    Gordon Dixon, Manchester Metropolitan University (ALLC),
+    Nancy Ide, Vassar College (ACH),
+    Willard McCarty, University of Toronto (ACH),
+    Elli Mylonas, Brown University (ACH),
+    Lisa Lena Opas, University of Joensuu (ALLC),
+    Harold Short, Kings College (ALLC)
+
+    Local Organizer: Espen Ore, University of Bergen (ALLC)
+
+LOCATION
+
+The University of Bergen was founded in 1946 but its history goes  back
+to 1825 with the founding of the Bergen Museum.  The University has  an
+enrolment of some 17,000 students. It is located in the central part of
+the  city of Bergen. Hosting this conference, the  Norwegian  Computing
+Centre  for  the Humanities was founded in 1972 and is located  at  the
+University of Bergen.
+
+Bergen, Norway's second largest city with a population of 220,000, was
+founded in 1071 according to the sagas. The city was an important
+Hanseatic trading centre and has retained an international profile that
+dates back to the early Middle Ages.
+
+There are direct flights to Bergen from Copenhagen, London, Oslo, and
+Paris. There is also a train connection with Oslo, and a ferry between
+Newcastle and Bergen.
+
+Hotel rooms in different price ranges will be available within walking
+distance from the conference center, and economically priced student
+accommodation will be available outside central Bergen.
+
+It is expected at this time that the fee for early registration for the
+conference will be in the US$125 to US$150 range, with an additional
+late registration fee.
+
+Detailed information about the conference will be made available in
+January or February of 1996.
+
+For further information please communicate with:
+
+    Espen Ore Local Organizer, ALLC-ACH '96
+    Norwegian Computing Centre for the Humanities
+    Harald Haarfagresgt. 31
+    N-5007 Bergen
+    NORWAY
+
+    Phone:  + 47 55 21 28 65
+    Fax:    + 47 55 32 26 56
+    E-mail: Espen.Ore@hd.uib.no
+
+    http://www.hd.uib.no/allc-ach96.html
+
+Please give your name, full mailing address, telephone and fax numbers,
+and e-mail address, with any enquiry.
+
+ALLC-ACH '96 info-list:
+
+If you want to receive information about the conference via e-mail you
+can subscribe to the mailing list by sending an empty e-mail message
+(from your own e-mail address) to:
+
+    allc-ach96-request@hd.uib.no
+=========================================================================
+Date:         Mon, 18 Sep 1995 10:29:54 CDT
+Reply-To:     Nancy Ide <ide@univ-aix.fr>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nancy Ide <ide@univ-aix.fr>
+Subject:      DL'96
+
+Call for Participation
+
+ACM DL'96 --- Digital
+Libraries '96
+
+First ACM International Conference on
+Digital Libraries
+
+Bethesda, MD
+March 20-23, 1996
+
+ACM Digital Libraries '96 is an international conference
+devoted to advancing the state-of-the-art in digital
+libraries.  The ACM DL series continues the sequence of
+Texas conferences: DL'94 in College Station and DL'95 in
+Austin.  The leaders of those events are helping with DL'96
+organization and program efforts.  The meeting will be co-
+located with Hypertext '96 in 1996 and with ACM SIGIR
+'97 the following year.  DL '96 will immediately follow
+Hypertext '96 at the Hyatt Regency
+in Bethesda, Maryland.  The site is located near the
+Washington D.C. Metro and provides easy access to the
+many attractions in the Baltimore-Washington area.
+
+The DL series is sponsored by ACM, through SIGIR and
+SIGLINK.   Other ACM SIGs have joined in cooperation,
+including: SIGAda, SIGART, SIGBIO, SIGCAPH,
+SIGCOMM, SIGCUE, SIGDA,  SIGMIS (formerly SIGBIT),
+and SIGOIS.
+
+In-cooperation sponsors include:
+
+ASIS (American Society for Information Science),
+CNI (Coalition for Networked Information),
+KSI (Knowledge Systems Inc.),
+LITA (Library and Information Technology Association),
+LoC (Library of Congress),
+NAL (National Agricultural Library),
+NLM (National Library of Medicine),
+SLA (Special Libraries Association).
+
+Three sessions at the conference have been reserved for the
+working groups of the Digital Library Forum.  These
+groups are studying aspects of interoperability in digital
+libraries.  During the sessions, members of the groups will
+describe the objectives of the groups, describe progress to
+date, and lead discussions of the issues.  The exact list of
+topics has not been finally chosen, but will likely include
+open architectures for digital libraries, archiving and
+digital preservation, and the National Computer Science
+Technical Reports Library.
+
+
+
+Technical Program
+
+We seek papers, posters and videos on the one hand--and
+proposals for tutorials and workshops on the other hand--
+on topics related to Digital Libraries, including but not
+limited to the following list:
+
+* architectures, reference models, standards
+* authoring and electronic publishing
+* cataloging, indexing, preserving
+* collaborative environments
+* collecting, capturing, filtering
+* distributed data, knowledge and information
+representation and systems
+* economic and social implications and issues
+* education, learning and related applications
+* evaluation methods and user testing
+* handling of graphics, GIS, multimedia information
+* hypertext and hypermedia systems (especially including
+WWW) and support
+* information storage and retrieval
+* intellectual property rights
+* modeling and simulation
+* networked information discovery
+* networking systems, protocols, security
+* publisher plans and concerns
+* user interfaces
+* visualization, browsing, searching
+
+Papers
+
+Technical papers present original reports of innovative and
+substantive new work that has not been published or
+submitted for publication elsewhere.  Papers are refereed by
+a pool of reviewers for the conference proceedings,
+published by ACM.  Because of the tight time schedule,
+designed to ensure that the latest results will be discussed,
+there will be little time for revision, so submissions should
+be in near-final form.
+
+Important Dates:
+Oct. 15, 1995 --- Papers due to Program Chair
+Dec. 1, 1995 --- Authors notified about PC decisions
+Jan. 1, 1996 --- Papers due to Program Chair
+
+Submissions:  Papers must be written in English and
+contain a maximum of 6000 words (excluding figures).  If
+possible, use 10 point Times Roman, single-spaced, with
+no more than a total of 12 pages.  The proceedings will be
+printed in typical ACM 2-column format, and articles will
+have a limit of 10 pages.  If submissions are made with
+paper, 6 copies must be provided.  If submissions are made
+electronically, the Subject line must say DL96 PDF
+Submission and Adobe's Portable Document Format must
+be used.
+
+
+Send submissions to arrive by October 15, 1995 to:
+
+Edward A. Fox
+Dept. of Computer Science
+660 McBryde Hall
+Virginia Tech
+Blacksburg VA 24061-0106
+Phone +1-540-231-5113
+FAX +1-540-231-6075
+Email: fox@vt.edu
+
+Tutorials
+
+Tutorials will precede the conference and serve to introduce
+attendees to principles in the field, develop bridges
+between the computer science and library/information
+science communities, or examine advanced topics in depth.
+Tutorials will be scheduled for 2.5 hour slots on Wednesday
+afternoon and evening, March 20, 1995.  Tutorials are
+invited on topics such as the following:
+
+Principles and practices of library science (Abstracting,
+Indexing and Classification)
+User behavior and information needs analysis (User Needs
+and Services)
+Information Retrieval and Hypertext (Searching,
+Browsing)
+Open System Design for the Internet
+
+Submissions should include a 200-word abstract, a 1-page
+topical outline of the course content, and describe course
+objectives, intended audience, and the qualifications of
+instructor(s).  Proposers are encouraged to contact the
+tutorials chairperson to discuss planned proposals.
+Proposals will be evaluated on the basis of background of
+the instructor(s) and the contribution of the tutorial to the
+overall conference program.
+
+Submit four copies of the proposal by October 15, 1995 to:
+
+Edie Rasmussen
+SLIS
+University of Pittsburgh
+135 N. Bellefield Avenue
+Pittsburgh, PA 15260
+Phone (412) 624-9459
+Fax (412) 648-7001
+erasmus@lis.pitt.edu
+
+Posters
+
+Poster presentations allow researchers to present late-
+breaking results or significant work in progress.  Posters
+will be refereed.  Poster sessions allow authors and
+conference participants to discuss the research in detail in
+one-on-one or small group settings.
+
+Submissions should consist of an extended abstract of at
+most two pages emphasizing the problem, what was done
+or is being done, and why the work is important.  Include:
+title, name and affiliation of the author(s) and complete
+contact information.    Note that the extended abstracts of
+the posters will be published in the conference
+proceedings.
+
+Submit four copies of the proposal by November 1, 1995
+to:
+
+Beth Davis-Brown
+National Digital Library Program
+LIBN/O/NDL (1000)
+The Library of Congress
+Washington, DC  20540
+Phone (202)-707-3301
+Fax (202)-707-0815
+bbro@loc.gov
+
+Videos
+
+Videos allow researchers and developers to illustrate the
+dynamics of operational and prototype systems.  Videos
+will be refereed and selected videos will be shown at a
+session during the conference so authors can verbally
+annotate their work.
+
+Submit videos that are a maximum of 5 minutes in length.
+VHS format (NTSC) is required for review, and Hi-8, SVHS,
+or Betacam SP are the formats required for final
+submissions.  It is likely that an author-supplied or
+conference-prepared digital video version will be prepared
+also and made available, so be sure that suitable releases
+can be provided for all submissions.  Also, please prepare a
+one-page summary of the video which will be published in
+the conference proceedings.
+
+Submit two copies of the videotape and written summary by
+October 15, 1995 to:
+
+Charles Goldstein
+National Library of Medicine
+8600 Rockville Pike
+Bethesda, MD  20894
+Phone (301) 496-1936
+Fax (301) 480-6183
+chuck@nlm.nih.gov
+
+Workshops
+
+Workshops provide an opportunity for up to 25
+participants to discuss issues in both research and applied
+areas for one day.  Workshop attendance is normally by
+invitation based on attendees' response to a call for
+workshop participation.  Organizers should draft a call
+describing the workshop and submit a three-page proposal
+containing: an outline of the theme and goals of the
+workshop, a description of the intended audience, an
+overview of activities planned for the workshop, estimates
+of number of participants, and a brief description of the
+organizer backgrounds and experience.
+
+Submit four copies of the proposal by October 15, 1995 to:
+
+Maria Zemankova
+Database and Expert Systems
+Division of Information, Robotics, and Intelligent
+Systems
+National Science Foundation
+4201 Wilson Blvd.
+Room 1115
+Arlington, VA  22230
+Phone: (703) 306-1930
+Fax: (701) 306-0599
+mzemanko@nsf.gov
+
+
+Conference Committee
+
+General Chair
+  Gary Marchionini (University of Maryland at College
+Park)
+Technical Program Chair
+  Ed Fox (Virginia Polytechnical Institute and State
+University)
+Tutorials
+  Edie Rasmussen (University of Pittsburgh)
+Workshops
+  Maria Zemankova (National Science Foundation)
+Posters
+  Beth Davis-Brown (Library of Congress)
+Videos
+  Charles Goldstein (National Library of Medicine)
+Treasurer
+  Lawrence Fitzpatrick (Personal Library Software Inc.)
+Publicity
+  Nancy Van House (University of California Berkeley)
+Registration
+  Linda Hill (University of Maryland at College
+Park/CESDIS)
+Local Arrangements
+  Lida Larsen (University of Maryland at College Park)
+Industry Liason
+ Roberta Rand (National Agriculture Library)
+
+Technical Program Committee
+William Arms, CNRI, USA
+Robert Akscyn, Knowledge Systems, USA
+Robert Allen, Bellcore, USA
+Daniel Atkins, U. Michigan, USA
+Ann Bishop, U. Ill. Urbana-Champaign, USA
+Christine Borgman, UCLA, USA
+Su-Shing Chen, NSF, USA
+W. Bruce Croft, U. Mass. Amherst, USA
+Steve DeRose, Electronic Book Tech., USA
+Timothy Finin, U. Md. Balt. County, USA
+James French, U. Virginia, USA
+Mark Frisse, Washington U., USA
+Richard Furuta, Texas A&M U., USA
+Hector Garcia-Molina, Stanford U., USA
+Henry Gladney, IBM Almaden Res., USA
+Ephraim Glinert, Rennselear Poly., USA
+John Guidi, U. Md. College Park, USA
+Thomas Hickey, OCLC, USA
+Nancy Ide, Vassar College, USA
+Rob Kling, U. Ca. Irvine, USA
+Ron Larsen, U. Md. College Park, USA
+John Leggett, Texas A&M U., USA
+Enrica Lemut, Istituto Matematica Applicata C.N.R., Italy
+Michael Lesk, Bellcore, USA
+David Levy, Xerox PARC, USA
+Clifford Lynch, U. California, USA
+Cathy Marshall, Texas A&M U., USA
+Cliff McKnight, Loughbourough, UK
+Fran Miksa, U. Texas Austin, USA
+Eugene Miya, NASA Ames, USA
+Sung Myaeng, Chungnam National U., S. Korea
+A. Desai Narasimhalu, National U. of Singapore
+Gultekin Ozsoyoglu, Case W. Reserve U., USA
+Roy Rada, Washington State U., USA
+P. Venkat Rangan, U. Ca. San Diego, USA
+Pamela Samuelson, U. Pittsburgh, USA
+Bruce Schatz, U. Ill. Urbana-Champaign, USA
+John Schnase, Washington U., USA
+Terence Smith, U. Ca. Santa Barbara, USA
+Scott Stevens, Carnegie-Mellon U., USA
+Chris Welty, Vassar College, USA
+Terry Winograd, Stanford U., USA
+
+
+For further information, see
+http://fox.cs.vt.edu/DL96/
+=========================================================================
+Date:         Mon, 18 Sep 1995 10:30:56 CDT
+Reply-To:     Jean Veronis <veronis@univ-aix.fr>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Jean Veronis <veronis@univ-aix.fr>
+Subject:      Re: Multi-lingual dictionary encoding issue
+
+Jon Patrick <J.D.Patrick@massey.ac.nz> asked on TEI-L (Thu, 14 Sep 1995):
+
+>We are encoding a trilingual dictionary that consists of Basque
+>headwords and French and Spanish definitions, but not basque
+>definitions. In the mark up process we wish to denote the french and
+>spanish definitions separately however the TEI standard only has the one
+>field <def>. Any suggestions on how we might get around this problem?
+>Note that the words "Fr" or "sp" do not appear in the text. The
+>lexicographer has assumed that the reader knows the difference. We have
+>the same problem with example sentences but which are given in the three
+>languages basque, french, spanish.
+
+Since then, Jon sent us a few entries of the Basque-Spanish-French
+dictionary, about which he says:
+
+>The fields are roughly basque, geographical-location,spanish,french..
+>The files have scanned in so still contain spelling errors.
+
+Here are a few suggestions, together with a few comments on some other
+interesting problems we came across while looking throuh the materials.
+
+
+1. Translations: in order to indicate the language for a given translation,
+the global LANG attribute seems appropriate (note that we use <trans> and
+not <def>, but see below):
+
+[ Apama] , abuela,  grand'lnere.
+
+<entry>
+  <form>
+    <orth>Apama</orth>
+  </form>
+  <trans lang=es>
+    <tr>abuela</tr>
+  </trans>
+  <trans lang=fr>
+    <tr>grand'lnere</tr>
+  </trans>
+</entry>
+
+
+[ Aphalmentu]  (S), Ahaiamiclllo:  abaisselrzent,  humiliation .
+
+<entry>
+  <form>
+    <orth>Aphalmentu</orth>
+  </form>
+  <usg type=geo>S</usg>
+  <trans lang=es>
+    <tr>Ahaiamiclllo</tr>
+  </trans>
+  <trans lang=fr>
+    <tr>abaisselrzent</tr>
+    <tr>humiliation</tr>
+  </trans>
+</entry>
+
+
+
+2. Examples: The LANG attribute can also be used here:
+
+[ APARATSU]  ( AN - b ), apero, con-junto de instrumentos y herramientos de
+un oficio:  attirail, I'ensemble des outils d un mThetatier.  NEKAZALGO
+APARATSUAK, los aperos de la branza, les instruments aratoires.  (??)
+
+<entry>
+  <form>
+    <orth>APARATSU</orth>
+    <usg type=geo>AN - b</usg>
+  </form>
+  <sense>
+    <def>apero,con-junto de instrumentos y herramientos de un oficio</def>
+    <def>attirail,I'ensemble des outils d un mThetatier</def>
+    <eg>
+      <q>NEKAZALGO APARATSUAK</q>
+      <trans lang=es>
+        <tr>los aperos de labranza</tr>
+      </trans>
+      <trans lang=fr>
+        <tr>les instruments aratoires</tr>
+      </trans>
+      <xr>??</xr>
+    </eg>
+  </sense>
+</entry>
+
+
+
+3. Usage notes: In the "Aphalmentu" example above, the headword seems to be
+restricted to use in a single geographic area. However, in the the example
+below, there are different orthographic forms of the word for different
+geographical regions. In the first case, we placed the <usg> tag at the
+entry level, whereas below the different geographical usage notes are
+placed within the <form> tag in order to associate them with the
+appropriate orthographic variant.
+
+[ Apal-ordu]  (B, G), [ aihal-tenore]  (Sc), hora de cenar,  heure de souper.
+
+<entry>
+  <form>
+    <orth>Apal-ordu</orth>
+    <usg type=geo>B</usg>
+    <usg type=geo>G</usg>
+  </form>
+  <form>
+    <orth>aihal-tenore</orth>
+    <usg type=geo>Sc</usg>
+  </form>
+  <trans lang=es>
+    <tr>hora de cenar</tr>
+  </trans>
+  <trans lang=fr>
+    <tr>heure de souper</tr>
+  </trans>
+</entry>
+
+
+In this example, the usage note applies to different senses of the word,
+for which there is only one orthographic form. So, here <usg> is included
+within the appropriate <sense> tags:
+
+
+[ Apaloste] : 1o (BC), despues de cenar,  apr s souper.--   2o (B), trabajo
+r#stico que despues de cenar se hace enltre varios vecinos,  travail
+rustique que font apres souper divers voisins rThetaunis.
+
+
+<entry>
+
+  <form>
+    <orth>Apaloste</orth>
+  </form>
+
+  <sense n='1o'>
+    <usg type=geo>BC</usg>
+    <trans lang=es>
+      <tr>despues de cenar</tr>
+    </trans>
+    <trans lang=fr>
+      <tr>apr s souper</tr>
+    </trans>
+  </sense>
+
+  <sense n='2o'>
+    <usg type=geo>B</usg>
+    <trans lang=es>
+      <tr>trabajo r#stico que despues de cenar se hace enltre varios
+          vecinos</tr>
+    </trans>
+    <trans lang=fr>
+      <tr>travail rustique que font apres souper divers voisins
+          rThetaunis</tr>
+    </trans>
+  </sense>
+
+</entry>
+
+
+4. Translation or definition?
+
+Some of the examples that Jon sent, such as the "Apaloste" example above,
+do not give a simple translation, but instead provide an explanation of the
+meaning of the headword. This is a common situation in bi-lingual and
+multi-lingual dictionaries, when there is no exact translation equivalent.
+Occasionally, these dictionaries provide both a translation and a lengthier
+explanation (see section 12.3.3.2 in P3, page 344 in the printed version).
+
+This problem was discussed at aome length in the dictionary working group,
+because the line where translation stops and definition begins is not at
+all clear. Our solution was to allow two tags in side <trans>: a <tr> tag
+for translations, and the <def> tag for definitions. It is up to the
+encoder to decide where the distinction lies. If the lengthy explanations
+in the "Apaloste" example are regarded as definitions, the encoding would
+be:
+
+<entry>
+
+  <form>
+    <orth>Apaloste</orth>
+  </form>
+
+  <sense n='1o'>
+    <usg type=geo>BC</usg>
+    <trans lang=es>
+      <tr>despues de cenar</tr>
+    </trans>
+    <trans lang=fr>
+      <tr>apr s souper</tr>
+    </trans>
+  </sense>
+
+  <sense n='2o'>
+    <usg type=geo>B</usg>
+    <trans lang=es>
+      <def>trabajo r#stico que despues de cenar se hace enltre varios
+           vecinos</def>
+    </trans>
+    <trans lang=fr>
+      <def>travail rustique que font apres souper divers voisins
+           rThetaunis</def>
+    </trans>
+  </sense>
+
+</entry>
+
+
+
+We hope this helps.
+
+Nancy Ide and Jean Veronis
+=========================================================================
+Date:         Mon, 18 Sep 1995 10:31:35 CDT
+Reply-To:     Jean Veronis <veronis@univ-aix.fr>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Jean Veronis <veronis@univ-aix.fr>
+Subject:      Morph info in dict entries
+
+In a private note, Eric Peterson <eric@azrael.mitre.org> asked me some
+clarification about the encoding of morphological information in dictionary
+entries. I have the feeling that we did not explain this very well in the
+Guidelines, and I am posting here (with Eric's authorization) a summary of
+our discussion, which might be of interest to other people.
+
+Eric was trying to find a legal way to note that an unusual <orth> form is
+peculiar to a particular part of speech - but not to all inflections of
+that POS, as in the following example (from a French-English dictionary):
+
+________________________________________________________________________
+bonhomme
+  nm: (pl bonshommes) fellow
+  a: good-natured;
+________________________________________________________________________
+
+
+The headword information ("bonhomme") applies to two senses, and the first
+sense has an unusual plural form ("bonshommes"). The following encoding,
+suggested as a possibility by Eric, reflects correctly the structure of the
+entry:
+
+  <entry>
+
+    <form>
+      <orth>bonhomme</orth>
+    </form>
+
+    <sense>
+      <gramGrp>
+        <pos>n</pos>
+        <gen>m</gen>
+      </gramGrp>
+      <form type=infl>
+         <number>pl</number>
+         <orth>bonshommes</orth>
+      </form>
+      <trans>
+        <tr>fellow</tr>
+      </trans>
+    </sense>
+
+    <sense>
+      <gramgrp>
+        <pos>a</pos>
+      </gramgrp>
+      <trans>
+        <tr>good-natured</tr>
+      </trans>
+    </sense>
+
+  </entry>
+
+However, Eric said that this encoding seems to suggest that the whole noun
+sense must be plural. This is the part that we did not explain very well in
+P3.
+
+You probably noticed that both <form> and <gramGrp> can contain the
+morphological tags <gen>, <number>, etc.. However,
+
+- the <gramGrp> tag gives grammatical info about the sense in which it appears
+  (or the whole entry if it appear at the top level);
+
+- the <form> tag gives information only about one or several forms for a given
+  sense (or the whole entry), and the morphological tags that appear in it give
+  morphological information only about that or those forms only.
+
+If I wanted to represent the fact that the first sense is only plural
+(which is not the case in the example), I would do:
+
+  <entry>
+
+    <form>
+      <orth>bonhomme</orth>
+    </form>
+
+    <sense>
+      <gramGrp>
+        <pos>n</pos>
+        <gen>m</gen>
+        <number>pl</number>
+      </gramGrp>
+      <form>
+         <orth>bonshommes</orth>
+      </form>
+      <trans>
+        <tr>fellow</tr>
+      </trans>
+    </sense>
+
+    <sense>
+      <gramGrp>
+        <pos>a</pos>
+      </gramGrp>
+      <trans>
+        <tr>good natured</tr>
+      </trans>
+    </sense>
+
+  </entry>
+
+
+Jean
+=========================================================================
+Date:         Mon, 18 Sep 1995 15:22:02 CDT
+Reply-To:     Alan Morrison <alanm@vax.ox.ac.uk>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Alan Morrison <alanm@vax.ox.ac.uk>
+Subject:      Re: Panorama and TEI
+
+>From: lbarth@mizar.usc.edu (Lewis M. Barth)
+>Subject: Re: Panorama and TEI
+
+>3. Change the <!DOCTYPE ...> line in your TEI file to something like:
+><!DOCTYPE PRE PUBLIC "-//LMB//TEI.2 SYSTEM//EN" "PLRDCTAN.DTD">
+>in which plrdctan.dtd, or whatever TEI.DTD you use, runs your whole TEI show.
+
+It is interesting to see how other have approached the setup of their Panorama
+files, at Oxford we have taken a slightly different approach and made use of
+public identifiers at the beginning of the document, for example:
+
+<!DOCTYPE TEI.2 PUBLIC "-//TEI//DTD TEI Lite 1.0//EN">
+
+while at the same time making the appropraite declarations in the CATALOG and
+ENTITYRC files.
+
+>and change the <>entityrc<> file to  contain something like:
+>
+>PUBLIC "-//LMB//TEI.2 SYSTEM//EN"
+
+here we have made declarations in the ENTITYRC file using STYLESPEC, NAVIGATOR
+and VERBATIM to define which stylesheet, navigator or verbatim text is to be
+used by the application. By doing this you are not prompted by Panorama for a
+stylesheet of navigator everytime you load a text.
+e.g
+
+PUBLIC "-//TEI//TEI lite 1.0//EN"
+VERBATIM "EG"
+STYLESPEC "Default" "TEILITE.SSH"
+NAVIGATOR "Default" "TEILITE.NAV"
+
+
+Yours,
+Alan Morrison
+Project Electra
+OUCS
+Oxford.
+=========================================================================
+Date:         Tue, 19 Sep 1995 10:55:10 CDT
+Reply-To:     Julie Thornton <JTHORNTO@eagle.call.gov>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Julie Thornton <JTHORNTO@eagle.call.gov>
+Subject:      Re: Multi-lingual dictionary encoding issue
+
+Consider using the terminological interchange format TIF from P3.  If I
+remember correctly, it will allow you to encode a language code (among other
+things) within a def field.
+
+Julie A. Thornton
+Assistant Testing & Research Coordinator
+Center for the Advancement of Language Learning
+4040 North Fairfax Drive, Suite 200
+Arlington, Va. 22203
+email: jthornto@call.gov
+phone: (703) 312-5079
+fax: (703) 528-6746
+=========================================================================
+Date:         Tue, 19 Sep 1995 10:57:51 CDT
+Reply-To:     Terry Allen <terry@ora.com>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Terry Allen <terry@ora.com>
+In-Reply-To:  Text Tool Maintenance <texttool@lemur.com> "TEI & List
+              Enumerators" (Sep  6, 11:20am)
+
+Why are you using TEI for this purpose?
+
+In any event, it sounds as though your list needs labels.  From
+teicore2.dtd:
+
+<!ELEMENT %n.list;      - -  ((%n.head)?, ( ((%n.item)+) |
+                             ((%n.headLabel)?, (%n.headItem)?,
+                             (%n.label;, %n.item;)+)))          >
+
+Though I don't use TEI very much, I'd think that your enumerators
+go in labels as content, which you can mark up.  This would be like
+a DL in HTML, or a Variablelist in Docbook.
+
+Regards,
+
+--
+Terry Allen  (terry@ora.com)   O'Reilly & Associates, Inc.
+Editor, Digital Media Group    101 Morris St.
+                               Sebastopol, Calif., 95472
+
+A Davenport Group sponsor.  For information on the Davenport
+  Group see ftp://ftp.ora.com/pub/davenport/README.html
+        or  http://www.ora.com/davenport/README.html
+Current HTML 2.0 spec:
+  ftp://ds.internic.net/internet-drafts/draft-ietf-html-spec-05.txt
+=========================================================================
+Date:         Wed, 20 Sep 1995 10:34:09 CDT
+Reply-To:     Ed Zalta <zalta@mally.Stanford.EDU>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Ed Zalta <zalta@mally.Stanford.EDU>
+Subject:      Encyclopedia Marked Up in TEI-compliant SGML?
+
+I direct the Metaphysics Research Lab at the Center for the
+Study of Language and Information (CSLI) on the Stanford
+University campus.  CSLI is an interdisciplinary research
+institute, with academic philosophers, logicians, linguists,
+computer scientists, etc., collaborating on various problems
+connected with the way inwhich people and computers use
+language and process information.
+
+  We are starting a project of creating an on-line Encyclopedia
+of Philosophy, to be served over the Web.  Our idea is to give
+experts in the field an SGML template to fill out: we provide
+the tags and they provide the content.  Then we will give them
+an account on our server and write permission to the directory
+storing the data for their particular entry.  That way, they
+can update and maintain their entry directly.  So the
+encyclopedia should not go out of date and will simply continue
+to grow.  Moreover, we don't want there to be a single way to
+view the encyclopedia (for example, by clicking a button, the
+user should get either a dictionary-style (short) entry or the
+longer encyclopedia entry).  So we want to be able to generate
+HTML on the fly in such a way that tailors the HTML pages to
+the research interests of the user.
+
+  My question is: what resources are their in the TEI tag
+scheme for encyclopedias.  I have looked at the tei2.dtd, and
+have looked at teidict2.dtd, and the teilite.dtd.  But none of
+these definitions offer tags uniquely tailored to marking up an
+encyclopedia.  Did I miss something?  Should we construct our
+own DTD by extending the TEI set?  Can someone point me to an
+encyclopedia that has already been marked up in TEI compliant
+SGML?
+  Thanks for any tips and pointers.
+
+---
+Edward N. Zalta
+Senior Researcher
+Center for the Study of Language and Information
+Stanford University
+http://mally.stanford.edu/zalta.html
+=========================================================================
+Date:         Thu, 21 Sep 1995 11:12:56 CDT
+Reply-To:     "Robert A. Kelly" <rkelly@mach1.wlu.ca>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         "Robert A. Kelly" <rkelly@mach1.wlu.ca>
+Subject:      Encoding Question: div Element
+
+I am using TEI Lite for transcribing and marking up an early 19th century
+work of systematic theology. The author is driving me crazy with
+inconsistent use of divisions and division markers. In one case a series
+of logical divisions just sort of peters out, and the last two are not
+even full paragraphs, but just parts of paragraphs. I am using the id
+attribute to give a unique id to each div element and the n attribute to
+show the divison markings in the text. What I need to know is whether the
+following is legal TEI Lite. Can a <p> element contain multiple (or any)
+<div> elements? Also, regarding the hymn lines at the end. I get mixed
+messages from the simplistic parsers I use. Can a <p> element contain
+multiple <l> elements?
+
+<div1>
+. . . .
+
+<div2>
+. . . .
+
+<div3 id="pop1229" n="i)">
+<p>The peculiar structure of Christianity by which it
+accomplishes the benign effects above enumerated, and which adapt
+it to universal adoption under every form of civil government,
+and every state of social society, demonstrate that it is based
+on a more perfect view of all the complicated relations of human
+society and all the principles of human nature than ever fell to
+the lot of any uninspired teacher of religion.</p>
+</div3>
+<p>Similar evidences are found in <div3 id="pop1229y" n="j)"> the
+mythologies of the Asiatic nations, which confirm many of the
+prominent facts of the Old Testament:</div3> <div3 id="pop1229z"
+n="k)"> in the discoveries of modern geologists, who find in the
+bowels of the earth conclusive proof of a universal deluge, of
+antediluvian animals, &amp;c. &amp;c.</div3></p>
+<p>In view of this overwhelming mass of concurrent evidence, to
+which might be added the corroborative testimony of profane
+writers, of coins, of geology, &amp;c., it is impossible for the
+impartial and persevering inquirer to doubt the divinity of the
+Christian religion. To suppose all these evidences to have
+originated in chance, is to admit a far greater miracle than any
+contended for by the Christian, and to believe it performed
+without any design, performed too without any beneficial effect,
+yea performed in circumstances calculated inevitably to involve
+the human family in a stupendous system of unqualified error! The
+different objections against Christianity are either mere
+misapprehensions of the objector, or they can be, as they often
+have been, satisfactorily answered. How truly may it, then, be
+said of the Christian, <q>on argument his faith is built.</q> How
+just the declaration,
+<l>A Christian dwells, like Uriel, in the sun,</l>
+<l>Meridian evidence puts doubt to flight;</l>
+<l>And ardent hope anticipates the skies.</l></p>
+</div2>
+</div1>
+
+Thanks to all.
+_______
+Robert A. Kelly
+Waterloo Lutheran Seminary/Wilfrid Laurier University
+75 University Ave. W.
+Waterloo, Ontario N2L 3C5                 519-884-1970, ext. 3853
+Canada                                          Fax: 519-725-2434
+Internet: rkelly@mach1.wlu.ca
+=========================================================================
+Date:         Thu, 21 Sep 1995 11:13:45 CDT
+Reply-To:     Winfried Bader <winfried.bader@zdv.uni-tuebingen.de>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Winfried Bader <winfried.bader@zdv.uni-tuebingen.de>
+Subject:      TEI-Workshop in Tuebingen, Nov. 95
+
+=====================================================================
+                   A N N O U N C E M E N T
+                   -----------------------
+
+                  We are proud to announce a
+                   T E I - W o r k s h o p
+                   given in German language
+=====================================================================
+     Please read and distribut! Please read and distribut!
+=====================================================================
+
+                        Ankuendigung
+                        ------------
+
+                          Workshop
+                          ========
+    SGML-konforme Textauszeichnung nach den Richtlinien der
+               Text Encoding Initiative (TEI)
+               ------------------------------
+                    15.-17. November 1995
+                           an der
+                    Universitaet Tuebingen
+=====================================================================
+
+
+Was ist die TEI?
+----------------
+Die Text Encoding Initiative (TEI), ein gemeinsames Unternehmen der
+Association for Computers and the Humanities, der Association for
+Literary and Linguistic Computing und der Association for
+Computational Linguistics, hat seit 1987 Richtlinien fuer die
+elektronische Textauszeichnung und den Textaustausch erarbeitet. Das
+Ergebnis, 1994 als Buch und CD veroeffentlicht, ist die Bereitstellung
+und Erlaeuterung SGML-konformer Document Type Definitions, die modular
+aufgebaut ein grosses Instrumentarium an Auszeichnungen fuer die
+Wiedergabe verschiedener Textsorten (Prosa, Poesie, Drama, Lexika
+etc.) und verschiedener Arten der Textuntersuchung (Textkritik,
+Textvergleich, linguistische Analysen, Querverbindungen etc.) bieten.
+
+
+Was sind die Themen des Workshops?
+----------------------------------
+Unter anderem sind folgende Themen vorgesehen:
+- Einfuehrung in Idee und Regeln von SGML (Standard Generalized Markup
+Language, ISO-Norm 8879 von 1986)
+- Klaerung des Verhaeltnisses von SGML, TEI und HTML (im World Wide
+Web verwendete Hyper Text Markup Language)
+- Wissenschaftliche Aspekte des Einsatzes der TEI-Auszeichnungen
+(Dokumentenanalyse, heuristische und hermeneutische Implikationen)
+- Einsatzgebiet und Ziele der  TEI-Verwendung: Datenaustausch,
+vielfaeltige Verwendung der Dokumente, TEI als gemeinsame Plattform
+von verschiedenen Bearbeitungsgaengen in Projekten (TEI-Dokumente als
+Endprodukt und als Datenformat fuer die Erarbeitung)
+- Vorstellung und Demonstration verschiedener Software zur Erfassung,
+Pruefung und Weiterverarbeitung (Durchsuchen, Erstellung von Indizes,
+Druckausgabe, elektronisches Publizieren) von SGML Dokumenten
+
+
+An wen wendet sich dieser Workshop?
+-----------------------------------
+Der Workshop wendet sich an alle, die auf dem Gebiet der
+Geisteswissenschaften mit der elektronischen Erfassung, Bearbeitung,
+Edition und Veroeffentlichung von Textdaten beschaeftigt sind: die
+Quellen sammeln, dokumentieren, mit Informationen anreichern, die
+Analysen an Texten durchfuehren, die lexikographische Datenbanken
+erstellen, bibliographische Daten sammeln, die Texte kritisch neu
+erarbeiten, die elektronische Textdaten mit anderen austauschen, auf
+verschiedenen Medien (Netz, CD-ROM, Buch) veroeffentlichen.
+
+
+Wer veranstaltet den Workshop?
+------------------------------
+Der TEI-Workshop wird vom Zentrum fuer Datenverarbeitung der
+Universitaet Tuebingen durchgefuehrt, das seit vielen Jahren um die
+Unterstuetzung von EDV-Anwendungen in den Geisteswissenschaften
+bemueht ist. Als eine der ersten Universitaeten hat Tuebingen vor 25
+Jahren in seinem Zentrum fuer Datenverarbeitung eine eigene Abteilung
+fuer Literarische und Dokumentarische Datenverarbeitung eingerichtet,
+in der man sich mit den Problemen der computerunterstuetzten
+geisteswissenschaftlichen Textdatenverarbeitung beschaeftigt. Das
+bekannteste Produkt dieser Arbeit ist das Software-Paket TUSTEP, das
+Grundoperationen zur Textdatenverarbeitung zur Verfuegung stellt.
+
+
+Wer sind die Referenten?
+------------------------
+Michael Sperberg-McQueen PhD (Germanistik) vom Computer Center der
+Universitaet von Illinois in Chicago (USA) ist seit 1987 mit der TEI
+befasst. Er war massgebliches Mitglied im Leitungsteam fuer die
+Erarbeitung der Richtlinien und als Koeditor fuer die
+Veroeffentlichung der Richtlinien verantwortlich. Er gilt mit Recht
+als einer der Vaeter der TEI und ist einer der fuehrenden Spezialisten
+fuer die SGML-konforme Auszeichnung von Texten in den
+Geisteswissenschaften.
+
+Dr. theol. Winfried Bader vom Zentrum fuer Datenverarbeitung der
+Universitaet Tuebingen hat durch seine langjaehrige
+Beratungstaetigkeit Erfahrung in der Planung und Durchfuehrung von
+elektronisch gestuetzten Texteditionen. Seine bibelwissenschaftlichen
+Arbeiten sind computerlinguistisch orientiert. Seit 1993 ist er
+Mitglied im Advisory Board der TEI; seit 1994 ist er ausgebildet zum
+TEI-Instructor.
+
+
+Was ist die Unterrichtssprache und Arbeitsform?
+-----------------------------------------------
+Die Unterrichtssprache des Workshops ist Deutsch. Als Arbeitsformen
+wechseln sich Vortrag, Demonstrationen, Gruppenarbeit und Diskussion
+ab.
+
+
+Wann findet der Workshop statt?
+-------------------------------
+Beginn: Mittwoch, 15. November 1995, 16 Uhr
+Ende:   Freitag,  17. November 1995, 17 Uhr
+
+
+Wo findet der Workshop statt?
+-----------------------------
+Ort: Zentrum fuer Datenverarbeitung der Universitaet Tuebingen
+     (Deutschland)
+
+
+Wo bekommt man weitere Informationen?
+-------------------------------------
+Bei weiteren Fragen wenden Sie sich bitte an:
+
+Winfried Bader
+Universitaet Tuebingen - Zentrum fuer Datenverarbeitung
+Brunnenstrasse 27
+D-72074 Tuebingen
+
+E-mail  : bader@zdv.uni-tuebingen.de
+Telefon : +49 - 7071 - 29 6973
+Fax     : +49 - 7071 - 29 5912
+
+Im WWW unter dem URL:
+http://www.uni-tuebingen.de/zdv/zrlinfo/teiworkshop.html
+
+
+Wie meldet man sich an?
+-----------------------
+Ihre verbindliche Anmeldung richten Sie bitte an Winfried Bader unter
+einer der obenstehenden Adressen.
+Die Zahl der Teilnehmer/innen ist begrenzt.
+
+Anmeldeschluss: 31. Oktober 1995
+=========================================================================
+Date:         Fri, 22 Sep 1995 10:33:15 CDT
+Reply-To:     Luis Villar <Luis.Villar@Dartmouth.EDU>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Luis Villar <Luis.Villar@Dartmouth.EDU>
+Subject:      Congratulations!
+
+We are proud to announce a
+                   T E I - W o r k s h o p
+                   given in German language
+
+This is the ONLY WAY to go in order to internationalized the TEI guidelines!
+It would be a wonderful idea to offer this type of workshop in more foreign
+languages!
+=========================================================================
+Date:         Fri, 22 Sep 1995 10:33:36 CDT
+Reply-To:     Nick Finke <nick.finke@Law.UC.Edu>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nick Finke <nick.finke@Law.UC.Edu>
+Subject:      Re: Encoding Question: div Element
+Comments: cc: "Robert A. Kelly" <rkelly@MACH1.WLU.CA>
+
+Robert A. Kelly wrote:
+
+>I am using TEI Lite for transcribing and marking up an early 19th century
+>work of systematic theology. The author is driving me crazy with
+>inconsistent use of divisions and division markers. In one case a series
+>of logical divisions just sort of peters out, and the last two are not
+>even full paragraphs, but just parts of paragraphs. I am using the id
+>attribute to give a unique id to each div element and the n attribute to
+>show the divison markings in the text. What I need to know is whether the
+>following is legal TEI Lite.
+
+It looks to me as if at least part of what you have coded as a <div3> might
+better be coded as an <item> in an ordered <list>.  <item>s can contain
+either <p>s or #PCDATA, so it doesn't matter if some of the <item>s are not
+full paragraphs.
+
+>Can a <p> element contain multiple (or any)
+><div> elements?
+
+No, but if you use a <list> (see above), this problem goes away.
+
+>Also, regarding the hymn lines at the end. I get mixed
+>messages from the simplistic parsers I use. Can a <p> element contain
+>multiple <l> elements?
+
+Not directly.  Isn't this verse a quote as well? <l>s can occur within a
+<q>, which can occur within <p>.
+
+Hope this helps.
+
+Nick Finke
+
+
+
+   *******************************************************************
+   * Nicholas D. Finke                        Phone:(513)556-0103    *
+   * Center for Electronic Text in the Law    Fax:  (513)556-6265    *
+   * University of Cincinnati College of Law  Email:                 *
+   * P.O. Box 210142                           nick.finke@law.uc.edu *
+   * Cincinnati, OH  45221-0142                                      *
+   *******************************************************************
+=========================================================================
+Date:         Sat, 23 Sep 1995 15:38:58 CDT
+Reply-To:     Lou Burnard <lou@vax.ox.ac.uk>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Lou Burnard <lou@vax.ox.ac.uk>
+Subject:      polyglots welcome
+
+>From: Luis Villar <Luis.Villar@Dartmouth.EDU>
+>Subject: Congratulations!
+>To: Multiple recipients of list TEI-L <TEI-L@UICVM.CC.UIC.EDU>
+>
+>We are proud to announce a
+>                   T E I - W o r k s h o p
+>                   given in German language
+>
+>This is the ONLY WAY to go in order to internationalized the TEI guidelines!
+>It would be a wonderful idea to offer this type of workshop in more foreign
+>languages!
+
+I couldn't agree more. We made a bid to the EU for funding to do precisely
+that, but although short-listed it seems to have fallen on stony ground. We are
+reliant therefore on the willingness of other European organizations or
+institutions to fund such activities, and we hope that lots of others will
+follow Tuebingen's example. In fairness though, I should point out that this is
+not the first non-anglophone TEI presentation -- I gave one in (more or less)
+French this past summer at the AIS Summer School, and I am sure there have been
+many others I don't know about.
+
+As regards translations of TEI publications, may I take this opportunity to
+urge more interested parties to follow the example of the French Ministry of
+Education, which has recently commissioned a French translation of the TEI Lite
+Tutorial (TEIU5)? I also know that a Spanish translation of P2, and an Italian
+version of P2, have both been produced (at the Universities of Barcelona and
+Pisa respectively) but I don't know how widely available they are.
+
+We'd love to see a Polyglot's Corner on the TEI Web Page! If you're interested,
+let us know.
+
+Lou Burnard
+=========================================================================
+Date:         Sat, 23 Sep 1995 15:39:59 CDT
+Reply-To:     Claude Gosselin <cgosseli@fse.ulaval.ca>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Claude Gosselin <cgosseli@fse.ulaval.ca>
+Subject:      A DTD for reading notes
+
+I am doing a PHD research on reading notes where I try to apply library
+techniques to notetaking in the process of an intellectual work, which
+implies the indexing and the structuration of the reading notes.  Anyone
+can tell me if there is a DTD that could  fulfill  my needs? I would
+appreciate enormously. Thank you.
+
+Claude Gosselin
+8-2325, 2e Ave
+Quebec, CANADA
+G1L 3E2
+cgosseli@fse.ulaval.ca
+
+-----------
+Claude Gosselin
+2325, 2e Avenue #8
+Quebec G1L3E2
+Tel: (418) 529-2600
+cgosseli@fse.ulaval.ca
+=========================================================================
+Date:         Mon, 25 Sep 1995 14:08:04 CDT
+Reply-To:     Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Dominic Dunlop/EOI <Dominic_Dunlop/EOI.EOI@HERMES.eo.net>
+Subject:      Forwarded CFP: SOCIETY FOR THE HISTORY OF AUTHORSHIP,
+              READING AND PUBLISHING
+
+A friend forwarded this to me.  Goodness knows how it reached him,
+although it lost its header along the way.  Anyway, I thought that there
+must be somebody on this list who feels that they have enough to tell a
+group such as the SOCIETY FOR THE HISTORY OF AUTHORSHIP, READING AND
+PUBLISHING about how SGML in general and the TEI recommendations in
+particular can help them that they'd want to submit an proposal.  On a
+note no doubt out of keeping with the gravity of the conference, I love
+"Although submissions by e-mail and fax will be accepted, original hard
+copy is *greatly* preferred."  I guess this reflects an inchoate concern
+about the big electronic bugaboo which is going to erase all traces of
+authority from documents.  Perhaps someone can reassure them.  Or at
+least show how the mighty sword of the TEI and impregnable armour of
+SGML can help them fight back.
+
+CALL FOR PAPERS:
+
+SOCIETY FOR THE HISTORY OF AUTHORSHIP, READING AND PUBLISHING
+
+FOURTH ANNUAL CONFERENCE
+
+WORCESTER, MASSACHUSETTS, 18-21 JULY 1996
+
+        The fourth annual conference of the Society for the History of
+Authorship, Reading and Publishing will meet 18-21 July 1996 in
+Worcester, Massachusetts, under the auspices of the American Antiquarian
+Society and its Program in the History of the Book in American Culture.
+SHARP welcomes proposals for papers dealing with the creation,
+diffusion, or reception of the written or printed word in any historical
+period.  Conference proceedings will be in English, but papers may deal
+with any national literature.  There are no limitations on topics, but
+we may organize special panels on comparative histories of the book; the
+book in the Americas; the collection and description of archival
+material and statistical information on printing, publishing, and
+reading; and future agendas for the field.
+
+        Submissions are encouraged from academics, graduate students,
+librarians, professionals in the book trades, and others with a special
+angle of vision on the field.  Proposals for either individual papers or
+full panels may be submitted.
+
+        Proposals (one pages maximum) and inquiries about the conference
+itself should be sent to: SHARP 1996, American Antiquarian Society, 185
+Salisbury Street, Worcester, MA 01609-1634 USA, fax 508-754-9069, e-mail
+cfs@mark.mwa.org.  Although submissions by e-mail and fax will be
+accepted, original hard copy is *greatly* preferred.  The deadline for
+submission of proposals is 20 November 1995.  For information about AAS
+and its Program in the History of the Book in American Culture, contact
+John B. Hench, the Society's director of research and publication, or
+Caroline F. Sloat, as above.
+
+        SHARP is an international organization of book historians.
+Membership--which includes a subscription to the SHARP quarterly
+newsletter and annual membership directory--is $15 in the United States
+and Canada, L10 in Britain, $20 elsewhere.  Checks in American or
+British currency, made out to SHARP, should be sent to the Membership
+Secretary, Linda Connors, Drew University Library, Madison, NJ 07940
+USA.  For a free sample copy of the SHARP newsletter, simple e-mail
+jerose@drew.drew.edu.
+=========================================================================
+Date:         Mon, 25 Sep 1995 14:09:56 CDT
+Reply-To:     Nancy Ide <ide@univ-aix.fr>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Nancy Ide <ide@univ-aix.fr>
+Subject:      Re: Encyclopedia Marked Up in TEI-compliant SGML?
+
+At 10:34 20/09/95, Ed Zalta wrote:
+
+>  My question is: what resources are their in the TEI tag
+>scheme for encyclopedias.  I have looked at the tei2.dtd, and
+>have looked at teidict2.dtd, and the teilite.dtd.  But none of
+>these definitions offer tags uniquely tailored to marking up an
+>encyclopedia.  Did I miss something?  Should we construct our
+>own DTD by extending the TEI set?
+
+
+The TEI tagset for dictionaries is the closest to what you are looking for,
+but it was not intended to cover encyclopedias. The dictionary tag set
+includes a few tags that might be of use to you (e.g., <xr> and possibly
+<re>). You should have a look at the dictionary chapter, and probably the
+one on terminology as well, since there are likely to be some ideas and
+tags in these chapters that you can use.
+
+It seems to me that many of your needs can be met by the TEI tags for
+general prose. You can always use the TEI <div> or <divN> tags to mark
+structural divisions in your encyclopedia, and a <head> tag could be used
+for the entry keyword in the appropriate <div>. The TEI tags for general
+prose and bibliographic citations should handle the entry text adequately.
+
+The other option is to extend the TEI DTD to handle your encyclopedia. This
+would be preferable if you want or need to restrict the allowed contents of
+each entry (for validation purposes, for example); relying on the existing
+TEI DTDs provides little restriction, since simply because they are
+general, tags such as <div> allow great freedom in what can appear inside
+them, and where. And if you can identify some consistent and coherent
+structural principles common across encyclopedias and capture them in your
+DTD, your work could provide a document model for encyclopedias that would
+be useful for others. (As with our experience in developing a DTD for
+dictionaries, I suspect the attempt to provide a general model for
+encyclopedia entries itself would be very illuminating!) I am not sure how
+highly structured encyclopedia entries are, or how much they differ from
+general prose, so I am not sure that developing a special DTD is worth the
+effort. However, should you decide to go this route, those of us who worked
+on the dictionary DTD would be very interested to follow your efforts and
+help out in any way we can.
+
+Nancy Ide
+=========================================================================
+Date:         Tue, 26 Sep 1995 10:32:18 CDT
+Reply-To:     "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         "C. M. Sperberg-McQueen" <U35395@UICVM.BITNET>
+Organization: ACH/ACL/ALLC Text Encoding Initiative
+Subject:      Re: polyglots welcome
+In-Reply-To:  Message of Sat, 23 Sep 1995 15:38:58 CDT from <lou@vax.ox.ac.uk>
+
+On Sat, 23 Sep 1995 15:38:58 CDT Lou Burnard said:
+>As regards translations of TEI publications, may I take this
+>opportunity to urge more interested parties to follow the example
+>of the French Ministry of Education, which has recently
+>commissioned a French translation of the TEI Lite Tutorial (TEIU5)?
+>I also know that a Spanish translation of P2, and an Italian
+>version of P2, have both been produced (at the Universities of
+>Barcelona and Pisa respectively) but I don't know how widely
+>available they are.
+
+Not to mention a Japanese translation of portions of P3, produced at
+Chiba University for use in the Chiba Map Task Corpus project (which
+replicates, in Japanese, the kind of task-oriented spoken corpus,
+produced in a controlled environment, originally created (I believe)
+by Henry Thompson in English).
+
+As with the Spanish and Italian translations, I don't know how
+widely available the Japanese materials are.
+
+-C. M. Sperberg-McQueen
+=========================================================================
+Date:         Wed, 27 Sep 1995 10:31:08 CDT
+Reply-To:     Masayuki TOYOSHIMA <mtoyo@Lgjp0.Lit.hokudai.ac.jp>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Masayuki TOYOSHIMA <mtoyo@Lgjp0.Lit.hokudai.ac.jp>
+Subject:      Re: polyglots welcome
+In-Reply-To:  Your message of "Tue, 26 Sep 1995 10:32:18 CDT."
+              <TEI-L%95092610341352@UICVM.UIC.EDU>
+
+>Not to mention a Japanese translation of portions of P3, produced at
+>Chiba University for use in the Chiba Map Task Corpus project
+ ...
+>I don't know how
+>widely available the Japanese materials are.
+
+ I would strongly like to be informed of the project by Chiba University.
+
+ I am especially interested in the technique of writing TEI-comformant
+ documents with its "writing system declaration".
+
+ I wonder how it is possible to code documtents with multi-byte coded
+ character set (like Japanese JIS X0208) mixed with single-byte ones
+ into SGML without violating the standard, which clearly states that
+ the code set is "a set of bit combinations of *EQUAL SIZE*" (4.43)...
+
+Masayuki TOYOSHIMA / Dept. of Japanese linguistics, Faculty of Letters,
+Hokkaido university, Sapporo 060 Japan, FAX +81-11-726-0919 (24h)
+mtoyo@Lit.hokudai.ac.jp, MHA00720@niftyserve.or.jp (AUP-free)
+=========================================================================
+Date:         Fri, 29 Sep 1995 10:30:50 CDT
+Reply-To:     PWILLETT@cluster.ucs.indiana.edu
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@UICVM.UIC.EDU>
+From:         Perry Willett <PWILLETT@cluster.ucs.indiana.edu>
+Subject:      Victorian Women Writers Project announcement
+
+This message is being cross-posted to VICTORIA, HUMANIST,
+WWP-L, EALS, TEI-L, ETEXTCTR and WMST-L.
+
+The Victorian Women Writers Project is an electronic collection
+of texts by British women writers of the late Victorian period.
+The collection includes works by Louisa Bevington, Amy Levy,
+Eliza Keary, Maud Keary and Dollie Radford, with works by
+Mathilde Blind, Dinah Maria Mulock Craik and Louise Guiney in
+preparation. Currently, the collection includes volumes of poetry
+and verse drama, with plans to include other literary and
+critical texts in the future. Considerable attention will be
+given to the accuracy and completeness of the texts, and to
+accurate bibliographical descriptions of them. The etexts are
+available as HTML documents or as TEI documents either for
+downloading or use with Panorama Free. The Victorian Women Writers
+Project is supported by Indiana University's Library Electronic
+Text Resource Service (LETRS) and is available for use through
+the World Wide Web at
+<URL http://www.indiana.edu/~letrs/vwwp/>.
+
+Perry Willett
+General Editor, Victorian Women Writers Project
+Main Library
+Indiana University
+PWILLETT@indiana.edu

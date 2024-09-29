@@ -1,0 +1,1555 @@
+<xml>=========================================================================
+Date:         Tue, 6 Feb 90 10:54:04 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      compound documents
+
+About compound documents in SGML and in the TEI.  R.P. Weber asked a
+week ago "could someone please explain the TEI approach to compound
+documents and images?  WIll SGML be used here, and if so, how?"
+
+Apologies for my delay in answering.  I was hoping one of our hypertext
+sages might weigh in with a reply.  (But he appears to have been in the
+Caribbean, and may not have received the query.)
+
+This problem has not, in fact, been discussed on this server, or as far
+as I'm aware by the working committees.  So the formal answer is that no
+decision has been cast in concrete yet.  Which allows me to turn the
+tables and say "How *should* compound documents be encoded for
+interchange?  What are the requirements?  What are the alternatives?"
+
+Less formally, I can offer some personal opinions, for what they are
+worth (face value:  two cents -- 2u, for those of you on IBM mainframes
+with real IBM terminals).
+
+Certainly SGML is where we should start in any search for ways of
+handling compound objects, and I don't yet know any reason that SGML
+won't provide a solution for the problem.  I assume there are two
+methods of using SGML in compound documents (correct me if I'm wrong):
+(1) use SGML to organize the compound document (i.e. have an SGML
+document which includes text, images, sound, etc. as its components), or
+(2) use whatever-you-like to organize the compound document as a whole,
+and use SGML as the notation for the textual components of the compound
+document.
+
+For the simple case of text-with-illustrations, SGML seems like a viable
+encoding mechanism (for the envelope and for the text components) to me.
+It allows you to encode the graphics however you like, declaring your
+graphics format as a non-SGML notation and declaring the contents of
+your graphics elements (say 'PICTURE' or 'BLORT') as being data in that
+notation, stored either within the SGML file or externally to it.  You
+get localization of the graphics within the text stream, integral or
+separate storage of the graphics, and complete freedom to choose
+whatever graphic notation you wish.
+
+As document encoding methods go, SGML is fairly hospitable to graphics
+and other non-text pieces of compound objects.  Nowhere in the standard
+does it say that the data have to be words and characters.  In fact, as
+far as I know there is no *explicit* requirement in the standard that an
+SGML document even has to be bytes in a computer.  (Sure, it's hard to
+understand the standard any other way, but that's not the same as an
+explicit requirement.)  ISO 8879 par. 6.1 note 1 says in fact "This
+International Standard does not constrain the physical organization of
+the document within the data stream, message handling protocol, file
+system, etc., that contains it."  At the SGML '89 conference last
+October in Atlanta, there was a very nice paper by Douglas MacLeod (read
+by Yuri Rubinsky) thinking about architectural designs as SGML
+documents, which led to a general discussion of SGML definitions for all
+sorts of objects, including automobiles.  Although most people
+(obviously) think of the SGML document as an electronic *description* of
+the automobile (and the physical automobile as a side effect of
+processing), it appears, in the light of the passage cited, hard to say
+categorically that an automobile itself could never be parsed as an SGML
+document.  (If you could figure out how to define the delimiters.)
+
+The only hitch is that the SGML standard itself (ISO 8879) does not
+specify in any detail what the interface between SGML processors and
+non-SGML processors must, may, or can look like -- an advantage, if you
+will, in that it doesn't constrain anyone to an inappropriate model, but
+a bit of a disadvantage in that most people don't have a clue what they
+can now or will eventually or might someday be able to do with SGML and
+graphics processors.
+
+Not being deeply involved in graphics work or compound documents myself,
+I don't know off-hand what options are offered for this sort of thing by
+existing SGML processors.  There will certainly be a fierce market
+demand for it, not only from humanists but also (to our great advantage)
+from the defense industry, which needs SGML support for technical
+manuals with diagrams (and of course cross-references and other
+hypertext mechanisms) and has the small change to pay for the
+development costs.  (As long as they don't charge the humanists
+defense-contractor prices!)
+
+If for some reason one does *not* want to use SGML as the envelope for
+the entire compound document, then presumably the major requirement for
+the text-components of the compound documents is that they be
+computationally well-behaved, with a clearly defined structure, hooks
+for pointers going out, and hooks for pointers coming in.  SGML
+certainly has all of this, in its document type declarations and its ID
+names and its IDREF pointers.
+
+Perhaps those subscribers to this list who actually work with compound
+documents and SGML will be willing to say how they make things work now,
+and how they would like to see things developing in the future.
+
+All this is, I repeat, just personal opinion and shouldn't be taken as
+defining "the" position of the TEI.  (Unless, of course, taking as "the"
+position will help get a discussion started.)
+
+-Michael Sperberg-McQueen
+ University of Illinois at Chicago
+=========================================================================
+Date:         Tue, 6 Feb 90 14:13:02 EST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Robert A Amsler <amsler@FLASH.BELLCORE.COM>
+Subject:      SGML and the restoration of case information to a file
+
+I'm working on restoring a text file that was keypunched in the 1960s
+to complete upper/lower case ASCII. (It currently is ALL UPPER CASE).
+I would like to `do it right' such that more than just the upper/lower
+case, italics, accent marks, paragraph, headings are correctly
+identified. I.e. capitalization seems to me to be a reflection of
+a deeper semantic reason things are capitalized, such as that they
+are a particular type of proper noun, name of a person, country, company,
+etc. Italics likewise reflects roles such as book, play, movie, etc. titles;
+foreign words, quoted material, emphasis, etc.
+
+Does anyone have any suggestions as to how to do such tagging?  I.e.,
+if one encounters something such as,
+
+`PRESIDENT KENNEDY TOLD PRIME MINISTER MACMILLIAN ...'
+
+and wants to restore the reasons it should be capitalized as ,
+
+`President Kennedy told Prime Minister Macmillian...'
+
+(Note: it is Macmillian not MacMillian) what should one do?
+
+Thus, I can markup the text as,
+
+<Sentence>
+ <NationLeader country=USA>
+  <Title> President </Title>
+  <LName id=John_F._Kennedy> Kennedy </LName> </NationLeader>
+ told
+ <NationLeader country=GB>
+  <Title> Prime Minister </Title>
+  <LName id=Harold_Macmillan> Macmillan </LName> </NationLeader>
+   ...
+=========================================================================
+Date:         Sun, 11 Feb 90 13:06:34 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Robert Philip Weber <WEBER@HARVARDA.BITNET>
+Subject:      funding sources for tei
+
+I understand TEI is in part funded by a grant from the Mellon Foundation;
+is that correct? Could someone please post to the TEI-L list a list
+of significant funding sources?  I'm more interested in who rather than
+how much.
+many thanks.
+Bob Weber
+---------
+Robert Philip Weber, Ph.D.       | Phone: (617) 495-3744
+Senior Consultant                | Fax:   (617) 495-0750
+Academic and Planning Services   |
+        Division                 |
+Office For Information Technology| Internet: weber@popvax.harvard.edu
+Harvard University               | Bitnet:   Weber@Harvarda
+50 Church Street                 |
+Cambridge MA 02138               |
+=========================================================================
+Date:         Mon, 12 Feb 90 16:53:04 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+Comments:     "ACH / ACL / ALLC Text Encoding Initiative"
+From:         Michael Sperberg-McQueen 312 996-2477 -2981 <U35395@UICVM.BITNET>
+Subject:      funding sources
+
+In answer to Bob Weber's query:
+
+You understand correctly.  The TEI has received funds from the National
+Endowment for the Humanities, the European Economic Community, and the
+Andrew W. Mellon Foundation.
+
+Further support is contributed (partly in-kind) by the various
+institutions at which participants in the initiative are housed and by
+the individual participants themselves.  Thus the support of UIC,
+Oxford, Vassar, Univ. of Pisa, Bellcore, the Wellcome Institute, Univ.
+of Oslo, Univ. of Arizona, and Queen's Univ. (Ont.), should be
+acknowledged, as also that of all the other places whose staff and
+faculty are serving on working committees.
+
+Finally, some costs have also been borne by the three sponsoring
+organizations:  the Association for Computers and the Humanities, the
+Association for Computational Linguistics, and the Association for
+Literary and Linguistic Computing.
+
+(We are now seeking funds for the second development cycle, to run from
+1990 to 1992.  Call us here at Pledge Central if you'd like to
+contribute...)
+
+Michael Sperberg-McQueen
+=========================================================================
+Date:         Mon, 12 Feb 90 18:07:19 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         Robert Philip Weber <WEBER@HARVARDA.BITNET>
+Subject:      SGML and ODA
+
+Could someone please explain the relationship between SGML and
+ODA, which I understand is a compound document standard?
+Many thanks
+Bob Weber
+---------
+Robert Philip Weber, Ph.D.       | Phone: (617) 495-3744
+Senior Consultant                | Fax:   (617) 495-0750
+Academic and Planning Services   |
+        Division                 |
+Office For Information Technology| Internet: weber@popvax.harvard.edu
+Harvard University               | Bitnet:   Weber@Harvarda
+50 Church Street                 |
+Cambridge MA 02138               |
+=========================================================================
+Date:         Sat, 24 Feb 90 10:54:03 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      TC/PARALLELS REVISED PART1
+
+(part 1 of 2)
+February 21, 1990                         3909 Swiss Avenue
+Robin C. Cover                            Dallas, TX    75204
+Draft, TEI-REP Working Paper              (214) 296-1783/841-3657
+For TEI-TRR4, sections 6.9 - 6.10         BITNET: zrcc1001@smuvm1
+                                          INTERNET: robin@txsil.lonestar.org
+*Supersedes draft "February 18, 1990"     UUCP: attctc!utafll!robin
+distributed on TEI-REP                    UUCP: attctc!texbell!txsil.robin
+
+
+          ENCODING FOR TEXTUAL PARALLELS AND CRITICAL APPARATUS
+
+INTRODUCTION
+
+     In this paper I discuss some proposals and partial solutions to the
+problems of encoding textual parallels, textual variation and related
+features.  Encoding for textual parallels and textual variation will
+employ SGML-based (and perhaps non-SGML) constructs developed for other
+encoding problems, both within the domain of TEI-REP and within the TEI
+ANA group.  The two inter-related topics specifically assigned to me
+under the current TEI-REP work agenda ("textual parallels" and "textual
+variants") are dependent upon and closely related to the decisions
+reached on "Reference Systems" (6.7; Mylonas), "Cross-References and
+Text-Links" (TEI TRR4 6.11; DeRose).  Likewise, Johansson's work on
+"Normalization Practices and Documenting Them" (TEI TRR4 7.2.1) bears
+similarity to the text-critical issue of machine collation and machine
+analysis of texts in different languages, scripts, transcription systems,
+orthographic-strata, etc.  Accordingly, I plan to revise the following
+sections for TEI TRR2 6.9-6.10 in light of other decisions and
+recommendations reached in the Oxford TEI-REP meetings.
+
+I. TEXTUAL PARALLELS  [revised material to be inserted at TEI TRR2 6.10]
+
+A. DEFINITIONS
+
+     I use the term "(textual) parallels" to refer broadly to any two
+documents, or regions of text within the same document, or sets of
+documents which literary/linguistic analysts would like to compare in
+some way because they share significant degree of structure and/or
+content, or perhaps pedigree.  The comparison may be quantitative (e.g.,
+searching for index of term-frequencies or co-occurrences) or simply
+visual (e.g.,parallel displays which support synchronous scrolling of two
+or more documents). Provisionally, I think of "textual variants" as a
+special case of textual parallelism (though requiring much more
+annotation) in that they are parallel textual objects competing for
+antiquity, typological priority, authenticity and so forth.  The issue of
+document versioning is tangent to textual criticism in that both involve
+attempts to reconstruct or record exact evolutionary stages and processes
+in the composition and transmission of texts.  In the more general case,
+"textually" variant readings are simply parallel texts which contribute
+information to our understanding of the evolutionary history of an
+idealized (fictional) literary entity we think of as a literary "text."
+
+Here are some examples of (sub-) documents I would call "parallel" texts:
+
+*a literary allusion and its assumed/purported origin in the
+    classic; a quotation and its contextual source
+
+*a literary text and its translation (into another language, or
+    into multiple languages)
+
+*the same text viewed simultaneously in different scripts, within
+    different orthographic strata or under different transcriptional
+    systems [here document views is envisioned as being generated
+    from separate documents or parts of a database rather than through
+    document filtering]
+
+*texts which stem from a common source (eg., the three New Testament
+    synoptics, sharing a common origin in the hypothetical document Q)
+
+*multiple (serial or synchronous) recensions of the same text, which
+    nevertheless maintain a common identity as a certain
+    literary document (e.g., the eight versions Sargon's
+    annalistic reports; multiple recensions of the flood epic in
+    several Mesopotamian languages at several periods; the long
+    and one-seventh-shorter versions of biblical Jeremiah)
+
+*instances of oral formulaic poetry (line, stanza) which appear
+    in different epic or liturgical compositions
+
+*a literary text and running commentary on that text, including
+    dedicated region(s) of textual commentary on the text
+    or textual apparatus
+
+*texts which bear some unclear textual relationship, but share
+    significant amount of content and/or structure (e.g.,
+    sections of biblical Samuel/Kings/Isa/Chron)
+
+*sections of texts "reused" in other contexts (long sections of
+    certain Psalms in prose texts narrating a liturgy)
+
+*sections of texts excerpted wholesale and thereafter acquiring
+    independent transmission history(e.g., biblical Odes),
+
+*paraphrases or synopses (e.g., Josephus' <cit>Antiquities of the
+    Jews</>, which sometimes tracks very closely with the
+    biblical (Greek) Septuagint text
+
+*a lineated/versified text and its associated (sets of) cross-references
+    to other texts or locations within the same text
+
+*a "clean" text and alternate views of that text based upon its
+    literary or linguistic annotations;
+
+B. LEVELS OF GRANULARITY
+
+    In order to provide encoding for such parallel texts or regions of
+texts, the encoder must begin by: (a) determining the level of
+granularity at which the text(s) are to be tagged, and (b) designating
+names for those textual objects which will be matched as the parallels
+(c) devising referencing a scheme which allows one to unambiguously point
+to regions of "parallel" text delimited by the tagging (so that reference
+may be made to these units from external sources).  The referencing
+scheme is critical because the parallels may not involve matched textual
+objects (e.g., "verses" in one edition with "verses" in another edition).
+The parallels may involve mappings between points and spans, or between
+spans of text very unlike in some characteristics.
+
+    The levels of granularity chosen of course depend upon the
+applications.  I believe that for representing "parallel" structures (and
+"textual") variants, character-level encoding and everything higher must
+be supported.  Certainly this will be required by linguists in the TEI
+ANA group, but we may imagine multiple uses for character-level encoding
+for "textual variation" and "parallels" as well.  In text criticism,
+paleographic annotations at character level are often given by various
+typographic conventions.  For example, in Qumran publications there are
+4-5 special sigla attached to characters (usually supralinear attachment)
+for indicating whether the characters are of such-and-such varying
+degrees of legibility, or suspended characters in a word, etc.  In other
+cases, uncertain characters are interpreted in terms of a closed set of
+alternatives:  "b/m" (written in Hebrew script) would mean "the character
+beth or mem -- we know it is one or the other, because and both make
+sense and are paleographically possible , but we don't know which letter
+this is for sure."  Or suppose we wish to study parallel displays in
+which adjacent orthographic strata are involved, and we want to see
+"level n+1" orthographic innovations in a color-coded scheme (e.g, in
+historic periods when quiescent consonants or semi-vowels are being
+introduced as vocalization markers).  Or a literary critic may wish to
+selectively tag consonance or assonance using character-level or
+syllable-level annotation.
+
+    At a higher (sub-word) unit, morpheme-level annotations are also both
+necessary for text criticism and parallel analysis.  Consider the case
+where a German student may be assisted in Greek language instruction by
+viewing parallel texts, say an Greek tragedy and a German translation, or
+an English student learning Hebrew uses synchronized parallel displays
+for Hebrew and English.   In either instance, the student might tab
+through a sentence in either window and see equivalent (parallel) terms
+displayed in reverse video in both windows.  But morpheme-level would be
+required: the Hebrew "and/from/his/hellish abode" is written as one
+"word" (yet four or more "morphemes," as counted by Hebrew linguists) but
+as four words in English, so the color display of the single Hebrew word
+will show four color-coded regions matching the similarly color-coded
+four separate words in English.  And German separable prepositions will
+map at morpheme level to single Greek terms.  For text-critical work,
+variants often involve just differences in person, number, gender, mood,
+state (whatever) which are resolved in inflectional morphemes; since
+these kinds of variations need to be annotated for cataloging, it's clear
+that morpheme-level annotations (morpheme-level tagging) are necessary.
+Syllable-level marking and morpheme-level marking are necessary for
+making text-critical comparisons of cuneiform texts, for example, because
+of mixed orthographies in various scribal traditions, geographic regions,
+etc. (e.g., the neo-Assyrian scribes use far more logographic
+(ideographic) spellings with phonetic complements for certain words than
+Babylonian scribes copying the same texts with syllabic writing; for
+these languages, text critical analysis will require not only
+orthographic normalization, but in some cases syllable- and morpheme
+level tags.  It is easy to recognize, or course, that linguistic analysis
+requires morpheme-level annotations, and probably multiple alternate
+morphemic representations based upon varying linguistic theories.
+
+    I have started with two examples of sub-word granularity for
+parallelism because it is not entirely clear that an SGML encoding should
+be used for this level of tagging/markup/linking.  I have no personal
+opinion or preference on this matter.  On the authority of two SGML
+experts, I am cautioned about two potential concerns: (a) the amount of
+overhead involved in SGML tagging at character- and morpheme-levels is
+extraordinary -- we can easily get more meta-data than data, which might
+be a problem; (b) character-level tagging using SGML has (apparently) not
+yet been adequately tested.  Here follows an example of an encoding of
+one single Hebrew word. I know it's monstrous: it evoked a gasp of
+"oy,veh" from a more qualified member of TEI-REP (I suppose not just
+because it's so ugly, and redundant -- fails to use legal minimizations,
+but also because there is no DATA here yet except marking of morphemes
+with reference id's; I have delimited only one of the 13 characters; I
+could have also added "syllableid," which would be useful in text
+criticism for cuneiform texts.
+
+========= I wrote: ========
+"Suppose I mark up a Hebrew text as follows, where (in my particular DTD,
+"verseid," "wordid" and "morphid" are required, but "charid" is optional
+(used mostly for citing Qumran readings, or in manuscript publications
+themselves).  In this sample, I put a charid tag on the first char by way
+of example because I know there's a textual variant I'll want to talk
+about.  But I use no minimizations yet.  Suppose I do something like in
+setting up markers for the first word... (the "text", if you're looking
+for it, is the first word of II Samuel 22:43 (assuming Michigan-Claremont
+uses IRV chars which arrive bei dir): W:)E$:XFAQ"73M  where "73" is the
+accent number from the standard Michigan-Claremont encoding scheme, and
+the word means "(thus) I beat them flat")
+
+<verse id=S2.22.43><word id=S2.22.43.1><morph id=2S.22.43.1.1>
+<char id=S2.22.43.1.1.1>w</charid>:</morph><morph id=S2.22.43.1.2>
+)E</morph><morph id=S2.22.43.1.3>$:XFQ</morph><morph id=S2.22.43.1.4>
+"73M</morph></word>....  (This example would be inbearably monstrous
+if charid's were assigned to each of the thirteen characters in the
+word.)
+
+================
+
+    One obvious criticism of this approach is that much of the encoding
+can be generated (e.g., charid's) by a program; so why introduce this
+stuff into the text?  Why not just let the application handle it, and use
+some non-SGML system for referencing?  On the hypothesis that such
+encoding is at least legal, and help would satisfy our need for
+character- and morpheme-level annotations, it remains unclear to me
+whether this encoding would actually be useful in solving the problem of
+"parallel" and "textually variant" texts.  If character- and morpheme
+level units tagged with an SGML-based tagging system cannot be addressed
+(referenced) with SGML mechanisms (IDREF, IDREFS) for purposes of
+synchronization, then perhaps they are of lesser value; perhaps a non
+SGML (applications-level) solution should be proposed. The issue of SGML
+based referencing will be discussed more below.
+
+    Besides the fact that this markup is ugly, redundant, and can in part
+be programmatically-generated, there are other criticisms: (a) current
+processors will gag and choke; (b) the file now defies the canon of
+"human-readable" SGML files.  Possible answers to these objections: (a)
+"don't let processors (except batch processors working as filters) look
+at the monstrosity," or "processors are getting faster all the time" and;
+(b) "so what? (give up the myth of 'human-readable' SGML)."
+
+    A non-SGML solution which would be well-suited (?) to humans and
+computers alike would be to use a standard referencing system down to
+verse or line level, then some kind of regular-expression style "pattern
+match" to get the offsets.  Of course, this is the method used by human
+editors and authors in traditional scholarship.  We say, "as reported by
+Josephus in Antiquities XVI.187, '(preceding_context) relevant_text
+(following_context)' (Loeb/Marcus edition) blah blah..."  For use of this
+convention in encoding, however, the rules would need to be much more
+rigorously defined and enforced (how to qualify second-occurrences of
+substrings; how to designate omission of characters/words with ellipsis).
+The advantage of this system is that it's instantly democratized because
+it's based upon unambiguous rules and applicable to paper editions as
+well as electronic editions.  A scholar in a remote part of the world
+publishing a new text, or encoding an extant text could cross-reference
+any other "parallel" text at any level of granularity without knowing how
+others (unbekannt) were encoding those "parallel" texts.  From the
+machine's point of view, the system is unambiguous and efficient because
+it uses character offset in the file.  The downside would be that
+character-offsets (in machine languages) are vulnerable when files are
+changed in minor ways, and methods for updating offsets/indices or
+redundancy checks would place another burden on the application.
+
+C. SGML-BASED REFERENCING SYSTEM
+
+More will be said below about the kinds of annotations which need to be
+attached at character- morpheme- word- arbitrary_string- and other
+(linguistic) levels for encoding textual variation.  Since parallel texts
+are just declared to be "matched" (but not HOW), the situation is easier.
+For the purpose of synchronizing textual regions for parallel display or
+analysis, the primary concern is whether/how the SGML-based encoding can
+be used, in connection with other factors, to help drive these
+applications. Some of the "other factors" will now be discussed.  Most of
+these issues were discussed at length in my earlier TEI-REP paper (TEI
+TRW2, available in 2 parts on the UICVM listserver as TRW2PT1 SCRIPT and
+TRW2PT2 SCRIPT), and need not be rehearsed in detail here.
+
+*referencing discontinuous segments (morphemes, words) belonging to the
+   same object (SGML id)
+
+*referencing individual sub-elements, and sequencing of those sub-
+   elements of such discontinuous segments
+
+*referencing arbitrary strings, word-substrings (e.g., where word
+   boundaries are in dispute, or have been misunderstood); we may think
+   of arbitrary character-offset as one example, though for texts
+   with syllabic, ideographic or mixed writing systems, other levels
+   of arbitrary spans are possible
+
+*multiple, overlapping, alternative hierarchies (without multiple DTD's
+   and burdensome CONCUR overhead)
+
+*synchronizing or normalizing incompatible external referencing
+   schemes which APPEAR TO point to identical content, but do not;
+   normalizing existing canonical referencing schemes (see especially
+   "FACTOR 4" in TEI-TRW2)
+
+*referencing textual elements within parallel streams of an interlinear
+   text, Paritur-Umschrift/ ("score") edition, or similar document, where
+   the text streams *could* be conceived as or generated from independent
+   documents, but in which specific text-geography (presentation) of the
+   printed edition is an essential aspect of the document's personality
+   (see my earlier description of variations,TEI TRW2 "Factor 7,")
+
+     Two general approaches for synchronization are obvious; in our
+CDWord hypertext project, we have used the first method: (1) one may
+place structure markers from text A as empty tags into all other
+documents which need to be set in synchrony with text A (multiple binary
+mappings), and, (2) one may place artificially-devised "canonical"
+reference markers in all texts, with the help of ancillary tables which
+help resolve anomalous situations relative to the canonical standard
+text.  Synchronizations may then be made between the artificial scheme
+and the individual referencing schemes used in traditional scholarship
+(incongruent systems being resolved at this level).  Whether either of
+these method is ideal, and how either would be best implemented with an
+SGML-based language I will defer to others.  Perhaps there are far better
+systems.  I have some skepticism about both methods, based on
+difficulties we have encountered.  Against the first method: (a) the
+amount of overhead in meta-data will become burdensome for texts which
+are heavily cross-referenced, and (with CONCUR?) seems to imply multiple
+or overfull DTD's; (b) it fails to exploit the usefulness of currently
+existing canonical referencing schemes; (c) it may (?? -- not sure) not
+support the need to see different sections of the same document in
+parallel.  However, in favor of the first method (multiple binary
+mappings) is that some synchronizations, especially those at a very low
+level of granularity, appear to be required at binary level.  Imagine,
+for example, trying to map a dozen versions or translations of the Bible
+onto a common "canonical" scheme, based upon unique (SGML) id's for each
+morpheme in each version, with an ultimate goal of supporting color-coded
+"parallels" at morpheme level between any two versions or all versions.
+Binary mappings at this level appear feasible (though labor intensive),
+but multiple synchronizations via a single canonically scheme seems hard.
+Maybe it would work, but I have some doubts (general linguists: please
+speak up).  Multiple binary mappings sounds like a lot of work, but
+currently the CATSS project at the University of Pennsylvania/Hebrew
+University, and the Fils d'Abraham Project (Maredsous) are making binary
+mappings between Bible versions, apparently with satisfactory results.
+At a higher level of granularity (e.g. biblical "verse" level), using an
+idealized general referencing system may be feasible; it works tolerably
+well in our CDWord project for the purpose of visually aligning
+(synchronous scrolling) biblical texts, translations, commentaries and
+other "canonically-structured" documents in parallel displays.
+
+     I do not know whether there may be more optimal SGML or non-SGML
+solutions to the referencing problem which avoid cluttering the text with
+unique id markers.  I feel confident that other members on the TEI-REP
+subcommittee (those with professional training in formal language theory)
+will have valuable judgments about these markup issues; I cannot promote
+other than the general options I see on the surface.  In response to a
+query, Steve DeRose briefly suggested using an open-ended canonical
+scheme with integers or whole numbers; presumably Steve (section 6.11,
+"Cross-References and Text-Links") and Elli Mylonas (section 6.7,
+"Reference Systems") David Durand will offer better presentations of the
+options.
+
+I do feel it would be wise to communicate with the TEI-ANA group about
+their solution(s) to the problem of character- and morpheme-level
+annotations.  The encoding of text-linguistic features with character
+level and morpheme-level annotations is inevitable: how does TEI-ANA
+propose to deal with id-markers?   Another concern parallel to that of
+TEI-ANA is that in some textual-critical arenas (as with
+linguistic/literary annotations), the volume of text-critical annotation
+will become immense: where shall these annotations be located in the SGML
+file?  It may become increasingly distasteful (to some??) to envision
+text-critical encoding (kilobytes per "word" in some cases) inter
+lineated with "the text."  It may be that "the text" should be kept free
+both of id markers and text-critical annotations (placing this
+information elsewhere in the document) so that our processors can
+(directly) read "the text" in real-time.  Others might argue that the
+encoding is not meant to be used by applications directly (but only as
+data/document interchange), so never mind if the "words" of "the text"
+are separated by a 100,000 characters of meta-data and annotation-data in
+the flat file.  I have no opinion, except that I would like to purchase
+affordable SGML software for my 386-class machine and not have it choke
+on my data.
+
+II.  TEXTUAL VARIANTS [revised material to be inserted at TEI TRR2 6.9]
+
+A. PRELIMINARIES
+
+    I suggested above that "textual variants" may be viewed as special
+cases of "textual parallels," though more complicated parallels.  Such a
+view is the more reasonable if we believe that talking about a textual
+problem in a textual commentary (referring to the core data of lemma,
+variants and witnesses) or from any  EXTERNAL locus is just as important
+as viewing textual variation from within a given document (the that
+document's "lemma" as over against readings of other witnesses cited only
+by their sigla).  I think the former is the proper (or optimal) way to
+conceptualize "textual variation" anyway, but incline even more strongly
+to it for pragmatic reasons.  Textual parallels may be thought of as
+immediate candidates for hypertext even if the taxonomy of links (link
+types) is underdeveloped.  We simply declare that loci A and B and C
+(where A, B, C may be points, spans, or discontinuous spans) are
+equivalent in some way, and let the application handle the expression of
+those links.  For encoding textual variation, the taxonomy of links must
+(usually) be much richer: texts A, B, and C are not just formally
+equivalent, but they are related in very specific ways.  The complex
+network of inter-dependencies between parallel objects is one important
+factor in making the encoding of textual variation more demanding.  I
+would be interested in the judgments of others about the relevance of
+hypertext (link types) to textual criticism; the paper of Steve DeRose
+("Expanding the Notion of Links," Hypertext 1989 Conference) is
+suggestive, but I have been unable to talk to him about this in detail.
+
+    Based upon exchanges with other scholars interested in textual
+variation, I sense that each one's formulation of a model for encoding
+textual variation will strongly reflect the particular field of textual
+studies (modern literature? epigraphic texts? ancient texts?), the
+adequacy of printed critical editions in the field, and the particular
+text-critical theories each one embraces.  These biases probably cannot
+be escaped, nor are they necessarily bad.  I would suggest that for TEI
+encoding "standards" (recommendations) to be accepted in humanities
+areas, it will be necessary to create user manuals highly specific to
+sub- specialty areas.  Scholarly needs and goals may be very different in
+specific areas, and the domain-experts in each literary field should be
+assisted in the refinement of prioritized goals in which encoding of
+text-critically-relevant information will play an important role.  In
+some fields, standard editions may contain evidence from manuscripts that
+are badly and incompletely collated, so that encoding through
+programmatic re-collation would be an optimal effort.  In other fields,
+the most fruitful historical results may come from intense study of
+scribal ductus and manuscript paleography which has hitherto been
+inadequately investigated.  Other fields may be blessed with superb
+critical editions in which the encoding of critical apparatuses alone may
+yield a rich, complete text-critical database.  The "manuals" for
+"encoding textual variants" should therefore reflect the variable
+situations and priorities in our respective literary fields.  At the same
+time, I feel it would be wise to develop as general a model as possible
+for the encoding of information germane to the text-critical enterprise.
+We may accept this on the strength of the obvious assumption that for
+standards-purposes, general solutions are better than dedicated solutions
+(e.g., solutions which are matched to current applications, or lack of
+applications).
+
+    We are fortunate to have on the TEI-REP subcommittee and immediate
+orbit several authorities on critical editions and machine-collation:
+
+*Wilhelm Ott (Director of the University of Tbingen in the Abteilung
+    fr literarische und dokumentarische Datenverarbeitung, Zentrums
+    fr Datenverarbeitung; TUSTEP programs for text collation and textual
+    editing)
+*Susan Hockey and Lou Burnard (most recently with Peter Robinson in
+    development of the COLLATE programs for Old Norse; cf.
+    <cit>LLC</> 4/2, 99-105 and 4/3, 174-181)
+*Manfred Thaller (whose representations for text-critical data I have
+    not seen, unfortunately)
+*Michael Sperberg-McQueen (superb control of the standard, combined with
+    background in letters; I have learned far less than I should have in
+    several email exchanges; SGML-izing of EDMACS)
+*Dominik Wujastyk (EDMACS, = modification of John Lavagnino's TEXTED.TEX
+    macros, for formatting critical apparatuses)
+*Robert Kraft and Emanuel Tov (CATSS project at the University of
+    Pennsylvania/Hebrew University, Jerusalem)
+*R.-Ferdinand Poswick (Secretary of AIBI and director of the
+    multi-lingual biblical databank project Fils d'Abraham at the Centre
+    Informatique et Bible, Maredsous)
+*Claus Huitfeldt (Norwegian Wittgenstein Project)
+
+I look forward to the contributions of these individuals on encoding
+text-critical data as TEI moves into its second cycle.
+
+B. THE GOALS OF ENCODING TEXT-CRITICAL DATA
+
+    My assignment in TEI TRR4 (6.9) is specified as providing assistance
+on encoding of the "Critical Apparatus."  Textual apparatuses have been
+used in printed books for several centuries, so the critical apparatus is
+undeniably an issue of concern for TEI-REP.  In my earlier TEI-REP paper
+(TEI TRW2, "Factor 2), I outlined several reasons why I (nevertheless)
+felt that a focus upon the "Critical Apparatus" was not the best approach
+to modeling the encoding of textual variation and textual transmission.
+
+    If the goal of the TEI-REP encoding recommendations is to provide
+mechanisms for the encoding of critical apparatuses <emp>exactly as they
+appear in printed manuscripts and editions</>, then we are faced with a
+broad task of surveying all kinds of critical apparatuses used in world
+literature (something I have been unable to do).  But volumes I have
+access to employ significantly different conventions in critical
+apparatus (some of which, like the "score" or /Paritur-Umschrift/, could
+possibly be handled as textual parallels; see TEI TRW2 "Factor 7," final
+paragraph).  If the goal is to provide mechanisms for encoding text
+critical information in critical apparatuses within a new standard sub
+document type (which represents the "best" traditions of critical
+apparatuses, e.g., in the Oxford critical editions), then the task is
+easier.  If the goal is to provide general mechanisms for recording
+knowledge/information germane to textual composition, textual evolution,
+recension and transmission, then we must determine whether and how
+optimally the encoding of the critical apparatus contributes to that
+process, and how to encode analysis <emp>not</> contained within the
+traditional critical apparatus.  In any case, the goal involves more than
+the simply the "markup" of a single document: it involves the encoding of
+complex relationships between elements of many documents.  The analysis
+involved in the taxonomy of relationships appears to me tangent to the
+forms of literary and linguistic analysis being developed in the TEI-ANA
+group.
+
+    I briefly outline my recommendation here. I believe it is more
+important to focus on encoding KNOWLEDGE about textual readings and
+textual evolution (e.g., information which is traditionally contained in
+separate volumes or sections of textual commentary), with a view to the
+creation of a text-critical database.  Much of this knowledge is not,
+traditionally, information coded in critical apparatuses: the fact that
+it <emp>could be</> is less relevant than the fact that it <emp>is not</>
+for discernible reasons.  My perspective is that data/knowledge about
+textual variants and textual evolution is parallel to the matter of
+(encoded) linguistic annotations, which contribute to lexicons, grammars,
+corpus-linguistics databases and other linguistic tools.  Thus, many of
+the critical editions I own have separate sections or associated
+companion volumes containing textual commentary: additional tables and
+lists of examples of orthographic practices, dialectical features,
+scribal proclivities, tell-tale recensional data, etc.  Such data would
+be far more valuable if included as part of the text-critical database
+(enriched even more because <emp>exhaustive</> lists and tables, based
+upon annotations, could then be generated).  In cases where text
+critical, philological other literary-critical data are mixed in the same
+commentary, it may be adequate or preferable to link (via our "textual
+parallel" mechanism) the text or textual apparatus to the commentary.  On
+balance, I still judge that much of the information in question is most
+useful in a database, and that "critical apparatus" and "textual
+commentary" should not simply be encoded as separate subdocuments.
+
+    In light of several exchanges with Michael Sperberg-McQueen, I am
+prepared to believe that my perspective arises from experience with
+ancient oriental (especially, biblical) texts, and that it may be
+unrepresentative of the scholarly interests and goals in a majority of
+literary fields. For this reason, I relegate to the Appendix some
+additional arguments and illustrative data on this point, but I do not
+ask that everyone read them.  In attempting to represent the interests of
+SBL/AOS/ASOR, I do feel it is necessary to document these concerns (which
+may be more germane to TEI cycle two).
+
+C. ENRICHED ENCODING SCHEME
+
+    Here follows a (preliminary) list of features which I recommend be
+considered as standard (where applicable) for an enriched encoding scheme
+-- encoding which would be destined for a database, from which improved
+critical apparatuses may be printed, including expression-driven user
+specified critical apparatuses.  For this purpose, I accept that we may
+differentiate "lemma" and "alternative readings," though it is unclear
+from a database point of view why a "lemma" deserves a privileged place
+or that its features would be any different than those of alternative
+readings.  The distinction is useful in that traditional critical
+apparatuses often do represent "lemma" and "alternative readings" in
+different ways.  Obviously, many of these features will pertain only to
+textual arenas where multiple languages and long traditions are involved
+(e.g., most sacred texts and other religious literature).  This first
+list is a prosaic description of the most important desiderata, but it is
+followed by a list of features in more formal terms.
+
+(1) exact identification of witness(es) offered as variands
+    -- Variant readings may usefully be grouped together "in support" of
+a certain textual alternative reading, and especially, with implied or
+explicit top-level normalization for readings in various languages.
+However, this grouping should not be at the expense of other important
+underlying information, including the listing of <emp>actual</> witnesses
+or at the expense of obscuring other details. They should not be grouped
+together unless every other relevant attribute (other than witness-id and
+textual_locus) is identical <emp>or</> unless access to the differences
+in detail is provided for (language, identical orthography, complete (not
+restored or partial) readings, etc.).  If groupings of dissimilar
+witnesses are needed for convenience (as in the Goettingen LXX, for
+example), then a mechanism for viewing the underlying individual readings
+should be supported.
+
+(2) declaration of the NAME of the canonical referencing scheme
+    -- The DTD of the (app crit's) containing document will presumably
+include some identification of the traditional referencing scheme used
+(most relevant when similar/identical referencing schemes actually point
+to different content).  In order to provide proper synchronization, the
+names of the referencing schemes of the alternative witnesses (which may
+not be available in electronic format) should be provided; such
+information will also be useful for machines when the texts of the
+alternative readings are machine-readable.
+
+(3) exact identification of textual locus for each cited witness
+    -- Just as the full identification of witnesses and "irrelevant"
+details about their readings are often suppresses, the exact locations
+are often not given.  The notation in a siglum (viz, the <emp>presence</>
+of the siglum) usually implies: "go look THERE, you'll find it at the
+appropriate point").  I consider this unsatisfactory, because machines
+will not be able to retrieve the context of the alternative reading
+merely from a siglum which implies "go look for it."  Referencing
+system(s) for textual_locus to be determined by TEI-REP, and included as
+properties of the alternative readings.
+
+(4) the language in which the alternative readings occur
+
+(5) the script, and/or orthographic level and/or transcriptional system
+    --  Applications will have difficulty comparing alternative readings
+which occur in different languages, scripts, orthographic strata or
+transcriptional schemes.  While the (app crit's) containing document will
+presumably contain these declarations in the DTD, relevant information
+about the alternative readings must be supplied in the encoding of the
+variants.  This requirement also applies equally to scholarly emendations
+offered as part of textual reconstructions, restorations or as is
+primitive readings.
+
+(6) the exact reading of a witness, not just a notation THAT it exists
+    -- When alternative readings all occur in a single language (the same
+language as the lemma) this requirement may be obvious or unnecessary.
+The feature is more important (non-optional) in cases where
+alternate_readings occur in various languages, and the
+language/script/orthography of the alternative_reading is different than
+that of the lemma
+
+(7) encoding of linguistic/literary attributes of characters, morphemes,
+words, phrases, clauses (etc.) in the lemma and in the alternative
+readings
+    -- Readings frequently vary in predictable (but text-critically
+important) ways: grammatical concord, scribal hyper-correction at other
+linguistic levels.  The linguistic annotations on the readings (lemma and
+variands) will bear on their interpretation and frequently be useful in
+classification of the reading for machine-collation & quantitative
+analysis.
+
+(8) encoding of paleographic and similar information
+    -- Such details will sometimes not be known, but encoding should be
+supported for publication of new texts and text fragments, and in cases
+where manuscript collation is used to verify readings.  These notations
+would register information about restored readings, character-level
+annotations about degree of legibility, alternative paleographic
+interpretations, erasures, corrections, marginal supralinear, sublinear
+(interlinear) readings, etc.
+
+(9) encoding of known or assumed inter-dependencies between the
+alternative reading and the lemma, or between various alternative
+readings
+    -- Such annotations are more appropriate when the readings can
+obviously be recognized as derivative from typologically-antecedent
+readings, or when some readings are (translations) in derivative
+languages, and so forth.  More subtle evidence of genetic/stemmatic
+relationships may be shown by collation programs, of course; I envision
+here some standard kinds of dependencies (variously applicable to
+different textual arenas).
+
+(10) a top-level normalized rendering (retroversion, transcription
+conversion, orthographic-stratum conversion) of the "readings"
+    -- Some kind of normalization for lemma and alternative reading is
+usually implied in a standard critical apparatus, but it may be necessary
+or desirable to make this representation explicit to allows machine
+collation of all the readings together, or to allow linguists to make use
+of the text-critical database.  (Perhaps this could always be inferred
+from elements and the associated attribute lists, but I'm not sure.)
+
+(11) translation of the lemma and alternate readings into modern
+language(s)
+    -- This may be viewed as a concession, and even an inappropriate
+concession, to non-specialists.  I feel it can be justified, and should
+be encouraged, to assist non-specialists, including inter-disciplinary
+scholarship, in surveying the specialists' field.  Similarly, it seems
+unnecessary to use Latin as a single "standard" language, when other
+international languages would make the information more accessible to
+persons who have legitimate interest in the data (personal opinion).
+
+(12) evaluation of the typological placement of each alternate reading
+and the lemma) within its own "inner dimension" (language group,
+geographical region, time period, etc.) and within the larger scope of
+textual evolution
+    -- This information would be germane in textual arenas which have
+long traditions, or multiple phases of textual evolution
+
+(13) evaluation/explanation of the alternate readings (and lemma)
+in terms of standard text-critical comments
+    -- Examples (will vary across fields): the reading represents
+expansion, euphemistic rendering, paleographic confusion, dittography,
+haplography, aural error, rendering based upon homographic root
+(polysemy), (hyper-) etymological translation, midrashic paraphrase,
+misplaced marginal/supralinear gloss, modernizing, secondary grammatical
+adjustment, other conflation, etc.   I confess that some standard sigla
+make sense only on the convention that each witness (as a published,
+encoded document) has its own "lemma" as over against the rest of the
+universe's "alternative readings"  (e.g., "textual plus," "textual
+minus," "different word order"), and these would have to be converted or
+interpreted when moving the annotations to a database.
+=========================================================================
+Date:         Sat, 24 Feb 90 10:54:16 CST
+Reply-To:     Text Encoding Initative public discussion list <TEI-L@UICVM>
+Sender:       Text Encoding Initative public discussion list <TEI-L@UICVM>
+From:         "Robin C. Cover" <ZRCC1001@SMUVM1.BITNET>
+Subject:      TC/PARALLELS REVISED PART2
+
+(part 2 of 2)
+D. SGML REPRESENTATION
+
+    I have only begun to work out some details in terms of an SGML-based
+encoding scheme.  I am increasingly pushed in the direction of this
+recommendation: that we provide basic guidelines, and examples (in a
+manual) but assume that the details of the feature list, including the
+designations of elements, attributes and nestings, will need to be filled
+out by domain experts in various fields of literature.  Two other
+conclusions are clear: (a) the "standard" template, somewhat like a
+bibliographic template, will involve many optional features; (b) the
+templates will be sometimes very complicated, with multiple levels of
+inter-dependencies; they will involve discipline-specific or language
+specific mechanisms for expressing the inter-dependencies.
+
+    It's often not clear to me whether to suggest elements or attributes
+for some features, so I welcome comments from other TEI-REP members and
+from the meta-language experts.  The following crude scheme reflects a
+desire to be able to reference a text-critical situation from outside the
+text (from a commentary or the database point of view), and thus
+envisions an external referencing mechanism for both "lemma" and
+"alternative reading."  It would be helpful to use the same general
+structure whether from the standpoint of internal or external
+referencing.  The two objects seem to be the same textual objects except
+that some essential information about the lemma is automatically
+inherited from the document DTD which needs to be supplied for the
+alternative readings.  I do not intend these names to be taken seriously,
+but as provisional handles that are clear.
+
+
+               =============================================
+
+<region_of_text_critical_interest>.....</>
+    an element,  (a) embedded within the text <emp>loc cit</> at some
+        legal level of granularity [character/syllable/morpheme/word
+        level], or (b) in an
+        associated text-critical file sub-document, or (c) in a separate
+        document type; it contains.. one <primary_reading>, zero or more
+        <alternate_readings> and zero or more <emendation_readings>; one
+        or more of <alternate_reading> OR <emendation_reading> is
+        assumed.
+
+    <primary_reading> .....</>  open & end tags for the primary reading
+
+    <primary_reading_document_name>  required element within <primary_
+        reading>; may be omitted if the encoding is part of the
+        containing document's app crit, and/or DTD   (??)
+
+    attributes of the <primary_reading_document_name> would include:
+
+        canonical_referencing_scheme_name: (optional; e.g., "uses the
+            Goettingen Septuagint versification"; not necessary
+            if this info is in the containing document's DTD)
+
+        language: (required; means should be documented for indicating
+            various kinds of bi-lingual documents; refinements to the
+            2-character language codes of ISO 639 should be recommended
+            to account for regional and genre-dialects, etc.)
+
+        text_locus: (required; using the canonical reference plus offset;
+            using some specified referencing system (perhaps different
+            options for different textual arenas & genre types)
+            to designate the precise locus(offset), which may contain
+            two or more discontinuous textual elements
+
+        orthographic_stratum: (optional but recommended for texts which
+            were written in different orthographic strata at different
+            periods/locations; useful for artificial/hypothetical
+            readings discussed in textual commentary or in emendations,
+            where presumed orthographic systems inferred through
+            historical linguistics)
+
+        script: (optional, but required for languages which are written
+            in more than one script)
+
+        other_attributes: (optional; a host of other attributes about the
+            witness, whether a printed edition, manuscript, tablet; these
+            would be standard  bibliographic data in many cases; date of
+            publication; current museum location; date of discovery;
+            provenience; date of the witness; name of archive; physical
+            substance & medium (inscribed stone, papyrus, codex, clay
+            tablet, fired brick, inscribed shard); literary genre &
+            sub-genre (e.g., scripture text on a mezuza))
+
+        <lemma>  required, single element within the <primary_reading>
+
+            <lemma_content> nested element of lemma, the content of
+                text_locus
+            language: language attribute if different than that
+                specified for document
+            orthographic_stratum: necessary if different than that
+                specified or assumed for the document
+            script: script attribute if different than that declared
+                for document (e.g., Hebrew tetragrammaton spelled
+                in archaic characters)
+======================================================================
+I have several uncertainties here:
+    a)    which should be attributes/tags
+    b)    how to signify parentage if the attributes are attached at
+          several different hierarchical sub-levels within the lemma (for
+          example, when "script" attribute changes for one of the three
+          words of the lemma
+======================================================================
+            <modern_language_translation_of_lemma>, one or more
+                optional nested elements of lemma; should
+                provide for alternate translations of the lemma
+                in a single language, or in multiple modern
+                languages
+            ll_encodings: mostly optional tags/attributes; examples:
+                *character-level, morpheme-level, syllable-level,
+                    phrase-level (etc.) id markers
+                *morphological descriptions (morpheme & word-level
+                    parse)
+                *lexical descriptions (lexical lemmas)
+                *syntactic tags
+                *paleographic/orthographic annotations
+                *other linguistic/literary annotations (all the
+                    ll_encodings potentially overlap with
+                    the TEI-ANA annotation database)
+            <top_level_normalization>  optional nested element of
+                    lemma when appropriate to textual arena;
+                    this would be the normal mechanism used
+                    by the application for grouping all
+                    similar alternative readings of witnesses
+                    in different languages
+  <conversion_table> (with some better name! to designate the
+                    parent(s) and/or child(ren) in presumed
+                    translation or dependency stream; e.g., Hebrew
+                    >> translated by Greek/Syriac as xxxx; Greek
+                    << retroversion from Hebrew Vorlage XXXX;
+                    Armenian << mediated through Greek YYYY << from
+                    Hebrew ZZZZ; this could be a table of mappings
+                    relevant to the particular circumstances of
+                    this lemma (word, phrase level)
+            <evaluation> optional nested element of lemma (which
+                contains one or more elements of....
+
+                <standard_tc_comment>  one or more of (e.g., name of
+                    scribal lapsus; unexplained corrupt reading;
+                    preferred reading; conflate reading
+                    (with demarcation & origin of sub-elements in
+                    conflation); the standard_tc_comment will be
+                    discipline specific)
+
+                <justification_of_standard_tc_comment>  nested within
+                    <standard_tc_comment>
+
+                <freeform_comment> any prose, probably allow this
+                    at any level of nesting
+
+                <typological_placement> (optional element of lemma
+                    as applicable to textual arena; genetic
+                    or stemmatic placement if known; justification
+                    for typological_placement as standard comment
+                    and/or freeform; would make use of data in
+                    conversion_table)
+
+    <alternate_reading> ....</> the alternate readings will have the same
+         features, in general, as the <primary_reading>
+
+    <emendation_reading> ...  </>  the emendations will have fewer of the
+        features of the <primary_reading>, but include one or more of a
+        set of principled_reason justifying the emendation; some scholars
+        prefer to put emended readings in separate categories, while
+        others (and more appropriately in some fields) would place
+        emended readings on equal par with <alternative_reading>; this
+        makes sense in textual arenas where retroversions and other
+        language-equivalents amount to guesses anyway.
+
+                ====================================
+
+    I do not have a strong opinion whether this text-critical information
+should normally be held at the close-tag of the text_locus or in some
+other file (sub-document) which is merged with the "text" prior to
+processing, or in some completely separate document (linked to the lemma
+containing document via (non-?) SGML link mechanisms. In any case the
+precise SGML expression of the file would just be a flattened out form
+once we decide which are tags and which are attributes.  If a document
+has sparse, sporadic text-critical annotation, there would be nothing
+wrong with putting the data at the text_locus.  I think I prefer the
+notion of holding text-critical data in a separate file if the amount of
+annotation is massive (more efficient use of processing using buffers?).
+
+E.  OTHER SYSTEMS FOR SGML REPRESENTATION
+
+    I may bring to Oxford some refinements/improvements on the above
+scheme, and welcome alternative proposals from others.  Perhaps a couple
+examples.  Michael has sent me a sample text with variants (with full
+DTD's) based upon SGML-ized EDMACS; I do not include it here, but hope
+Michael (and perhaps Dominik) will bring these samples and proposals. I
+especially solicit comments from Professor Ott.  I hope also to hear from
+Professors Thaller and Huitfeldt in Oxford (who are reported to have
+schemes for encoding textual variation), and I have yet to analyze a
+sample of marked text from Bob Kraft.  I look forward to seeing the
+detailed work of Peter Robinson (Hockey/Burnard) in connection with
+COLLATE and OCP productions using SGML for textual variation.  Overall, I
+feel that the referencing scheme is the hardest part.  The taxonomies for
+inter-dependencies can be worked out by domain experts, and we should be
+able to settle on the core terms/structures in Oxford.  The motivation
+for a highly detailed and rich (but constrained) set of text-critical
+annotations, obviously, is in support of the richness of the database.  I
+look to Lou Burnard for recommendations on database.
+
+===================================================================
+
+APPENDIX
+
+The following sections of Appendix attempt to explain why I feel that a
+focus on the traditional "critical apparatus" is, at least in some
+textual arenas, less appropriate for encoding than a focus upon the total
+available body of text-critical knowledge.  I admit the probability that
+this evaluation and its significance are of less moment in some literary
+fields than in others.  The appendix has three parts:
+
+A-1. A reworked HUMANIST posting stating the case generally
+A-2. A summary of positive and negative appraisals of the traditional
+        critical apparatus
+A-3. A worked example from the standard critical edition of the Hebrew
+        Bible
+
+               =======================================
+
+A-1. GENERAL STATEMENT INDICATING THAT/WHY I THINK ENCODING KNOWLEDGE
+        ABOUT TEXTUAL VARIATION, AND ENCODING PRIMARY DOCUMENTS IS A
+        BETTER FOCUS FOR ENCODING THAN THE "CRITICAL APPARATUS"
+        (REWORKED HUMANIST POSTING)
+
+    I feel a lot of work remains to be done before we are prepared to
+assess how we may best represent knowledge about "textual variation"
+(textual evolution, textual parallels) using SGML markup languages or
+other "portable" formalisms.  In the simplest textual arenas, or in the
+event that someone wishes to represent in electronic format JUST what is
+visible on a printed page of a critical edition, the challenge may not be
+too difficult.  Indeed, several schemes are currently in use by scholarly
+editing and text-processing systems which can be expressed in an SGML
+language.  By "simple" textual arenas, I refer to: (a) cases in which all
+textual witnesses are written in the same language and the same "scripts"
+(= one level within a stratified orthographic system); (b) cases in which
+the witnesses can be seen in close genetic/stemmatic relationship, not as
+products of complex textual evolution through heavy recensional/editorial
+activity; (c) cases in which the number of witnesses and amount of
+necessary textual commentary represents a small body of information; (d)
+cases in which one is not concerned about paleographic information and
+other character-level annotations or codicolgical information.  In such
+cases, the traditional critical apparatus serves literary scholarship
+very well (the apparatus-region offers enough space for unambiguous
+presentation of the information), and the SGML-ish representations are
+fairly straight-forward.
+
+    But I think the assumptions above may not pertain to the work of a
+significant number of humanities scholars.  The goal of encoding "JUST
+what is visible on a printed page" (a traditional apparatus criticus, for
+example) might constitute an important and economical step in the
+creation of a text-critical database, if assumptions (b) and (c) and (d)
+were also germane.  But when the textual data and published knowledge
+about that "textual" data become very rich, the standard critical
+apparatus represents (increasingly) a concession to the limitations of
+the traditional paper medium: both physical space (the amount of
+selectivity and condensation) and the ability of a reader to absorb
+(synthesize, evaluate) large amounts of textual information in complex
+relationships.  In these more complex situations (biblical studies, for
+example), the paper app crit will contain a selection of data, not all
+the data (excluding orthographic variants, for instance, which may be
+important for historical linguistics); it will indicate THAT a certain
+manuscript or manuscript tradition bears testimony to a certain reading,
+but will not indicate the steps of principled evaluation which were used
+to make this judgment (language retroversions, for example); it will tell
+you THAT a certain manuscript tradition (e.g.,
+"Syriac/Ethiopic/Arabic/Aramaic/Coptic" in support of a certain variant
+of the Hebrew Bible) supports a given reading, but not which manuscripts
+exactly, or where, precisely (machine-readable terms) these
+Syriac/Ethiopic/Arabic/Aramaic/Coptic readings may be found, or what
+expressions are actually used there.  Similarly, some editors (at some
+periods) were narrowly focused on particular aspects of textual history,
+textual variation and textual evolution, and systematically ignored the
+"irrelevant" and "trivial" variations which contributed nothing to their
+own interests.  Searches for texts of highest antiquity or authenticity,
+for example, have often been given prominent and full representation in
+critical apparatuses: this priority serves well the interests of certain
+kinds of historical inquiry (search for the Urtext), but ignores data
+which are valuable for understanding later traditions which inadvertently
+or consciously "corrupted" the texts, perhaps for liturgical purposes.
+
+    It is my opinion, then, that to model the "electronic critical
+editions" of the 21st century after paper editions would, in some cases,
+represent a short-sighted goal.  We no longer have to exclude "minor"
+(sic!) orthographic variants (essential for some forms of historical or
+comparative linguistics) from the databank just because they would render
+a traditional app crit "unreadable" from the perspective of scholars
+disinterested in orthography.  Rather than just "encoding" or "marking
+up" modern critical editions (a necessary or desirable step, perhaps), we
+need to think rather about representation of the knowledge about textual
+variation, held in critical editions, to be sure, but also in textual
+commentaries and in fully-encoded manuscripts (tablets, shards, lapidary
+inscriptions, papyri or other primary documents) which themselves
+constitute the primary data.  In short: we need the encoding of ALL the
+human knowledge about physical texts, textual "variants" AND the
+scholarly judgments about processes of textual evolution.  "Hypertext"
+and "SGML-based" encoding can then be put to work in applications
+software which allows us to study the text with multiple views, even
+hypothetical documents created with the aid of an SQL/FQL and the text
+critical database.  We may then dispense with the static (sometimes
+overly selective, sometimes overfull, sometimes inaccurate) app crits and
+instead enjoy dynamic user-specified app crits containing particular
+classes of text-critical information we wish to see at a given moment; we
+may have several different app-crits on the screen, simultaneously.  We
+will be able to do simulations and test hypotheses by dynamically
+querying hypothetical texts reconstructed from an FQL expression.
+
+    It is also my judgment that we are quite a distance away from knowing
+how to encode knowledge about textual relationships in which inter
+dependencies are complex ("variants," recensions, parallels, allusions,
+quotations, evolutionary factors, hermeneutical- translational factors).
+But I think SGML embodies one indispensable ingredient in getting there:
+encouraging us to assign unique names to objects in our textual universe,
+and to other properties of text and textual relationships.  Our
+conceptions about these textual (literary, linguistic) objects will
+inevitably prove to be crude approximations, but by coding our current
+understanding about them in syntactically- rigorous ways (using SGML
+based languages), we at least contribute to a legacy of preserving the
+text and our understanding of it.  This conception of encoding that is
+self-documenting represents an advance upon the less thoughtful processes
+of antiquity (and in some modern conceptions of text), which were usually
+self-destructing.
+
+              =======================================
+
+A-2. A SUMMARY OF POSITIVE AND NEGATIVE APPRAISALS OF THE TRADITIONAL
+        CRITICAL APPARATUS
+
+If the reader fails to feel any relevance of the tension I have
+articulated above, it may be because the traditional "critical apparatus"
+serves varying fields more or less well.  I will promote here the
+argument (should be, "hypothesis") that generally speaking, the adequacy
+of a critical apparatus (*adequacy conceived in MODERN terms*) will be
+inversely proportional to the mass and complexity of relevant textual
+data.    Here is an amazing situation: I have before me open copies of
+six critical editions (gathered off my shelves at random)...
+
+  - Hesiod's Theogony (Oxford/Clarendon, 1966/1982)
+  - Hesiod's Works and Days (Oxford/Clarendon, 1970/1983)
+  - Greek New Testament (Nestle-Aland, 26th edition)
+  - Hebrew Bible (BHS, 1967)
+  - Ms Neophyti I, Aramaic Targum to Genesis (Madrid, 1968)
+  - Annals of Assurbanipal, King of Assyria (Leipzig, 1916)...
+
+... and each of the six critical editions contains about the same
+proportion of "critical apparatus" to "text" per page, though the Greek
+NT and Targum have slightly higher proportion of apparatus.  Does this
+mean fortune has preserved for us an equivalent wealth of textual
+evidence for inclusion in these critical apparatuses?  Hardly.  It means
+that the scholarly convention called the "critical" edition typically
+contains pages in which "text" makes up 1/2 - 3/4 of the page, usually at
+the top, and the remainder of the page is free for "critical apparatus."
+If the two Bibles included a level of textual detail (data/perspicuity)
+and percentage of associated relevant facts equivalent to that contained
+in the Hesiod and Assurbanipal volumes, no human would be able to lift
+the book.  We may also reflect on the fact that most of these volumes, as
+with most critical editions of literary texts, contain separate sections
+or companion volumes of textual commentary: why separate sections or
+companion volumes?
+
+    Why separate sections in a critical edition volume, or companion
+volume, for textual commentary -- when the same subject matter is
+covered?  Because the traditional critical apparatus is, at the same
+moment, both a useful and feeble (paper) convention.  I qualify "paper"
+because in the age of hypertext we are no longer bound by some of the
+debilitating features of linear text on paper, and the textual commentary
+supplies one nice example.  Positively: The critical apparatus is a
+powerful and useful scholarly convention, and (I suspect) will continue
+to be so for the future, even when reproduced on the computer display in
+character-for-character mimicry of the paper apparatus.  We feel sure
+that encoding of text-critical information will enable scholars to
+electronically produce far more complete, accurate and informative
+critical apparatuses than in the past, whether for paper distribution or
+for use in programs.  For textual traditions containing fewer than a
+dozen witnesses, the app crit may contain exhaustive inventory of textual
+variants (fully spelled out), including "mere" orthographic variants.
+For textual traditions with a wealth of evolutionary history, the app
+crit supplies an essential, digestible overview or summary of the "most
+important" text-critical issues.
+
+    Negatively: and negatively in direct proportion to the wealth of
+textual tradition, the app crit is a feeble instrument in that it only
+provides a "summary" or "overview" of the textual issues that are most
+important in the editor's personal judgment.  The fact that the textual
+commentary is isolated in a separate section, or in a companion volume,
+is a concession to this problem of linear (paper) text.  Hypertext offers
+the power to zoom up-and-down through our choice of detail, at any layer;
+the textual commentary need not be tucked away somewhere else, and the
+data of the apparatus need not be an "overview" unless we choose that
+format.  The syntax of the apparatus need not be cryptic and ambiguous
+(as is often the case in my field -- though this should not be
+tolerated).  To the delight of many younger inter-disciplinary scholars,
+the language of the apparatus need not be Latin (ahem...where the
+scholarly world of humanities seems intent on outdoing the evil of the
+medieval Church in keeping certain information...); the app crit may be
+in EVERY language, if desirable.
+
+    Consider, for example, that the app crit of the Hebrew Bible
+(mentioned in the group above) frequently cites among its witnesses the
+"Greek."  But in traditional terms (conventional amount of space allotted
+to the app crit), this "citation" can never be more than a pointer to the
+eclectic critical edition of the Greek text, which lives in some 18
+separate volumes (still incomplete in the standard Goettingen LXX), which
+in turn is built up through the investigation of its Greek witnesses and
+daughter versions (Armenian, Arabic, Ethiopic, Coptic, Syriac, etc.) each
+of which have their own critical editions.  Hypertext will allow us to
+traverse this path, if the exact paths are charted (rather than citing
+sigla of "traditions alluded to"), but gaining access to this data will
+not fit (sensibly) within the traditional conception of a critical
+apparatus.  A traditional critical apparatus must be "manageable," and
+not take up more than a certain acceptable percentage of the page, and
+one must be able to peruse it for a synthetic view.  Or consider again,
+when a textual note in the Hebrew Bible says "&gothicQ + mult vrb" it
+means, "go look for a Qumran manuscript containing a reading relevant to
+this textual locus, and you'll see it adds lots of additional words."
+The editor's failure to cite the words may indicate that he thinks they
+are secondary, or it may indicate that the three additional sentences of
+Hebrew will not fit on the page.  We may fault the editor for not being
+more specific, (or the editorial board for wanting to print the Henrew
+Bible in one volume) but within the constraints of the apparatus space,
+there may indeed not be room for giving the Qumran reading.  There is not
+space for giving dozens of other interesting variants.
+
+    In short, the negative features of the app crit (even if these are
+not theoretically-necessary negatives) disappear with cheap/compact
+electronic storage and non-sequential access to the textual databank.
+The principle of selectivity in a critical apparatus (or for any encoded,
+annotated text) is essential, but the question is: WHOSE power to select?
+In a fully marked text (all manuscripts, text-critical annotations,
+linguistic annotations, bibliographic annotations, literary-critical
+annotations), 99% of what's "in" the text will be garbage at any one
+moment.  The power of selectivity needs to be handed to the user.
+Scholars who are forced to work with inadequate critical editions should
+not be encouraged to "encode" those critical editions; they should be
+given guidelines and tools which make possible the encoding of
+information, ultimately designed for a (relational?) database, from which
+they can create their own critical apparatuses and make queries of the
+sort that critical-apparatuses were never intended to answer.
+
+                     ==================================
+
+A-3. A WORKED EXAMPLE FROM THE STANDARD CRITICAL EDITION OF THE HEBREW
+        BIBLE
+
+Here follows an example of the deficiency of critical apparatus in cases
+where the principle of selectivity and pressure for brevity work
+decidedly against the usefulness of the apparatus.  Two rebuttals could
+be offered (by anyone patient enough to read this example): "it's an
+isolated, unrepresentative and extreme example," and "the editor should
+be shot."  Neither are fair: I can find far worse examples (which I
+sometimes use in instructing students that ad fontes does not mean the
+critical apparatus!); and the editors were working under hopelessly
+unrealistic constraints: "(something like) the critical apparatus shall
+consume no more that 2 vertical inches at the bottom of the page..."
+
+The standard edition of the Hebrew Bible (BHS) offers four textual notes
+on Deuteronomy 32:8, where the text reads (according to the translated
+Hebrew BHS text):
+
+    When the Most High (Elyon) gave the nations their patrimony
+        When he made a division for the sons of men
+    He established the territories/boundaries of the people
+        According to the number of the sons of Israel.
+
+The fourth textual note on this verse in the BHS apparatus concerns the
+expression "sons of Isreal."  It's tough using IRV characters to indicate
+what's happening here, but I will try in successive stages: (1) to
+represent the textual note (2) to explain what's meant by the textual
+note (3) to explain what's missing and wrong and inadequate from the
+perspective of a machine-readable version.
+
+(1) REPRESENTING THE PHYSICAL TEXT (MIXED NOTATION FOR ECONOMY).
+
+&par; <superscript>d &mdash; d</superscript> &gothicQ;&gothicG;
+(<greekfont>&smoothbreathing;&alpha;&gamma;&gamma;&epsi;&acute;
+&lambda;&omega;&nu &theta;&epsi;&ogr;&tilde</greekfont>)
+<greekfont>&sigma;</greekfont>&acute;&gothicL;<superscript>Syh
+</superscript> prb recte <hebrewfont1 direction=righttoleft>bny
+</hebrewfont1><hebrewfont2 direction=righttoleft>&aleph;"l
+</hebrewfont2> vel <hebrewfont1 direction=righttoleft>bny</hebrewfont1>
+<hebrewfont2 direction=righttoleft>&aleph;"</hebrewfont1><hebrewfont2
+direction=righttoleft>lym</hebrewfont2> &par
+
+Comment: I don't mean this as an optimal or even legal SGML represe
+tation, but simply an intelligible representation of surface/typographic
+features; it's stupid to use "direction" as an attribute, but I did not
+want to write rules; different representations of Hebrew in the app crit
+will use different directions of writing.  In this textual note, the
+orthographic stratum changes twice within Hebrew clauses, once within a
+single Hebrew word.
+
+(2) EXPLICATION OF THE PHYSICAL TEXT REPRESENTATION.
+
+&par  := indicates/delimits textual notes
+<superscript>d &mdash; d</superscript> := the superscript d-d
+    notation means that the textual note pertains to the text
+    string in the main Hebrew text which is likewise delimited by
+    superscript d-d in Roman characters
+&gothicQ := Qumran
+&gothicG := Old Greek
+(...)    := Greek text meaning "angels of god"
+<greekfont>&sigma;</greekfont>&acute; := Symmachus (late Greek
+    revision)
+&gothicL;  := Old Latin
+<superscript>Syh</superscript>  := Syrohexaplaric reading
+prb recte  := editor's evaluative comment in latin
+<hebrewfont1 direction=righttoleft>bny
+    </hebrewfont1><hebrewfont2 direction=righttoleft>&aleph;"l
+    </hebrewfont2>  := first Hebrew reading which "might be" the
+    correct retroverted/restored reading, and means "sons of
+    El/god"; the use of "hebrewfont1" and "hebrewfont2" are to
+    signify two different levels of orthography, one without
+    vowels and one with vowels; the lemma needs to be represented
+    (tagged) as belonging to a third stratum of the orthography,
+    having accentuation, designation of spirant allophones, etc.
+    thus: <hebrewfont3 direction=righttoleft>b.:n"y71
+    yi&sin;rF'"75l</>   (means: "sons of Israel")
+vel  := editor's comment in latin
+<hebrewfont1 direction=righttoleft>bny</hebrewfont1> <hebrewfont2
+    direction=righttoleft>&aleph;"</hebrewfont1><hebrewfont2
+    direction=righttoleft>lym</hebrewfont2>  := the second
+    possible Hebrew reading, according to the editor which might
+    stand behind the readings of "Qumran," "Old Greek,"
+    "Symmachus," "Old Latin" and "Syrohexapla"
+
+(3) WHAT'S INADEQUATE/WRONG ABOUT THE READING FROM A MACHINE'S POINT
+        OF VIEW?
+
+    (a) The convention of mapping the textual note to the text string
+with "superscript d-d" works just fine for humans, but is not a legal
+SGML representation.  If we wish to place such textual data in the flat
+file loc cit, a number of possibilities are open: flag the lemma at both
+ends with <textual_variant>....</> or whatever.  I question whether we
+want to do this, since in some cases there will be literally pages of
+"textual_variant" data for each of several words in a sentence.  An
+alternative is to find a qualified referencing system (perhaps using id's
+and refid's), and to hold text-critical data in a separate file.  Note
+that when giving the Hebrew lemma, a third orthographic stratum
+(different from the two in the app crit) must be used as a language
+(script?) qualifier: the main text contains cantillation marks as well as
+consonants, matres and vowels.  The application software will have to be
+smart enough to convert readings from one orthographic stratum to another
+in order to make comparisons.
+
+(b) The siglum &gothicQ for "Qumran" is meant for a humans.  It means
+that somewhere, sometime a manuscript was found in one of the Qumran
+(Dead Sea) caves which bears some relationship (yet to be made clear) to
+this text.  But which cave?  Which manuscript?  Where was it published?
+Plate number?  Line number?  There are hundreds of published and
+unpublished Qumran manuscripts.  What language (Hebrew, Aramaic, Greek,
+-- all three languages are among the Qumran witnesses)?  Is this reading
+in a biblical manuscript, or in a liturgical text, or quoted in a non
+canonical apocalyptic work?  If I look up the siglum &gothicQ in the
+introduction to the text, I am simply informed that "&gothicQ" refers to
+discoveries made at Chirbet Qumran and published in the series DJD
+(Discoveries of the Judean Desert), 1960ff.  Now, if I didn't know any
+better, I might hunt through all DJD volumes to find this Qumran reading
+bearing on Deut 32:8, but would not find it.  The text is actually
+published (yet not in full editio princeps) in two journal articles, as I
+determine from other bibliographic research.  When I read the articles
+and look at the only published photograph, I discover that the Qumran
+reading (bny 'lhym) is actually *neither* of the two alternatives offered
+by the editor, who proposed either "bny 'l" or "bny 'lym".  The correct
+reading was published in 1959, though the editor of BHS did his work in
+1972.  Thus, the siglum &gothicQ is entirely misleading, a mere cipher
+alerting me to the existence of Qumran evidence for this text, which I
+have to find for myself and read for myself.  The interpretation actually
+given in the app crit is wrong.
+
+(c) The siglum &gothicG means that the "Old Greek" (as determined through
+careful sifting of hundreds of Greek manuscripts and daughter versions
+dependent upon the Old Greek) has a bearing on the text at this lemma.
+But since the Old Greek had no Hebrew reading at all, the citing of this
+siglum should be accompanied by an indication of what the Old Greek
+reading was, and whether its retroversion to Hebrew is assured, and with
+what level of confidence, and on what grounds, and with what precise
+Hebrew result.  It may be that the Greek reading which follows in
+parenthesis constitutes part of that evidence: but there is no grammar
+telling what "parentheses" means in this syntactic relationship; a human
+would not know for sure what the parenthesized reading
+(<greekfont>&smoothbreathing;&alpha;&gamma;&gamma;&epsi;&acute;
+&lambda;&omega;&nu &theta;&epsi;&ogr;&tilde</greekfont>) "angels of god"
+means for this textual variant.  It's presence between the Old Greek
+siglum and that of Symmachus (another Greek witness) suggests that it
+might pertain to the Old Greek tradition.  So we now turn to the standard
+critical edition of the (Old) Greek Deuteronomy (the Goettingen
+Septuagint volume, 1977) to explicate the ambiguity.  We find that the
+eclectic text of the Goettingen LXX reads "sons of god" not "angels of
+God."  Studying carefully the apparatus of the Goettingen LXX presents a
+confusing picture, so we turn to the companion volume of textual
+commentary which supports the Goettingen Septuagint (Text History of the
+Greek Deuteronomy. MSU XIII. 1978).  There we find that the reading of
+the eclectic text in the critical edition is not attested in the extant
+Greek manuscripts themselves, but is inferred from the (derivative-of
+Old-Greek) Armenian text and from a partial reading in one very
+prestigious text in Greek (manuscript 848, dating to the middle of the
+first century B.C.E.).  So it turns out, on further inspection, that the
+reading apparently attached to "Old Greek" in BHS is wrong, or at best,
+entirely misleading.  Again: the siglum served as a cipher alerting us
+that the Old Greek tradition has relevant testimony bearing on this
+Hebrew text, and we will have to find it and study it.
+
+(d) The next siglum <greekfont>&sigma;</greekfont>&acute; says that the
+late Greek reviser Symmachus has a reading which reflects one of the two
+Hebrew alternatives suggested by the editor.  But what is Symmachus'
+reading in Greek?  On what grounds can it be claimed to support one of
+the two Hebrew readings which follow as the editor's proposals?  We are
+not told: we must find a copy of Symmachus and make our own evaluation.
+
+(e) The next siglum (&gothicL) tells us that Old Latin supports a Vorlage
+like one of the two proposed Hebrew readings (or perhaps just a reading
+in support of the (now exposed) "Old Greek," but we cannot tell for sure.
+In either case, can we trust this judgment?  What does Old Latin read (in
+Latin)?  Is the Old Latin reading secure at this locus, and on what basis
+is it claimed as support?  We must find the Old Latin ourselves and make
+the evaluation.
+
+(f) The superscript "Syh" following &gothicL is curious for being
+superscripted (presumably a typographic error, but demands
+investigation).  In any case, we are not told what "the" Syriac reading
+is, in what manuscripts/authors it is found, and on what basis it can be
+claimed to support the Old Greek (as indirect evidence) or one the Hebrew
+readings proposed by the editor?
+
+(g) The two Hebrew readings proposed by the editor cannot be used
+directly by software: (a) as direct substitutes for the lemma (b) as
+alternatives to be compared to the lemma.  The lemma carries full
+orthography for vocalization (vowels) and cantillation (tone, pitch), and
+thus embeds 4 or 5 distinct strata of Hebrew orthography in one
+particular script; the proposed Hebrew variants in this case use the same
+script, but contain mixed orthographies, with only partial vocalization
+and no cantillation. One could propose that software absorb the burden of
+identifying transcriptional systems, orthographic strata and then
+generating normalizations, but I doubt this would be wise: if editors use
+mixed orthography with words, the encoding should identify this. Thus,
+the encoding would require that the scholar supply linguistic information
+which is only inferred (though easily by humans) in the critical
+apparatus.
+
+(h) Finally, the app crit supplies no information about witnesses that
+support the lemma.  All Masoretic texts?  A majority?  How about the
+Samaritan Pentateuch?  And where is the editor's explanation for the
+lemma's reading "sons of Israel" in place of the alternative "sons of
+(the) god(s)"?  What is the justification for the editor's judgment
+"<emp>prb recte</>"?
+
+CONCLUSION
+
+The app crit for the 4th textual reading in BHS Deuteronomy 32:8 is a
+more like a footnote or pointer to external textual evidence than a
+record of precise textual evidence.  The scholar must locate and evaluate
+several other sources to determine what the alternate readings are, what
+their inter-relationships are, and credentials these readings have in
+support of the editor's two alternatives.  From the perspective of a
+traditional critical apparatus, the major elements are indeed present:
+lemma, variand(s), witnesses.  But essential information is missing:
+annotations to these witnesses and readings expressed in terms of objects
+which can be pronounced, written-out, classified and counted.  An
+encoding of this information in a form useful for analysis would need to
+contain much more information.</xml>

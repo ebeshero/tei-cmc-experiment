@@ -1,0 +1,41 @@
+Ciarán’s observation does not square with our experience in the EarlyPrint project.  Consider ‘handsome, clever, and rich’ from the opening sentence of Emma. There may be occasions where you want to identify phrases like that in some other corpus.
+
+Well, go to http://blacklab.earlyprint.org/corpussearch/ and enter the search term
+
+[pos="j"][pos="j"]["and"][pos="j"]
+
+Within seconds it will retrieve 8,291 matches from texts between 1640 and 1660, my personal favourite being “the Scottish growes dulle, Frostie, and wayward.”
+
+I am told by Phil Burns, who knows a lot about these things, that the Blacklab search engine is relatively easy to install. It also supports incremental indexing, which is a big help.  The current user interface is very Spartan, and a user has to know the tag set on which the searches are based. Blacklab is element aware in simple ways that will support many of the uses that come up in literary scholarship. For instance, you can look for adjectives before ‘liberty’ in poetry. And so on.
+
+
+
+From: "TEI (Text Encoding Initiative) public discussion list" <TEI-L@LISTSERV.BROWN.EDU> on behalf of Serge Heiden <slh@ENS-LYON.FR>
+Organization: ENS de Lyon
+Reply-To: Serge Heiden <slh@ENS-LYON.FR>
+Date: Tuesday, April 3, 2018 at 8:30 AM
+To: "TEI (Text Encoding Initiative) public discussion list" <TEI-L@LISTSERV.BROWN.EDU>
+Subject: Re: <c> tag
+
+Hi Ciarán,
+
+Le 29/03/2018 à 00:50, Ciarán Ó Duibhín a écrit :
+
+...
+Overall my conclusion is that there is little point in converting to TEI a corpus of texts intended for indexing/retrieval, as it does not mean they can be easily used with more applications and on more platforms.  If Xaira had continued to be developed, this might have been different.
+...
+
+Thank you for the report on the applications.
+
+What would help a lot would be to list explicitly some services or features of Xaira useful or necessary for you that are not found in the software discussed. Somehow the relevant features of XML editors for teaching have been discussed and synthesized here: https://wiki.tei-c.org/index.php/Editor_for_teaching_TEI_-_features<https://urldefense.proofpoint.com/v2/url?u=https-3A__wiki.tei-2Dc.org_index.php_Editor-5Ffor-5Fteaching-5FTEI-5F-2D-5Ffeatures&d=DwMFaQ&c=yHlS04HhBraes5BQ9ueu5zKhE7rtNXt_d012z2PA6ws&r=rG8zxOdssqSzDRz4x1GLlmLOW60xyVXydxwnJZpkxbk&m=oxlY0TR5-4UZuZcAuoAsZxunsp3RW4IyD8jk0aviXTc&s=EFBauIgBfNnCjSfH4zi76ql-KsSEGWUsNaBNnzjatzE&e=>
+
+Best,
+Serge
+
+--
+
+Dr. Serge Heiden, slh AT ens-lyon.fr, http://textometrie.ens-lyon.fr<https://urldefense.proofpoint.com/v2/url?u=http-3A__textometrie.ens-2Dlyon.fr&d=DwMFaQ&c=yHlS04HhBraes5BQ9ueu5zKhE7rtNXt_d012z2PA6ws&r=rG8zxOdssqSzDRz4x1GLlmLOW60xyVXydxwnJZpkxbk&m=oxlY0TR5-4UZuZcAuoAsZxunsp3RW4IyD8jk0aviXTc&s=OEdBAk-kNFdBeFAZQF7BNLTohsLuCrDSOOPmsJE7YSU&e=>
+
+Équipe de recherche Cactus, laboratoire IHRIM UMR5317, ENS de Lyon
+
+15, parvis René Descartes 69342 Lyon BP7000 Cedex, tél. +33(0)622003883

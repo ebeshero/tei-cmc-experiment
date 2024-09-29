@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Text Encoding Initiative public discussion list</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>TEI-L LOG9001, LOG9002, LOG9003, LOG9004</edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>The Pennsylvania State University</publisher>
+            <distributor>LISTS.PSU.EDU LISTSERV Server (17.0)</distributor>
+            <date>2024</date>
+         </publicationStmt>
+      
+         <sourceDesc>
+              <bibl>
+                 <title>TEI-L Listserv</title>
+                 <publisher>University of Illinois Chicago</publisher>
+                 <distributor>TEI-L@UICVM</distributor>
+                 <date>1990</date>
+              </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc> 
+         <samplingDecl>
+            <p>Sampled by requesting monthly logs from LISTS.PSU.EDU by e-mail with GET commands: <code>GET TEI-L LOG 9001</code> (for January 1990). 
+               One log command was issued for each month.</p>
+         </samplingDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <post>stuff</post>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,824 @@
+=========================================================================
+Date:         Mon, 2 Apr 2018 10:11:22 -0400
+Reply-To:     Raffaele Viglianti <raffaeleviglianti@GMAIL.COM>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Raffaele Viglianti <raffaeleviglianti@GMAIL.COM>
+Subject:      CPF: Intentionally Digital, Intentionally Black conference at UMD
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="001a1141ce9e5f72d70568de2bfa"
+Message-ID:  <CAMyHAnPr8ePBOd8qmMooQBAe47dyEQyp7Sw3X4=auj+9m=fc3g@mail.gmail.com>
+
+--001a1141ce9e5f72d70568de2bfa
+Content-Type: text/plain; charset="UTF-8"
+
+Good Morning,
+
+The African American Digital Humanities (AADHum) initiative at the
+University of Maryland is excited to announce that we are now accepting
+proposals for our first national conference: Intentionally Digital,
+Intentionally Black.
+
+The conference will take place October 18-20, 2018 at the University of
+Maryland, College Park and feature keynote speakers Andre Brock (Univ. of
+Michigan) and Jessica Marie Johnson (Johns Hopkins Univ.).
+
+Interested participants are invited to submit proposals for individual
+papers, panels, digital posters, tools/digital project demonstrations, and
+roundtables by April 9, 2018. Proposals should be submitted online at:
+https://www.conftool.pro/aadhum2018/.
+
+For more information, please check out our website: http://aadhum.umd.edu/
+conference/. Questions can be directed to: aadhum@umd.edu.
+
+We look forward to reviewing your proposals and seeing you in College Park
+this Fall!
+
+Best,
+The AADHum Team
+
+--001a1141ce9e5f72d70568de2bfa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Good Morning, <br><br>The African American Digital Hu=
+manities (AADHum)=20
+initiative at the University of Maryland is excited to announce that we=20
+are now accepting proposals for our first national conference:=20
+Intentionally Digital, Intentionally Black. <br><br>The conference will tak=
+e place <span class=3D"gmail-aBn" tabindex=3D"0"><span class=3D"gmail-aQJ">=
+October 18-20, 2018</span></span>
+ at the University of Maryland, College Park and feature keynote=20
+speakers Andre Brock (Univ. of Michigan) and Jessica Marie Johnson=20
+(Johns Hopkins Univ.).<br><br>Interested participants are invited to=20
+submit proposals for individual papers, panels, digital posters,=20
+tools/digital project demonstrations, and roundtables by <span class=3D"gma=
+il-aBn" tabindex=3D"0"><span class=3D"gmail-aQJ">April 9, 2018</span></span=
+>. Proposals should be submitted online at: <a href=3D"https://www.conftool=
+.pro/aadhum2018/" target=3D"_blank">https://www.conftool.pro/<wbr>aadhum201=
+8/</a>. <br><br>For more information, please check out our website: <a href=
+=3D"http://aadhum.umd.edu/conference/" target=3D"_blank">http://aadhum.umd.=
+edu/<wbr>conference/</a>. Questions can be directed to: <a href=3D"mailto:a=
+adhum@umd.edu" target=3D"_blank">aadhum@umd.edu</a>. <br><br>We look forwar=
+d to reviewing your proposals and seeing you in College Park this Fall! <br=
+><br>Best, <br>The AADHum Team <div class=3D"gmail-yj6qo"></div><div class=
+=3D"gmail-adL"><br></div><br></div></div>
+
+--001a1141ce9e5f72d70568de2bfa--
+=========================================================================
+Date:         Tue, 3 Apr 2018 15:30:20 +0200
+Reply-To:     Serge Heiden <slh@ENS-LYON.FR>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Serge Heiden <slh@ENS-LYON.FR>
+Organization: ENS de Lyon
+Subject:      Re: <c> tag
+In-Reply-To:  <F6956EBA08EE483FA287BB611EF92461@InneallChiarin>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+              boundary="------------07D93307A4162A2985255799"
+Message-ID:  <00a0e02f-253e-de99-df94-2d77d4a8f226@ens-lyon.fr>
+
+This is a multi-part message in MIME format.
+--------------07D93307A4162A2985255799
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ciar=C3=A1n,
+
+Le 29/03/2018 =C3=A0 00:50, Ciar=C3=A1n =C3=93 Duibh=C3=ADn a =C3=A9crit=C2=
+=A0:
+> ...
+> Overall my conclusion is that=C2=A0there is little point in converting =
+to=20
+> TEI a corpus of texts intended for indexing/retrieval, as it does not=20
+> mean they can be easily used=C2=A0with more applications and on more=20
+> platforms.=C2=A0 If Xaira had continued to be developed, this might hav=
+e=20
+> been different.
+> ...
+
+Thank you for the report on the applications.
+
+What would help a lot would be to list explicitly some services or=20
+features of Xaira useful or necessary for you that are not found in the=20
+software discussed. Somehow the relevant features of XML editors for=20
+teaching have been discussed and synthesized here:=20
+https://wiki.tei-c.org/index.php/Editor_for_teaching_TEI_-_features
+
+Best,
+Serge
+
+--=20
+
+Dr. Serge Heiden, slh AT ens-lyon.fr, http://textometrie.ens-lyon.fr
+=C3=89quipe de recherche Cactus, laboratoire IHRIM UMR5317, ENS de Lyon
+15, parvis Ren=C3=A9 Descartes 69342 Lyon BP7000 Cedex, t=C3=A9l. +33(0)6=
+22003883
+
+
+--------------07D93307A4162A2985255799
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    Hi Ciar=C3=A1n,<br>
+    <br>
+    Le 29/03/2018 =C3=A0 00:50, Ciar=C3=A1n =C3=93 Duibh=C3=ADn a =C3=A9c=
+rit=C2=A0:<br>
+    <blockquote type=3D"cite"
+      cite=3D"mid:F6956EBA08EE483FA287BB611EF92461@InneallChiarin">
+      <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-=
+Type">
+      <meta name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16872">
+      <style></style>
+      <div><font face=3D"Arial" size=3D"2">...<br>
+          Overall my conclusion is that=C2=A0there is little point in
+          converting to TEI a corpus of texts intended for
+          indexing/retrieval, as it does not mean they can be easily
+          used=C2=A0with more applications and on more platforms.=C2=A0 I=
+f Xaira
+          had continued to be developed, this might have been different.<=
+br>
+          ...<br>
+        </font></div>
+    </blockquote>
+    <br>
+    <span id=3D"result_box" class=3D"" lang=3D"en"><span class=3D"">Thank=
+ you
+        for the report on the applications.</span><br>
+      <br>
+      <span class=3D"">What would help a lot would be to list explicitly
+        some services or features of Xaira useful or necessary for you
+        that are not found in the software discussed. </span><span>Someho=
+w
+        the relevant features of XML editors for teaching have been
+        discussed and synthesized here: </span></span><a class=3D"moz-txt=
+-link-freetext" href=3D"https://wiki.tei-c.org/index.php/Editor_for_teach=
+ing_TEI_-_features">https://wiki.tei-c.org/index.php/Editor_for_teaching_=
+TEI_-_features</a><br>
+    <br>
+    Best,<br>
+    Serge<br>
+    <br>
+    --
+    <pre class=3D"moz-signature" cols=3D"72">Dr. Serge Heiden, slh AT ens=
+-lyon.fr, <a class=3D"moz-txt-link-freetext" href=3D"http://textometrie.e=
+ns-lyon.fr">http://textometrie.ens-lyon.fr</a>
+=C3=89quipe de recherche Cactus, laboratoire IHRIM UMR5317, ENS de Lyon
+15, parvis Ren=C3=A9 Descartes 69342 Lyon BP7000 Cedex, t=C3=A9l. +33(0)6=
+22003883
+</pre>
+  </body>
+</html>
+
+--------------07D93307A4162A2985255799--
+=========================================================================
+Date:         Tue, 3 Apr 2018 13:58:43 +0000
+Reply-To:     Martin Mueller <martinmueller@NORTHWESTERN.EDU>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Martin Mueller <martinmueller@NORTHWESTERN.EDU>
+Subject:      Re: <c> tag
+Comments: To: Serge Heiden <slh@ENS-LYON.FR>
+In-Reply-To:  <00a0e02f-253e-de99-df94-2d77d4a8f226@ens-lyon.fr>
+Content-Type: multipart/alternative;
+              boundary="_000_F3B91CB09A0C480C9C05A596512ED990northwesternedu_"
+MIME-Version: 1.0
+Message-ID:  <F3B91CB0-9A0C-480C-9C05-A596512ED990@northwestern.edu>
+
+--_000_F3B91CB09A0C480C9C05A596512ED990northwesternedu_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+Q2lhcsOhbuKAmXMgb2JzZXJ2YXRpb24gZG9lcyBub3Qgc3F1YXJlIHdpdGggb3VyIGV4cGVyaWVu
+Y2UgaW4gdGhlIEVhcmx5UHJpbnQgcHJvamVjdC4gIENvbnNpZGVyIOKAmGhhbmRzb21lLCBjbGV2
+ZXIsIGFuZCByaWNo4oCZIGZyb20gdGhlIG9wZW5pbmcgc2VudGVuY2Ugb2YgRW1tYS4gVGhlcmUg
+bWF5IGJlIG9jY2FzaW9ucyB3aGVyZSB5b3Ugd2FudCB0byBpZGVudGlmeSBwaHJhc2VzIGxpa2Ug
+dGhhdCBpbiBzb21lIG90aGVyIGNvcnB1cy4NCg0KV2VsbCwgZ28gdG8gaHR0cDovL2JsYWNrbGFi
+LmVhcmx5cHJpbnQub3JnL2NvcnB1c3NlYXJjaC8gYW5kIGVudGVyIHRoZSBzZWFyY2ggdGVybQ0K
+DQpbcG9zPSJqIl1bcG9zPSJqIl1bImFuZCJdW3Bvcz0iaiJdDQoNCldpdGhpbiBzZWNvbmRzIGl0
+IHdpbGwgcmV0cmlldmUgOCwyOTEgbWF0Y2hlcyBmcm9tIHRleHRzIGJldHdlZW4gMTY0MCBhbmQg
+MTY2MCwgbXkgcGVyc29uYWwgZmF2b3VyaXRlIGJlaW5nIOKAnHRoZSBTY290dGlzaCBncm93ZXMg
+ZHVsbGUsIEZyb3N0aWUsIGFuZCB3YXl3YXJkLuKAnQ0KDQpJIGFtIHRvbGQgYnkgUGhpbCBCdXJu
+cywgd2hvIGtub3dzIGEgbG90IGFib3V0IHRoZXNlIHRoaW5ncywgdGhhdCB0aGUgQmxhY2tsYWIg
+c2VhcmNoIGVuZ2luZSBpcyByZWxhdGl2ZWx5IGVhc3kgdG8gaW5zdGFsbC4gSXQgYWxzbyBzdXBw
+b3J0cyBpbmNyZW1lbnRhbCBpbmRleGluZywgd2hpY2ggaXMgYSBiaWcgaGVscC4gIFRoZSBjdXJy
+ZW50IHVzZXIgaW50ZXJmYWNlIGlzIHZlcnkgU3BhcnRhbiwgYW5kIGEgdXNlciBoYXMgdG8ga25v
+dyB0aGUgdGFnIHNldCBvbiB3aGljaCB0aGUgc2VhcmNoZXMgYXJlIGJhc2VkLiBCbGFja2xhYiBp
+cyBlbGVtZW50IGF3YXJlIGluIHNpbXBsZSB3YXlzIHRoYXQgd2lsbCBzdXBwb3J0IG1hbnkgb2Yg
+dGhlIHVzZXMgdGhhdCBjb21lIHVwIGluIGxpdGVyYXJ5IHNjaG9sYXJzaGlwLiBGb3IgaW5zdGFu
+Y2UsIHlvdSBjYW4gbG9vayBmb3IgYWRqZWN0aXZlcyBiZWZvcmUg4oCYbGliZXJ0eeKAmSBpbiBw
+b2V0cnkuIEFuZCBzbyBvbi4NCg0KDQoNCkZyb206ICJURUkgKFRleHQgRW5jb2RpbmcgSW5pdGlh
+dGl2ZSkgcHVibGljIGRpc2N1c3Npb24gbGlzdCIgPFRFSS1MQExJU1RTRVJWLkJST1dOLkVEVT4g
+b24gYmVoYWxmIG9mIFNlcmdlIEhlaWRlbiA8c2xoQEVOUy1MWU9OLkZSPg0KT3JnYW5pemF0aW9u
+OiBFTlMgZGUgTHlvbg0KUmVwbHktVG86IFNlcmdlIEhlaWRlbiA8c2xoQEVOUy1MWU9OLkZSPg0K
+RGF0ZTogVHVlc2RheSwgQXByaWwgMywgMjAxOCBhdCA4OjMwIEFNDQpUbzogIlRFSSAoVGV4dCBF
+bmNvZGluZyBJbml0aWF0aXZlKSBwdWJsaWMgZGlzY3Vzc2lvbiBsaXN0IiA8VEVJLUxATElTVFNF
+UlYuQlJPV04uRURVPg0KU3ViamVjdDogUmU6IDxjPiB0YWcNCg0KSGkgQ2lhcsOhbiwNCg0KTGUg
+MjkvMDMvMjAxOCDDoCAwMDo1MCwgQ2lhcsOhbiDDkyBEdWliaMOtbiBhIMOpY3JpdCA6DQoNCi4u
+Lg0KT3ZlcmFsbCBteSBjb25jbHVzaW9uIGlzIHRoYXQgdGhlcmUgaXMgbGl0dGxlIHBvaW50IGlu
+IGNvbnZlcnRpbmcgdG8gVEVJIGEgY29ycHVzIG9mIHRleHRzIGludGVuZGVkIGZvciBpbmRleGlu
+Zy9yZXRyaWV2YWwsIGFzIGl0IGRvZXMgbm90IG1lYW4gdGhleSBjYW4gYmUgZWFzaWx5IHVzZWQg
+d2l0aCBtb3JlIGFwcGxpY2F0aW9ucyBhbmQgb24gbW9yZSBwbGF0Zm9ybXMuICBJZiBYYWlyYSBo
+YWQgY29udGludWVkIHRvIGJlIGRldmVsb3BlZCwgdGhpcyBtaWdodCBoYXZlIGJlZW4gZGlmZmVy
+ZW50Lg0KLi4uDQoNClRoYW5rIHlvdSBmb3IgdGhlIHJlcG9ydCBvbiB0aGUgYXBwbGljYXRpb25z
+Lg0KDQpXaGF0IHdvdWxkIGhlbHAgYSBsb3Qgd291bGQgYmUgdG8gbGlzdCBleHBsaWNpdGx5IHNv
+bWUgc2VydmljZXMgb3IgZmVhdHVyZXMgb2YgWGFpcmEgdXNlZnVsIG9yIG5lY2Vzc2FyeSBmb3Ig
+eW91IHRoYXQgYXJlIG5vdCBmb3VuZCBpbiB0aGUgc29mdHdhcmUgZGlzY3Vzc2VkLiBTb21laG93
+IHRoZSByZWxldmFudCBmZWF0dXJlcyBvZiBYTUwgZWRpdG9ycyBmb3IgdGVhY2hpbmcgaGF2ZSBi
+ZWVuIGRpc2N1c3NlZCBhbmQgc3ludGhlc2l6ZWQgaGVyZTogaHR0cHM6Ly93aWtpLnRlaS1jLm9y
+Zy9pbmRleC5waHAvRWRpdG9yX2Zvcl90ZWFjaGluZ19URUlfLV9mZWF0dXJlczxodHRwczovL3Vy
+bGRlZmVuc2UucHJvb2Zwb2ludC5jb20vdjIvdXJsP3U9aHR0cHMtM0FfX3dpa2kudGVpLTJEYy5v
+cmdfaW5kZXgucGhwX0VkaXRvci01RmZvci01RnRlYWNoaW5nLTVGVEVJLTVGLTJELTVGZmVhdHVy
+ZXMmZD1Ed01GYVEmYz15SGxTMDRIaEJyYWVzNUJROXVldTV6S2hFN3J0Tlh0X2QwMTJ6MlBBNndz
+JnI9ckc4enhPZHNzcVN6RFJ6NHgxR0xsbUxPVzYweHlWWHlkeHduSlpwa3hiayZtPW94bFkwVFI1
+LTRVWnVaY0F1b0FzWnh1bnNwM1JXNEl5RDhqazBhdmlYVGMmcz1FRkJhdUlnQmZObkNqU2ZINHpp
+NzZxbC1Lc1NFR1dVc05hQk5uemphdHpFJmU9Pg0KDQpCZXN0LA0KU2VyZ2UNCg0KLS0NCg0KRHIu
+IFNlcmdlIEhlaWRlbiwgc2xoIEFUIGVucy1seW9uLmZyLCBodHRwOi8vdGV4dG9tZXRyaWUuZW5z
+LWx5b24uZnI8aHR0cHM6Ly91cmxkZWZlbnNlLnByb29mcG9pbnQuY29tL3YyL3VybD91PWh0dHAt
+M0FfX3RleHRvbWV0cmllLmVucy0yRGx5b24uZnImZD1Ed01GYVEmYz15SGxTMDRIaEJyYWVzNUJR
+OXVldTV6S2hFN3J0Tlh0X2QwMTJ6MlBBNndzJnI9ckc4enhPZHNzcVN6RFJ6NHgxR0xsbUxPVzYw
+eHlWWHlkeHduSlpwa3hiayZtPW94bFkwVFI1LTRVWnVaY0F1b0FzWnh1bnNwM1JXNEl5RDhqazBh
+dmlYVGMmcz1PRWRCQWsta05GZEJlRkFaUUY3Qk5MVG9oc0x1Q3JEU09PUG1zSkU3WVNVJmU9Pg0K
+DQrDiXF1aXBlIGRlIHJlY2hlcmNoZSBDYWN0dXMsIGxhYm9yYXRvaXJlIElIUklNIFVNUjUzMTcs
+IEVOUyBkZSBMeW9uDQoNCjE1LCBwYXJ2aXMgUmVuw6kgRGVzY2FydGVzIDY5MzQyIEx5b24gQlA3
+MDAwIENlZGV4LCB0w6lsLiArMzMoMCk2MjIwMDM4ODMNCg==
+
+--_000_F3B91CB09A0C480C9C05A596512ED990northwesternedu_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <9FF369CF89468D4089B961FF49174CA7@e.northwestern.edu>
+Content-Transfer-Encoding: base64
+
+PGh0bWwgeG1sbnM6bz0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6b2ZmaWNlIiB4
+bWxuczp3PSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOm9mZmljZTp3b3JkIiB4bWxuczptPSJo
+dHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL29mZmljZS8yMDA0LzEyL29tbWwiIHhtbG5zPSJo
+dHRwOi8vd3d3LnczLm9yZy9UUi9SRUMtaHRtbDQwIj4NCjxoZWFkPg0KPG1ldGEgaHR0cC1lcXVp
+dj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiPg0KPG1l
+dGEgbmFtZT0iR2VuZXJhdG9yIiBjb250ZW50PSJNaWNyb3NvZnQgV29yZCAxNSAoZmlsdGVyZWQg
+bWVkaXVtKSI+DQo8c3R5bGU+PCEtLQ0KLyogRm9udCBEZWZpbml0aW9ucyAqLw0KQGZvbnQtZmFj
+ZQ0KCXtmb250LWZhbWlseToiQ2FtYnJpYSBNYXRoIjsNCglwYW5vc2UtMToyIDQgNSAzIDUgNCA2
+IDMgMiA0O30NCkBmb250LWZhY2UNCgl7Zm9udC1mYW1pbHk6Q2FsaWJyaTsNCglwYW5vc2UtMToy
+IDE1IDUgMiAyIDIgNCAzIDIgNDt9DQpAZm9udC1mYWNlDQoJe2ZvbnQtZmFtaWx5OkNvbnNvbGFz
+Ow0KCXBhbm9zZS0xOjIgMTEgNiA5IDIgMiA0IDMgMiA0O30NCi8qIFN0eWxlIERlZmluaXRpb25z
+ICovDQpwLk1zb05vcm1hbCwgbGkuTXNvTm9ybWFsLCBkaXYuTXNvTm9ybWFsDQoJe21hcmdpbjow
+aW47DQoJbWFyZ2luLWJvdHRvbTouMDAwMXB0Ow0KCWZvbnQtc2l6ZToxMS4wcHQ7DQoJZm9udC1m
+YW1pbHk6IkNhbGlicmkiLHNhbnMtc2VyaWY7fQ0KYTpsaW5rLCBzcGFuLk1zb0h5cGVybGluaw0K
+CXttc28tc3R5bGUtcHJpb3JpdHk6OTk7DQoJY29sb3I6Ymx1ZTsNCgl0ZXh0LWRlY29yYXRpb246
+dW5kZXJsaW5lO30NCmE6dmlzaXRlZCwgc3Bhbi5Nc29IeXBlcmxpbmtGb2xsb3dlZA0KCXttc28t
+c3R5bGUtcHJpb3JpdHk6OTk7DQoJY29sb3I6cHVycGxlOw0KCXRleHQtZGVjb3JhdGlvbjp1bmRl
+cmxpbmU7fQ0KcHJlDQoJe21zby1zdHlsZS1wcmlvcml0eTo5OTsNCgltc28tc3R5bGUtbGluazoi
+SFRNTCBQcmVmb3JtYXR0ZWQgQ2hhciI7DQoJbWFyZ2luOjBpbjsNCgltYXJnaW4tYm90dG9tOi4w
+MDAxcHQ7DQoJZm9udC1zaXplOjEwLjBwdDsNCglmb250LWZhbWlseToiQ291cmllciBOZXciO30N
+CnAubXNvbm9ybWFsMCwgbGkubXNvbm9ybWFsMCwgZGl2Lm1zb25vcm1hbDANCgl7bXNvLXN0eWxl
+LW5hbWU6bXNvbm9ybWFsOw0KCW1zby1tYXJnaW4tdG9wLWFsdDphdXRvOw0KCW1hcmdpbi1yaWdo
+dDowaW47DQoJbXNvLW1hcmdpbi1ib3R0b20tYWx0OmF1dG87DQoJbWFyZ2luLWxlZnQ6MGluOw0K
+CWZvbnQtc2l6ZToxMS4wcHQ7DQoJZm9udC1mYW1pbHk6IkNhbGlicmkiLHNhbnMtc2VyaWY7fQ0K
+c3Bhbi5IVE1MUHJlZm9ybWF0dGVkQ2hhcg0KCXttc28tc3R5bGUtbmFtZToiSFRNTCBQcmVmb3Jt
+YXR0ZWQgQ2hhciI7DQoJbXNvLXN0eWxlLXByaW9yaXR5Ojk5Ow0KCW1zby1zdHlsZS1saW5rOiJI
+VE1MIFByZWZvcm1hdHRlZCI7DQoJZm9udC1mYW1pbHk6IkNvbnNvbGFzIixzZXJpZjt9DQpzcGFu
+LkVtYWlsU3R5bGUyMA0KCXttc28tc3R5bGUtdHlwZTpwZXJzb25hbC1yZXBseTsNCglmb250LWZh
+bWlseToiQ2FsaWJyaSIsc2Fucy1zZXJpZjsNCgljb2xvcjp3aW5kb3d0ZXh0O30NCi5Nc29DaHBE
+ZWZhdWx0DQoJe21zby1zdHlsZS10eXBlOmV4cG9ydC1vbmx5Ow0KCWZvbnQtc2l6ZToxMC4wcHQ7
+fQ0KQHBhZ2UgV29yZFNlY3Rpb24xDQoJe3NpemU6OC41aW4gMTEuMGluOw0KCW1hcmdpbjoxLjBp
+biAxLjBpbiAxLjBpbiAxLjBpbjt9DQpkaXYuV29yZFNlY3Rpb24xDQoJe3BhZ2U6V29yZFNlY3Rp
+b24xO30NCi0tPjwvc3R5bGU+DQo8L2hlYWQ+DQo8Ym9keSBsYW5nPSJFTi1VUyIgbGluaz0iYmx1
+ZSIgdmxpbms9InB1cnBsZSI+DQo8ZGl2IGNsYXNzPSJXb3JkU2VjdGlvbjEiPg0KPHAgY2xhc3M9
+Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxNC4wcHQiPkNpYXLDoW7igJlzIG9i
+c2VydmF0aW9uIGRvZXMgbm90IHNxdWFyZSB3aXRoIG91ciBleHBlcmllbmNlIGluIHRoZSBFYXJs
+eVByaW50IHByb2plY3QuJm5ic3A7IENvbnNpZGVyIOKAmGhhbmRzb21lLCBjbGV2ZXIsIGFuZCBy
+aWNo4oCZIGZyb20gdGhlIG9wZW5pbmcgc2VudGVuY2Ugb2YgRW1tYS4gVGhlcmUgbWF5IGJlIG9j
+Y2FzaW9ucyB3aGVyZSB5b3Ugd2FudCB0byBpZGVudGlmeQ0KIHBocmFzZXMgbGlrZSB0aGF0IGlu
+IHNvbWUgb3RoZXIgY29ycHVzLiA8bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0iTXNv
+Tm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjE0LjBwdCI+PG86cD4mbmJzcDs8L286cD48
+L3NwYW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTox
+NC4wcHQiPldlbGwsIGdvIHRvIDxhIGhyZWY9Imh0dHA6Ly9ibGFja2xhYi5lYXJseXByaW50Lm9y
+Zy9jb3JwdXNzZWFyY2gvIj4NCmh0dHA6Ly9ibGFja2xhYi5lYXJseXByaW50Lm9yZy9jb3JwdXNz
+ZWFyY2gvPC9hPiBhbmQgZW50ZXIgdGhlIHNlYXJjaCB0ZXJtJm5ic3A7IDxvOnA+DQo8L286cD48
+L3NwYW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTox
+NC4wcHQiPjxvOnA+Jm5ic3A7PC9vOnA+PC9zcGFuPjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwi
+PjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTQuMHB0O2NvbG9yOmJsYWNrO2JhY2tncm91bmQ6I0ZG
+RkFGMyI+W3Bvcz0mcXVvdDtqJnF1b3Q7XVtwb3M9JnF1b3Q7aiZxdW90O11bJnF1b3Q7YW5kJnF1
+b3Q7XVtwb3M9JnF1b3Q7aiZxdW90O108bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0i
+TXNvTm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjE0LjBwdDtjb2xvcjpibGFjaztiYWNr
+Z3JvdW5kOiNGRkZBRjMiPjxvOnA+Jm5ic3A7PC9vOnA+PC9zcGFuPjwvcD4NCjxwIGNsYXNzPSJN
+c29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTQuMHB0O2NvbG9yOmJsYWNrO2JhY2tn
+cm91bmQ6I0ZGRkFGMyI+V2l0aGluIHNlY29uZHMgaXQgd2lsbCByZXRyaWV2ZSA4LDI5MSBtYXRj
+aGVzIGZyb20gdGV4dHMgYmV0d2VlbiAxNjQwIGFuZCAxNjYwLCBteSBwZXJzb25hbCBmYXZvdXJp
+dGUgYmVpbmcg4oCcdGhlIFNjb3R0aXNoIGdyb3dlcyBkdWxsZSwgRnJvc3RpZSwgYW5kIHdheXdh
+cmQu4oCdPG86cD48L286cD48L3NwYW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4g
+c3R5bGU9ImZvbnQtc2l6ZToxNC4wcHQ7Y29sb3I6YmxhY2s7YmFja2dyb3VuZDojRkZGQUYzIj48
+bzpwPiZuYnNwOzwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIj48c3BhbiBz
+dHlsZT0iZm9udC1zaXplOjE0LjBwdDtjb2xvcjpibGFjaztiYWNrZ3JvdW5kOiNGRkZBRjMiPkkg
+YW0gdG9sZCBieSBQaGlsIEJ1cm5zLCB3aG8ga25vd3MgYSBsb3QgYWJvdXQgdGhlc2UgdGhpbmdz
+LCB0aGF0IHRoZSBCbGFja2xhYiBzZWFyY2ggZW5naW5lIGlzIHJlbGF0aXZlbHkgZWFzeSB0byBp
+bnN0YWxsLiBJdCBhbHNvIHN1cHBvcnRzIGluY3JlbWVudGFsIGluZGV4aW5nLCB3aGljaCBpcyBh
+DQogYmlnIGhlbHAuJm5ic3A7IFRoZSBjdXJyZW50IHVzZXIgaW50ZXJmYWNlIGlzIHZlcnkgU3Bh
+cnRhbiwgYW5kIGEgdXNlciBoYXMgdG8ga25vdyB0aGUgdGFnIHNldCBvbiB3aGljaCB0aGUgc2Vh
+cmNoZXMgYXJlIGJhc2VkLiBCbGFja2xhYiBpcyBlbGVtZW50IGF3YXJlIGluIHNpbXBsZSB3YXlz
+IHRoYXQgd2lsbCBzdXBwb3J0IG1hbnkgb2YgdGhlIHVzZXMgdGhhdCBjb21lIHVwIGluIGxpdGVy
+YXJ5IHNjaG9sYXJzaGlwLiBGb3IgaW5zdGFuY2UsIHlvdSBjYW4NCiBsb29rIGZvciBhZGplY3Rp
+dmVzIGJlZm9yZSDigJhsaWJlcnR54oCZIGluIHBvZXRyeS4gQW5kIHNvIG9uLiA8bzpwPjwvbzpw
+Pjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXpl
+OjE0LjBwdDtjb2xvcjpibGFjaztiYWNrZ3JvdW5kOiNGRkZBRjMiPjxvOnA+Jm5ic3A7PC9vOnA+
+PC9zcGFuPjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6
+MTQuMHB0O2NvbG9yOmJsYWNrO2JhY2tncm91bmQ6I0ZGRkFGMyI+PG86cD4mbmJzcDs8L286cD48
+L3NwYW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTox
+NC4wcHQiPjxvOnA+Jm5ic3A7PC9vOnA+PC9zcGFuPjwvcD4NCjxkaXYgc3R5bGU9ImJvcmRlcjpu
+b25lO2JvcmRlci10b3A6c29saWQgI0I1QzRERiAxLjBwdDtwYWRkaW5nOjMuMHB0IDBpbiAwaW4g
+MGluIj4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTIu
+MHB0O2NvbG9yOmJsYWNrIj5Gcm9tOiA8L3NwYW4+PC9iPjxzcGFuIHN0eWxlPSJmb250LXNpemU6
+MTIuMHB0O2NvbG9yOmJsYWNrIj4mcXVvdDtURUkgKFRleHQgRW5jb2RpbmcgSW5pdGlhdGl2ZSkg
+cHVibGljIGRpc2N1c3Npb24gbGlzdCZxdW90OyAmbHQ7VEVJLUxATElTVFNFUlYuQlJPV04uRURV
+Jmd0OyBvbiBiZWhhbGYgb2YgU2VyZ2UgSGVpZGVuICZsdDtzbGhARU5TLUxZT04uRlImZ3Q7PGJy
+Pg0KPGI+T3JnYW5pemF0aW9uOiA8L2I+RU5TIGRlIEx5b248YnI+DQo8Yj5SZXBseS1UbzogPC9i
+PlNlcmdlIEhlaWRlbiAmbHQ7c2xoQEVOUy1MWU9OLkZSJmd0Ozxicj4NCjxiPkRhdGU6IDwvYj5U
+dWVzZGF5LCBBcHJpbCAzLCAyMDE4IGF0IDg6MzAgQU08YnI+DQo8Yj5UbzogPC9iPiZxdW90O1RF
+SSAoVGV4dCBFbmNvZGluZyBJbml0aWF0aXZlKSBwdWJsaWMgZGlzY3Vzc2lvbiBsaXN0JnF1b3Q7
+ICZsdDtURUktTEBMSVNUU0VSVi5CUk9XTi5FRFUmZ3Q7PGJyPg0KPGI+U3ViamVjdDogPC9iPlJl
+OiAmbHQ7YyZndDsgdGFnPG86cD48L286cD48L3NwYW4+PC9wPg0KPC9kaXY+DQo8ZGl2Pg0KPHAg
+Y2xhc3M9Ik1zb05vcm1hbCI+PG86cD4mbmJzcDs8L286cD48L3A+DQo8L2Rpdj4NCjxwIGNsYXNz
+PSJNc29Ob3JtYWwiPjxhIG5hbWU9Il9NYWlsT3JpZ2luYWxCb2R5Ij5IaSBDaWFyw6FuLDxicj4N
+Cjxicj4NCkxlIDI5LzAzLzIwMTggw6AgMDA6NTAsIENpYXLDoW4gw5MgRHVpYmjDrW4gYSDDqWNy
+aXQmbmJzcDs6PGJyPg0KPGJyPg0KPG86cD48L286cD48L2E+PC9wPg0KPGJsb2NrcXVvdGUgc3R5
+bGU9Im1hcmdpbi10b3A6NS4wcHQ7bWFyZ2luLWJvdHRvbTo1LjBwdCI+DQo8ZGl2Pg0KPHAgY2xh
+c3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9Im1zby1ib29rbWFyazpfTWFpbE9yaWdpbmFsQm9k
+eSI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMC4wcHQ7Zm9udC1mYW1pbHk6JnF1b3Q7QXJpYWwm
+cXVvdDssc2Fucy1zZXJpZiI+Li4uPGJyPg0KT3ZlcmFsbCBteSBjb25jbHVzaW9uIGlzIHRoYXQm
+bmJzcDt0aGVyZSBpcyBsaXR0bGUgcG9pbnQgaW4gY29udmVydGluZyB0byBURUkgYSBjb3JwdXMg
+b2YgdGV4dHMgaW50ZW5kZWQgZm9yIGluZGV4aW5nL3JldHJpZXZhbCwgYXMgaXQgZG9lcyBub3Qg
+bWVhbiB0aGV5IGNhbiBiZSBlYXNpbHkgdXNlZCZuYnNwO3dpdGggbW9yZSBhcHBsaWNhdGlvbnMg
+YW5kIG9uIG1vcmUgcGxhdGZvcm1zLiZuYnNwOyBJZiBYYWlyYSBoYWQgY29udGludWVkIHRvIGJl
+IGRldmVsb3BlZCwgdGhpcw0KIG1pZ2h0IGhhdmUgYmVlbiBkaWZmZXJlbnQuPGJyPg0KLi4uPC9z
+cGFuPjxvOnA+PC9vOnA+PC9zcGFuPjwvcD4NCjwvZGl2Pg0KPC9ibG9ja3F1b3RlPg0KPHAgY2xh
+c3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9Im1zby1ib29rbWFyazpfTWFpbE9yaWdpbmFsQm9k
+eSI+PGJyPg0KPC9zcGFuPjxzcGFuIHN0eWxlPSJtc28tYm9va21hcms6X01haWxPcmlnaW5hbEJv
+ZHkiPjxzcGFuIGxhbmc9IkVOIj5UaGFuayB5b3UgZm9yIHRoZSByZXBvcnQgb24gdGhlIGFwcGxp
+Y2F0aW9ucy48YnI+DQo8YnI+DQpXaGF0IHdvdWxkIGhlbHAgYSBsb3Qgd291bGQgYmUgdG8gbGlz
+dCBleHBsaWNpdGx5IHNvbWUgc2VydmljZXMgb3IgZmVhdHVyZXMgb2YgWGFpcmEgdXNlZnVsIG9y
+IG5lY2Vzc2FyeSBmb3IgeW91IHRoYXQgYXJlIG5vdCBmb3VuZCBpbiB0aGUgc29mdHdhcmUgZGlz
+Y3Vzc2VkLiBTb21laG93IHRoZSByZWxldmFudCBmZWF0dXJlcyBvZiBYTUwgZWRpdG9ycyBmb3Ig
+dGVhY2hpbmcgaGF2ZSBiZWVuIGRpc2N1c3NlZCBhbmQgc3ludGhlc2l6ZWQgaGVyZToNCjwvc3Bh
+bj48L3NwYW4+PGEgaHJlZj0iaHR0cHM6Ly91cmxkZWZlbnNlLnByb29mcG9pbnQuY29tL3YyL3Vy
+bD91PWh0dHBzLTNBX193aWtpLnRlaS0yRGMub3JnX2luZGV4LnBocF9FZGl0b3ItNUZmb3ItNUZ0
+ZWFjaGluZy01RlRFSS01Ri0yRC01RmZlYXR1cmVzJmFtcDtkPUR3TUZhUSZhbXA7Yz15SGxTMDRI
+aEJyYWVzNUJROXVldTV6S2hFN3J0Tlh0X2QwMTJ6MlBBNndzJmFtcDtyPXJHOHp4T2Rzc3FTekRS
+ejR4MUdMbG1MT1c2MHh5Vlh5ZHh3bkpacGt4YmsmYW1wO209b3hsWTBUUjUtNFVadVpjQXVvQXNa
+eHVuc3AzUlc0SXlEOGprMGF2aVhUYyZhbXA7cz1FRkJhdUlnQmZObkNqU2ZINHppNzZxbC1Lc1NF
+R1dVc05hQk5uemphdHpFJmFtcDtlPSI+PHNwYW4gc3R5bGU9Im1zby1ib29rbWFyazpfTWFpbE9y
+aWdpbmFsQm9keSI+aHR0cHM6Ly93aWtpLnRlaS1jLm9yZy9pbmRleC5waHAvRWRpdG9yX2Zvcl90
+ZWFjaGluZ19URUlfLV9mZWF0dXJlczwvc3Bhbj48c3BhbiBzdHlsZT0ibXNvLWJvb2ttYXJrOl9N
+YWlsT3JpZ2luYWxCb2R5Ij48L3NwYW4+PC9hPjxzcGFuIHN0eWxlPSJtc28tYm9va21hcms6X01h
+aWxPcmlnaW5hbEJvZHkiPjxicj4NCjxicj4NCkJlc3QsPGJyPg0KU2VyZ2U8YnI+DQo8YnI+DQot
+LSA8bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cHJlPjxzcGFuIHN0eWxlPSJtc28tYm9va21hcms6
+X01haWxPcmlnaW5hbEJvZHkiPkRyLiBTZXJnZSBIZWlkZW4sIHNsaCBBVCBlbnMtbHlvbi5mciwg
+PC9zcGFuPjxhIGhyZWY9Imh0dHBzOi8vdXJsZGVmZW5zZS5wcm9vZnBvaW50LmNvbS92Mi91cmw/
+dT1odHRwLTNBX190ZXh0b21ldHJpZS5lbnMtMkRseW9uLmZyJmFtcDtkPUR3TUZhUSZhbXA7Yz15
+SGxTMDRIaEJyYWVzNUJROXVldTV6S2hFN3J0Tlh0X2QwMTJ6MlBBNndzJmFtcDtyPXJHOHp4T2Rz
+c3FTekRSejR4MUdMbG1MT1c2MHh5Vlh5ZHh3bkpacGt4YmsmYW1wO209b3hsWTBUUjUtNFVadVpj
+QXVvQXNaeHVuc3AzUlc0SXlEOGprMGF2aVhUYyZhbXA7cz1PRWRCQWsta05GZEJlRkFaUUY3Qk5M
+VG9oc0x1Q3JEU09PUG1zSkU3WVNVJmFtcDtlPSI+PHNwYW4gc3R5bGU9Im1zby1ib29rbWFyazpf
+TWFpbE9yaWdpbmFsQm9keSI+aHR0cDovL3RleHRvbWV0cmllLmVucy1seW9uLmZyPC9zcGFuPjxz
+cGFuIHN0eWxlPSJtc28tYm9va21hcms6X01haWxPcmlnaW5hbEJvZHkiPjwvc3Bhbj48L2E+PHNw
+YW4gc3R5bGU9Im1zby1ib29rbWFyazpfTWFpbE9yaWdpbmFsQm9keSI+PG86cD48L286cD48L3Nw
+YW4+PC9wcmU+DQo8cHJlPjxzcGFuIHN0eWxlPSJtc28tYm9va21hcms6X01haWxPcmlnaW5hbEJv
+ZHkiPsOJcXVpcGUgZGUgcmVjaGVyY2hlIENhY3R1cywgbGFib3JhdG9pcmUgSUhSSU0gVU1SNTMx
+NywgRU5TIGRlIEx5b248bzpwPjwvbzpwPjwvc3Bhbj48L3ByZT4NCjxwcmU+PHNwYW4gc3R5bGU9
+Im1zby1ib29rbWFyazpfTWFpbE9yaWdpbmFsQm9keSI+MTUsIHBhcnZpcyBSZW7DqSBEZXNjYXJ0
+ZXMgNjkzNDIgTHlvbiBCUDcwMDAgQ2VkZXgsIHTDqWwuICYjNDM7MzMoMCk2MjIwMDM4ODM8bzpw
+PjwvbzpwPjwvc3Bhbj48L3ByZT4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
+
+--_000_F3B91CB09A0C480C9C05A596512ED990northwesternedu_--
+=========================================================================
+Date:         Wed, 4 Apr 2018 17:14:08 -0700
+Reply-To:     Martin Holmes <mholmes@UVIC.CA>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Martin Holmes <mholmes@UVIC.CA>
+Subject:      Accommodation for the conference, and Japanese lessons
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Message-ID:  <46449485-dadb-a0fe-e699-ec069c4cfebf@uvic.ca>
+
+Hi all,
+
+[I also posted this on the TEI Facebook page, so please feel free to
+reply there.]
+
+I'm going to come to Tokyo a week ahead of the conference and I'd like
+to arrange some Japanese language lessons for the mornings or the
+afternoons during that week if I can (I have JLPT N4 and I'm studying
+for N3 now). Does anyone have suggestions for language schools or
+teachers? Also, any info on suggested accommodation for the conference?
+
+Cheers,
+Martin
+=========================================================================
+Date:         Thu, 5 Apr 2018 11:29:02 +0100
+Reply-To:     Susan Schreibman <susan.schreibman@GMAIL.COM>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Susan Schreibman <susan.schreibman@GMAIL.COM>
+Subject:      invitation to participate in a survey
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+              boundary="------------286D9421CC4E93A144935094"
+Message-ID:  <a4153cbc-6d93-2698-e798-602c05d8a78e@gmail.com>
+
+This is a multi-part message in MIME format.
+--------------286D9421CC4E93A144935094
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Dear colleagues,
+
+
+Educational videos have become a staple of both F2F and online teaching.
+We are conducting a survey to explore the use and effectiveness of and
+interest
+in videos as pedagogical tools. It will take approximately 10 minutes to
+complete, and all responses will be anonymous.
+
+We would like to hear from you about your experience using videos,
+either as an educator or as a learner. We are particularly interested in
+hearing from
+people who have watched or used in an educational setting the videos
+available from the #dariahTeach platform <https://teach.dariah.eu/>, an
+online platform with open-source, high quality, multilingual teaching
+materials for the digital arts and humanities. We now have three courses
+with TEI content: Text Encoding and the TEI, Digitising Dictionaries,
+and Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding
+
+Videos are part of virtually all of our online courses, and is the only
+method of delivery for our Introduction to Digital Humanities course.
+The results of this survey will inform a forthcoming publication on the
+use of videos as pedagogical tools in the Digital Humanities.
+
+To participate in the survey, please follow
+https://www.surveymonkey.com/r/dariahTeach
+<https://www.surveymonkey.com/r/dariahTeach>
+
+To learn more about #dariahTeach please visit the #dariahTeach website
+<https://www.dariah.eu/teach/>
+
+If you have any questions or comments, do not hesitate to contact:
+Professor Susan Schreibman, Maynooth University, Email:
+susan.schreibman@mu.ie <mailto:susan.schreibman@mu.ie>Â Dr
+Konstantinos Papadopoulos, Maynooth University, Email:
+Konstantinos.Papadopoulos@mu.ie <mailto:Konstantinos.Papadopoulos@mu.ie>
+
+--
+Susan Schreibman
+Professor of Digital Humanities
+Director of An Foras Feasa
+Iontas Building
+Maynooth University
+Maynooth, Co. Kildare
+
+email: susan.schreibman@nuim.ie
+phone: +353 1 708 3451
+fax:  +353 1 708 4797
+
+
+--------------286D9421CC4E93A144935094
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF">
+    <p style="margin-top:0;margin-bottom:0"><span style="color: rgb(34,
+        34, 34); font-family: arial, sans-serif; font-size: 12.8px;">Dear
+        colleagues,</span><br style="color: rgb(34, 34, 34);
+        font-family: arial, sans-serif; font-size: 12.8px;">
+    </p>
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">Educational videos have become a staple of
+      both F2F and online teaching. We </span><span style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">are conducting a survey to explore the use and
+      effectiveness of and interest</span><br style="color: rgb(34, 34,
+      34); font-family: arial, sans-serif; font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">in videos as pedagogical tools. It will take
+      approximately 10 minutes to </span><span style="color: rgb(34,
+      34, 34); font-family: arial, sans-serif; font-size: 12.8px;">complete,
+      and all responses will be anonymous. </span><br style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">We would like to hear from you about your
+      experience using videos, either as </span><span style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">an educator or as a learner. We are particularly
+      interested in hearing from</span><br style="color: rgb(34, 34,
+      34); font-family: arial, sans-serif; font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">people who have watched or used in an
+      educational setting the videos </span><span style="color: rgb(34,
+      34, 34); font-family: arial, sans-serif; font-size: 12.8px;">available
+      from the #dariahTeach platform &lt;</span><a
+      href="https://teach.dariah.eu/"
+data-saferedirecturl="https://www.google.com/url?hl=en-GB&amp;q=https://teach.dariah.eu/&amp;source=gmail&amp;ust=1521191851426000&amp;usg=AFQjCNEsUs5xSF-7rgWeYljqozrqrtd8DQ"
+      rel="noreferrer" target="_blank" style="color: rgb(17, 85, 204);
+      font-family: arial, sans-serif; font-size: 12.8px;"
+      id="LPlnk122027">https://teach.dariah.eu/</a><span style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">&gt;, an </span><span style="color: rgb(34, 34, 34);
+      font-family: arial, sans-serif; font-size: 12.8px;">online
+      platform with open-source, high quality, multilingual teaching </span><span
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">materials for the digital arts and humanities.
+      We now have three courses with TEI content: Text Encoding and the
+      TEI, Digitising Dictionaries, and Digital Scholarly Editions:
+      Manuscripts, Texts and TEI Encoding</span><br style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">Videos are part of virtually all of our online
+      courses, and is the only </span><span style="color: rgb(34, 34,
+      34); font-family: arial, sans-serif; font-size: 12.8px;">method of
+      delivery for our Introduction to Digital Humanities course. The </span><span
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">results of this survey will inform a
+      forthcoming publication on the use of </span><span style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">videos as pedagogical tools in the Digital Humanities.</span><br
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">To participate in the survey, please follow</span><br
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <a href="https://www.surveymonkey.com/r/dariahTeach"
+data-saferedirecturl="https://www.google.com/url?hl=en-GB&amp;q=https://www.surveymonkey.com/r/dariahTeach&amp;source=gmail&amp;ust=1521191851426000&amp;usg=AFQjCNFDy6v5DDtoyaGBus3o0X30GuZATg"
+      rel="noreferrer" target="_blank" style="color: rgb(17, 85, 204);
+      font-family: arial, sans-serif; font-size: 12.8px;"
+      id="LPlnk210732">https://www.surveymonkey.com/<wbr>r/dariahTeach</a><br
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">To learn more about #dariahTeach please visit
+      the #dariahTeach website</span><br style="color: rgb(34, 34, 34);
+      font-family: arial, sans-serif; font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">&lt;</span><a
+      href="https://www.dariah.eu/teach/"
+data-saferedirecturl="https://www.google.com/url?hl=en-GB&amp;q=https://www.dariah.eu/teach/&amp;source=gmail&amp;ust=1521191851426000&amp;usg=AFQjCNFh1pF2lZ9u5_YQupKQOOpsDSHTqQ"
+      rel="noreferrer" target="_blank" style="color: rgb(17, 85, 204);
+      font-family: arial, sans-serif; font-size: 12.8px;"
+      id="LPlnk648446">https://www.dariah.eu/teach/</a><span
+      style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">&gt;</span><br>
+    <br style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">If you have any questions or comments, do not
+      hesitate to contact: Professor </span><span style="color: rgb(34,
+      34, 34); font-family: arial, sans-serif; font-size: 12.8px;">Susan
+      Schreibman, Maynooth University, Email:Â </span><a
+      href="mailto:susan.schreibman@mu.ie" style="color: rgb(17, 85,
+      204); font-family: arial, sans-serif; font-size: 12.8px;"
+      id="LPlnk111084">susan.schreibman@mu.ie</a><span style="color:
+      rgb(34, 34, 34); font-family: arial, sans-serif; font-size:
+      12.8px;">Â Dr</span><br style="color: rgb(34, 34, 34); font-family:
+      arial, sans-serif; font-size: 12.8px;">
+    <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif;
+      font-size: 12.8px;">Konstantinos Papadopoulos, Maynooth
+      University, Email: </span><a
+      href="mailto:Konstantinos.Papadopoulos@mu.ie" style="color:
+      rgb(17, 85, 204); font-family: arial, sans-serif; font-size:
+      12.8px;" id="LPlnk301893">Konstantinos.Papadopoulos@mu.<wbr>ie</a>
+    <pre class="moz-signature" cols="72">--
+Susan Schreibman
+Professor of Digital Humanities
+Director of An Foras Feasa
+Iontas Building
+Maynooth University
+Maynooth, Co. Kildare
+
+email: <a class="moz-txt-link-abbreviated" href="mailto:susan.schreibman@nuim.ie">susan.schreibman@nuim.ie</a>
+phone: +353 1 708 3451
+fax:  +353 1 708 4797</pre>
+  </body>
+</html>
+
+--------------286D9421CC4E93A144935094--
+=========================================================================
+Date:         Mon, 9 Apr 2018 12:33:27 +0200
+Reply-To:     Anne GF <annegf@UNIV-GRENOBLE-ALPES.FR>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         Anne GF <annegf@UNIV-GRENOBLE-ALPES.FR>
+Subject:      Attribute @pos and @msd with Oxygen XML Editor
+In-Reply-To:  <ed315ca7-197a-51db-8f3e-22dacc8cb4d5@univ-grenoble-alpes.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+              boundary="------------11EF5628A3ACAF0495DCDA21"
+Message-ID:  <ca8b084b-7d93-8944-556c-2226ded8f1ff@univ-grenoble-alpes.fr>
+
+This is a multi-part message in MIME format.
+--------------11EF5628A3ACAF0495DCDA21
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Dear TEI-List,
+
+I'm working with the software Oxygen XML Editor=20
+(https://www.oxygenxml.com/) and encoding with students textual document=20
+in TEI-XML.
+
+We would like to encode some linguistic information, as POS. So,=20
+following the documentation, here the encoding we use:
+
+<TEI xmlns=3D"http://www.tei-c.org/ns/1.0">
+ =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 (...)
+ =C2=A0=C2=A0=C2=A0 <text>
+ =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 <body>
+ =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 <p>
+ =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 <s>Les *<w pos=3D"N" lemma=3D"chat">*chats*</w>* mange=
+nt=20
+les souris</s>
+ =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </p>
+ =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </body>
+ =C2=A0=C2=A0=C2=A0 </text>
+ =C2=A0 </TEI>
+
+But, Oxygen do not accept the attribute @pos. @lemma is ok, but @pos=20
+(neither @msd)... do you know why and how I can resolve that? Is Oxygen=20
+true showing me an error, or is it an issue of the software? Show I=20
+change the TEI xmlns declaration?
+
+Oxygen gives my the following error: "/attribute "pos" not allowed here;=20
+expected attribute "ana", "cert", "change", "copyOf", "corresp",=20
+"exclude", "facs", "function", "lemma", "lemmaRef", "met", "n", "next",=20
+"ns:datcat", "ns:valueDatcat", "part", "prev", "real", "rend",=20
+"rendition", "resp", "rhyme", "sameAs", "select", "source", "style",=20
+"subtype", "synch", "type", "xml:base", "xml:id", "xml:lang" or=20
+"xml:space" (with xmlns:ns=3D"http://www.isocat.org/ns/dcr")/"
+
+
+Thanks a lot for your help!
+
+Anne GF
+
+--=20
+Anne Garcia-Fernandez
+Ing=C3=A9nieure de recherche CNRS
+Litt&Arts (UMR 5316)
+Universit=C3=A9 Grenoble Alpes
+Tel. (04 76 8)2 41 05
+Bureau : Stendhal B321ter =E2=96=B6=20
+<http://webdsi2.upmf-grenoble.fr/connecteur_php/BiperV4/infosplus_carte.p=
+hp?type=3DPP&personne=3D163200>
+
+
+--------------11EF5628A3ACAF0495DCDA21
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf=
+-8">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    Dear TEI-List,
+    <div class=3D"moz-forward-container">
+      <div class=3D"moz-forward-container">
+        <p>I'm working with the software Oxygen XML Editor (<a
+            class=3D"moz-txt-link-freetext"
+            href=3D"https://www.oxygenxml.com/" moz-do-not-send=3D"true">=
+https://www.oxygenxml.com/</a>)
+          and encoding with students textual document in TEI-XML.</p>
+        <p>We would like to encode some linguistic information, as POS.
+          So, following the documentation, here the encoding we use:</p>
+        <p>&lt;TEI xmlns=3D<a class=3D"moz-txt-link-rfc2396E"
+            href=3D"http://www.tei-c.org/ns/1.0" moz-do-not-send=3D"true"=
+>"http://www.tei-c.org/ns/1.0"</a>&gt;<br>
+          =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 (...)<br>
+          =C2=A0=C2=A0=C2=A0 &lt;text&gt;<br>
+          =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 &lt;body&gt;<br>
+          =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 &lt;p&gt;<br>
+          =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 &lt;s&gt;Les <b>&lt;w pos=3D"N"
+            lemma=3D"chat"&gt;</b>chats<b>&lt;/w&gt;</b> mangent les
+          souris&lt;/s&gt; <br>
+          =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 &lt;/p&gt;<br>
+          =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 &lt;/body&gt;<br>
+          =C2=A0=C2=A0=C2=A0 &lt;/text&gt;<br>
+          =C2=A0 &lt;/TEI&gt;</p>
+        <p>But, Oxygen do not accept the attribute @pos. @lemma is ok,
+          but @pos (neither @msd)... do you know why and how I can
+          resolve that? Is Oxygen true showing me an error, or is it an
+          issue of the software? Show I change the TEI xmlns
+          declaration?</p>
+        <p>Oxygen gives my the following error: "<i>attribute "pos" not
+            allowed here; expected attribute "ana", "cert", "change",
+            "copyOf", "corresp", "exclude", "facs", "function", "lemma",
+            "lemmaRef", "met", "n", "next", "ns:datcat",
+            "ns:valueDatcat", "part", "prev", "real", "rend",
+            "rendition", "resp", "rhyme", "sameAs", "select", "source",
+            "style", "subtype", "synch", "type", "xml:base", "xml:id",
+            "xml:lang" or "xml:space" (with xmlns:ns=3D<a
+              class=3D"moz-txt-link-rfc2396E"
+              href=3D"http://www.isocat.org/ns/dcr" moz-do-not-send=3D"tr=
+ue">"http://www.isocat.org/ns/dcr"</a>)</i>"</p>
+        <p><br>
+        </p>
+        <p>Thanks a lot for your help!<br>
+        </p>
+        <p>Anne GF<br>
+        </p>
+        <div class=3D"moz-signature">-- <br>
+          <meta http-equiv=3D"content-type" content=3D"text/html;
+            charset=3Dutf-8">
+          <title></title>
+          <div class=3D"moz-signature">
+            <div>
+              <table style=3D"table-layout: fixed;" border=3D"0"
+                cellpadding=3D"3px">
+                <tbody>
+                  <tr>
+                    <td style=3D"border-left: 1px solid black;
+                      padding-left: 10px;">
+                      <div style=3D"font-family: arial; color: #e43134;
+                        font-size: 10pt; font-weight: bold;">Anne
+                        Garcia-Fernandez</div>
+                      <div><span style=3D"font-family: arial; color:
+                          #575757; font-size: 10pt; font-weight: bold;
+                          margin-top: 0; margin-bottom: 8px;">Ing=C3=A9ni=
+eure
+                          de recherche CNRS</span><br>
+                        <span style=3D"font-family: arial; font-size:
+                          10pt;">Litt&amp;Arts (UMR 5316)</span><br>
+                        <span style=3D"font-size: 10pt;">Universit=C3=A9
+                          Grenoble Alpes</span><br>
+                        <span style=3D"font-family: arial; font-size:
+                          10pt;">Tel. (04 76 8)2 41 05</span><br>
+                        <span style=3D"font-family: arial; font-size:
+                          10pt;">Bureau : Stendhal B321ter <a
+href=3D"http://webdsi2.upmf-grenoble.fr/connecteur_php/BiperV4/infosplus_=
+carte.php?type=3DPP&amp;personne=3D163200"
+                            style=3D"text-decoration: none;"
+                            target=3D"_blank" moz-do-not-send=3D"true">=E2=
+=96=B6</a></span></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+--------------11EF5628A3ACAF0495DCDA21--
+=========================================================================
+Date:         Mon, 9 Apr 2018 13:24:23 +0200
+Reply-To:     =?UTF-8?Q?Piotr_Ba=c5=84ski?= <bansp@O2.PL>
+Sender:       "TEI (Text Encoding Initiative) public discussion list"
+              <TEI-L@LISTSERV.BROWN.EDU>
+From:         =?UTF-8?Q?Piotr_Ba=c5=84ski?= <bansp@O2.PL>
+Subject:      Re: Attribute @pos and @msd with Oxygen XML Editor
+Comments: To: Anne GF <annegf@UNIV-GRENOBLE-ALPES.FR>
+In-Reply-To:  <ca8b084b-7d93-8944-556c-2226ded8f1ff@univ-grenoble-alpes.fr>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+Message-ID:  <27f2eb08-24c7-2c8f-0e6e-5c2d09fad299@o2.pl>
+
+Dear Anne,
+
+It sounds like you are using an older version of the Guidelines.
+Hopefully, all you need to do is to update the "TEI Framework" inside
+oXygen (Help -> Manage add-ons).
+
+I hope this helps, please let the list know if it hasn't.
+
+    Piotr
