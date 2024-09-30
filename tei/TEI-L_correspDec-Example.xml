@@ -19,9 +19,9 @@
          <sourceDesc>
 
             <bibl>
-               <title level="m">TEI-L Listserv</title>
-               <title level="a">LOG9001</title>
-               <title level="a">LOG9002</title>
+               <title level="s">TEI-L Listserv</title>
+               <title level="s">LOG9001</title>
+               <title level="s">LOG9002</title>
                <publisher>University of Illinois Chicago</publisher>
                <distributor>TEI-L@UICVM</distributor>
                <date>1990</date>
