@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Text Encoding Initiative public discussion list</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>January and February 1990 in the TEI Listserv
+               <!-- TEI-L LOG9001, LOG9002 --></edition>
+         </editionStmt>
+         <publicationStmt>
+            <!-- about the born-digital document -->
+            <publisher>https://github.com/tei-cmc-experiment/tei-cmc-experiment</publisher>
+         </publicationStmt>
+         <sourceDesc>
+
+            <bibl>
+               <title level="m">TEI-L Listserv</title>
+               <title level="a">LOG9001</title>
+               <title level="a">LOG9002</title>
+               <publisher>University of Illinois Chicago</publisher>
+               <distributor>TEI-L@UICVM</distributor>
+               <date>1990</date>
+               <relatedItem type="archive">
+                  <bibl>
+                     <publisher>The Pennsylvania State University</publisher>
+                     <distributor>LISTS.PSU.EDU LISTSERV Server (17.0)</distributor>
+                     <date>2024</date>
+                  </bibl>
+               </relatedItem>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <samplingDecl>
+            <p>Sampled by requesting monthly logs from <name type="API">LISTS.PSU.EDU</name> by
+               e-mail with GET commands: <code>GET TEI-L LOG 9001</code> (for January 1990). One log
+               command was issued for each month. See <ptr type="APIdoc"
+                  target="https://www.lsoft.com/manuals/17.0/commands/14File-serverandwebfunctioncomma.html"
+               />. Received by e-mail between <date from="2024-09-21" to="2024-09-22">September 21
+                  and 22, 2024</date>.</p>
+         </samplingDecl>
+      </encodingDesc>
+   </teiHeader>
+   <TEI xml:id="Web-1990-01-31-0933">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="subjectLine">compound documents and images</title>
+               <author>Robert Philip Weber</author>
+            </titleStmt>
+            <publicationStmt>
+            <p>TEI-L Listserv</p>
+            </publicationStmt>
+            <sourceDesc>
+               <bibl><title level="a">LOG9001</title></bibl>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <langUsage>
+               <language ident="en">English</language>
+            </langUsage>
+            <correspDesc>
+               <correspAction type="sent">
+                  <persName>Robert Philip Weber</persName>
+                  <email>WEBER@HARVARDA.BITNET</email>
+                  <date when="1990-01-31">Wed, 31 Jan 90 09:33:26 CST</date>
+               </correspAction>
+               <correspAction type="relayed">
+                  <orgName><ref target="TEI-L@UICVM">Text Encoding
+                     Initative public discussion list</ref></orgName>
+               </correspAction>            
+            </correspDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <post>
+               <p>could someone please explain the <name type="ML">TEI</name> approach to compound
+                  documents and images? WIll <name type="ML">SGML</name> be used here, and if so,
+                  how? I've just joined the list. sorry if this has been asked before.</p>
+               <p>Many Thanks</p>
+               <signed generatedBy="human">Bob Weber</signed>
+               <signed generatedBy="template"> Robert Philip Weber, Ph.D. | Phone: (617) 495-3744
+                  <lb/>Senior Consultant | Fax: (617) 495-0750 <lb/>Academic and Planning Services |
+                  <lb/>Division | <lb/>Office For Information Technology| Internet:
+                  weber@popvax.harvard.edu <lb/>Harvard University | Bitnet: Weber@Harvarda <lb/>50
+                  Church Street | <lb/>Cambridge MA 02138 | </signed>               
+            </post>
+         </body>
+      </text>
+   </TEI>
+   <TEI xml:id="Spe-1990-02-06-1054">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title type="subjectLine">compound documents</title>
+               <author>Michael Sperberg-McQueen</author>
+            </titleStmt>
+            <publicationStmt>
+               <p>TEI-L Listserv</p>
+            </publicationStmt>
+            <sourceDesc>
+               <bibl><title level="a">LOG9002</title></bibl>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <langUsage>
+               <language ident="en">English</language>
+            </langUsage>
+            <correspDesc>
+               <correspAction type="sent">
+                  <persName>Michael Sperberg-McQueen</persName>
+                  <email>U35395@UICVM.BITNET</email>
+                  <date when="1990-02-06">Tue, 6 Feb 90 10:54:04 CST</date>
+               </correspAction>
+               <correspAction type="relayed">
+                  <orgName><ref target="TEI-L@UICVM">Text Encoding
+                     Initative public discussion list</ref></orgName>
+               </correspAction>  
+               <correspContext>
+                  <ref type="in-response-to" target="#Web-1990-01-31-0933">previous message of <persName>Robert Philip Weber</persName> to the TEI-L Listserv.
+                  <date when="1990-01-31"/>
+                  </ref>
+               </correspContext>
+            </correspDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <post>
+               <p>About compound documents in <name type="ML">SGML</name> and in the <name type="ML"
+                  >TEI</name>. <ref target="#Web-1990-01-31-0933"><persName>R.P. Weber</persName>
+                     asked a week ago <q>could someone please explain the <name type="ML">TEI</name>
+                        approach to compound documents and images? WIll <name type="ML">SGML</name>
+                        be used here, and if so, how?</q></ref></p>
+               <p>Apologies for my delay in answering. I was hoping one of our hypertext sages might
+                  weigh in with a reply. (But he appears to have been in the
+                  <placeName>Caribbean</placeName>, and may not have received the query.)</p>
+               <p>This problem has not, in fact, been discussed on this server, or as far as I'm
+                  aware by the working committees. So the formal answer is that no decision has been
+                  cast in concrete yet. Which allows me to turn the tables and say <q>How <emph
+                     rend="*">should</emph> compound documents be encoded for interchange? What
+                     are the requirements? What are the alternatives?</q></p>
+               <p>Less formally, I can offer some personal opinions, for what they are worth (face
+                  value: two cents -- 2u, for those of you on <objectName>IBM
+                     mainframes</objectName> with real <objectName>IBM terminals</objectName>).</p>
+               <p> Certainly <name type="ML">SGML</name> is where we should start in any search for
+                  ways of handling compound objects, and I don't yet know any reason that SGML won't
+                  provide a solution for the problem. I assume there are two methods of using <name
+                     type="ML">SGML</name> in compound documents (correct me if I'm wrong): (1) use
+                  <name type="ML">SGML</name> to organize the compound document (i.e. have an
+                  SGML document which includes text, images, sound, etc. as its components), or (2)
+                  use whatever-you-like to organize the compound document as a whole, and use <name
+                     type="ML">SGML</name> as the notation for the textual components of the
+                  compound document.</p>
+               <p>For the simple case of text-with-illustrations, <name type="ML">SGML</name> seems
+                  like a viable encoding mechanism (for the envelope and for the text components) to
+                  me. It allows you to encode the graphics however you like, declaring your graphics
+                  format as a non-<name type="ML">SGML</name> notation and declaring the contents of
+                  your graphics elements (say 'PICTURE' or 'BLORT') as being data in that notation,
+                  stored either within the <name type="ML">SGML</name> file or externally to it. You
+                  get localization of the graphics within the text stream, integral or separate
+                  storage of the graphics, and complete freedom to choose whatever graphic notation
+                  you wish.</p>
+               <p>As document encoding methods go, <name type="ML">SGML</name> is fairly hospitable
+                  to graphics and other non-text pieces of compound objects. Nowhere in the standard
+                  does it say that the data have to be words and characters. In fact, as far as I
+                  know there is no <emph rend="*">explicit</emph> requirement in the standard that
+                  an <name type="ML">SGML</name> document even has to be bytes in a computer. (Sure,
+                  it's hard to understand the standard any other way, but that's not the same as an
+                  explicit requirement.) <bibl>ISO 8879 par. 6.1 note 1</bibl> says in fact <q>This
+                     International Standard does not constrain the physical organization of the
+                     document within the data stream, message handling protocol, file system, etc.,
+                     that contains it.</q> At the <eventName>SGML '89 conference</eventName> last
+                  <date when="1989-10">October</date> in <placeName>Atlanta</placeName>, there
+                  was a very nice paper by <persName>Douglas MacLeod</persName> (read by
+                  <persName>Yuri Rubinsky</persName>) thinking about architectural designs as
+                  <name type="ML">SGML</name> documents, which led to a general discussion of
+                  <name type="ML">SGML</name> definitions for all sorts of objects, including
+                  automobiles. Although most people (obviously) think of the <name type="ML"
+                     >SGML</name> document as an electronic <emph rend="*">description</emph> of the
+                  automobile (and the physical automobile as a side effect of processing), it
+                  appears, in the light of the passage cited, hard to say categorically that an
+                  automobile itself could never be parsed as an <name type="ML">SGML</name>
+                  document. (If you could figure out how to define the delimiters.)</p>
+               <p>The only hitch is that the <name type="ML">SGML</name> standard itself (<bibl
+                  type="standard">ISO 8879</bibl>) does not specify in any detail what the
+                  interface between <name type="ML">SGML</name> processors and non-<name type="ML"
+                     >SGML</name> processors must, may, or can look like -- an advantage, if you
+                  will, in that it doesn't constrain anyone to an inappropriate model, but a bit of
+                  a disadvantage in that most people don't have a clue what they can now or will
+                  eventually or might someday be able to do with SGML and graphics processors.</p>
+               <p>Not being deeply involved in graphics work or compound documents myself, I don't
+                  know off-hand what options are offered for this sort of thing by existing <name
+                     type="ML">SGML</name> processors. There will certainly be a fierce market
+                  demand for it, not only from humanists but also (to our great advantage) from the
+                  defense industry, which needs <name type="ML">SGML</name> support for technical
+                  manuals with diagrams (and of course cross-references and other hypertext
+                  mechanisms) and has the small change to pay for the development costs. (As long as
+                  they don't charge the humanists defense-contractor prices!)</p>
+               <p>If for some reason one does <emph rend="*">not</emph> want to use <name type="ML"
+                  >SGML</name> as the envelope for the entire compound document, then presumably
+                  the major requirement for the text-components of the compound documents is that
+                  they be computationally well-behaved, with a clearly defined structure, hooks for
+                  pointers going out, and hooks for pointers coming in. SGML certainly has all of
+                  this, in its document type declarations and its ID names and its IDREF
+                  pointers.</p>
+               <p>Perhaps those subscribers to this list who actually work with compound documents
+                  and <name type="ML">SGML</name> will be willing to say how they make things work
+                  now, and how they would like to see things developing in the future.</p>
+               <p> All this is, I repeat, just personal opinion and shouldn't be taken as defining
+                  <soCalled>the</soCalled> position of the <orgName>TEI</orgName>. (Unless, of
+                  course, taking as <soCalled>the</soCalled> position will help get a discussion
+                  started.)</p>
+               <signed generatedBy="human">-Michael Sperberg-McQueen<lb/> University of Illinois at
+                  Chicago </signed>
+            </post>
+         </body>
+      </text>
+      
+   </TEI>
+</TEI>
