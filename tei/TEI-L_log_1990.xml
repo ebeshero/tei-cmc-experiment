@@ -53,14 +53,14 @@
             <post xml:id="Cov-1990-01-08-1608">
                <dateline>
                   <date when="1990-01-08">Mon, 8 Jan 90 16:08:22 CST</date>
-                  <ref type="reply-to" target="TEI-L@UICVM">Text Encoding Initative public
+                  <ref type="reply-to" target="email:TEI-L@UICVM">Text Encoding Initative public
                      discussion list </ref>
                   <!-- Note: reply-to is different from in-reply-to, which we only begin seeing in April 1990! 
                   in-reply-to would definitely be template-generated.
                   -->
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="ZRCC1001@SMUVM1.BITNET">"Robin C.
+                  <ref generatedBy="template" type="from" target="email:ZRCC1001@SMUVM1.BITNET">"Robin C.
                      Cover"</ref>
                   <title level="a" type="subject" generatedBy="human">ISO 639</title>
                </dateline>
@@ -129,11 +129,11 @@
             <post xml:id="Cov-1990-01-12-1246">
                <dateline>
                   <date when="1990-01-12">Fri, 12 Jan 90 12:46:07 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="ZRCC1001@SMUVM1.BITNET">"Robin C.
+                  <ref generatedBy="template" type="from" target="email:ZRCC1001@SMUVM1.BITNET">"Robin C.
                      Cover"</ref>
                   <title level="a" type="subject" generatedBy="human">ISO 639 LANGUAGE CODES</title>
                </dateline>
@@ -226,11 +226,11 @@
             <post xml:id="Byr-1990-01-29-1054">
                <dateline>
                   <date when="1990-01-12">Mon, 29 Jan 90 10:54:39 PST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="BB.NAC@RLG.BITNET">"NACO
+                  <ref generatedBy="template" type="from" target="email:BB.NAC@RLG.BITNET">"NACO
                      (LC)"</ref>
                   <title level="a" type="subject" generatedBy="human">ISO Standard for Language
                      Codes</title>
@@ -250,12 +250,12 @@
             </post>
             <post xml:id="Web-1990-01-31-0933">
                <dateline>
-                  <date when="1990-01-31">=Wed, 31 Jan 90 09:33:26 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <date when="1990-01-31">Wed, 31 Jan 90 09:33:26 CST</date>
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="WEBER@HARVARDA.BITNET">Robert
+                  <ref generatedBy="template" type="from" target="email:WEBER@HARVARDA.BITNET">Robert
                      Philip Weber</ref>
                   <title level="a" type="subject" generatedBy="human">compound documents and
                      images</title>
@@ -277,13 +277,13 @@
             <post xml:id="Spe-1990-02-06-1054">
                <dateline>
                   <date when="1990-02-06">Tue, 6 Feb 90 10:54:04 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
                   <ref generatedBy="human" type="Comments">"ACH / ACL / ALLC Text Encoding
                      Initiative"</ref>
-                  <ref generatedBy="template" type="from" target="U35395@UICVM.BITNET">Michael
+                  <ref generatedBy="template" type="from" target="email:U35395@UICVM.BITNET">Michael
                      Sperberg-McQueen 312 996-2477 -2981</ref>
                   <title level="a" type="subject" generatedBy="human">compound documents</title>
                </dateline>
@@ -377,11 +377,11 @@
             <post xml:id="Ams-1990-02-06-1413">
                <dateline>
                   <date when="1990-02-06">Tue, 6 Feb 90 14:13:02 EST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="amsler@FLASH.BELLCORE.COM">Robert
+                  <ref generatedBy="template" type="from" target="email:amsler@FLASH.BELLCORE.COM">Robert
                      A Amsler</ref>
                   <title level="a" type="subject" generatedBy="human">SGML and the restoration of
                      case information to a file</title>
@@ -413,11 +413,11 @@
             <post xml:id="Web-1990-02-11-1306">
                <dateline>
                   <date when="1990-02-11">Sun, 11 Feb 90 13:06:34 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="WEBER@HARVARDA.BITNET">Robert
+                  <ref generatedBy="template" type="from" target="email:WEBER@HARVARDA.BITNET">Robert
                      Philip Weber</ref>
                   <title level="a" type="subject" generatedBy="human">funding sources for
                      tei</title>
@@ -438,13 +438,13 @@
             <post xml:id="Spe-1990-02-12-1653">
                <dateline>
                   <date when="1990-02-12">Mon, 12 Feb 90 16:53:04 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
                   <ref generatedBy="human" type="Comments">"ACH / ACL / ALLC Text Encoding
                      Initiative"</ref>
-                  <ref generatedBy="template" type="from" target="U35395@UICVM.BITNET">Michael
+                  <ref generatedBy="template" type="from" target="email:U35395@UICVM.BITNET">Michael
                      Sperberg-McQueen 312 996-2477 -2981</ref>
                   <title level="a" type="subject" generatedBy="human">funding sources</title>
                </dateline>
@@ -473,11 +473,11 @@
             <post xml:id="Web-1990-02-12-1807">
                <dateline>
                   <date when="1990-02-12">Mon, 12 Feb 90 18:07:19 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="WEBER@HARVARDA.BITNET">Robert
+                  <ref generatedBy="template" type="from" target="email:WEBER@HARVARDA.BITNET">Robert
                      Philip Weber</ref>
                   <title level="a" type="subject" generatedBy="human">SGML and ODA</title>
                </dateline>
@@ -496,11 +496,11 @@
             <post xml:id="Cov-1990-02-24-105403">
                <dateline>
                   <date when="1990-02-24">Sat, 24 Feb 90 10:54:03 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="ZRCC1001@SMUVM1.BITNET">"Robin C.
+                  <ref generatedBy="template" type="from" target="email:ZRCC1001@SMUVM1.BITNET">"Robin C.
                      Cover"</ref>
                   <title level="a" type="subject" generatedBy="human">TC/PARALLELS REVISED
                      PART1</title>
@@ -1259,11 +1259,11 @@
             <post xml:id="Cov-1990-02-24-105416">
                <dateline>
                   <date when="1990-02-24">Sat, 24 Feb 90 10:54:16 CST</date>
-                  <ref generatedBy="system" type="reply-to" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="reply-to" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list </ref>
-                  <ref generatedBy="system" type="sender" target="TEI-L@UICVM">Text Encoding
+                  <ref generatedBy="system" type="sender" target="email:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref>
-                  <ref generatedBy="template" type="from" target="ZRCC1001@SMUVM1.BITNET">"Robin C.
+                  <ref generatedBy="template" type="from" target="email:ZRCC1001@SMUVM1.BITNET">"Robin C.
                      Cover"</ref>
                   <title level="a" type="subject" generatedBy="human">TC/PARALLELS REVISED
                      PART2</title>
