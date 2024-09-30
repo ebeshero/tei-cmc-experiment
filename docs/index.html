@@ -1,0 +1,79 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>non-XML ASCII</title>
+    <meta name="author" content="Syd Bauman">
+    <meta name="copyleft" content="2024 Syd Bauman">
+    <style type="text/css">
+      body { margin: 3em; }
+      th, td { padding: 0.6ex; }
+      .dec, .hex, .bin { text-align: center; }
+      .sym { text-align: right; }
+      .desc { text-align: left; }
+      dl { margin: 1em; 1em; 1em; 2em; }
+      dd > code { font-size: 125%; } 
+      dt { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h1>The 29 7-bit ASCII characters that are not legal in XML</h1>
+    <div style="margin: 0em 0em 0em 3em;">
+      <table border="1">
+        <thead style="background-color: #F0F0FF;">
+          <tr>
+            <th class="dec">base 10</th>
+            <th class="hex">base 16</th>
+            <th class="bin">base 02</th>
+            <th class="sym">symbol</th>
+            <th class="desc">description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> <td class="dec">0</td> <td class="hex">00</td> <td class="bin">0000 0000</td> <td class="sym">NUL</td> <td class="desc">Null character</td> </tr>
+          <tr> <td class="dec">1</td> <td class="hex">01</td> <td class="bin">0000 0001</td> <td class="sym">SOH</td> <td class="desc">Start of Heading</td> </tr>
+          <tr> <td class="dec">2</td> <td class="hex">02</td> <td class="bin">0000 0010</td> <td class="sym">STX</td> <td class="desc">Start of Text</td> </tr>
+          <tr> <td class="dec">3</td> <td class="hex">03</td> <td class="bin">0000 0011</td> <td class="sym">ETX</td> <td class="desc">End of Text</td> </tr>
+          <tr> <td class="dec">4</td> <td class="hex">04</td> <td class="bin">0000 0100</td> <td class="sym">EOT</td> <td class="desc">End of Transmission</td> </tr>
+          <tr> <td class="dec">5</td> <td class="hex">05</td> <td class="bin">0000 0101</td> <td class="sym">ENQ</td> <td class="desc">Enquiry</td> </tr>
+          <tr> <td class="dec">6</td> <td class="hex">06</td> <td class="bin">0000 0110</td> <td class="sym">ACK</td> <td class="desc">Acknowledge</td> </tr>
+          <tr> <td class="dec">7</td> <td class="hex">07</td> <td class="bin">0000 0111</td> <td class="sym">BEL</td> <td class="desc">Bell, Alert</td> </tr>
+          <tr> <td class="dec">8</td> <td class="hex">08</td> <td class="bin">0000 1000</td> <td class="sym">BS</td> <td class="desc">Backspace</td> </tr>
+          <tr> <td class="dec">11</td> <td class="hex">0B</td> <td class="bin">0000 1011</td> <td class="sym">VT</td> <td class="desc">Vertical Tabulation</td> </tr>
+          <tr> <td class="dec">12</td> <td class="hex">0C</td> <td class="bin">0000 1100</td> <td class="sym">FF</td> <td class="desc">Form Feed</td> </tr>
+          <tr> <td class="dec">14</td> <td class="hex">0E</td> <td class="bin">0000 1110</td> <td class="sym">SO</td> <td class="desc">Shift Out</td> </tr>
+          <tr> <td class="dec">15</td> <td class="hex">0F</td> <td class="bin">0000 1111</td> <td class="sym">SI</td> <td class="desc">Shift In</td> </tr>
+          <tr> <td class="dec">16</td> <td class="hex">10</td> <td class="bin">0001 0000</td> <td class="sym">DLE</td> <td class="desc">Data Link Escape</td> </tr>
+          <tr> <td class="dec">17</td> <td class="hex">11</td> <td class="bin">0001 0001</td> <td class="sym">DC1</td> <td class="desc">Device Control One (XON)</td> </tr>
+          <tr> <td class="dec">18</td> <td class="hex">12</td> <td class="bin">0001 0010</td> <td class="sym">DC2</td> <td class="desc">Device Control Two</td> </tr>
+          <tr> <td class="dec">19</td> <td class="hex">13</td> <td class="bin">0001 0011</td> <td class="sym">DC3</td> <td class="desc">Device Control Three (XOFF)</td> </tr>
+          <tr> <td class="dec">20</td> <td class="hex">14</td> <td class="bin">0001 0100</td> <td class="sym">DC4</td> <td class="desc">Device Control Four</td> </tr>
+          <tr> <td class="dec">21</td> <td class="hex">15</td> <td class="bin">0001 0101</td> <td class="sym">NAK</td> <td class="desc">Negative Acknowledge</td> </tr>
+          <tr> <td class="dec">22</td> <td class="hex">16</td> <td class="bin">0001 0110</td> <td class="sym">SYN</td> <td class="desc">Synchronous Idle</td> </tr>
+          <tr> <td class="dec">23</td> <td class="hex">17</td> <td class="bin">0001 0111</td> <td class="sym">ETB</td> <td class="desc">End of Transmission Block</td> </tr>
+          <tr> <td class="dec">24</td> <td class="hex">18</td> <td class="bin">0001 1000</td> <td class="sym">CAN</td> <td class="desc">Cancel</td> </tr>
+          <tr> <td class="dec">25</td> <td class="hex">19</td> <td class="bin">0001 1001</td> <td class="sym">EM</td> <td class="desc">End of medium</td> </tr>
+          <tr> <td class="dec">26</td> <td class="hex">1A</td> <td class="bin">0001 1010</td> <td class="sym">SUB</td> <td class="desc">Substitute</td> </tr>
+          <tr> <td class="dec">27</td> <td class="hex">1B</td> <td class="bin">0001 1011</td> <td class="sym">ESC</td> <td class="desc">Escape</td> </tr>
+          <tr> <td class="dec">28</td> <td class="hex">1C</td> <td class="bin">0001 1100</td> <td class="sym">FS</td> <td class="desc">File Separator</td> </tr>
+          <tr> <td class="dec">29</td> <td class="hex">1D</td> <td class="bin">0001 1101</td> <td class="sym">GS</td> <td class="desc">Group Separator</td> </tr>
+          <tr> <td class="dec">30</td> <td class="hex">1E</td> <td class="bin">0001 1110</td> <td class="sym">RS</td> <td class="desc">Record Separator</td> </tr>
+          <tr> <td class="dec">31</td> <td class="hex">1F</td> <td class="bin">0001 1111</td> <td class="sym">US</td> <td class="desc">Unit Separator</td> </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>regular expressions to match these characters</h2>
+    <p>Not all of these are tested.</p>
+    <dl>
+      <dt>PCRE, Java, or oXygen:</dt>
+      <dd><code>[\u0000-\u0008\u000C\u000E-\u0019]</code></dd>
+      <dt>W3C:</dt>
+      <dd><code>[#x00-#x08#x0C#x0E-#x19]</code></dd>
+      <dt>Emacs:</dt>
+      <dd><code>[^␤[:print:]]</code> &nbsp; &nbsp; ; where ‘␤’ is typed CTL-J</dd>
+      <dt>grep or egrep:</dt>
+      <dd><code>[^[:print:]]</code></dd>
+    </dl>
+  
+
+</body></html>
