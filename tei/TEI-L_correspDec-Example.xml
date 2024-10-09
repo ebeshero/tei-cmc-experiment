@@ -71,7 +71,7 @@
                   <date when="1990-01-31">Wed, 31 Jan 90 09:33:26 CST</date>
                </correspAction>
                <correspAction type="relayed">
-                  <orgName><ref target="email:TEI-L@UICVM">Text Encoding
+                  <orgName><ref target="mailto:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref></orgName>
                </correspAction>            
             </correspDesc>
@@ -119,7 +119,7 @@
                   <date when="1990-02-06">Tue, 6 Feb 90 10:54:04 CST</date>
                </correspAction>
                <correspAction type="relayed">
-                  <orgName><ref target="email:TEI-L@UICVM">Text Encoding
+                  <orgName><ref target="mailto:TEI-L@UICVM">Text Encoding
                      Initative public discussion list</ref></orgName>
                </correspAction>  
                <correspContext>

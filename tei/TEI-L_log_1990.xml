@@ -20,8 +20,8 @@
 
             <bibl>
                <title level="s">TEI-L Listserv</title>
-               <title level="s">LOG9001</title>
-               <title level="s">LOG9002</title>
+               <biblScope unit="log">LOG9001</biblScope>
+               <biblScope unit="log">LOG9002</biblScope>
                <publisher>University of Illinois Chicago</publisher>
                <distributor>TEI-L@UICVM</distributor>
                <date>1990</date>
