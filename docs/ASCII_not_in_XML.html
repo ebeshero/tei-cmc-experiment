@@ -1,10 +1,11 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>non-XML ASCII</title>
-    <meta name="author" content="Syd Bauman">
-    <meta name="copyleft" content="2024 Syd Bauman">
+    <meta name="author" content="Syd Bauman"/>
+    <meta name="copyleft" content="2024 Syd Bauman"/>
     <style type="text/css">
       body { margin: 3em; }
       th, td { padding: 0.6ex; }
@@ -66,14 +67,13 @@
     <p>Not all of these are tested.</p>
     <dl>
       <dt>PCRE, Java, or oXygen:</dt>
-      <dd><code>[\u0000-\u0008\u000C\u000E-\u0019]</code></dd>
+      <dd><code>[\u0000-\u0008\u000C\u000E-\u001F]</code></dd>
       <dt>W3C:</dt>
-      <dd><code>[#x00-#x08#x0C#x0E-#x19]</code></dd>
+      <dd><code>[#x00-#x08#x0C#x0E-#x1F]</code></dd>
       <dt>Emacs:</dt>
       <dd><code>[^␤[:print:]]</code> &nbsp; &nbsp; ; where ‘␤’ is typed CTL-J</dd>
       <dt>grep or egrep:</dt>
       <dd><code>[^[:print:]]</code></dd>
     </dl>
-  
-
-</body></html>
+  </body>
+</html>
